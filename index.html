@@ -6,7 +6,7 @@
 				.divAnswer {
 				  width: 100%;
 				  text-align: left;
-				  background-color: lightblue;
+				  background-color: #E3E2F5;
 				  margin-top:5px;
 				  display:none;
 				}
@@ -20,9 +20,9 @@
 				function showHideAnswer() {
 				  var x = event.target.parentElement.getElementsByClassName('divAnswer')[0];
 				  if (x.style.display == "block") {
-					x.style.display = "none";
+						x.style.display = "none";
 				  } else {
-					x.style.display = "block";
+						x.style.display = "block";
 				  }
 				}
 			</script>
@@ -81,11 +81,42 @@
 			<div class="divQuestion">How does machine learning differ from data mining?</div>
 			<button onclick="showHideAnswer()">Answer</button>
 			<div class="divAnswer" >
-				Machine learning aims at predictions based on known properties learned from the  training data. Data mining focuses on discovery of unknown properties on the data
+				Machine learning aims at predictions based on known properties learned from the  training data. 
+				Data mining focuses on discovery of unknown properties on the data
 			</div>
 		</div>
 		
+		<div>
+			<div class="divQuestion">How to prevent overfitting?</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >
+					Overfitting happens when your model that trais your training data too well and cannot generalize.
+					To prevent overfitting you can use regularization and cross-validation.
+			</div>
+		</div>
 		
+		<div>
+			<div class="divQuestion">What is cross-validation in machine learning?</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >
+						Cross-validation refers to the process of splitting a dataset into a training set (usually 80) and test
+				    set (usually 20%). This splitting is done randomly. This is usually repeated 10 times.
+			</div>
+		</div>
+	
+		<div>
+			<div class="divQuestion">What is regularization in machine learning?</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >	
+					Regularization is a technique used to reduce overfitting. 
+					Regularization adds a penalty on the different parameters of the model to reduce the freedom of the model
+					Regularization is usually done by adding a correction term to the formula for a mathematical model. 
+					This correction term penalizes the higher order terms so that the model is forced to be simpler.
+			</div>
+		</div>
+
+
+	
 
 
 	</body>
