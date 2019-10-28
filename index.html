@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<style>
+				.divAnswer {
+				  width: 100%;
+				  text-align: left;
+				  background-color: lightblue;
+				  margin-top:5px;
+				  display:none;
+				}
+
+				.divQuestion {
+					padding-top: 15px;
+				}
+			</style>
+			
+			<script>
+				function showHideAnswer() {
+				  var x = event.target.parentElement.getElementsByClassName('divAnswer')[0];
+				  if (x.style.display == "block") {
+					x.style.display = "none";
+				  } else {
+					x.style.display = "block";
+				  }
+				}
+			</script>
+	</head>
+	<body>
+		<h2>Data Science questions / answers</h2>
+		
+		<h3>Statistics</h3>
+		
+		<div>
+			<div>What is Difference between data science and machine learning</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >
+				<p>Data science = statistical analysis + data engineering in order to get information from the data</p>
+				
+				Machine learning = create a model to predict something. You can also define it as teaching computers to learn by examples
+			</div>
+		</div>
+
+		<div>
+			<div class="divQuestion">What is a random variable?</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >
+				It assign a numerical value to each possible outcome. A numeric value is a necessary condition in the sense that something not numeric chosen at random is NOT a random variable. Remember that values of random variables are determined by chance
+			</div>
+		</div>
+		
+		<div>
+			<div class="divQuestion">Can you explain the two types of random variable discrete and continuous?</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >
+				Discrete random variables have a finite number of possible outcomes
+				Continuous random variables you cannot count the number of possible outcomes
+			</div>
+		</div>
+		
+		<div>
+			<div class="divQuestion">What is a probability distribution?</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >
+				A probability distribution displays the probabilities associated with all possible outcomes.
+			</div>
+		</div>
+		
+		<div>
+			<div class="divQuestion">What is a probability distribution?</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >
+				A probability distribution displays the probabilities associated with all possible outcomes.
+			</div>
+		</div>
+		
+		<h3>Machine learning</h3>
+		
+		<div>
+			<div class="divQuestion">How does machine learning differ from data mining?</div>
+			<button onclick="showHideAnswer()">Answer</button>
+			<div class="divAnswer" >
+				Machine learning aims at predictions based on known properties learned from the  training data. Data mining focuses on discovery of unknown properties on the data
+			</div>
+		</div>
+		
+		
+
+
+	</body>
+</html>
