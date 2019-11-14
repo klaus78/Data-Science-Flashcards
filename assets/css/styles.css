@@ -1,0 +1,22 @@
+.divAnswer {
+      width: 100%;
+      text-align: left;
+      background-color: lightblue;
+      margin-top:5px;
+      display:none;
+}
+
+.divQuestion {
+      padding-top: 15px;
+}
+
+button {
+      background-color: #5b82d7; 
+      border: none;
+      color: white;
+      padding: 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+}

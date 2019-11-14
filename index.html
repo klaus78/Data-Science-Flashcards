@@ -1,134 +1,41 @@
-<!DOCTYPE html>
+---
+title: Questions Answers
+---
+
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-			<style>
-				.divAnswer {
-				  width: 100%;
-				  text-align: left;
-				  background-color: #E3E2F5;
-				  margin-top:5px;
-				  display:none;
-				}
 
-				.divQuestion {
-					padding-top: 15px;
-				}
-				
-				button {
-					background-color: #5b82d7; 
-					  border: none;
-					  color: white;
-					  padding: 8px;
-					  text-align: center;
-					  text-decoration: none;
-					  display: inline-block;
-					  font-size: 16px;
-				}
-			</style>
-			
-			<script>
-				function showHideAnswer() {
-				  var x = event.target.parentElement.getElementsByClassName('divAnswer')[0];
-				  if (x.style.display == "block") {
-						x.style.display = "none";
-				  } else {
-						x.style.display = "block";
-				  }
-				}
-			</script>
-	</head>
-	<body>
-		<h2>Data Science questions / answers</h2>
-		
-		<h3>Statistics</h3>
-		
-		<div>
-			<div>What is Difference between data science and machine learning</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >
-				Data science = statistical analysis + data engineering in order to get information from the data.
-				<br><br>
-				Machine learning = create a model to predict something. You can also define it as teaching computers to learn by examples.
-			</div>
-		</div>
+<head>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="text/javascript" src="/assets/js/main.js"></script>
+</head>
 
-		<div>
-			<div class="divQuestion">What is a random variable?</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >
-				It assign a numerical value to each possible outcome. A numeric value is a necessary condition in the sense that something not numeric chosen at random is NOT a random variable. Remember that values of random variables are determined by chance
-			</div>
-		</div>
-		
-		<div>
-			<div class="divQuestion">Can you explain the two types of random variable discrete and continuous?</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >
-				Discrete random variables have a finite number of possible outcomes
-				Continuous random variables you cannot count the number of possible outcomes
-			</div>
-		</div>
-		
-		<div>
-			<div class="divQuestion">What is a probability distribution?</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >
-				A probability distribution displays the probabilities associated with all possible outcomes.
-			</div>
-		</div>
-		
-		<div>
-			<div class="divQuestion">What is a probability distribution?</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >
-				A probability distribution displays the probabilities associated with all possible outcomes.
-			</div>
-		</div>
-		
-		<h3>Machine learning</h3>
-		
-		<div>
-			<div class="divQuestion">How does machine learning differ from data mining?</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >
-				Machine learning aims at predictions based on known properties learned from the  training data. 
-				Data mining focuses on discovery of unknown properties on the data
-			</div>
-		</div>
-		
-		<div>
-			<div class="divQuestion">How to prevent overfitting?</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >
-					Overfitting happens when your model that trais your training data too well and cannot generalize.
-					To prevent overfitting you can use regularization and cross-validation.
-			</div>
-		</div>
-		
-		<div>
-			<div class="divQuestion">What is cross-validation in machine learning?</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >
-						Cross-validation refers to the process of splitting a dataset into a training set (usually 80) and test
-				    set (usually 20%). This splitting is done randomly. This is usually repeated 10 times.
-			</div>
-		</div>
-	
-		<div>
-			<div class="divQuestion">What is regularization in machine learning?</div>
-			<button onclick="showHideAnswer()">Answer</button>
-			<div class="divAnswer" >	
-					Regularization is a technique used to reduce overfitting. 
-					Regularization adds a penalty on the different parameters of the model to reduce the freedom of the model
-					Regularization is usually done by adding a correction term to the formula for a mathematical model. 
-					This correction term penalizes the higher order terms so that the model is forced to be simpler.
-			</div>
-		</div>
+<body>
+  <h1>Data science questions / answers</h1>
+  <ol>
 
+    {% for item in site.data.questions_answers %}
+    {% if item.header %}
+      <h2>{{item.header}}</h2>
+    {% endif %}
+    <li>
+      <div class="divQuestion">
+        {{item.question}}
+      </div>
 
-	
+      <button onclick="showHideAnswer()">Answer</button>
 
+      <div class="divAnswer">
+        {{item.answer}}
+        {% if item.image %}
+        <br>
+        <img src="/assets/images/{{item.image}}" alt="not found">
+        {% endif %}
+      </div>
 
-	</body>
+    </li>
+    {% endfor %}
+  </ol>
+
+</body>
+
 </html>
