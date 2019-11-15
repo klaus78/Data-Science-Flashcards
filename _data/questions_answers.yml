@@ -59,4 +59,11 @@
     <br>
     P(A) P(B|A) + P(A’) P(B|A’)
 - question: Make the plot of an uniform distribution
-  image: uniform_distribution.png
+  image: uniform_distribution.PNG
+
+
+- header: Data Analysis
+  question: What is the hamming distance?
+  answer: >
+    The hamming distance is used for categorical features. If all the variables 
+    are categorical then the hamming distance is defined as the number of mismatches
