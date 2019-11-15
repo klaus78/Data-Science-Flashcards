@@ -17,9 +17,6 @@ button {
       text-align: center;
       text-decoration: none;
       display: inline-block;
+      padding:8px;
 }
 
-@media only screen and (min-width: 768px) {
-      /* desktop code */
-      button { padding: 8px; }
-}
