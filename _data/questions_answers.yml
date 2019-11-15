@@ -26,3 +26,18 @@
 
 - question: What is the meaning of the complementary event of A, that is indicated by A’?
   answer: A’ is the event that A does not happen and is given by 1-P(A)
+
+- question: What does it mean two events are mutually exclusive or disjoint? 
+  answer: > 
+    It means that only one of them can occur
+
+- question: What happens when two events intersect?
+  answer: When two events intersect, they can occur simultaneously
+
+- question: What is the probability P(A or B)?
+  answer: P(A or B) = P(A) + P(B) - P(A and B)
+
+- question: > 
+    If  events A  and B are disjoint, what is the probability of either event 
+    (A or B)
+  answer: P(A or B) = P(A) + P(B)
