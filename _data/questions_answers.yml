@@ -41,3 +41,22 @@
     If  events A  and B are disjoint, what is the probability of either event 
     (A or B)
   answer: P(A or B) = P(A) + P(B)
+
+- question: What does it mean that 2 events are independent?
+  answer: >
+    These are 2 events that do not affect each other. If one event occurs, 
+    the probability of the other occuring remains exactly the same. 
+    <br>
+    P(A|B) = P(A)
+- question: >
+    If events A and B are independent, what is the probability of both 
+    events is the product of the probabilities for each event?
+  answer: P(A and B) = P(A) x P(B)
+
+- question: What is the law of total probability?
+  answer: > 
+    P(B) = P(B and A) + P(B and A’) = 
+    <br>
+    P(A) P(B|A) + P(A’) P(B|A’)
+- question: Make the plot of an uniform distribution
+  image: uniform_distribution.png
