@@ -14,8 +14,12 @@ button {
       background-color: #5b82d7; 
       border: none;
       color: white;
-      padding: 8px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+      /* desktop code */
+      button { padding: 8px; }
 }
