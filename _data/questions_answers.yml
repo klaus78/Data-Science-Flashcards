@@ -1,4 +1,4 @@
-- header: Statistics
+- h2: Statistics
   question: What is the difference between data science and machine learning
   answer: >
     Data science = statistical analysis + data engineering in order to get 
@@ -62,8 +62,48 @@
   image: uniform_distribution.PNG
 
 
-- header: Data Analysis
+- h2: Data Analysis
   question: What is the hamming distance?
   answer: >
     The hamming distance is used for categorical features. If all the variables 
     are categorical then the hamming distance is defined as the number of mismatches
+
+- question: What is the Manhattan (or city block) distance?
+  answer: >
+    It is the number of horizontal and/or vertical steps to go from point p1 to point 
+    p2
+
+- question: What is the distance matrix?
+  answer: >
+    It is a square matrix (two-dimensional array) containing the distances, taken 
+    pairwise, between the elements of a set of points
+
+- question: What is the Levenshtein distance?
+  answer: >
+    The Levenshtein distance is the minimum number of single-character edits 
+    (insertions, deletions or substitutions) to change one word into one another
+
+- question: What is the Z-score normalization (also called standardization)?
+  answer: > 
+    It is a technique that scales the values so that they will have the properties
+    of a standard distribution with mean &mu; = 0  and standard deviation &sigma; = 1.
+
+
+- question: What is the min-max scaling (also called normalization)?
+  answer: It is a technique that scales the values between 0 and 1.
+
+- question: When is Z-score normalization used? When is min-max scaling used instead?
+  answer: >
+    The min-max scaling can work better when the distribution is not gaussian
+    or when the standard deviation is very small.
+
+- question: >
+    What is the disadvantage of min-max scaling compared to Z-score normalization 
+    concerning outliers?
+  answer: >
+    The min-max scaling is more sensitive to min-max scaling since the data is
+    bounded between 0 and 1 which automatically leads to information loss about
+    outliers. 
+    <br>
+    The Z-score normalization is more suited when there are outliers since the
+    data is not bounded but simply rescaled to have mean 0 and standard deviation 1.

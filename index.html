@@ -16,9 +16,14 @@ title: Questions Answers
   <ol>
 
     {% for item in site.data.questions_answers %}
-    {% if item.header %}
-      <h2>{{item.header}}</h2>
+    {% if item.h2 %}
+      <h2>{{item.h2}}</h2>
     {% endif %}
+
+    {% if item.h3 %}
+      <h3>{{item.h3}}</h3>
+    {% endif %}
+
     <li>
       <div class="divQuestion">
         {{item.question}}
