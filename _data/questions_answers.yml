@@ -15,7 +15,9 @@
 
 - question: Can you explain the two types of random variable discrete and continuous?
   answer: >
-    Discrete random variables have a finite number of possible outcomes
+    Discrete random variables have a finite number of possible 
+    outcomes
+    <br><br>
     Continuous random variables you cannot count the number of possible outcomes
 
 - question: What is a probability distribution?
@@ -49,8 +51,7 @@
     <br>
     P(A|B) = P(A)
 - question: >
-    If events A and B are independent, what is the probability of both 
-    events is the product of the probabilities for each event?
+    If events A and B are independent, what is the probability of both events happen?
   answer: P(A and B) = P(A) x P(B)
 
 - question: What is the law of total probability?
@@ -60,6 +61,26 @@
     P(A) P(B|A) + P(A’) P(B|A’)
 - question: Make the plot of an uniform distribution
   image: uniform_distribution.PNG
+
+- question: What types of discrete probability distributions are there?
+  answer: >
+     There are the Bernoulli distribution, the Binomial distribution and
+     the Poisson distribution.
+     <br><br>
+     The Bernoulli distribution is a random experiment that has 2 possible
+     outcomes with probability p and q, where p+q = 1
+     <br><br>
+     The Binomial distribution is a sequence of repeated Bernoulli trials
+     performed indipendently. 
+     <br>
+     n = number of items, k = num items I pickup
+     <br> All possible combinations are n! / ( (n-k)! * k! )
+     <br><br>
+     The Poisson distribution is a limiting version of the Binomial distribution
+     where the number of trials gets really large but the probability of success
+     gets smaller at the same time.
+
+
 
 
 - h2: Data Analysis
@@ -139,3 +160,33 @@
   answer: >
     You can use an histogram, a scatter plot or also some statistics values like to say that 
     outliers are outside of the 1.5 IQR limit
+  
+- h2: Machine learning
+  question: What is Naive Bayes?
+  answer: >
+    Naive Bayes is a supervised machine learning algorithm based on the Bayes theorem that is used
+    to solve classification problems.
+
+- question: Why is Naive Bayes called "naive"?
+  answer: >
+    Because the Naive Bayes is based on the idea that the predictor variables are independent of 
+    each other while in nature this is oft not the case.
+- question: When is the Naive Bayes usually used
+  answer: > 
+    Naive Bayes is often used in <br>
+    - text classification like spam filter<br>
+    - real-time classification since it is fast<br>
+    - multi-class prediction
+
+- question: When Naive Bayes is used with numerical variables, what condition is assumed on the data?
+  answer: >
+    Numerical variables used in Naive Bayes are expected to have a normal distribution.
+    This is not always the case in practice.
+
+- question: How does the Naive Bayes perform with categorical variables?
+  answer: > 
+    It performs better with categorical variables since no assumpion is made on
+    the data distribution. By contrast with numerical variables a normal distribution
+    is assumed.
+
+- question: 
