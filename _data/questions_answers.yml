@@ -77,8 +77,10 @@
      <br> All possible combinations are n! / ( (n-k)! * k! )
      <br><br>
      The Poisson distribution is a limiting version of the Binomial distribution
-     where the number of trials gets really large but the probability of success
-     gets smaller at the same time.
+     where the number of trials n gets really large but the probability of success p
+     gets smaller at the same time. In other words if you have a Binomial distribution
+     where you let n tends to infinite and p tends to zero such that np = &lambda;, then
+     that distribution approaches a Poisson distribution with parameter &lambda;.
 
 
 
@@ -185,8 +187,6 @@
 
 - question: How does the Naive Bayes perform with categorical variables?
   answer: > 
-    It performs better with categorical variables since no assumpion is made on
+    It performs well with categorical variables since no assumpion is made on
     the data distribution. By contrast with numerical variables a normal distribution
     is assumed.
-
-- question: 
