@@ -1,13 +1,6 @@
-- h2: Statistics
-  question: What is the difference between data science and machine learning
-  answer: >
-    Data science = statistical analysis + data engineering in order to get 
-    information from the data
-    <br><br>
-    Machine learning = create a model to predict something. You can also define 
-    it as teaching computers to learn by examples
 
-- question: What is a random variable?
+- h2: Statistics
+  question: What is a random variable?
   answer: > 
     It assign a numerical value to each possile outcome. A numeric value is a necessary condition in 
     the sense that something not numeric chosen at random is NOT a random variable. 
@@ -19,9 +12,6 @@
     outcomes
     <br><br>
     Continuous random variables you cannot count the number of possible outcomes
-
-- question: What is a probability distribution?
-  answer: A probability distribution displays the probabilities associated with all possible outcomes.
 
 - question: What is the definition of probability of occurence of event A?
   answer: num cases for event A / num all cases
@@ -54,12 +44,44 @@
     If events A and B are independent, what is the probability of both events happen?
   answer: P(A and B) = P(A) x P(B)
 
+- question: >
+    What diagram is particularly useful for visualizing probabilities? Can you use it
+    to visualize P(A), P(A'), P(A or B), P(A and B)? 
+  answer: The Venn diagram is very useful for visualizing probabilities.
+  image: venn_diagrams.png
+
+- question: What is the meaning of conditional probability P(A|B)?
+  answer: >
+    The conditional probability P(A|B) is the probability that A happens
+    given that event B has already happened.
+
+- question: > 
+    What diagram is particularly useful for visualizing conditional probabilities? Can you use
+    this diagram to visualize the conditional property P(A|B)?
+  answer: Conditional probabilities can be well visualized with a probability tree.
+  image: conditional_tree.png
+
 - question: What is the law of total probability?
   answer: > 
     P(B) = P(B and A) + P(B and A’) = 
     <br>
     P(A) P(B|A) + P(A’) P(B|A’)
-- question: Make the plot of an uniform distribution
+
+- question: What is a probability distribution?
+  answer: A probability distribution displays the probabilities associated with all possible outcomes.
+
+- question: What is the expectation of a probability distribution? Can you calculate it with an example?
+  answer: >
+    The expectation E(X) of a probability distribution X is basically the average value of the
+    probability distribution. It is defined as
+    <br><br>
+    E(X) = sum x * P(X = x)
+    <br><br>
+    For example given x = 1,2,3 and P(x) = 0.2, 0.5, 0.3 we have that E(X) equals 
+    1*0.2 + 2*0.5 + 3*0.3 = 2.1
+
+- question: What is an uniform distribution? Draw a plot of it.
+  answer: An uniform distribution is a distribution where all values are equally likely.
   image: uniform_distribution.PNG
 
 - question: What types of discrete probability distributions are there?
@@ -164,7 +186,15 @@
     outliers are outside of the 1.5 IQR limit
   
 - h2: Machine learning
-  question: What is Naive Bayes?
+  question: What is the difference between data science and machine learning
+  answer: >
+    Data science = statistical analysis + data engineering in order to get 
+    information from the data
+    <br><br>
+    Machine learning = create a model to predict something. You can also define 
+    it as teaching computers to learn by examples
+
+- question: What is Naive Bayes?
   answer: >
     Naive Bayes is a supervised machine learning algorithm based on the Bayes theorem that is used
     to solve classification problems.
