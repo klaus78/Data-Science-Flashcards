@@ -203,7 +203,21 @@
   answer: >
     Because the Naive Bayes is based on the idea that the predictor variables are independent of 
     each other while in nature this is oft not the case.
-- question: When is the Naive Bayes usually used
+
+- question: What is the Bayes theorem?
+  answer: >
+    The Bayes theorem is a mathematical formula for finding P(A|B) from P(B|A).
+    The formula is 
+    <br><br>
+    P(A|B) = P(B|A) * P(A) / P(B)
+
+
+- question: What are the main advantages of Naive Bayes?
+  answer: >
+    The Naive Bayes is a relatively simple and very quick algorithm since it is a probabilistic 
+    model that does not require a training step. This makes it very scalable.
+
+- question: When is the Naive Bayes usually used?
   answer: > 
     Naive Bayes is often used in <br>
     - text classification like spam filter<br>
