@@ -12,34 +12,39 @@ title: Questions Answers
 </head>
 
 <body>
+
+ 
+
   <h1>Data science questions / answers</h1>
   <ol>
 
-    {% for item in site.data.questions_answers %}
-    {% if item.h2 %}
-      <h2>{{item.h2}}</h2>
-    {% endif %}
+    {% for file in site.data.sort %}
+     {% for item in site.data.files.[file.topic] in%}
+      {% if item.h2 %}
+        <h2>{{item.h2}}</h2>
+      {% endif %}
 
-    {% if item.h3 %}
-      <h3>{{item.h3}}</h3>
-    {% endif %}
+      {% if item.h3 %}
+        <h3>{{item.h3}}</h3>
+      {% endif %}
 
-    <li>
-      <div class="divQuestion">
-        {{item.question}}
-      </div>
+      <li>
+        <div class="divQuestion">
+          {{item.question}}
+        </div>
 
-      <button onclick="showHideAnswer()">Answer</button>
+        <button onclick="showHideAnswer()">Answer</button>
 
-      <div class="divAnswer">
-        {{item.answer}}
-        {% if item.image %}
-        <br>
-        <img src="./assets/images/{{item.image}}" alt="not found">
-        {% endif %}
-      </div>
+        <div class="divAnswer">
+          {{item.answer}}
+          {% if item.image %}
+          <br>
+          <img src="./assets/images/{{item.image}}" alt="not found">
+          {% endif %}
+        </div>
 
-    </li>
+      </li>
+      {% endfor %}
     {% endfor %}
   </ol>
 

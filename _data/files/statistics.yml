@@ -1,0 +1,106 @@
+
+- h2: Statistics
+  question: What is a random variable?
+  answer: > 
+    It assign a numerical value to each possile outcome. A numeric value is a necessary condition in 
+    the sense that something not numeric chosen at random is NOT a random variable. 
+    Remember that values of random variables are determined by chance.
+
+- question: Can you explain the two types of random variable discrete and continuous?
+  answer: >
+    Discrete random variables have a finite number of possible 
+    outcomes
+    <br><br>
+    Continuous random variables you cannot count the number of possible outcomes
+
+- question: What is the definition of probability of occurence of event A?
+  answer: num cases for event A / num all cases
+
+- question: What is the meaning of the complementary event of A, that is indicated by A’?
+  answer: A’ is the event that A does not happen and is given by 1-P(A)
+
+- question: What does it mean two events are mutually exclusive or disjoint? 
+  answer: > 
+    It means that only one of them can occur
+
+- question: What happens when two events intersect?
+  answer: When two events intersect, they can occur simultaneously
+
+- question: What is the probability P(A or B)?
+  answer: P(A or B) = P(A) + P(B) - P(A and B)
+
+- question: > 
+    If  events A  and B are disjoint, what is the probability of either event 
+    (A or B)
+  answer: P(A or B) = P(A) + P(B)
+
+- question: What does it mean that 2 events are independent?
+  answer: >
+    These are 2 events that do not affect each other. If one event occurs, 
+    the probability of the other occuring remains exactly the same. 
+    <br>
+    P(A|B) = P(A)
+- question: >
+    If events A and B are independent, what is the probability of both events happen?
+  answer: P(A and B) = P(A) x P(B)
+
+- question: >
+    What diagram is particularly useful for visualizing probabilities? Can you use it
+    to visualize P(A), P(A'), P(A or B), P(A and B)? 
+  answer: The Venn diagram is very useful for visualizing probabilities.
+  image: venn_diagrams.png
+
+- question: What is the meaning of conditional probability P(A|B)?
+  answer: >
+    The conditional probability P(A|B) is the probability that A happens
+    given that event B has already happened.
+
+- question: > 
+    What diagram is particularly useful for visualizing conditional probabilities? Can you use
+    this diagram to visualize the conditional property P(A|B)?
+  answer: Conditional probabilities can be well visualized with a probability tree.
+  image: conditional_tree.png
+
+- question: What is the law of total probability?
+  answer: > 
+    P(B) = P(B and A) + P(B and A’) = 
+    <br>
+    P(A) P(B|A) + P(A’) P(B|A’)
+
+- question: What is a probability distribution?
+  answer: A probability distribution displays the probabilities associated with all possible outcomes.
+
+- question: What is the expectation of a probability distribution? Can you calculate it with an example?
+  answer: >
+    The expectation E(X) of a probability distribution X is basically the average value of the
+    probability distribution. It is defined as
+    <br><br>
+    E(X) = sum x * P(X = x)
+    <br><br>
+    For example given x = 1,2,3 and P(x) = 0.2, 0.5, 0.3 we have that E(X) equals 
+    1*0.2 + 2*0.5 + 3*0.3 = 2.1
+
+- question: What is an uniform distribution? Draw a plot of it.
+  answer: An uniform distribution is a distribution where all values are equally likely.
+  image: uniform_distribution.PNG
+
+- question: What types of discrete probability distributions are there?
+  answer: >
+     There are the Bernoulli distribution, the Binomial distribution and
+     the Poisson distribution.
+     <br><br>
+     The Bernoulli distribution is a random experiment that has 2 possible
+     outcomes with probability p and q, where p+q = 1
+     <br><br>
+     The Binomial distribution is a sequence of repeated Bernoulli trials
+     performed indipendently. 
+     <br>
+     n = number of items, k = num items I pickup
+     <br> All possible combinations are n! / ( (n-k)! * k! )
+     <br><br>
+     The Poisson distribution is a limiting version of the Binomial distribution
+     where the number of trials n gets really large but the probability of success p
+     gets smaller at the same time. In other words if you have a Binomial distribution
+     where you let n tends to infinite and p tends to zero such that np = &lambda;, then
+     that distribution approaches a Poisson distribution with parameter &lambda;.
+

@@ -1,0 +1,50 @@
+
+- h2: Machine learning
+  question: What is the difference between data science and machine learning
+  answer: >
+    Data science = statistical analysis + data engineering in order to get 
+    information from the data
+    <br><br>
+    Machine learning = create a model to predict something. You can also define 
+    it as teaching computers to learn by examples
+
+- question: What is Naive Bayes?
+  answer: >
+    Naive Bayes is a supervised machine learning algorithm based on the Bayes theorem that is used
+    to solve classification problems.
+
+- question: Why is Naive Bayes called "naive"?
+  answer: >
+    Because the Naive Bayes is based on the idea that the predictor variables are independent of 
+    each other while in nature this is oft not the case.
+
+- question: What is the Bayes theorem?
+  answer: >
+    The Bayes theorem is a mathematical formula for finding P(A|B) from P(B|A).
+    The formula is 
+    <br><br>
+    P(A|B) = P(B|A) * P(A) / P(B)
+
+
+- question: What are the main advantages of Naive Bayes?
+  answer: >
+    The Naive Bayes is a relatively simple and very quick algorithm since it is a probabilistic 
+    model that does not require a training step. This makes it very scalable.
+
+- question: When is the Naive Bayes usually used?
+  answer: > 
+    Naive Bayes is often used in <br>
+    - text classification like spam filter<br>
+    - real-time classification since it is fast<br>
+    - multi-class prediction
+
+- question: When Naive Bayes is used with numerical variables, what condition is assumed on the data?
+  answer: >
+    Numerical variables used in Naive Bayes are expected to have a normal distribution.
+    This is not always the case in practice.
+
+- question: How does the Naive Bayes perform with categorical variables?
+  answer: > 
+    It performs well with categorical variables since no assumpion is made on
+    the data distribution. By contrast with numerical variables a normal distribution
+    is assumed.
