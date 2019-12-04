@@ -8,7 +8,42 @@
     Machine learning = create a model to predict something. You can also define 
     it as teaching computers to learn by examples
 
-- question: What is Naive Bayes?
+- question: What are the typical steps of a machine Learning process?
+  answer: > 
+    The steps are
+    <br>- domain knowledge
+    <br>- feature selection
+    <br>- choose machine learning algorithm
+    <br>- training
+    <br>- evaluation
+    <br>- optimization
+    <br>- testing
+   
+
+
+- question: What is overfitting and what are some techniques for preventing it?
+  answer: >
+    Overfitting happens when your model works well with the training dataset but
+    does not well with new data, which means the model cannot generalize well. 
+    <br>
+    To prevent overfitting you can for example use regularization and cross-validation.
+
+- question: What is cross-validation in machine learning?
+  answer: > 
+    Cross-validation refers to the process of splitting a dataset into a 
+    training set (usually 80%) and test set (usually 20%) and evaluate
+    the performance of the model with those two datasets. This process
+    is usually repeated 10 times.
+
+- question: What is regularization?
+  answer: >
+    Regularization adds a penalty on the different parameters of the model to reduce the 
+    freedom of the model. Regularization is usually done by adding a correction term to 
+    the formula for a mathematical model. This correction term penalizes the higher order 
+    terms so that the model is forced to be simpler.
+
+- h3: Naive Bayes
+  question: What is Naive Bayes?
   answer: >
     Naive Bayes is a supervised machine learning algorithm based on the Bayes theorem that is used
     to solve classification problems.

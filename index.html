@@ -19,7 +19,8 @@ title: Questions Answers
   <ol>
 
     {% for file in site.data.sort %}
-     {% for item in site.data.files.[file.topic] in%}
+     {% for item in site.data.files.[file.topic] in %}
+     
       {% if item.h2 %}
         <h2>{{item.h2}}</h2>
       {% endif %}
