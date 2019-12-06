@@ -10,7 +10,7 @@
 
 - question: What are the typical steps of a machine Learning process?
   answer: > 
-    The steps are
+    The typical steps of a machine learning process are
     <br>- domain knowledge
     <br>- feature selection
     <br>- choose machine learning algorithm
@@ -19,7 +19,6 @@
     <br>- optimization
     <br>- testing
    
-
 
 - question: What is overfitting and what are some techniques for preventing it?
   answer: >
@@ -41,6 +40,34 @@
     freedom of the model. Regularization is usually done by adding a correction term to 
     the formula for a mathematical model. This correction term penalizes the higher order 
     terms so that the model is forced to be simpler.
+
+- question: What is the curse of dimensionality?
+  answer: >
+    The curse of dimensionality is a tendency that it is easier to overfit a dataset 
+    when there are few points and many features. Data needs to increase exponentially 
+    with the number of features in order not to have overfitting.
+
+- question: What is unsupervised learning? Make also some examples
+  answer: > 
+    Unsupervised learning is a machine learning process with unlabeled data.
+    <br><br>
+    Some examples of unsupervised learning are
+    <br> - Clustering algorithms (K-means, hierarchical custering, Probabilistic clustering)
+    <br> - Dimension reduction algorithms (PCA, Single Value Decomposition SVD)
+
+- question: What is reinforcement learning
+  answer: >
+    It is a machine learning algorithm that receives feedback on his output so that the accuracy
+    of the output is improved based on this feedback. Finally the algorithm learns through trial
+    and error.
+
+- question: What is supervised learning
+  answer: It is a machine learning process with a labeled training dataset.
+
+- question: What are the two main types of supervised learning algorithms?
+  answer: >
+    Supervised machine learning algorithms are mainly classified 
+    into classification and regression.
 
 - h3: Naive Bayes
   question: What is Naive Bayes?
