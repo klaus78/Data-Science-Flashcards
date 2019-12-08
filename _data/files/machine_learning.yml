@@ -69,6 +69,27 @@
     Supervised machine learning algorithms are mainly classified 
     into classification and regression.
 
+
+- h3: Evaluate machine learning methods
+  question: What is bias in a machine learning model?
+  answer: >
+    Bias is the error that is introduced by analyzing a complex model using a too simple model. 
+    In other words bias is the inability of the model to capture the real nature of the true 
+    relationship in the data.
+
+- question: What does high bias mean for my model?
+  answer: High bias means the model is underfitting the data.
+
+- question: What is the variance of a machine learning model
+  answer: > 
+    Variance is the amount that the estimate of the target function will change if different training 
+    data was used.
+
+- question: What does high variance mean for my model?
+  answer: > 
+    High variance means the model is overfitting, ie small changes in the training data set lead 
+    to big changes in the output of the model.
+
 - h3: Naive Bayes
   question: What is Naive Bayes?
   answer: >
