@@ -23,7 +23,7 @@
 - question: What is overfitting and what are some techniques for preventing it?
   answer: >
     Overfitting happens when your model works well with the training dataset but
-    does not well with new data, which means the model cannot generalize well. 
+    does not work well with new data, which means the model cannot generalize well. 
     <br>
     To prevent overfitting you can for example use regularization and cross-validation.
 
@@ -80,7 +80,7 @@
 - question: What does high bias mean for my model?
   answer: High bias means the model is underfitting the data.
 
-- question: What is the variance of a machine learning model
+- question: What is the variance of a machine learning model?
   answer: > 
     Variance is the amount that the estimate of the target function will change if different training 
     data was used.
