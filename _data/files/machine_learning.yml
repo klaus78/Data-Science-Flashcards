@@ -90,6 +90,53 @@
     High variance means the model is overfitting, ie small changes in the training data set lead 
     to big changes in the output of the model.
 
+
+- question: What matrix do you construct to evaluate the performance of a classifier?
+  answer: >
+    To evaluate the performance of a classifier you construct a confusion matrix
+    <table>
+      <tr>
+        <td></td>
+        <th>y = 1</th> 
+        <th>y = -1</th>
+      </tr>
+      <tr>
+        <td>y# = 1</td>
+        <td>TP</td> 
+        <td>FP</td>
+      </tr>
+      <tr>
+        <td>y# = -1</td>
+        <td>FN</td> 
+        <td>TN</td>
+      </tr>
+    </table>
+    <br>
+    where 
+    y = actual label, y# = predicted label, TP = true positives, FP = false positives, FN = false negatives
+    TN = true negatives.
+
+- question: Can you mention some numerican quantities used to evaluate classifiers?
+  answer: >
+    misclassification error or accuracy = (FP + FN) / n
+    <br>true positive rate or sentitivity = TP / (TP + FN)
+    <br>true negative rate or specificity = TN / (TN + FP)
+    <br>Precision  = TP / (TP + FP)
+    <br>False positive rate (FNR)  = FP / (TN + FP)
+    <br>False  negative rate (FNR)  = FN / (TP + FN)
+
+- question: To evaluate a generic ML model what numerical quantity do you typically use?
+  answer: You would the use misclassification error or accuracy
+
+- question: To evaluate a ML model for medicine what numerical quantities do you typically use?
+  answer: Doctors would use sensitivity and specificity.
+
+- question: If you want to evaluate a classifier with a curve what do you use?
+  answer: >
+    You can use an ROC curve. An ROC curve answers to the question 
+    “for a particular false positive rate what is the corresponding true positive rate?
+  image: roc_curve.png
+
 - h3: Naive Bayes
   question: What is Naive Bayes?
   answer: >
@@ -131,3 +178,4 @@
     It performs well with categorical variables since no assumpion is made on
     the data distribution. By contrast with numerical variables a normal distribution
     is assumed.
+
