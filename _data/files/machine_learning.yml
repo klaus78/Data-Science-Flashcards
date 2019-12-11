@@ -179,3 +179,28 @@
     the data distribution. By contrast with numerical variables a normal distribution
     is assumed.
 
+- h3: Regression
+  question: What do you predict with linear regression?
+  answer: Linear regression predicts a real value
+
+- question: What are the most common techniques used for computing the coefficients in linear regression?
+  answer: >
+    The most common techniques used for computing the coefficients in linear regression are 
+    <br> - Ordinary Least Squares. Seeks to minimize the sum of the squared residuals, ie the distance 
+    between the points and the regression line.
+    <br><br> - Gradient descendent. Works by inizializing randomly the coefficients. A learning rate is 
+    used as a scale factor and the coefficients are updated in the direction towards minimizing the error. 
+    The process is repeated until a minimum sum squared error is achieved or no further improvement is 
+    possible.
+
+- question: What is logistic regression?
+  answer: >
+    It is a statistical technique that is used to analyze a dataset and predict the binary outcome. 
+    The outcome has to be a binary outcome that is either zero or one or a yes or no. 
+    In other words the output of a logistic regression is always categorical (= discrete)
+
+
+- question: What do you predict with logistic regression?
+  answer: >
+    Logistic regression predicts the probabilty that a variable has one value or another. 
+    Thus it is a binary variable.
