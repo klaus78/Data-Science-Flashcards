@@ -204,3 +204,19 @@
   answer: >
     Logistic regression predicts the probabilty that a variable has one value or another. 
     Thus it is a binary variable.
+
+- question: What is the KNN algorithm?
+  answer: >
+    A k-nearest neighbor (KNN) method scores an example by finding the k training examples 
+    nearest to the example and then taking the average of their outcomes as the score.
+
+- question: Can you mention some advantages and disadvantages of the KNN algorithm?
+  answer: >
+    Some advantages are
+    <br>- simple concept
+    <br>- builiding a model is cheap
+    <br>- no assumption is made about the data distrubution
+    <br><br>Some disadvantages are
+    <br>- classifying unknown records is expensive, in particular with big data sets, 
+         since you have to find the K nearest neighbors
+    <br>- pretty affected by data missing and data scaling
