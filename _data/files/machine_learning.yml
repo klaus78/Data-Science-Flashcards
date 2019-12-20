@@ -220,3 +220,51 @@
     <br>- classifying unknown records is expensive, in particular with big data sets, 
          since you have to find the K nearest neighbors
     <br>- pretty affected by data missing and data scaling
+
+- h3: Decision trees
+  question: What is a decision trees?
+  answer: >
+    A decision tree is a classification algorithm that models the features and the data in a tree-like 
+    structure.
+- question: How are decision trees built?
+  answer: >
+    Building a decision tree is a recursive process. The dataset is split into subsets, which are 
+    then split repeatedly into even smaller subsets, and so on and so forth until the process stops 
+    when the algorithm determines the data within the subsets are sufficiently homogenous, or another 
+    stopping criterion has been met.
+- question: What is a great advantage of using decision trees?
+  answer: >
+    The output of the decision trees is human readable. This makes thiis algorithm interesting to be 
+    used in cases where the decision mechanism needs to be transparent because of legal reasons 
+    (for example medical diagnostics)
+- question: What are some disadvantages of decision trees?
+  answer: >
+    - each split considers one feature at a time which means that the decision lines are basically 
+    parallel to the axis and are not diagonal, which would be the case if you would evaluate two or 
+    more features within the same split.
+    <br><br>- it is easy to overfit or underfit the model
+    <br><br>- small changes in the input data will lead to a very different output
+- question: >
+    What technique do you use to reduce the overfitting of a decision tree. How many appraches there are?
+  answer: >
+    To reduce the overfitting of a decision tree you can use pruning, which reduces the size of the tree. 
+    There are two approaches to pruning<br>
+    <br><br>Pre-pruning - the tree stop growing when it reaches a certain number of decisions or when 
+    the decision nodes contains too few items. A disadvantage of this approach is that some important 
+    data could be pruned.
+    <br><br>Post-pruning - the tree can grow as needed and only at the end it is checked if the tree 
+    is too big. This approach guarantees that the important data is not pruned.
+
+- question: >
+   What are the main techniques to combine decision trees to obtain a more accurate model 
+   (so called ensemble techniques)?
+  answer: >
+    There are two techniques
+    <br><br> Boosting algorithms. This is a sequential process. In boosting algorithms learners 
+    are learned sequentially with early learners fitting simple models to the data and then analyzing 
+    data for errors. After each training step the weights are redistributed. 
+    Misclassified data gets an increased weight so that this data will be more on focus in the 
+    next train step.
+    <br><br>Bagging techniques. This is a parallel process. In a bagging technique the dataset is 
+    divided into n samples using randomized sampling.Then a model is build on each sample. 
+    After that the resulting models are combined using voting or averaging.
