@@ -15,14 +15,17 @@ title: Questions Answers
 
  
 
-  <h1>Data science questions / answers</h1>
-
+  <h1>Data science questions / answer</h1>
 
   {% for file in site.data.sort %}
   {% for item in site.data.files.[file.topic] in %}
     
     {% if item.h2 %}
-      <a href="#{{item.h2}}"><h3>{{item.h2}}</h3></a>
+      <a href="#{{item.h2}}"><h2>{{item.h2}}</h2></a>
+    {% endif %}
+
+    {% if item.h3 %}
+      <a href="#{{item.h3}}"><h3>{{item.h3}}</h3></a>
     {% endif %}
 
   {% endfor %}
@@ -39,7 +42,7 @@ title: Questions Answers
       {% endif %}
 
       {% if item.h3 %}
-        <h3>{{item.h3}}</h3>
+        <h3 id="{{item.h3}}">{{item.h3}}</h3>
       {% endif %}
 
       <li>
