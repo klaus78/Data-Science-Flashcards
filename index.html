@@ -25,7 +25,9 @@ title: Questions Answers
     {% endif %}
 
     {% if item.h3 %}
-      <a href="#{{item.h3}}"><h3>{{item.h3}}</h3></a>
+      <ul>
+        <li><a href="#{{item.h3}}"><h3>{{item.h3}}</h3></a></li>
+      </ul>
     {% endif %}
 
   {% endfor %}
@@ -43,6 +45,7 @@ title: Questions Answers
 
       {% if item.h3 %}
         <h3 id="{{item.h3}}">{{item.h3}}</h3>
+        <a href="#top">Top</a>
       {% endif %}
 
       <li>
