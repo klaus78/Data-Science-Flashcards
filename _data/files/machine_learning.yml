@@ -129,7 +129,7 @@
     False positives (negatives) = number of items with labels y = -1 (1) that
     are classified wrongly.
 
-- question: Can you mention some numerican quantities used to evaluate classifiers?
+- question: Can you mention metrics used to evaluate classifiers?
   answer: >
     accuracy = (TP + TN) / n
     <br>true positive rate or sentitivity  or recall = TP / (TP + FN)
@@ -140,18 +140,37 @@
     <br><br>
     Accuracy is the percentage of the correctly classified items.
     <br><br>
-    Precision is the percentage of the items that were correctly classified
-    as positive.
+    Precision is the percentage of the items that were classified
+    as positive and that are actually positive.
+    <br><br>
+    Recall is the percentage of the items that are positive and that
+    were classified as positive.
 
-- question: To evaluate a generic machine learning model what numerical quantity do you typically use?
+- question: To evaluate a generic machine learning model what metrics do you typically use?
   answer: > 
     You would the use misclassification error or accuracy. 
-    Accuracy is useful when all classes are equally important.
+    Accuracy works well when all classes are equally important and the 
+    training dataset is balanced.
 
-- question: To evaluate a machine learning model for cancel detection what numerical quantities do you typically use?
+- question: > 
+    To evaluate a machine learning model for cancel detection what metrics do 
+    you typically use?
   answer: > 
     Doctors would use sensitivity and specificity because the cost of a misclassified cancer 
     is much higher than the cost of a healthy tissue classified as cancer.
+
+- question: What is the meaning and use of the F-measure (also called F-score)?
+  answer: >
+    The F-measure combines the precision and recall using the harmonic mean.
+    <br><br>
+    F-measure = 2 (Precision X Recall) / (Precision + Recall)
+    <br><br>
+    The F-measure value is between 0 (worst case) and 1 (best case). It can be used
+    when you want to compare the performance of two classifiers w.r.t. precision and recall
+    but you are not sure which of the two values to pick. So with the F-measure you seek
+    a balance between precision and recall.
+
+
 
 - question: If you want to evaluate a classifier with a curve what do you use?
   answer: >
