@@ -23,21 +23,29 @@
   answer: > 
     It is a technique that scales the values so that they will have the properties
     of a standard distribution with mean &mu; = 0  and standard deviation &sigma; = 1.
+    <br>The formula for the normalization is z = (x - &mu;) / &sigma;
 
 
 - question: What is the min-max scaling (also called normalization)?
-  answer: It is a technique that scales the values between 0 and 1.
+  answer: It is a technique that scales the values between 0 and 1. 
+  <br>The formula for the min max scaling is 
+  <br>scaled = (toscale - min) / (max - min)
 
 - question: When is Z-score normalization used? When is min-max scaling used instead?
   answer: >
-    The min-max scaling can work better when the distribution is not gaussian
-    or when the standard deviation is very small.
+    The Z-score normalization is used when the data has a gaussian distribution.
+    <br><br>
+    The min-max scaling is more used when the distribution is not gaussian or not known.
+    In addition, the min-max scaling works better than the Z-normalization when the 
+    standard deviation is very small. Indeed in such case the effect of scaling the data
+    between 0 and 1 will not affect the standard deviation significantly since it 
+    is already small.
 
 - question: >
     What is the disadvantage of min-max scaling compared to Z-score normalization 
     concerning outliers?
   answer: >
-    The min-max scaling is more sensitive to min-max scaling since the data is
+    The min-max scaling is more sensitive to outliers since the data is
     bounded between 0 and 1 which automatically leads to information loss about
     outliers. 
     <br>
