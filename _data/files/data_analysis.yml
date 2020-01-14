@@ -27,9 +27,10 @@
 
 
 - question: What is the min-max scaling (also called normalization)?
-  answer: It is a technique that scales the values between 0 and 1. 
-  <br>The formula for the min max scaling is 
-  <br>scaled = (toscale - min) / (max - min)
+  answer: >
+    It is a technique that scales the values between 0 and 1. 
+    <br>The formula for the min max scaling is 
+    <br>scaled = (toscale - min) / (max - min)
 
 - question: When is Z-score normalization used? When is min-max scaling used instead?
   answer: >

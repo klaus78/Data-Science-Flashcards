@@ -48,7 +48,7 @@
     when there are few points and many features. Data needs to increase exponentially 
     with the number of features in order not to have overfitting.
 
-- question: What is unsupervised learning? Make also some examples
+- question: What is unsupervised learning? Make also some examples of algorithms
   answer: > 
     Unsupervised learning is a machine learning process with unlabeled data.
     <br><br>
@@ -70,12 +70,17 @@
     Supervised machine learning algorithms are mainly classified 
     into classification and regression.
 
+- question: Can you mention some supervised machine learning algorithms?
+  answer: >
+    The most common supervised machine learning algorithms are 
+    <br>K-nearest neighbor, Naive Bayes, Decision Trees, Linear Regression, 
+    Support Vector Machines.
+
 - question: What are hyperparameters?
   answer: >
     Hyperparameters are parameters used by the training model and 
     they must be obviously set before starting the training process. 
     An example is the the k value in the k-nearest neighbor algorithm.
-
 
 - h3: Evaluate machine learning methods
   question: What is bias in a machine learning model?
