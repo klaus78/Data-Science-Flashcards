@@ -145,11 +145,13 @@
     <br><br>
     Accuracy is the percentage of the correctly classified items.
     <br><br>
-    Precision is the percentage of the items that were classified
-    as positive and that are actually positive.
+    Precision is the percentage of the items classified as positive that are actually positive
     <br><br>
-    Recall is the percentage of the items that are positive and that
-    were classified as positive.
+    Sensitivity or Recall is the percentage of the positive items that
+    were actually classified as positive.
+    <br><br>
+    Specificity is the percentage of the negative items that
+    were actually classified as negative.
 
 - question: To evaluate a generic machine learning model what metrics do you typically use?
   answer: > 
@@ -179,7 +181,25 @@
 
 - question: If you want to evaluate a classifier with a curve what do you use?
   answer: >
-    You can use an ROC curve. An ROC curve answers to the question 
+    You can use an ROC curve. The ROC curve plots the sensitivity (= TPF) against
+    1-specificity (=FPR) for different values of a parameter that affects the classifier.
+    <br><br>
+    Sensitivity = probability of predicting that a real positive will be positive. This can
+    be seen as the accuracy of positives.
+    <br>
+    Specificity = probability of predicting that a real negative will be negative. This can
+    be seen as the accuracy of negatives.
+    <br><br>
+    The best result is high sensitivity and low specificity which means the closest the curve
+    is to point (0,1), the better. This can be also expressed as the farther the curve is
+    from the diagonal line (0,0)-(1,1) the better. This diagonal line represents the line of 
+    a classifier working at random. 
+    <br>
+    The distance of the curve from point (0,1) can be measured with the AUC (area under the curve)
+    that should be close to 1 as much as possible.
+
+    
+    answers to the question 
     “for a particular false positive rate what is the corresponding true positive rate?
   image: roc_curve.png
 
