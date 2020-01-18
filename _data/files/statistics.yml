@@ -135,3 +135,17 @@
     The mean is more useful when there are no outliers.
     <br>The median is more useful when there are outliers.
 
+- question: >
+    What quantities can you use to measure variability and spread?
+  answer: >
+    You can use the following quantities: range, interquartile range, 
+    variance and standard deviation.
+
+- question: What is range?
+  answer: Range is the difference max -  min
+
+- question: What is the interquartile range?
+  answer: >
+    The interquartile range is found as follows:
+    <br>Divide the interval into 4 equal parts Q1, Q2, Q3, Q4. 
+    <br>The interquartile range is then IQR = Q3 - Q1
