@@ -136,6 +136,15 @@
     <br>The median is more useful when there are outliers.
 
 - question: >
+    When the median and the mean have the same value or different values, what does it mean?
+  answer: >
+    If the distribution is a normal distribution then the mean and variance are equals.
+    However, when the mean and variance are equal, this does not mean the distribution is normal.    
+    <br><br>If mean > median, the distribution is skewed to the right, ie the tail is on the right.
+    <br><br>If mean < median, the distribution is skewed to the left, ie the tail is on the left.
+  image: mean_median_skewed.png
+
+- question: >
     What quantities can you use to measure variability and spread?
   answer: >
     You can use the following quantities: range, interquartile range, 
