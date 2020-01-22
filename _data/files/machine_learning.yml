@@ -83,6 +83,13 @@
     An example is the the k value in the k-nearest neighbor algorithm.
 
 - h3: Evaluate machine learning methods
+  question: What is the difference between model evaluation and model validation?
+  answer: >
+    The difference between model evaluation and model validation is that
+    <br><br>model evaluation is used to check the performance of a machine learning model
+    on the training set.
+    <br><br>model validation is used to ensure that a model performs well also on a test set.
+
   question: What is bias in a machine learning model?
   answer: >
     Bias is the error that is introduced by analyzing a complex model using a too simple model. 
@@ -101,7 +108,6 @@
   answer: > 
     High variance means the model is overfitting, ie small changes in the training data set lead 
     to big changes in the output of the model.
-
 
 - question: What matrix do you construct to evaluate the performance of a classifier?
   answer: >
@@ -268,15 +274,27 @@
 
 - question: What do you predict with logistic regression?
   answer: >
-    Logistic regression predicts the probabilty that a variable has one value or another. 
-    Thus it is a binary variable.
+    Logistic regression predicts the probabilty that a variable belongs to one 
+    class or another. 
 
-- question: What is the KNN algorithm?
+- question: Can you explain a real use case for logistic regression?
+  answer: >
+    You can use logistic regression to predict the probability that a customer will buy 
+    a product.	
+
+- question: How can you turn logistic regression into a classifier?
+  answer: >
+    To turn logistic regression into a classifier you can use a threshold. If the 
+    output of the logistic regression is above (below) the threshold, then the output
+    can be classified as class zero (class one).
+
+- h3: K-Nearest neighbor algorithm (KNN)
+  question: What is the KNN algorithm?
   answer: >
     A k-nearest neighbor (KNN) method scores an example by finding the k training examples 
     nearest to the example and then taking the average of their outcomes as the score.
 
-- question: Can you mention some advantages and disadvantages of the KNN algorithm?
+- question: What are some advantages and disadvantages of the KNN algorithm?
   answer: >
     Some advantages are
     <br>- simple concept
@@ -286,6 +304,12 @@
     <br>- classifying unknown records is expensive, in particular with big data sets, 
          since you have to find the K nearest neighbors
     <br>- pretty affected by data missing and data scaling
+
+- question: Make an example of a real user-case for the KNN algorithm
+  answer: >
+    You can use the KNN algorith to recommend a product to a customer 
+    based on the purchases of other similar customers.
+    
 
 - h3: Decision trees
   question: What is a decision trees?
