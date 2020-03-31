@@ -76,6 +76,31 @@
     a) replace the missing values with the mean<br>
     b) interpolate values<br>
     c) take the previous or next value
+
+- question: >
+    What are the two basic models for feature selection? 
+  answer: >
+    There are basically two types of models for feature selection:
+    <br><br>- wrapper methods: the basic idea is to create many machine learning models
+    with different subsets of features. Finally select the features that provide the best
+    performance according to a certain metric.
+    <br><br>- filter methods: the relationship between between each feature and the target
+    variable is quantified. Depending on the relationship value then a number of features 
+    can be salected.
+    
+- question: What are the differences between the two main models for feature selection?
+  answer: >
+    Some differences between filter and wrapper methods are
+    <br>- wrapper methods rely on machine learning models while filter methods do not. Filter
+    methods rely on statistical values.
+    <br>- filter methods can fail when there is not enough data to extract meaningful 
+    statistical values
+    <br>- wrapper methods take much more time since they involve training a number of
+    machine learning models.
+    <br>- using features extracted with wrapper methods can lead to machine learning models
+    affected by overfitting since those features have been extracted using machine learning
+    models.
+
 - question: Can you draw a boxplot and explain it?
   answer: >
     Upper extreme (95th Percentile) = exactly 5 percent of the values in the data are 

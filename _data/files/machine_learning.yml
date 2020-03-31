@@ -35,13 +35,14 @@
     the performance of the model with those two datasets. 
 
 - question: What is K-fold cross-validation?
-  answer: K-fold cross-validation is a kind of cross-validation. The steps are
-  <br>- split a dataset into k parts. Each part is called fold.
-  <br>- take one fold i as test set and take the remaining (k-1) folds as training set.
-  <br>- train you classification algorithm with the two datasets from previous point. Finally for 
-  each fold we get an accuracy value. i.e. in total we get K accuracy values.
-  <br>- the final accuracy value for your classification algorithm is given by the average of
-  the K accuracy values.
+  answer: >
+    K-fold cross-validation is a kind of cross-validation. The steps are
+    <br>- split a dataset into k parts. Each part is called fold.
+    <br>- take one fold i as test set and take the remaining (k-1) folds as training set.
+    <br>- train you classification algorithm with the two datasets from previous point. Finally for 
+    each fold we get an accuracy value. i.e. in total we get K accuracy values.
+    <br>- the final accuracy value for your classification algorithm is given by the average of
+    the K accuracy values.
 
 - question: What is regularization?
   answer: >
