@@ -32,8 +32,16 @@
   answer: > 
     Cross-validation refers to the process of splitting a dataset into a 
     training set (usually 80%) and test set (usually 20%) and evaluate
-    the performance of the model with those two datasets. This process
-    is usually repeated 10 times.
+    the performance of the model with those two datasets. 
+
+- question: What is K-fold cross-validation?
+  answer: K-fold cross-validation is a kind of cross-validation. The steps are
+  <br>- split a dataset into k parts. Each part is called fold.
+  <br>- take one fold i as test set and take the remaining (k-1) folds as training set.
+  <br>- train you classification algorithm with the two datasets from previous point. Finally for 
+  each fold we get an accuracy value. i.e. in total we get K accuracy values.
+  <br>- the final accuracy value for your classification algorithm is given by the average of
+  the K accuracy values.
 
 - question: What is regularization?
   answer: >
@@ -324,7 +332,7 @@
     stopping criterion has been met.
 - question: What is a great advantage of using decision trees?
   answer: >
-    The output of the decision trees is human readable. This makes thiis algorithm interesting to be 
+    The output of the decision trees is human readable. This makes decision trees interesting to be 
     used in cases where the decision mechanism needs to be transparent because of legal reasons 
     (for example medical diagnostics)
 - question: What are some disadvantages of decision trees?
@@ -335,7 +343,7 @@
     <br><br>- it is easy to overfit or underfit the model
     <br><br>- small changes in the input data will lead to a very different output
 - question: >
-    What technique do you use to reduce the overfitting of a decision tree. How many appraches there are?
+    What technique do you use to reduce the overfitting of a decision tree? How many approaches there are?
   answer: >
     To reduce the overfitting of a decision tree you can use pruning, which reduces the size of the tree. 
     There are two approaches to pruning<br>

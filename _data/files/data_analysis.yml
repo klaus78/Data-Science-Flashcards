@@ -25,7 +25,6 @@
     of a standard distribution with mean &mu; = 0  and standard deviation &sigma; = 1.
     <br>The formula for the normalization is z = (x - &mu;) / &sigma;
 
-
 - question: What is the min-max scaling (also called normalization)?
   answer: >
     It is a technique that scales the values between 0 and 1. 
@@ -52,6 +51,15 @@
     <br>
     The Z-score normalization is more suited when there are outliers since the
     data is not bounded but simply rescaled to have mean 0 and standard deviation 1.
+
+- question: >
+    What kind of algorithms are not affected by feature scaling? 
+    Can you make some examples of such algorithms? 
+  answer: >
+    Any algorithm that is not distance based is not affected by feature scaling.
+    <br>
+    Examples of algorithms not affected by feature scaling are Naive Bayes, Tree-based
+    algorithms and Linear Discriminant Analysis.
 
 - question: How to treat missing values?
   answer: >
