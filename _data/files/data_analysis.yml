@@ -101,6 +101,26 @@
     affected by overfitting since those features have been extracted using machine learning
     models.
 
+- question: Can you explain what correlation is?
+  answer: >
+    Correlation is a statistical value that quantifies the dependency between
+    two variables. The most common correlation is the Pearson’s Correlation which
+    measures linear relationships. Its value ranges from -1 to +1. The -1 (+1) value represents a 
+    perfectly negative (positive) linear relationship. The close the value to 0 is, the weakest the
+    linear correlation is. As a thumb rule you can consider values < -0.5 or > +0.5
+    to have a significant relationship.
+
+- question: What are some limitations of correlation?
+  answer: >
+    Some limitations of correlation are
+    <br>- it captures linear relationships. For this reason it makes sense to use correlation
+    when there is a kind of linear relationship between two variables. This can be seen with
+    a scatter plot.
+    <br>- if two variables have a more complex relationship than a linear one, but this 
+    relationship will not be captured in the correlation value.
+    <br>- a strong correlation between two variables does not mean that changes in one variable
+    does cause changes in the other variable. In other words correlation does not mean causation.
+
 - question: Can you draw a boxplot and explain it?
   answer: >
     Upper extreme (95th Percentile) = exactly 5 percent of the values in the data are 
