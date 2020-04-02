@@ -78,7 +78,7 @@
     c) take the previous or next value
 
 - question: >
-    What are the two basic models for feature selection? 
+    What are the two basic types of feature selection? 
   answer: >
     There are basically two types of models for feature selection:
     <br><br>- wrapper methods: the basic idea is to create many machine learning models
@@ -88,7 +88,7 @@
     variable is quantified. Depending on the relationship value then a number of features 
     can be salected.
     
-- question: What are the differences between the two main models for feature selection?
+- question: What are the differences between the two main types of feature selection?
   answer: >
     Some differences between filter and wrapper methods are
     <br>- wrapper methods rely on machine learning models while filter methods do not. Filter
@@ -120,6 +120,20 @@
     relationship will not be captured in the correlation value.
     <br>- a strong correlation between two variables does not mean that changes in one variable
     does cause changes in the other variable. In other words correlation does not mean causation.
+
+- question: How can you use correlation for feature selection?
+  answer: >
+    There are at least two approaches:
+    <br>- use the the correlation of each feature with the target. You can keep those features 
+    that have a significant correlation, i.e. a correlation
+    value < -0.5 or > +0.5. 
+    <br>- You can use the pairwise correlation between features. If two features are highly 
+    correlated then you can drop one of them since they provide the same information.
+
+- question: How can you use variance for feature selection?
+  answer: >
+    Features with a low variance can be dropped since (almost) constant features do not provide
+    any information.
 
 - question: Can you draw a boxplot and explain it?
   answer: >
