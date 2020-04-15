@@ -20,7 +20,6 @@
     <br>- testing
     <br>- deployment
    
-
 - question: What is overfitting and what are some techniques for preventing it?
   answer: >
     Overfitting happens when your model works well with the training dataset but
@@ -321,7 +320,7 @@
     
 
 - h3: Decision trees
-  question: What is a decision trees?
+  question: What is a decision tree?
   answer: >
     A decision tree is a classification algorithm that models the features and the data in a tree-like 
     structure.

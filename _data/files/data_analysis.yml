@@ -1,4 +1,36 @@
 - h2: Data Analysis
+  question: What are the two main types of data?
+  answer: >
+     The two main types of data are
+     <br>- numeric.
+     <br>- categorical. The variable can be only one of a finite set of values.
+       
+       
+- question: You can divide numerical data into two types. What are they?
+  answer: >
+    The two types of numerical data are
+    <br><br>- interval data. Interval data is a data type that is measured on a scale where all 
+    points are at the same distance. Interval data does not have a zero point.
+    Without a zero point the concept of multiplication and division is not
+    applicable and thus only sum and difference operations can be applied to interval data.
+    An example of interval data is tempeature in C and F. You cannot say that 20C is twice
+    as hot as 10C. This is equivalent to 50F and 68F which is clearly not as twice as hot.
+    <br><br>- radio data. Ratio data is similar similar to interval data except that it has a 
+    meaningful zero value so that all the sum, subtraction, multiplication and division operations
+    can be applied. Some examples of ratio data are the length and the weight.
+       
+- question: You can divide categorical data into two types. What are they?
+  answer: >
+    There are two types of categorical data
+    <br><br>- ordinal data= this data has some kind of order but the difference between
+    items is not important. An example of ordinal data are the months or the
+    happiness state (sad, happy, very happy etc)
+    <br><br>- nominal data = data without order and without any quantitative value.
+    Some examples of nominal data are all cities in the USA, the gender (male/female),
+    the color hair (brown, black, blonde etc)
+
+
+- h3: Distance metrices
   question: What is the hamming distance?
   answer: >
     The hamming distance is used for categorical features. If all the variables 
@@ -18,6 +50,55 @@
   answer: >
     The Levenshtein distance is the minimum number of single-character edits 
     (insertions, deletions or substitutions) to change one word into one another
+
+
+- h3: Feature engineering
+  question: What are the main techniques of feature engineering
+  answer: >
+    The main techniques of feature engineering are
+    <br><br>- feature selection. It selects a subset of features without
+    transforming them
+    <br><br>- feaure learning. Use ML learning algorithms to extract the best features
+    <br><br>- feature extraction. transform the existing features into new features. This
+    is usually done by dim reduction
+    <br><br>- feature combination. Combine single features into a more powerful feature
+         
+
+- question: What are the main purposes of feature selection?
+  answer: >
+    Reducing the number of features by feature selection are useful for
+    <br><br>- making models more understandable
+    <br><br>- reducing the training times
+    <br><br>- avoid the curse of dimensionality
+    <br><br>- reduce the risk of overfitting by removing noise in the data
+   
+- question: What are the main techniques of feature selection?
+  answer: >
+    The main techniques of feature selection are
+    <br><br>- filter methods. Statistical techniques are used to evaluate the relationship 
+    between indiviual features and the target features. This technique is completely independent 
+    of the model
+    <br><br>- wrapper method. This consists in training a machine learning model 
+    by adding/removing features so you can evauate their effect on the model based on a 
+    certain scoring
+    <br><br>- embedded methods. The features are selected during the model training
+    and more important features are assigned an higher rank. Examples of such
+    models are decision trees and lasso regression models
+
+
+- question: What are some differences between the main techniques of feature selection?
+  answer: >
+    Some differences between filter and wrapper methods are
+    <br><br>- wrapper methods rely on machine learning models while filter methods do not. Filter
+    methods rely on statistical values.
+    <br><br>- filter methods can fail when there is not enough data to extract meaningful 
+    statistical values
+    <br><br>- wrapper methods take much more time since they involve training a number of
+    machine learning models.
+    <br><br>- using features extracted with wrapper methods can lead to machine learning models
+    affected by overfitting since those features have been extracted using machine learning
+    models.    
+
 
 - question: What is the Z-score normalization (also called standardization)?
   answer: > 
@@ -77,49 +158,35 @@
     b) interpolate values<br>
     c) take the previous or next value
 
-- question: >
-    What are the two basic types of feature selection? 
-  answer: >
-    There are basically two types of models for feature selection:
-    <br><br>- wrapper methods: the basic idea is to create many machine learning models
-    with different subsets of features. Finally select the features that provide the best
-    performance according to a certain metric.
-    <br><br>- filter methods: the relationship between between each feature and the target
-    variable is quantified. Depending on the relationship value then a number of features 
-    can be salected.
-    
-- question: What are the differences between the two main types of feature selection?
-  answer: >
-    Some differences between filter and wrapper methods are
-    <br>- wrapper methods rely on machine learning models while filter methods do not. Filter
-    methods rely on statistical values.
-    <br>- filter methods can fail when there is not enough data to extract meaningful 
-    statistical values
-    <br>- wrapper methods take much more time since they involve training a number of
-    machine learning models.
-    <br>- using features extracted with wrapper methods can lead to machine learning models
-    affected by overfitting since those features have been extracted using machine learning
-    models.
 
-- question: Can you explain what correlation is?
+- h3: Correlation
+  question: What is correlation? Is correlation related with causation?
+  answer: >
+    Correlation is any statistical relationship, causal or not, between two variables.
+    Correlation does not mean causation.
+
+- question: What range of values can have correlation? What values are significant?
   answer: >
     Correlation is a statistical value that quantifies the dependency between
-    two variables. The most common correlation is the Pearson’s Correlation which
-    measures linear relationships. Its value ranges from -1 to +1. The -1 (+1) value represents a 
-    perfectly negative (positive) linear relationship. The close the value to 0 is, the weakest the
+    two variables.  The correlation value ranges from -1 to +1. The -1 (+1) value represents a 
+    perfectly negative (positive) correlation. The close the value to 0 is, the weakest the
     linear correlation is. As a thumb rule you can consider values < -0.5 or > +0.5
-    to have a significant relationship.
-
-- question: What are some limitations of correlation?
+    to have a significant relationship.    
+   
+   
+- question: There are three main types of correlation, what are they and when are they used?
   answer: >
-    Some limitations of correlation are
-    <br>- it captures linear relationships. For this reason it makes sense to use correlation
-    when there is a kind of linear relationship between two variables. This can be seen with
-    a scatter plot.
-    <br>- if two variables have a more complex relationship than a linear one, but this 
-    relationship will not be captured in the correlation value.
-    <br>- a strong correlation between two variables does not mean that changes in one variable
-    does cause changes in the other variable. In other words correlation does not mean causation.
+    The three most common type of correlation are
+    <br><br>- Pearson. It is the most common correlation and is used only with numerica data
+    It measures the linear relationship between two variables. It also assumes
+    that the variables are normally distributed.
+    <br><br>- Kendall. It is a rank correlation measure. It works with interval,
+    ratio and ordinal data. It measures how similar ranked orderings are. 
+    No linear correlation is assumed.
+    <br><br>- Spearman. It is is a rank correlation measure. No linearity is assumed but 
+    a monotonic relationship, ie an increasing (var1 increases and also var2 increases) 
+    or decreasing (var1 decreases and also var2 decreases) relationship.
+
 
 - question: How can you use correlation for feature selection?
   answer: >
@@ -135,7 +202,21 @@
     Features with a low variance can be dropped since (almost) constant features do not provide
     any information.
 
-- question: Can you draw a boxplot and explain it?
+- h3: Dimensionality reduction
+  question: What are the main techniques of dimensionality reduction?
+  answer: >
+    The main techniques of dimensionality reduction are
+    <br>- projection
+    <br>- manifold learning
+    <br>- autoencoding
+
+- question: >
+    PCA is affected by scale. To get the optimal performance out of PCA, 
+    which is a crucial first step?
+  answer: It is necessary to standardize the data using z-score
+
+- h3: Charts
+  question: Can you draw a boxplot and explain it?
   answer: >
     Upper extreme (95th Percentile) = exactly 5 percent of the values in the data are 
     greater than this value. (May instead be the highest value if not displayed separately as dots).<br>
