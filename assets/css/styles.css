@@ -3,7 +3,8 @@
       text-align: left;
       background-color: lightblue;
       margin-top:5px;
-      display:none;
+      padding:2px;
+      display: none;
 }
 
 .divQuestion {
@@ -24,5 +25,12 @@ img {
       width: auto;
       max-width: 100%;
       height: auto;
+      padding: 2px;
 }
 
+
+
+div.flex-box {
+      display:flex;
+      justify-content: space-between;
+}
