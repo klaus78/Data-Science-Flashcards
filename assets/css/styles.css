@@ -1,9 +1,10 @@
 .divAnswer {
       width: 100%;
       text-align: left;
-      background-color: lightblue;
+      background-color: #f8f8f8;
       margin-top:5px;
       padding:2px;
+      border:1px solid #d8d8d8;
       display: none;
 }
 
@@ -14,11 +15,19 @@
 button {
       background-color: #5b82d7; 
       border: none;
+      cursor: pointer;
+      border-radius: 2px;
       color: white;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       padding:8px;
+}
+button:hover {
+      background-color: #4265b3;
+}
+button:active {
+      transform: translateY(1px);
 }
 
 img {

@@ -14,11 +14,15 @@ title: Questions Answers
 <body> 
 
   <div class="flex-box">
-    <span><h1 class="h1-inline">Data science questions / answer</h1></span>
+    <span><h1 class="h1-inline">Data Science Flashcards</h1></span>
     <span><a href="https://github.com/klaus78/Data_Science_Questions_Answers">Contribute</a></span>
   </div>
 
-  
+  <p>
+    This is a large and comprehensive collection of Data Science questions and answers in forms of flashcards. 
+    By answering these questions you can test your knowledge and prepare for interviews. Below
+    you can select a topic and jump to the respective questions. 
+  </p>
 
   
 
@@ -44,11 +48,13 @@ title: Questions Answers
      {% for item in site.data.files.[file.topic] in %}
      
       {% if item.h2 %}
+        <hr style="border: 4px solid;border-radius: 4px;">
         <h2 id="{{item.h2}}">{{item.h2}} </h2>
         <a href="#top">Top</a>
       {% endif %}
 
       {% if item.h3 %}
+        <hr>
         <h3 id="{{item.h3}}">{{item.h3}}</h3>
         <a href="#top">Top</a>
       {% endif %}
