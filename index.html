@@ -11,7 +11,7 @@ title: Questions Answers
   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
 
-<body> 
+<body>
 
   <div class="flex-box">
     <span><h1 class="h1-inline">Data Science Flashcards</h1></span>
@@ -19,9 +19,9 @@ title: Questions Answers
   </div>
 
   <p>
-    This is a large and comprehensive collection of Data Science questions and answers in forms of flashcards. 
-    By answering these questions you can test your knowledge and prepare for interviews. Below
-    you can select a topic and jump to the respective questions. 
+    This is a large and comprehensive collection of Data Science questions and answers in form of flashcards. 
+    By answering these questions you can test your knowledge on Data Science and related topics. Below
+    you can select a specific topic and jump to the respective questions. 
   </p>
 
   
@@ -48,15 +48,15 @@ title: Questions Answers
      {% for item in site.data.files.[file.topic] in %}
      
       {% if item.h2 %}
-        <hr style="border: 4px solid;border-radius: 4px;">
-        <h2 id="{{item.h2}}">{{item.h2}} </h2>
+        <hr class="hr-thick">
+        <h2 id="{{item.h2}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h2}} </h2>
         <a href="#top">Top</a>
       {% endif %}
 
       {% if item.h3 %}
-        <hr>
-        <h3 id="{{item.h3}}">{{item.h3}}</h3>
-        <a href="#top">Top</a>
+        <hr class="hr-thin">
+        <h3 id="{{item.h3}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h3}}</h3>
+        <a href="#top" >Top</a>
       {% endif %}
 
       <li>
