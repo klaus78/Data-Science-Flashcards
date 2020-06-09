@@ -10,14 +10,12 @@ Let us say you want to add a new question-answer about Statistics. You can do th
 
 Each question-answer has the form
 
-- h3: header to be added in case the question is the first of a subtopic.
-  question: new question
-  answer: >
-    answer as a 
-    multiline text
-  image: imagefile.png
+**h3:** header to be added in case the question is the first of a subtopic.
+**question:** new question
+**answer:** answer of the new question
+**image:** imagefile.png
 
-Notice that the **question:** and **answer:** tags are mandatory. 
+Notice that the **question:** and **answer:** tags are mandatory.
 
 You can use the **h3:** tag when the question is the first question of a subtopic.
 
