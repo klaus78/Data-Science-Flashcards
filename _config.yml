@@ -22,7 +22,7 @@ title: Data Science Questions Answers
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Large set of questions/answers on Data Science and Machine Learning.
-baseurl: "/Data_Science_Questions_Answers" # the subpath of your site, e.g. /blog
+baseurl: "/Data_Science_Flashcards" # the subpath of your site, e.g. /blog
 url: "https://klaus78.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 
