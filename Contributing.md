@@ -22,7 +22,7 @@ You can use the **h3:** tag when the question is the first question of a subtopi
 Each question can have one image with the **image:** tag. This is the name of the file located in the **assets\images** folder.
 
 ## Testing 
-Before pushing the code make sure that the markdown syntax of the files is correct. 
+Before pushing the code, make sure that the markdown syntax of the files is correct. 
 
 For this purpose, in the home directory of your project you can type the *jekyll serve* command. This command will try to generate the site. 
 

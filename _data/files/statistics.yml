@@ -2,19 +2,20 @@
 - h2: Statistics
   question: What is a random variable?
   answer: > 
-    It assign a numerical value to each possile outcome. A numeric value is a necessary condition in 
+    A random variable assigna a numeric value to each possile outcome. 
+    A numeric value is a necessary condition in 
     the sense that something not numeric chosen at random is NOT a random variable. 
-    Remember that values of random variables are determined by chance.
+    Notice that values of random variables are determined by chance.
 
 - question: Can you explain the two types of random variable discrete and continuous?
   answer: >
     Discrete random variables have a finite number of possible 
     outcomes
     <br><br>
-    Continuous random variables you cannot count the number of possible outcomes
+    Continuous random variables have a non-finite number of possible outcomes
 
-- question: What is the definition of probability of occurence of event A?
-  answer: num cases for event A / num all cases
+- question: What is the definition of probability of occurence of event A, that is indicated by P(A)?
+  answer: P(A) = num cases for event A / num all cases
 
 - question: What is the meaning of the complementary event of A, that is indicated by A’?
   answer: A’ is the event that A does not happen and is given by 1-P(A)
@@ -48,7 +49,7 @@
     What diagram is particularly useful for visualizing probabilities? Can you use it
     to visualize P(A), P(A'), P(A or B), P(A and B)? 
   answer: The Venn diagram is very useful for visualizing probabilities.
-  image: venn_diagrams.png
+  image: venn_diagrams.png 
 
 - question: What is the meaning of conditional probability P(A|B)?
   answer: >
