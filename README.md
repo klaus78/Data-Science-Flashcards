@@ -4,5 +4,5 @@ This is a collection of questions-answers on **Data Science** and **Machine Lear
 # Take me to the questions
 The list of questions-answers is [HERE](https://klaus78.github.io/Data_Science_Flashcards). 
 
-## Contributing
+# Contributing
 Contributors are welcome. If you want to improve an answer or add a new question, please create a pull request. For details on how to contribute you can check the [following guidelines](https://github.com/klaus78/Data_Science_Flashcards/blob/master/Contributing.md).
