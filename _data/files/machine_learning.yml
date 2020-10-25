@@ -20,6 +20,15 @@
     <br>- testing
     <br>- deployment
    
+- question: >
+    All machine learning algorithms work essentially in a similar way. What is it?
+  answer: >
+    All machine learning algorithms work essentially like
+    <br>- make a prediction
+    <br>- compute the error given by (predicted values - real values)
+    <br>- make a new prediction that reduces the error above
+    <br>- repeat until the error is minimized
+
 - question: What is overfitting and what are some techniques for preventing it?
   answer: >
     Overfitting happens when your model works well with the training dataset but
