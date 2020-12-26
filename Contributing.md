@@ -24,6 +24,10 @@ Each question can have one image with the **image:** tag. This is the name of th
 ## Testing 
 Before pushing the code, make sure that the markdown syntax of the files is correct. 
 
-For this purpose, in the home directory of your project you can type the *jekyll serve* command. This command will try to generate the site. 
+For this purpose, in the home directory of your project you can type the 
+
+*jekyll serve* 
+
+command. This command will try to generate the site. 
 
 If the site generation is successful, you can check the generated website at http://127.0.0.1:4000/Data_Science_Flashcards/.

@@ -1,5 +1,6 @@
 * {
       font-family: sans-serif;
+      /* font-size:20px; */
 }
 
 .divAnswer {
@@ -19,6 +20,7 @@
 h1{
       margin-top: 0px;
       margin-bottom: 0px;
+      font-size: 36px;
 }
 
 
