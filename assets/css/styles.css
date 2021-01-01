@@ -1,5 +1,5 @@
 * {
-      font-family: sans-serif;
+      font-family: helvetica;
       /* font-size:20px; */
 }
 
@@ -33,7 +33,9 @@ h3 {
       font-size: 20px;
 }
 
-   
+body {
+ font-size: 18px;
+}
 
 button {
       background-color: #5b82d7; 
@@ -45,6 +47,7 @@ button {
       text-align: center;
       display: inline-block;
       padding:8px;
+      font-size: 17px;
 }
 button:hover {
       background-color: #4265b3;
