@@ -215,6 +215,24 @@
     which is a crucial first step?
   answer: It is necessary to standardize the data using z-score
 
+- h3: Text processing
+  question: What are some steps involved in the preprocessing of a text?
+  answer: >
+    The preprocessing of a text can involve
+    <br>- make text lower case
+    <br>- remove punctuation
+    <br>- tokenize the text (split up the words in a sentence)
+    <br>- remove stop words as they convey grammar rather than meaning
+    <br>- word stemming (reduce words to their stems)
+- question: What is a word cloud?
+  answer: >
+    The word cloud is a visualization technique for text processing where the most frequent
+    words in a text are shown in bigger. 
+    <br><br>
+    The word cloud is not a really scientific method but it can be very useful to capture the 
+    attention of people, for example in presentations. An example of word cloud is
+  image: word_cloud.png
+
 - h3: Charts
   question: Can you draw a boxplot and explain it?
   answer: >
@@ -232,3 +250,4 @@
   answer: >
     You can use an histogram, a scatter plot or also some statistics values like to say that 
     outliers are outside of the 1.5 IQR limit
+
