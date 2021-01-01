@@ -4,78 +4,82 @@ title: Questions Answers
 
 <html>
 
-<head>
-  <link rel="stylesheet" href="./assets/css/styles.css">
-  <script type="text/javascript" src="./assets/js/main.js"></script>
-  <meta name="viewport" 
-  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-</head>
+  <head>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="{{ page.title }}"/>
+    <meta name="twitter:description" content="Large collection of interview questions and answers on Data Science and Machine Learning"/>
+    <meta name="twitter:url" content="https://klaus78.github.io/Data_Science_Flashcards/"/>
+  </head>
 
-<body>
+  <body>
 
-  <div class="flex-box">
-    <span><h1 class="h1-inline">Data Science Flashcards</h1></span>
-    <span><a href="https://github.com/klaus78/Data_Science_Questions_Answers">Contribute</a></span>
-  </div>
+    <div class="flex-box">
+      <span><h1 class="h1-inline">Data Science Flashcards</h1></span>
+      <span><a href="https://github.com/klaus78/Data_Science_Questions_Answers">Contribute</a></span>
+    </div>
 
-  <p>
-    Large collection of interview questions and answers on Data Science and Machine Learning.
-  </p>
+    <p>
+      Large collection of interview questions and answers on Data Science and Machine Learning.
+    </p>
 
-  
-  {% for file in site.data.sort %}
-  {% for item in site.data.files.[file.topic] in %}
     
-    {% if item.h2 %}
-      <a href="#{{item.h2}}"><h2>{{item.h2}}</h2></a>
-    {% endif %}
-
-    {% if item.h3 %}
-      <ul>
-        <li><a href="#{{item.h3}}"><h3>{{item.h3}}</h3></a></li>
-      </ul>
-    {% endif %}
-
-  {% endfor %}
-  {% endfor %}
-
-  <ol>
-
     {% for file in site.data.sort %}
-     {% for item in site.data.files.[file.topic] in %}
-     
+    {% for item in site.data.files.[file.topic] in %}
+      
       {% if item.h2 %}
-        <hr class="hr-thick">
-        <h2 id="{{item.h2}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h2}} </h2>
-        <a href="#top">Top</a>
+        <a href="#{{item.h2}}"><h2>{{item.h2}}</h2></a>
       {% endif %}
 
       {% if item.h3 %}
-        <hr class="hr-thin">
-        <h3 id="{{item.h3}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h3}}</h3>
-        <a href="#top" >Top</a>
+        <ul>
+          <li><a href="#{{item.h3}}"><h3>{{item.h3}}</h3></a></li>
+        </ul>
       {% endif %}
 
-      <li>
-        <div class="divQuestion">
-          {{item.question}}
-        </div>
-
-        <button onclick="showHideAnswer()">Answer</button>
-
-        <div class="divAnswer">
-          {{item.answer}}
-          {% if item.image %}
-          <br>
-          <img src="./assets/images/{{item.image}}" alt="not found">
-          {% endif %}
-        </div>
-
-      </li>
-      {% endfor %}
     {% endfor %}
-  </ol>
+    {% endfor %}
 
-</body>
+    <ol>
+
+      {% for file in site.data.sort %}
+      {% for item in site.data.files.[file.topic] in %}
+      
+        {% if item.h2 %}
+          <hr class="hr-thick">
+          <h2 id="{{item.h2}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h2}} </h2>
+          <a href="#top">Top</a>
+        {% endif %}
+
+        {% if item.h3 %}
+          <hr class="hr-thin">
+          <h3 id="{{item.h3}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h3}}</h3>
+          <a href="#top" >Top</a>
+        {% endif %}
+
+        <li>
+          <div class="divQuestion">
+            {{item.question}}
+          </div>
+
+          <button onclick="showHideAnswer()">Answer</button>
+
+          <div class="divAnswer">
+            {{item.answer}}
+            {% if item.image %}
+            <br>
+            <img src="./assets/images/{{item.image}}" alt="not found">
+            {% endif %}
+          </div>
+
+        </li>
+        {% endfor %}
+      {% endfor %}
+    </ol>
+
+  </body>
 
 </html>
