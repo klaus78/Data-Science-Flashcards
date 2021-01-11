@@ -4,10 +4,11 @@
 }
 
 .divAnswer {
-      width: 100%;
+      width: 99%;
       text-align: left;
       background-color: #f8f8f8;
       margin-top:5px;
+      
       padding:2px;
       border:1px solid #d8d8d8;
       display: none;
@@ -47,6 +48,7 @@ button {
       text-align: center;
       display: inline-block;
       padding:8px;
+      margin-top:4px;
       font-size: 17px;
 }
 button:hover {

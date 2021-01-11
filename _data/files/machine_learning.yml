@@ -184,8 +184,8 @@
     training dataset is balanced.
 
 - question: > 
-    To evaluate a machine learning model for cancel detection what metrics do 
-    you typically use?
+    To evaluate a machine learning model for cancer detection what metrics do 
+    doctors typically use?
   answer: > 
     Doctors would use sensitivity and specificity because the cost of a misclassified cancer 
     is much higher than the cost of a healthy tissue classified as cancer.

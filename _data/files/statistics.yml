@@ -2,7 +2,7 @@
 - h2: Statistics
   question: What is a random variable?
   answer: > 
-    A random variable assigna a numeric value to each possile outcome. 
+    A random variable assigns a numeric value to each possile outcome. 
     A numeric value is a necessary condition in 
     the sense that something not numeric chosen at random is NOT a random variable. 
     Notice that values of random variables are determined by chance.
@@ -27,13 +27,13 @@
 - question: What happens when two events intersect?
   answer: When two events intersect, they can occur simultaneously
 
-- question: What is the probability P(A or B)?
-  answer: P(A or B) = P(A) + P(B) - P(A and B)
+- question: What is the probability P(A &cup; B)?
+  answer: P(A &cup; B) = P(A) + P(B) - P(A &cap; B)
 
 - question: > 
     If  events A  and B are disjoint, what is the probability of either event 
-    (A or B)
-  answer: P(A or B) = P(A) + P(B)
+    (A &cup; B)
+  answer: P(A &cup; B) = P(A) + P(B)
 
 - question: What does it mean that 2 events are independent?
   answer: >
@@ -43,11 +43,11 @@
     P(A|B) = P(A)
 - question: >
     If events A and B are independent, what is the probability of both events happen?
-  answer: P(A and B) = P(A) x P(B)
+  answer: P(A &cap; B) = P(A) x P(B)
 
 - question: >
     What diagram is particularly useful for visualizing probabilities? Can you use it
-    to visualize P(A), P(A'), P(A or B), P(A and B)? 
+    to visualize P(A), P(A'), P(A &cup; B), P(A &cap; B)? 
   answer: The Venn diagram is very useful for visualizing probabilities.
   image: venn_diagrams.png 
 
@@ -64,7 +64,7 @@
 
 - question: What is the law of total probability?
   answer: > 
-    P(B) = P(B and A) + P(B and A’) = 
+    P(B) = P(B &cap; A) + P(B &cap; A’) = 
     <br>
     P(A) P(B|A) + P(A’) P(B|A’)
 
