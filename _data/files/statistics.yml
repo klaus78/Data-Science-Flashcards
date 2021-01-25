@@ -2,17 +2,19 @@
 - h2: Statistics
   question: What is a random variable?
   answer: > 
-    A random variable assigns a numeric value to each possile outcome. 
+    A random variable assigns a numeric value to each possile outcome of a random phenomenon. 
     A numeric value is a necessary condition in 
     the sense that something not numeric chosen at random is NOT a random variable. 
-    Notice that values of random variables are determined by chance.
-
-- question: Can you explain the two types of random variable discrete and continuous?
+ 
+- question: What is the difference between discrete and continuous random variables? Can you make a couple of examples of both?
   answer: >
     Discrete random variables have a finite number of possible 
-    outcomes
+    outcomes. An example of discrete random variables is the result of tossing a coin. 
+    There are two possible outcomes (head or tail).   
     <br><br>
-    Continuous random variables have a non-finite number of possible outcomes
+    Continuous random variables have a non-finite number of possible outcomes. In other words a continuous random
+    variable can assume any value in an interval. An example of continuous random variable
+    is the temperature in a room. The temperature can take any value within a range.
 
 - question: What is the definition of probability of occurence of event A, that is indicated by P(A)?
   answer: P(A) = num cases for event A / num all cases
