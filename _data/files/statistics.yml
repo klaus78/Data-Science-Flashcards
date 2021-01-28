@@ -114,7 +114,7 @@
     around a central value in the form of a bell-shaped curve. Random variables 
     have a normal distribution.
 
-- question: What is the Central Limit Theorem? Why it's important?
+- question: What is the Central Limit Theorem? Why is it important?
   answer: >
     The Central Limit Theorem states that the sampling distribution 
     of the sample means approaches a normal distribution as the sample size gets larger 
@@ -139,7 +139,7 @@
     <br>The median is more useful when there are outliers.
 
 - question: >
-    When the median and the mean have the same value or different values, what does it mean?
+    What does it mean when the median and the mean have the same value or different values?
   answer: >
     If the distribution is a normal distribution then the mean and variance are equals.
     However, when the mean and variance are equal, this does not mean the distribution is normal.    
