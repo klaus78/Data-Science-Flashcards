@@ -24,22 +24,22 @@
 
 - question: What does it mean two events are mutually exclusive or disjoint? 
   answer: > 
-    It means that only one of the two events can occur
+    Two events are mutually exclusive or disjoint when only one of the two events can occur.
 
 - question: What happens when two events intersect?
-  answer: When two events intersect, they can occur simultaneously
+  answer: When two events intersect, they can occur simultaneously.
 
-- question: What is the probability P(A &cup; B)?
+- question: What is the formula for the probability P(A &cup; B)?
   answer: P(A &cup; B) = P(A) + P(B) - P(A &cap; B)
 
 - question: > 
-    If  events A  and B are disjoint, what is the probability of either event 
+    If  events A  and B are disjoint, what is the formula for the probability of either event 
     (A &cup; B)
   answer: P(A &cup; B) = P(A) + P(B)
 
-- question: What does it mean that 2 events are independent?
+- question: What does it mean that two events are independent?
   answer: >
-    These are 2 events that do not affect each other. If one event occurs, 
+    Two independent events are two events that do not affect each other. If one event occurs, 
     the probability of the other occuring remains exactly the same. 
     <br>
     P(A|B) = P(A)
