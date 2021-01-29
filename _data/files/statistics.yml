@@ -117,10 +117,10 @@
 - question: What is the Central Limit Theorem? Why is it important?
   answer: >
     The Central Limit Theorem states that the sampling distribution 
-    of the sample means approaches a normal distribution as the sample size gets larger 
-    The central limit theorem is important because under certain condition, you can 
-    approximate some distribution with Normal distribution although the distribution is 
-    not Normally distributed.
+    of the sample means approaches a normal distribution as the sample size gets larger.
+    <br><br>
+    The Central Limit Theorem is important because under certain conditions you can 
+    approximate a non-normal distribution with a normal distribution.
 
 
 - question: What is the difference between mean, median, mode?
