@@ -158,29 +158,37 @@
     False positives (negatives) = number of items with labels y = -1 (1) that
     are classified wrongly.
 
-- question: Can you mention metrics used to evaluate classifiers?
+- question: Can you mention some metrics used to evaluate classifiers?
   answer: >
-    accuracy = (TP + TN) / n
+    Accuracy = (TP + TN) / n
     <br>true positive rate or sentitivity  or recall = TP / (TP + FN)
     <br>true negative rate or specificity = TN / (TN + FP)
     <br>Precision  = TP / (TP + FP)
     <br>False positive rate (FPR)  = FP / (TN + FP)
     <br>False  negative rate (FNR)  = FN / (TP + FN)
     <br><br>
-    Accuracy is the percentage of the correctly classified items.
+    <b>Accuracy</b> is the percentage of the correctly classified items.
     <br><br>
-    Precision is the percentage of the items classified as positive that are actually positive
+    <b>Precision</b> is the percentage of the items classified as positive that are actually positive
     <br><br>
-    Sensitivity or Recall is the percentage of the positive items that
+    <b>Sensitivity</b> or <b>Recall</b> is the percentage of the positive items that
     were actually classified as positive.
     <br><br>
-    Specificity is the percentage of the negative items that
+    <b>Specificity</b> is the percentage of the negative items that
     were actually classified as negative.
+
+- question: > 
+    What metrics are more meaningful with balanced datasets and what work better for unbalanced datasets?
+    Balanced (unbalanced) dataset means you (do not) have the same number of samples for each class. 
+  answer: >
+    When the dataset is balanced, the accuracy is a good metric. 
+    <br><br>If the dataset is unbalanced, precision and recall
+    are better metrices. 
 
 - question: To evaluate a generic machine learning model what metrics do you typically use?
   answer: > 
-    You would the use misclassification error or accuracy. 
-    Accuracy works well when all classes are equally important and the 
+    You would probably use the misclassification error or accuracy. 
+    However, notice that accuracy works well when all classes are equally important and the 
     training dataset is balanced.
 
 - question: > 
@@ -188,7 +196,8 @@
     doctors typically use?
   answer: > 
     Doctors would use sensitivity and specificity because the cost of a misclassified cancer 
-    is much higher than the cost of a healthy tissue classified as cancer.
+    is much higher than the cost of a healthy tissue classified as cancer. In addition a typical
+    cancer dataset is strongly unbalanced, with few cancel samples and many healthy samples.
 
 - question: What is the meaning and use of the F-measure (also called F-score)?
   answer: >
@@ -325,7 +334,7 @@
 
 - question: Make an example of a real user-case for the KNN algorithm
   answer: >
-    You can use the KNN algorith to recommend a product to a customer 
+    You can use the KNN algorithm to recommend a product to a customer 
     based on the purchases of other similar customers.
     
 

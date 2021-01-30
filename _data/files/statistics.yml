@@ -29,12 +29,15 @@
 - question: What happens when two events intersect?
   answer: When two events intersect, they can occur simultaneously.
 
-- question: What is the formula for the probability P(A &cup; B)?
-  answer: P(A &cup; B) = P(A) + P(B) - P(A &cap; B)
+- question: What is the meaning of the probability P(A &cup; B)? What is the formula for the probability P(A &cup; B)? 
+  answer: >
+    P(A &cup; B) is the probability that either event A or event B happens. 
+    <br><br>
+    P(A &cup; B) = P(A) + P(B) - P(A &cap; B)
 
 - question: > 
-    If  events A  and B are disjoint, what is the formula for the probability of either event 
-    (A &cup; B)
+    If  events A and B are disjoint, what is the formula for the probability 
+    P(A &cup; B)
   answer: P(A &cup; B) = P(A) + P(B)
 
 - question: What does it mean that two events are independent?
