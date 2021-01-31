@@ -63,8 +63,8 @@
 
 - question: > 
     What diagram is particularly useful for visualizing conditional probabilities? Can you use
-    this diagram to visualize the conditional property P(A|B)?
-  answer: Conditional probabilities can be well visualized with a probability tree.
+    this diagram to visualize the conditional probability P(A|B)?
+  answer: Conditional probabilities can be well visualized with a <b>probability tree</b>.
   image: conditional_tree.png
 
 - question: What is the law of total probability?
@@ -74,7 +74,7 @@
     P(A) P(B|A) + P(A’) P(B|A’)
 
 - question: What is a probability distribution?
-  answer: A probability distribution displays the probabilities associated with all possible outcomes.
+  answer: A probability distribution is a plot that displays the probabilities associated with all possible outcomes.
 
 - question: What is the expectation of a probability distribution? Can you calculate it with an example?
   answer: >
@@ -87,7 +87,7 @@
     1*0.2 + 2*0.5 + 3*0.3 = 2.1
 
 - question: What is an uniform distribution? Draw a plot of it.
-  answer: An uniform distribution is a distribution where all values are equally likely.
+  answer: An uniform distribution is a distribution where all values have the same probability.
   image: uniform_distribution.PNG
 
 - question: What types of discrete probability distributions are there?
@@ -95,16 +95,16 @@
      There are the Bernoulli distribution, the Binomial distribution and
      the Poisson distribution.
      <br><br>
-     The Bernoulli distribution is a random experiment that has 2 possible
+     The <b>Bernoulli distribution</b> is a random experiment that has 2 possible
      outcomes with probability p and q, where p+q = 1
      <br><br>
-     The Binomial distribution is a sequence of repeated Bernoulli trials
+     The <b>Binomial distribution</b> is a sequence of repeated Bernoulli trials
      performed indipendently. 
      <br>
      n = number of items, k = num items I pickup
      <br> All possible combinations are n! / ( (n-k)! * k! )
      <br><br>
-     The Poisson distribution is a limiting version of the Binomial distribution
+     The <b>Poisson distribution</b> is a limiting version of the Binomial distribution
      where the number of trials n gets really large but the probability of success p
      gets smaller at the same time. In other words if you have a Binomial distribution
      where you let n tends to infinite and p tends to zero such that np = &lambda;, then
@@ -129,12 +129,13 @@
 - question: What is the difference between mean, median, mode?
   answer: >
     Mean = sum all items / num items
-    <br>Median =  value in the middle when the values are sorted
-    <br>Mode = most frequent value in a dataset
+    <br><br>Median =  value in the middle when the values are sorted
+    <br><br>Mode = most frequent value in a dataset
     <br><br>
-    For example given 1,3,4,9,2006 we have 
-    <br>Mean = (1+3+4+9+2006) / 5
+    For example given 1,3,4,4,2006 we have 
+    <br>Mean = (1+3+4+4+2006) / 5
     <br>Median = 4
+    <br>Mode = 4
 
 - question: When is the mean more useful and when the median is more useful?
   answer: >
