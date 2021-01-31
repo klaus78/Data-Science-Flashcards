@@ -3,23 +3,23 @@
 
   question: What is the difference between data science and machine learning
   answer: >
-    Data science = statistical analysis + data engineering in order to get 
-    information from the data
+    <b>Data science</b> = statistical analysis + data engineering in order to get 
+    information from the data.
     <br><br>
-    Machine learning = create a model to predict something. You can also define 
-    it as teaching computers to learn by examples
+    <b>Machine learning</b> = create a model to predict something. You can also define 
+    it as teaching computers to learn by examples.
 
-- question: What are the typical steps of a machine Learning process?
+- question: What are the typical steps of the creation of a machine learning model?
   answer: > 
-    The typical steps of a machine learning process are
-    <br>- domain knowledge
-    <br>- feature selection
-    <br>- choose machine learning algorithm
-    <br>- training
-    <br>- evaluation
-    <br>- optimization
-    <br>- testing
-    <br>- deployment
+    The typical steps of a machine learning process are:
+    <br><br>- domain knowledge
+    <br><br>- feature selection
+    <br><br>- choose machine learning algorithm
+    <br><br>- training
+    <br><br>- evaluation
+    <br><br>- optimization
+    <br><br>- testing
+    <br><br>- deployment
    
 - question: >
     All machine learning algorithms work essentially in a similar way. What is it?
@@ -30,6 +30,26 @@
     <br>- make a new prediction that reduces the error above
     <br>- repeat until the error is minimized
 
+  question: What is bias in a machine learning model?
+  answer: >
+    <b>Bias</b> is the error that is introduced by analyzing a complex model using a too simple model. 
+    In other words bias is the inability of the model to capture the real nature of the true 
+    relationship in the data.
+
+- question: What does high bias mean for a machine learning model?
+  answer: High bias means the model is underfitting the data.
+
+- question: What is the variance of a machine learning model?
+  answer: > 
+    <b>Variance</b> is the amount that the estimate of the target function will change if different training 
+    data was used.
+
+- question: What does high variance mean for a machine learning model?
+  answer: > 
+    High variance means the model is overfitting, ie small changes in the training data set lead 
+    to big changes in the output of the model.
+
+
 - question: What is overfitting and what are some techniques for preventing it?
   answer: >
     Overfitting happens when your model works well with the training dataset but
@@ -39,23 +59,23 @@
 
 - question: What is cross-validation in machine learning?
   answer: > 
-    Cross-validation refers to the process of splitting a dataset into a 
+    <b>Cross-validation</b> refers to the process of splitting a dataset into a 
     training set (usually 80%) and test set (usually 20%) and evaluate
     the performance of the model with those two datasets. 
 
 - question: What is K-fold cross-validation?
   answer: >
-    K-fold cross-validation is a kind of cross-validation. The steps are
-    <br>- split a dataset into k parts. Each part is called fold.
-    <br>- take one fold i as test set and take the remaining (k-1) folds as training set.
-    <br>- train you classification algorithm with the two datasets from previous point. Finally for 
+    <b>K-fold cross-validation</b> is a kind of cross-validation. The steps are
+    <br><br>- split a dataset into k parts. Each part is called fold.
+    <br><br>- take one fold i as test set and take the remaining (k-1) folds as training set.
+    <br><br>- train you classification algorithm with the two datasets from previous point. Finally for 
     each fold we get an accuracy value. i.e. in total we get K accuracy values.
-    <br>- the final accuracy value for your classification algorithm is given by the average of
+    <br><br>- the final accuracy value for your classification algorithm is given by the average of
     the K accuracy values.
 
 - question: What is regularization?
   answer: >
-    Regularization adds a penalty on the different parameters of the model to reduce the 
+    <b>Regularization</b> adds a penalty on the different parameters of the model to reduce the 
     freedom of the model. Regularization is usually done by adding a correction term to 
     the formula for a mathematical model. This correction term penalizes the higher order 
     terms so that the model is forced to be simpler.
@@ -76,12 +96,12 @@
 
 - question: What is reinforcement learning?
   answer: >
-    It is a machine learning algorithm that receives feedback on his output so that the accuracy
-    of the output is improved based on this feedback. Finally the algorithm learns through trial
+    <b>Reinforcement learning</b> is a machine learning algorithm that receives feedback on its output so that the accuracy
+    of the output is improved based on this feedback. In other words the algorithm learns through trial
     and error.
 
 - question: What is supervised learning?
-  answer: It is a machine learning process with a labeled training dataset.
+  answer: <b>Supervised learning</b> is a machine learning process with a labeled training dataset.
 
 - question: What are the two main types of supervised learning algorithms?
   answer: >
@@ -104,28 +124,9 @@
   question: What is the difference between model evaluation and model validation?
   answer: >
     The difference between model evaluation and model validation is that
-    <br><br>model evaluation is used to check the performance of a machine learning model
+    <br><br><b>model evaluation</b> is used to check the performance of a machine learning model
     on the training set.
-    <br><br>model validation is used to ensure that a model performs well also on a test set.
-
-  question: What is bias in a machine learning model?
-  answer: >
-    Bias is the error that is introduced by analyzing a complex model using a too simple model. 
-    In other words bias is the inability of the model to capture the real nature of the true 
-    relationship in the data.
-
-- question: What does high bias mean for a machine learning model?
-  answer: High bias means the model is underfitting the data.
-
-- question: What is the variance of a machine learning model?
-  answer: > 
-    Variance is the amount that the estimate of the target function will change if different training 
-    data was used.
-
-- question: What does high variance mean for a machine learning model?
-  answer: > 
-    High variance means the model is overfitting, ie small changes in the training data set lead 
-    to big changes in the output of the model.
+    <br><br><b>model validation</b> is used to ensure that a model performs well also on a test set.
 
 - question: What matrix do you construct to evaluate the performance of a classifier?
   answer: >
@@ -178,11 +179,11 @@
     were actually classified as negative.
 
 - question: > 
-    What metrics are more meaningful with balanced datasets and what work better for unbalanced datasets?
-    Balanced (unbalanced) dataset means you (do not) have the same number of samples for each class. 
+    What metrics are more meaningful with class-balanced datasets and what work better 
+    for class-unbalanced datasets? 
   answer: >
-    When the dataset is balanced, the accuracy is a good metric. 
-    <br><br>If the dataset is unbalanced, precision and recall
+    When the dataset is class-balanced, the accuracy is a good metric. 
+    <br><br>If the dataset is class-unbalanced, precision and recall
     are better metrices. 
 
 - question: To evaluate a generic machine learning model what metrics do you typically use?
@@ -245,7 +246,10 @@
 - question: Why is Naive Bayes called "naive"?
   answer: >
     Because the Naive Bayes is based on the idea that the predictor variables are independent of 
-    each other while in nature this is oft not the case.
+    each other while in nature this is often not the case.
+    <br><br>
+    A Naive Bayes classifier calculates the probability of an item of belonging to each possible
+    output class. The class with the highest probability is then chosen as output.
 
 - question: What is the Bayes theorem?
   answer: >
@@ -285,9 +289,9 @@
 - question: What are the most common techniques used for computing the coefficients in linear regression?
   answer: >
     The most common techniques used for computing the coefficients in linear regression are 
-    <br> - Ordinary Least Squares. Seeks to minimize the sum of the squared residuals, ie the distance 
+    <br><br> - <b>Ordinary Least Squares</b> seeks to minimize the sum of the squared residuals, ie the distance 
     between the points and the regression line.
-    <br><br> - Gradient descendent. Works by inizializing randomly the coefficients. A learning rate is 
+    <br><br> - <b>Gradient descendent</b> works by inizializing randomly the coefficients. A learning rate is 
     used as a scale factor and the coefficients are updated in the direction towards minimizing the error. 
     The process is repeated until a minimum sum squared error is achieved or no further improvement is 
     possible.
