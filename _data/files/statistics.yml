@@ -1,6 +1,24 @@
 
 - h2: Statistics
-  question: What is a random variable?
+  question: What are the three main types of data you can encounter?
+  answer: >
+    The three main types of data types are:
+    <ul>
+    <li><b>numerical data</b>: the data represents some kind of quantitative value that you can measure. It could be a temperature or a weight. 
+    Numerical data can be divided into 
+    <ul>
+      <li><i>discrete data</i>: it is integer based and can assume a limited set of values, for example like the amount of money you have on your account.</li> 
+      <li><i>continuous data</i>: it has an infinite number of possible values like the weight of a person, which can be 60 Kg or 60,345 Kg or 60,345678 Kg. In this
+      example you can take the weight with as many decimals as you like.</li> 
+    </ul></li>
+    <li><b>categorical data:</b> it is data that can have numerical values but those numbers have no intrinsic mathematical meaning. Some examples are gender, race, religion. 
+    You can maps values to number, like say male is 0 and female is 1. But those number have no mathematical meaning, i.e. the male value has no
+    numerical relationship with the female value.</li>
+    <li><b>ordinal data:</b> this is a mixture of numerical and categorical data. More specifically it is categorical data with mathematical
+    meaning. For example the hotel rating stars from 1 to 5 have a numerical meaning: a five star hotel
+    is better than a two star hotel.</li>
+
+- question: What is a random variable?
   answer: > 
     A random variable assigns a numeric value to each possile outcome of a random phenomenon. 
     A numeric value is a necessary condition in 
@@ -8,11 +26,11 @@
  
 - question: What is the difference between discrete and continuous random variables? Can you make a couple of examples of both?
   answer: >
-    Discrete random variables have a finite number of possible 
+    <b>Discrete random variables</b> have a finite number of possible 
     outcomes. An example of discrete random variables is the result of tossing a coin. 
     There are two possible outcomes (head or tail).   
     <br><br>
-    Continuous random variables have a non-finite number of possible outcomes. In other words a continuous random
+    <b>Continuous random variables</b> have a non-finite number of possible outcomes. In other words a continuous random
     variable can assume any value in an interval. An example of continuous random variable
     is the temperature in a room. The temperature can take any value within a range.
 
@@ -20,7 +38,7 @@
   answer: P(A) = num cases for event A / num all cases
 
 - question: What is the meaning of the complementary event of A, that is indicated by A’?
-  answer: A’ is the event that A does not happen and is given by 1-P(A)
+  answer: A’ is the event that A does not happen and its probability is given by <br>P(A') = 1-P(A)
 
 - question: What does it mean two events are mutually exclusive or disjoint? 
   answer: > 
