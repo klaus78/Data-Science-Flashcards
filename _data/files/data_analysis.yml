@@ -234,7 +234,23 @@
   image: word_cloud.png
 
 - h3: Charts
-  question: Can you draw a boxplot and explain it?
+  question: What is a pie chart? When should it be used / not used?
+  answer: >
+    A <b>pie chart</b> is basically a circle that is divided into slices. Each slice represents a group.
+    The size of each slice is proportional to the numbers of items of that group. 
+    For example in the picture below, given a set of different fruits,
+    you can see the proportion of each type of fruit. 
+    <br><br>
+    Pie charts are good at showing the relative quantities of items in an intuitive manner. In particular, pie chars
+    are good at showing what groups are more or less predominant. In the picture apples are the predominant fruit.
+    <br><br>
+    Pie charts should not be used for exact quantitative comparisons of slices, in particular when slices have a similar size.
+    Indeed it is hard for the human eye to compare areas. For example pie charts should not be used to find how much the cherries 
+    slide is bigger/smaller than the bananas slice.
+  image: pie_chart.png
+
+
+- question: Can you draw a boxplot and explain it?
   answer: >
     Upper extreme (95th Percentile) = exactly 5 percent of the values in the data are 
     greater than this value. (May instead be the highest value if not displayed separately as dots).<br>
