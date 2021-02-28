@@ -184,7 +184,7 @@
     ratio and ordinal data. It measures how similar ranked orderings are. 
     No linear correlation is assumed.
     <br><br>- Spearman. It is is a rank correlation measure. No linearity is assumed but 
-    a monotonic relationship, ie an increasing (var1 increases and also var2 increases) 
+    a monotonic relationship, i.e. an increasing (var1 increases and also var2 increases) 
     or decreasing (var1 decreases and also var2 decreases) relationship.
 
 

@@ -7,7 +7,7 @@
     <li><b>numerical data</b>: the data represents some kind of quantitative value that you can measure. It could be a temperature or a weight. 
     Numerical data can be divided into 
     <ul>
-      <li><i>discrete data</i>: it is integer based and can assume a limited set of values, for example like the amount of money you have on your account.</li> 
+      <li><i>discrete data</i>: it is integer based and can take a limited set of values, for example like the amount of money you have on your account.</li> 
       <li><i>continuous data</i>: it has an infinite number of possible values like the weight of a person, which can be 60 Kg or 60,345 Kg or 60,345678 Kg. In this
       example you can take the weight with as many decimals as you like.</li> 
     </ul></li>
@@ -146,28 +146,38 @@
 
 - question: What is the difference between mean, median, mode?
   answer: >
-    Mean = sum all items / num items
-    <br><br>Median =  value in the middle when the values are sorted
-    <br><br>Mode = most frequent value in a dataset
+    <b>Mean</b> (&mu;) = sum all items / num items
+    <br><br><b>Median</b> =  value in the middle when the values are sorted. When the number of items is even there is no a single middle
+    value and the mean of the two middle numbers is taken instead.
+    <br><br><b>Mode</b> = most frequent value in a dataset
     <br><br>
     For example given 1,3,4,4,2006 we have 
     <br>Mean = (1+3+4+4+2006) / 5
     <br>Median = 4
     <br>Mode = 4
+    <br><br>
+    For example given 1,3,4,5,6,8  we have 6 numbers. The median is given by the mean of the two middle values i.e. (4+5)/2
 
 - question: When is the mean more useful and when the median is more useful?
   answer: >
-    The mean is more useful when there are no outliers.
-    <br>The median is more useful when there are outliers.
+    The <b>mean</b> is more useful when there are no outliers. Indeed the mean is more affected
+    by outliers than the mean. 
+    <br><br>The <b>median</b> is more useful when there are outliers.
 
 - question: >
     What does it mean when the median and the mean have the same value or different values?
   answer: >
     If the distribution is a normal distribution then the mean and variance are equals.
     However, when the mean and variance are equal, this does not mean the distribution is normal.    
-    <br><br>If mean > median, the distribution is skewed to the right, ie the tail is on the right.
-    <br><br>If mean < median, the distribution is skewed to the left, ie the tail is on the left.
+    <br><br>If mean > median, the distribution is skewed to the right, i.e. the tail is on the right.
+    <br><br>If mean < median, the distribution is skewed to the left, i.e. the tail is on the left.
   image: mean_median_skewed.png
+
+- question: Can you use the mean/median with categorical data?
+  answer:  >
+    It is not possible to use the mean/median with categorical data. Mean/median can be used only
+    with numerical data.
+       
 
 - question: >
     What quantities can you use to measure variability and spread?
@@ -176,10 +186,13 @@
     variance and standard deviation.
 
 - question: What is the range?
-  answer: Range is the difference max -  min
+  answer: >
+    The <b>range</b> is given by the difference between the largest and the smallest values in a dataset.
+    <br><br>
+    The range is one of the ways of measuring how much a dataset is spread out.
 
 - question: What is the interquartile range?
   answer: >
-    The interquartile range is found as follows:
+    The <b>interquartile range</b> is found as follows:
     <br>Divide the interval into 4 equal parts Q1, Q2, Q3, Q4. 
     <br>The interquartile range is then IQR = Q3 - Q1

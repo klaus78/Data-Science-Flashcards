@@ -46,7 +46,7 @@
 
 - question: What does high variance mean for a machine learning model?
   answer: > 
-    High variance means the model is overfitting, ie small changes in the training data set lead 
+    High variance means the model is overfitting, i.e. small changes in the training data set lead 
     to big changes in the output of the model.
 
 
@@ -289,7 +289,7 @@
 - question: What are the most common techniques used for computing the coefficients in linear regression?
   answer: >
     The most common techniques used for computing the coefficients in linear regression are 
-    <br><br> - <b>Ordinary Least Squares</b> seeks to minimize the sum of the squared residuals, ie the distance 
+    <br><br> - <b>Ordinary Least Squares</b> seeks to minimize the sum of the squared residuals, i.e. the distance 
     between the points and the regression line.
     <br><br> - <b>Gradient descendent</b> works by inizializing randomly the coefficients. A learning rate is 
     used as a scale factor and the coefficients are updated in the direction towards minimizing the error. 
