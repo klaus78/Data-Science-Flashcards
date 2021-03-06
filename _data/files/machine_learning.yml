@@ -345,19 +345,28 @@
 - h3: Decision trees
   question: What is a decision tree?
   answer: >
-    A decision tree is a classification algorithm that models the features and the data in a tree-like 
-    structure.
+    A <b>decision tree</b> is a supervised machine learning algorithm that creates a flowchart from a dataset. This flowchart
+    can be represented as a tree-like structure. You can also think of a decision tree as a sequence of if-else conditions. 
+    <br><br>
+    For example, the decision tree in the picture below models the question of going to the beach. 
+    According to this decision tree, we go to the beach only when the weather is sunny and the temperature is higher than 25 °C.
+  image: decision_tree.png
 - question: How are decision trees built?
   answer: >
-    Building a decision tree is a recursive process. The dataset is split into subsets, which are 
-    then split repeatedly into even smaller subsets, and so on and so forth until the process stops 
-    when the algorithm determines the data within the subsets are sufficiently homogenous, or another 
+    <b>Building a decision tree</b> is a recursive process. 
+    At each step the algorithm searches for the best possible feature that can be used to split the dataset while minimizing the
+    entropy within each subset. The subsets are then split repeatedly into even smaller subsets, and so on and so forth until 
+    the process stops when the algorithm determines the data within the subsets are sufficiently homogenous, or another 
     stopping criterion has been met.
+    <br><br>
+    The <b>entropy</b> describes the variety in a dataset. An entropy of 0 means that all items are in the same class. The 
+    maximum entropy possible is when each item is in a different class.  
+
 - question: What is a great advantage of using decision trees?
   answer: >
-    The output of the decision trees is human readable. This makes decision trees interesting to be 
+    A great advantage of decision tree is that its output is human readable. This makes decision trees interesting to be 
     used in cases where the decision mechanism needs to be transparent because of legal reasons 
-    (for example medical diagnostics)
+    (for example in medical diagnostics).
 - question: What are some disadvantages of decision trees?
   answer: >
     - each split considers one feature at a time which means that the decision lines are basically 
