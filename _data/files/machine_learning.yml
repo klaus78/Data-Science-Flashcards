@@ -346,11 +346,12 @@
   question: What is a decision tree?
   answer: >
     A <b>decision tree</b> is a supervised machine learning algorithm that creates a flowchart from a dataset. This flowchart
-    can be represented as a tree-like structure. You can also think of a decision tree as a sequence of if-else conditions. 
+    can be represented as a tree-like structure. You can also think of a decision tree as a sequence of if-else conditions where a
+    a feature is evaluated at each if-else condition.
     <br><br>
     For example, the decision tree in the picture below models the question of going to the beach. 
     According to this decision tree, we go to the beach only when the weather is sunny and the temperature is higher than 25 °C.
-  image: decision_tree.png
+  image: decision_tree.PNG
 - question: How are decision trees built?
   answer: >
     <b>Building a decision tree</b> is a recursive process. 
@@ -361,43 +362,53 @@
     <br><br>
     The <b>entropy</b> describes the variety in a dataset. An entropy of 0 means that all items are in the same class. The 
     maximum entropy possible is when each item is in a different class.  
-
-- question: What is a great advantage of using decision trees?
+    <br><br>This algorithm is a greedy algorithm since it chooses a local optimal solution at each step.
+- question: What are the main advantages of decision trees?
   answer: >
-    A great advantage of decision tree is that its output is human readable. This makes decision trees interesting to be 
-    used in cases where the decision mechanism needs to be transparent because of legal reasons 
-    (for example in medical diagnostics).
+    The <b>main advantages of decision trees</b> are:
+    <ul>
+    <li><b>Output simple to understand</b>: the output tree is human readable, i.e. it can be interpreted easily. 
+    This makes decision trees particularly interesting for cases 
+    where the decision mechanism needs to be transparent (for example in medical diagnostics).</li>
+    <li><b>Minimum data preparation</b>: decision trees do require less data cleaning and data preparation. 
+    Indeed they do not need data normalization/scaling and
+    they can work well even with missing values.</li>
+    </ul>
 - question: What are some disadvantages of decision trees?
   answer: >
-    - each split considers one feature at a time which means that the decision lines are basically 
-    parallel to the axis and are not diagonal, which would be the case if you would evaluate two or 
-    more features within the same split.
-    <br><br>- it is easy to overfit or underfit the model
-    <br><br>- small changes in the input data will lead to a very different output
+    Some <b>disadvantages of decision trees</b> are:
+    <ul>
+    <li><b>Overfitting</b>: decision trees can easily overfit the data.</li>
+    <li><b>Instability</b>: small changes in the input data can lead to a very different tree output structure.</li>
+    <li><b>Complex data structure</b>: the structure of decision trees can become complex for example when the dataset has a lot
+    of features.</li>
+    </ul>
 - question: >
-    What technique do you use to reduce the overfitting of a decision tree? How many approaches there are?
+    What technique can you use to reduce the overfitting of a decision tree? How many approaches there are?
   answer: >
-    To reduce the overfitting of a decision tree you can use pruning, which reduces the size of the tree. 
+    To <b>reduce the overfitting of a decision tree</b> you can use <b>pruning</b>, which reduces the size of the tree. 
     There are two approaches to pruning<br>
-    <br><br>Pre-pruning - the tree stop growing when it reaches a certain number of decisions or when 
+    <ul>
+    <li><b>Pre-pruning</b>: the tree stop growing when it reaches a certain number of decisions or when 
     the decision nodes contains too few items. A disadvantage of this approach is that some important 
-    data could be pruned.
-    <br><br>Post-pruning - the tree can grow as needed and only at the end it is checked if the tree 
-    is too big. This approach guarantees that the important data is not pruned.
-
+    data could be pruned.</li>
+    <li><b>Post-pruning</b>: the tree can grow as needed and only at the end it is checked if the tree 
+    is too big. This approach guarantees that the important data is not pruned.</li>
+    </ul>
 - question: >
-   What are the main techniques to combine decision trees to obtain a more accurate model 
+   What are the main techniques used to combine decision trees to obtain a more accurate model 
    (so called ensemble techniques)?
   answer: >
-    There are two techniques
-    <br><br> Boosting algorithms. This is a sequential process. In boosting algorithms learners 
+    There are two main ensemble techniques
+    <ul>
+    <li><b>Boosting algorithms</b>: this is a sequential process. In boosting algorithms learners 
     are learned sequentially with early learners fitting simple models to the data and then analyzing 
     data for errors. After each training step the weights are redistributed. 
     Misclassified data gets an increased weight so that this data will be more on focus in the 
-    next train step.
-    <br><br>Bagging techniques. This is a parallel process. In a bagging technique the dataset is 
+    next train step.</li>
+    <li><b>Bagging techniques</b>: this is a parallel process. In a bagging technique the dataset is 
     divided into n samples using randomized sampling.Then a model is build on each sample. 
-    After that the resulting models are combined using voting or averaging.
-
+    After that the resulting models are combined using voting or averaging.</li>
+    </ul>
 
 
