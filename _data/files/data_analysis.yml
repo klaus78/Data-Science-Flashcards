@@ -245,9 +245,26 @@
     are good at showing what groups are more or less predominant. In the picture apples are the predominant fruit.
     <br><br>
     Pie charts should not be used for exact quantitative comparisons of slices, in particular when slices have a similar size.
-    Indeed it is hard for the human eye to compare areas. For example pie charts should not be used to find how much the cherries 
-    slide is bigger/smaller than the bananas slice.
+    Indeed it is hard for the human eye to compare areas. For example, considering the picture, pie charts should not be used 
+    to find how much the cherries slide is bigger/smaller than the bananas slice.
   image: pie_chart.png
+
+- question: What is a bar chart? When should it be used?
+  answer: >
+    A <b>bar chart</b> is a chart that represents categorical data with rectangular bars. The size of each bar is proportional
+    to the value represented.
+    <br><br>
+    A bar chart is useful when you want to compare values. In particular a bar chart can also be used to compare
+    values that are pretty similar. In this case a bar chart is a better choice than a pie chart because 
+    pie charts are not particularly suitable for comparing similar values. 
+  image: bar_chart.png
+
+
+- question:  What are some difference between a bar chart and an histogram?
+  answer: >
+    A <b>bar chart</b> shows the frequency of every value of a <b>categorical</b> variable. 
+    <br><br>
+    An <b>histogram</b> is used to represent the distribution of a <b>continuous</b> variable.
 
 
 - question: Can you draw a boxplot and explain it?
@@ -258,11 +275,7 @@
     (May instead be the smallest value if not displayed separately as dots).
   image: boxplot.png
 
-- question:  What is a bar chart? What is the difference with an histogram?
-  answer: >
-    A bar chart records the frequency of every value of a categorical variable. It 
-    is the same as an histogram except the histogram is for a continuous variable
-- question: How to find outliers?
+- question: How to find outliers with a plot?
   answer: >
     You can use an histogram, a scatter plot or also some statistics values like to say that 
     outliers are outside of the 1.5 IQR limit
