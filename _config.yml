@@ -28,6 +28,8 @@ url: "https://klaus78.github.io" # the base hostname & protocol for your site, e
 
 # Build settings
 theme: minima
+
+#highlighter: rouge
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

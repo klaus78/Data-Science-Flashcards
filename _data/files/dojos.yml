@@ -1,0 +1,63 @@
+- h2: Dojos
+  h3: Python dojos
+  question: >
+    Create a list and print the first two items, everything from the third element and the last two elements
+  python: |
+    
+    mylist = [3,5,7,9,2,4,7]
+    # first two items
+    mylist[:2]
+    # all items from third
+    mylist[3:]
+    # last two items
+    mylist[-2:]
+    
+- question: Take a list and concatenate it with another list
+  python: |
+
+    list1 = [5,2,7]
+    list2 = [6,1,9]
+    list1.extend(list2)
+    print(list1)
+
+- question: Create a tuple with two integers and print the second integer
+  python: |
+
+    myTuple = (3,5)
+    print(myTuple[1])
+
+- question: Create a dictionary, add a (key, value) pair, try to retrieve that key then a non-existing key
+  python: |
+
+    myDict = {}
+    myDict['myKey'] = 'myValue'
+    print(myDict.get('myKey'))
+    print(myDict.get('myKey2'))
+
+- question: >
+    Create a function1 that calls a function2. Function2 must create a tuple from input params x,y 
+    In addition call function1 with a lambda function that sums two params
+  python: |
+
+    def createTuple(x,y):
+      return (x,y)
+
+    def doSomething(f,x,y):
+      return f(x,y)
+
+    t = doSomething(createTuple,3,6)
+    print(type(t))
+
+    doSomething(lambda x,y: x+y, 4,6)
+
+- question: Loop over the first 10 integers and print only the even numbers
+  python: |
+  
+    for i in range(10):
+      if i%2 == 0:
+          print(i)
+          
+- question: Given a list of integers, add 1 to each element of the list
+  python: |
+  
+    new_list = [x+1 for x in my_list]

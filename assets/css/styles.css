@@ -1,3 +1,5 @@
+@import "colorful.css";
+
 * {
       font-family: Calibri;
       /* font-size:20px; */
@@ -11,6 +13,14 @@
       
       padding:2px;
       border:1px solid #d8d8d8;
+      display: none;
+}
+
+.divCode {
+      text-align: left;
+      background-color: #f8f8f8;
+      margin-left: -20px;
+      margin-top: -20px;
       display: none;
 }
 

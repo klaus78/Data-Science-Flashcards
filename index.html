@@ -26,8 +26,7 @@ title: Data Science Interview Questions
     <p>
       Large collection of interview questions and answers on <b>Data Science</b> and <b>Machine Learning</b>.
     </p>
-
-    
+        
     {% for file in site.data.sort %}
     {% for item in site.data.files.[file.topic] in %}
       
@@ -68,13 +67,30 @@ title: Data Science Interview Questions
 
           <button onclick="showHideAnswer()">Answer</button>
 
-          <div class="divAnswer">
-            {{item.answer}}
-            {% if item.image %}
-            <br>
-            <img src="./assets/images/{{item.image}}" alt="not found">
+          
+            {% if item.answer %}
+              <div class="divAnswer">
+              {{item.answer}}
+
+              {% if item.image %}
+              <br>
+              <img src="./assets/images/{{item.image}}" alt="not found">
+              {% endif %}
+          
+              </div>
+            {% endif %}
+
+            
+
+          <div class="divCode">
+            {% if item.python %}
+            {% highlight python %}
+              {{item.python}}
+            {% endhighlight %}
             {% endif %}
           </div>
+
+          
 
         </li>
         {% endfor %}
