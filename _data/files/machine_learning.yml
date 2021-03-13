@@ -345,7 +345,7 @@
 - h3: Decision trees
   question: What is a decision tree?
   answer: >
-    A <b>decision tree</b> is a supervised machine learning algorithm that creates a flowchart from a dataset. This flowchart
+    A <b>decision tree</b> is a supervised machine learning algorithm that generates a flowchart from a dataset. This flowchart
     can be represented as a tree-like structure. You can also think of a decision tree as a sequence of if-else conditions where a
     a feature is evaluated at each if-else condition.
     <br><br>
@@ -384,7 +384,7 @@
     of features.</li>
     </ul>
 - question: >
-    What technique can you use to reduce the overfitting of a decision tree? How many approaches there are?
+    What technique can you use to reduce the overfitting of a decision tree? How many approaches are there?
   answer: >
     To <b>reduce the overfitting of a decision tree</b> you can use <b>pruning</b>, which reduces the size of the tree. 
     There are two approaches to pruning<br>
@@ -410,5 +410,27 @@
     divided into n samples using randomized sampling.Then a model is build on each sample. 
     After that the resulting models are combined using voting or averaging.</li>
     </ul>
+    
+- h3: Support Vector Machine
+  question: What is Support Vector Machine and what is its main idea?
+  answer: >
+    <b>Support Vector Machine</b> (SVM) is a supervised machine learning algorithm that tries to find high dimensional
+    planes that divide a dataset into clusters. The planes are found in such a way that they are as far as possible from any point.
+    <br><br>
+    The position of the planes depends on the so called <b>support vectors</b>, that are the points that are closest to the planes.
+    
+- question: What is the technique called <i>kerneling</i> that is used by Support Vector Machine?
+  answer:
+    Under the hood, SVM uses a technique called <b>kerneling</b> to find clusters that might not be apparent in lower
+    dimensions. More specifically, the dataset is mapped via kernel functions into a higher dimension where the
+    data is potentially easier to cluster.
 
-
+- question: What is Support Vector Machine particulary good at? What are some disadvantages? 
+  answer: >
+      Support Vector Machine is particularly good at classifying high-dimensional data, i.e. data with a lot of features.
+      <br><br>
+      SVM has some disadvantages like:
+      <ul>
+        <li>it does not perform well with large datasets because of high computational costs.</li>
+        <li>the kernel must be chosen carefully and this can be tricky.</li>
+      </ul> 
