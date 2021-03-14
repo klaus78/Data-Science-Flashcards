@@ -1,9 +1,9 @@
-- h2: Dojos
-  h3: Python dojos
+- h2: Coding Dojos
+  h3: Python Dojos
   question: >
     Create a list and print the first two items, everything from the third element and the last two elements
   python: |
-    
+
     mylist = [3,5,7,9,2,4,7]
     # first two items
     mylist[:2]
