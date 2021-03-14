@@ -1,5 +1,6 @@
 
 - h2: Statistics
+  h3: Types of data
   question: What are the three main types of data you can encounter?
   answer: >
     The three main types of data types are:
@@ -34,7 +35,8 @@
     variable can assume any value in an interval. An example of continuous random variable
     is the temperature in a room. The temperature can take any value within a range.
 
-- question: What is the definition of probability of occurence of event A, that is indicated by P(A)?
+- h3: Probabilities
+  question: What is the definition of probability of occurence of event A, that is indicated by P(A)?
   answer: P(A) = num cases for event A / num all cases
 
 - question: What is the meaning of the complementary event of A, that is indicated by A’?
@@ -144,7 +146,8 @@
     approximate a non-normal distribution with a normal distribution.
 
 
-- question: What is the difference between mean, median, mode?
+- h3: Averages
+  question: What is the difference between mean, median, mode?
   answer: >
     <b>Mean</b> (&mu;) = sum all items / num items
     <br><br><b>Median</b> =  value in the middle when the values are sorted. When the number of items is even there is no a single middle

@@ -8,9 +8,9 @@ function showHideAnswer() {
       if(divAnswer) {
             if (divAnswer.style.display == "block") {
                   divAnswer.style.display = "none";
-                  } else {
+            } else {
                   divAnswer.style.display = "block";
-                  }
+            }
       }
 
     
@@ -19,6 +19,37 @@ function showHideAnswer() {
                   divCode.style.display = "none";
             } else {
                   divCode.style.display = "block";
+            }
+      }
+}
+
+function showHideMenus() {
+      
+      event.target.classList.toggle("active")
+
+      next = event.target.nextElementSibling;
+      
+      while(next && next.classList.contains("hideable_h3"))
+      {
+            if(next) {
+                  showHideElement(next);
+                  next = next.nextElementSibling;
+            }
+            else return;
+      }
+
+      if(!next) {
+
+      }
+      
+}
+
+function showHideElement(elem) {
+      if(elem) {
+            if (elem.style.display == "block") {
+                  elem.style.display = "none";
+            } else {
+                  elem.style.display = "block";
             }
       }
 }

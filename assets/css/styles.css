@@ -1,8 +1,44 @@
 @import "colorful.css";
 
-* {
-      font-family: Calibri;
+
+
+
+*:not(.divCode) {
+      font-family: Calibri, Open Sans;
       /* font-size:20px; */
+}
+
+
+.collapsible:not(a) {
+      background-color: #efefef;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 26px;
+}
+
+.active:not(a), .collapsible:not(a):hover {
+      background-color: #d7d7d7;
+}
+
+.collapsible:not(a):after {
+      content: '\025BC'; /* Unicode character for "arrow down" sign  */
+      font-size: 20px;
+      color: #5b82d7;
+      float: right;
+      margin-left: 5px;
+}
+
+.active:not(a):after {
+      content: "\25B2"; /* Unicode character for "arrow up" sign  */
+}
+
+.hideable_h3 {
+      display: none;
 }
 
 .divAnswer {
@@ -16,13 +52,19 @@
       display: none;
 }
 
-.divCode {
+
+.divCode  {
       text-align: left;
       background-color: #f8f8f8;
       margin-left: -20px;
-      margin-top: -20px;
-      display: none;
+      display: none;      
 }
+
+.divCode * {
+      font-family: monospace;
+}
+
+
 
 .divQuestion {
       padding-top: 15px;
@@ -61,10 +103,11 @@ button {
       margin-top:3px;
       font-size: 17px;
 }
-button:hover {
+
+.buttonAnswer:hover {
       background-color: #4265b3;
 }
-button:active {
+.buttonAnswer:active {
       transform: translateY(1px);
 }
 

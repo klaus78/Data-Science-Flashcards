@@ -26,21 +26,25 @@ title: Data Science Interview Questions
     <p>
       Large collection of interview questions and answers on <b>Data Science</b> and <b>Machine Learning</b>.
     </p>
+
         
     {% for file in site.data.sort %}
-    {% for item in site.data.files.[file.topic] in %}
+      {% for item in site.data.files.[file.topic] in %}
       
-      {% if item.h2 %}
-        <a href="#{{item.h2}}"><h2>{{item.h2}}</h2></a>
-      {% endif %}
+        {% if item.h2 %}
+          <!-- <a href="#{{item.h2}}"><h2>{{item.h2}}</h2></a> -->
+          <button class="collapsible" onclick="showHideMenus()">
+            <a href="#{{item.h2}}">{{item.h2}}</a>
+          </button>
+        {% endif %}
 
-      {% if item.h3 %}
-        <ul>
-          <li><a href="#{{item.h3}}"><h3>{{item.h3}}</h3></a></li>
-        </ul>
-      {% endif %}
-
-    {% endfor %}
+        {% if item.h3 %}
+          <ul class="hideable_h3">
+            <li><a href="#{{item.h3}}"><h3>{{item.h3}}</h3></a></li>
+          </ul>
+        {% endif %}
+      
+      {% endfor %}
     {% endfor %}
 
     <ol>
@@ -65,32 +69,29 @@ title: Data Science Interview Questions
             {{item.question}}
           </div>
 
-          <button onclick="showHideAnswer()">Answer</button>
+          <button onclick="showHideAnswer()" class="buttonAnswer">Answer</button>
 
-          
-            {% if item.answer %}
-              <div class="divAnswer">
-              {{item.answer}}
+          {% if item.answer %}
+            <div class="divAnswer">
+            {{item.answer}}
 
-              {% if item.image %}
-              <br>
-              <img src="./assets/images/{{item.image}}" alt="not found">
-              {% endif %}
-          
-              </div>
+            {% if item.image %}
+            <br>
+            <img src="./assets/images/{{item.image}}" alt="not found">
             {% endif %}
+        
+            </div>
+          {% endif %}
 
-            
-
-          <div class="divCode">
-            {% if item.python %}
-            {% highlight python %}
-              {{item.python}}
-            {% endhighlight %}
-            {% endif %}
+        
+        {% if item.python %}
+         <div class="divCode">
+          {% highlight python %}
+            {{item.python}}
+          {% endhighlight %}
           </div>
+        {% endif %}
 
-          
 
         </li>
         {% endfor %}
