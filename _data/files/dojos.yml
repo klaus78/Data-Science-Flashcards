@@ -18,6 +18,7 @@
     list1 = [5,2,7]
     list2 = [6,1,9]
     list1.extend(list2)
+    # list1 is the concatenation of list1 and list2
     print(list1)
 
 - question: Create a tuple with two integers and print the second integer
@@ -26,17 +27,18 @@
     myTuple = (3,5)
     print(myTuple[1])
 
-- question: Create a dictionary, add a (key, value) pair, try to retrieve that key then a non-existing key
+- question: Create a dictionary, add a (key, value) pair, try to retrieve that key then a non-existing key.
   python: |
 
     myDict = {}
     myDict['myKey'] = 'myValue'
-    print(myDict.get('myKey'))
-    print(myDict.get('myKey2'))
+    print(myDict.get('myKey')) # returns myValue
+    # retrieve non-existing key
+    print(myDict.get('myKey2')) # returns None
 
 - question: >
     Create a function1 that calls a function2. Function2 must create a tuple from input params x,y 
-    In addition call function1 with a lambda function that sums two params
+    In addition call function1 with a lambda function that sums two params.
   python: |
 
     def createTuple(x,y):
@@ -50,14 +52,64 @@
 
     doSomething(lambda x,y: x+y, 4,6)
 
-- question: Loop over the first 10 integers and print only the even numbers
+- question: Loop over the first 10 integers and print only the even numbers.
   python: |
   
     for i in range(10):
       if i%2 == 0:
           print(i)
           
-- question: Given a list of integers, add 1 to each element of the list
+- question: Given a list of integers, add 1 to each element of the list.
   python: |
-  
+
     new_list = [x+1 for x in my_list]
+
+- h3: Pandas Dojos
+  question: What are the two main data structures of Pandas?
+  answer: >
+    The two main data structures of Pandas are <i>Series</i> and <i>Dataframe</i>.
+
+- question: >
+    Create a Series with 3 values and an index identifying each data point. Then
+    print the values and the index separately.
+
+  python: |
+
+        from pandas import Series, DataFrame
+        import pandas as pd
+        mySeries = Series([4, 7, 5], index=['a','b','c'])
+        # print values 4,7,5
+        mySeries.values
+        # print index 'a','b','c'
+        mySeries.index
+
+- question: >
+    Open a csv file, show the first and last two rows, show the number of rows and columns and show the column names  
+  python: |
+    
+    # content of file.csv
+    # name,age,money
+    # john,43,2500
+    # ringo,32,3420
+    # paul,42,5600
+
+    import pandas as pd
+    ds = pd.read_csv('file.csv')
+    # first row
+    ds.head(1)
+    # last two rows
+    ds.tail(2)
+    # number of rows and columns
+    ds.shape
+    # column names
+    ds.columns
+
+
+
+- question: Given a dataframe, sort the values by a column and show how many different items there are in that column
+  python: |
+
+    # sort by column 1
+    ds.sort_values(['name'])
+    # show different number of items
+    ds['name'].value_counts()
