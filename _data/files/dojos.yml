@@ -1,7 +1,108 @@
 - h2: Coding Dojos
-  h3: Python Dojos
+  h3: SQL Dojos
+  question: Given a table <code>person(name,age)</code>, sort the records by age ascending and by name descending
+  sql: | 
+  
+    SELECT * FROM person 
+    ORDER BY age ASC,name DESC
+    
+- question: Given a table <code>person(name,age)</code>, select the minimum age, the maximum age, the average age. In addition
+    rename the average age to <code>meanAge</code>
+  sql: |
+  
+    SELECT MIN(age), MAX(age), AVG(age) AS meanAge
+    FROM person
+    
+- question: Given a table <code>person(name,age)</code>, select all names that do not start with <code>'R'</code>
+  sql: |
+  
+    SELECT name FROM person 
+    WHERE name NOT LIKE 'R%'
+
+- question: >
+    Given a table <code>person(name,age)</code>, select all names that start with <code>'R'</code> and end 
+    with <code>'A'</code> and do not contain <code>'C'</code>
+  sql: |
+  
+    SELECT name FROM person 
+    WHERE name LIKE 'R%A' 
+    and name NOT LIKE '%C%'
+
+- question: > 
+    Given a table <code>person(name,age)</code>, select all names where the second letter is a <code>'i'</code> and the letter before the last
+    letter is a <code>'n'</code>
+  sql: |
+
+    SELECT * FROM person 
+    WHERE name LIKE '_i%' 
+    AND name LIKE '%n_'
+
+- question: >
+    Given a table <code>person(name,age)</code>, select all items whose age is one of the following values: 23,56,75.
+    Then select all items whose age is NOT one of the previous values.
+  sql: |
+    
+    -- query 1: items with one of the ages below
+    SELECT * FROM person 
+    WHERE age IN (23,56,75)
+
+    -- query 2: items with NONE of the ages below
+    SELECT * FROM person 
+    WHERE age NOT IN (23,56,75)
+
+- question: >
+    Given a table <code>person(name,age)</code>, select all records whose age is between 20 and 40.
+    Then select all records whose age is NOT between the previous values.
+  sql: |
+
+    -- age is between 20 and 40
+    SELECT * FROM person
+    WHERE age between 20 AND 40
+
+    -- age is NOT between 20 and 40
+    SELECT * FROM person
+    WHERE age NOT between 20 AND 40
+
+- question: What is a JOIN clause? What are the four types of JOIN clauses in SQL?
+  answer: >
+    A JOIN clause is a query that retrieves records from two or more tables.
+    <br><br>
+    In SQL there are the following types of JOIN clauses (lets suppose we have two tables):
+    <ul>
+      <li><b>INNER JOIN</b>: returns records that have matching values in <u>both</u> tables.</li>
+      <li><b>LEFT (OUTER) JOIN</b>: returns all records from the left table and all matching records from the right table.</li>
+      <li><b>RIGHT (OUTER) JOIN</b>: returns all records from the right table and all matching records from the left table.</li>
+      <li><b>FULL (OUTER) JOIN</b>: returns all records that match in the left <u>or</u> in the right table.</li>
+    </ul>
+
+- question: Given the tables <code>person(name,age), salary(name,money)</code>, select all records that match in both tables
+  sql: |
+
+    SELECT * FROM person
+    INNER JOIN salary
+    ON person.name = salary.name
+
+- question: >
+    Given the tables <code>person(name,age), salary(name,money)</code>, select all records from <code>person</code> and all 
+    matching records from <code>salary</code>.
+  sql: |
+
+    SELECT * FROM salary
+    LEFT JOIN person 
+    ON person.name = salary.name
+
+- question: >
+    Given a table <code>person(name,age)</code>, show the number of records for each name and rename that column to <code>n</code>.
+  sql: |
+
+    SELECT name, COUNT(*) as n
+    FROM person
+    GROUP BY name
+
+
+- h3: Python Dojos
   question: >
-    Create a list and print the first two items, everything from the third element and the last two elements
+    Given a list <code>[3,5,7,9,2,4,7]</code>, print the first two items, everything from the third element and the last two elements
   python: |
 
     mylist = [3,5,7,9,2,4,7]
@@ -21,20 +122,20 @@
     # list1 is the concatenation of list1 and list2
     print(list1)
 
-- question: Create a tuple with two integers and print the second integer
+- question: Create a tuple with 3 and 5 and print the second integer
   python: |
 
     myTuple = (3,5)
-    print(myTuple[1])
+    print(myTuple[1]) # prints 5
 
 - question: Create a dictionary, add a (key, value) pair, try to retrieve that key then a non-existing key.
   python: |
 
     myDict = {}
     myDict['myKey'] = 'myValue'
-    print(myDict.get('myKey')) # returns myValue
+    print(myDict.get('myKey')) # prints myValue
     # retrieve non-existing key
-    print(myDict.get('myKey2')) # returns None
+    print(myDict.get('myKey2')) # prints None
 
 - question: >
     Create a function1 that calls a function2. Function2 must create a tuple from input params x,y 
@@ -59,18 +160,35 @@
       if i%2 == 0:
           print(i)
           
-- question: Given a list of integers, add 1 to each element of the list.
+- question: Given a list of integers, add 1 to each element of the list by using <i>list comprehension</i>.
   python: |
 
-    new_list = [x+1 for x in my_list]
+    a = [4,5,6]
+    # 5,6,7
+    b = [x+1 for x in a]
+
+- h3: Matplotlib and Seaborn Dojos
+  question: Visualize a pie chart using Matplotlib
+  python: |
+
+    import matplotlib.pyplot as plt
+    values = [14, 35, 23, 25, 15]
+    fruits = ["Apples", "Bananas", "Cherries", "Apricots", "Pears"]
+    plt.pie(values, labels = fruits)
+    plt.show()
 
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
   answer: >
-    The two main data structures of Pandas are <i>Series</i> and <i>Dataframe</i>.
+    The two main data structures of Pandas are 
+    <ul>
+      <li><b>Series</b>: it is given by a one-dimensional arrays and an associated array of labels, called indices.</li>  
+      <li><b>Dataframe</b>: it is a tabular data structure with rows and columns that behind the scenes 
+      is a collection of <i>Series></i></li>
+    </ul>
 
 - question: >
-    Create a Series with 3 values and an index identifying each data point. Then
+    Create a Series with 3 values (4,5,7) and 3 indices ('a','b','c'). Then
     print the values and the index separately.
 
   python: |
@@ -82,6 +200,37 @@
         mySeries.values
         # print index 'a','b','c'
         mySeries.index
+
+- question: Given a series <code>pd.Series(['male', 'female', 'male'])</code>, map 'male' to 0 and 'female' to 1. 
+  python: |
+
+    myseries = pd.Series(['male', 'female', 'male'])
+    mapping = {'male': 0, 'female': 1}
+    # map 'male' to 0 and 'female' to 1
+    myseries.map(mapping)
+
+- question: > 
+    Given a series <code>pd.Series([5,-7,2])</code>, replace the negative numbers with 0.
+  python: |
+
+    mySeries = pd.Series([5,-7,2])
+    # -7 is replaced with 0
+    mySeries[mySeries < 0] = 0
+
+- question: Given a series <code>pd.Series([5,np.nan,2])</code>, replace the nan number with the mean.
+  python: |
+
+    mySeries = pd.Series([5,np.nan,2])
+    # replace all nan numbers with the mean of the remaining numbers
+    mySeries[mySeries.isnull()] = mySeries.mean()
+
+- question: Given a series <code>pd.Series(['John','Paul','Ringo'])</code>, return a new series where each string is replaced with its first character.
+  python: |
+
+    mySeries = pd.Series(['John','Paul','Ringo'])
+    # for each string return the first char
+    mySeries.apply(lambda s : s[0]) # [J,P,R]
+
 
 - question: >
     Open a csv file, show the first and last two rows, show the number of rows and columns and show the column names  
@@ -104,8 +253,6 @@
     # column names
     ds.columns
 
-
-
 - question: Given a dataframe, sort the values by a column and show how many different items there are in that column
   python: |
 
@@ -113,3 +260,23 @@
     ds.sort_values(['name'])
     # show different number of items
     ds['name'].value_counts()
+
+- question: Given a dataframe, show all columns of row 2, show the number of null values for all columns
+  python: |
+
+    data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
+            'Role':['Tecnician', 'Programmer','Student',np.nan],
+            'Salary':[46000,57000,8000,120000]}
+    ds = pd.DataFrame(data) 
+    # show all columns of row 2
+    ds.loc[2,:]
+    # number of null values for each column
+    ds.isnull().sum()
+
+- question: >
+    Given list of ages, divide the ages into groups of range ages. For examples ages between 0 and 5 are babys, 
+    between 5 and 10 are children and so on. 
+
+  python: |
+
+    pd.cut([3,4,13,14,23,24],bins=[0,5,15,25], labels=['Baby','Child','Young'])

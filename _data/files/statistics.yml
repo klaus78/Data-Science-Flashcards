@@ -148,7 +148,7 @@
 
 - h3: Averages
   question: What is the difference between mean, median, mode?
-  answer: >
+  answer: >    
     <b>Mean</b> (&mu;) = sum all items / num items
     <br><br><b>Median</b> =  value in the middle when the values are sorted. When the number of items is even there is no a single middle
     value and the mean of the two middle numbers is taken instead.

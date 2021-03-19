@@ -52,6 +52,12 @@
       display: none;
 }
 
+.divQuestion code  {
+      font-family: monospace;
+      font-size: 15px;
+      background-color: #f8f8f8;
+}
+
 pre {
       overflow-x: auto;
       white-space: pre-wrap;
@@ -73,7 +79,6 @@ pre {
       font-family: monospace;
       font-size: 14px;
 }
-
 
 
 .divQuestion {

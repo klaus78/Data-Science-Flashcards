@@ -92,6 +92,14 @@ title: Data Science Interview Questions
           </div>
         {% endif %}
 
+        {% if item.sql %}
+         <div class="divCode">
+          {% highlight sql %}
+            {{item.sql}}
+          {% endhighlight %}
+          </div>
+        {% endif %}
+
 
         </li>
         {% endfor %}
