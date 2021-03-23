@@ -262,10 +262,27 @@
 
 - question:  What are some difference between a bar chart and an histogram?
   answer: >
-    A <b>bar chart</b> shows the frequency of every value of a <b>categorical</b> variable. 
-    <br><br>
-    An <b>histogram</b> is used to represent the distribution of a <b>continuous</b> variable.
+    A <b>bar chart</b> 
+    <ul>
+    <li>shows the frequency of each value of a <u>categorical</u> variable.</li>
+    <li>each column represents a single value.</li> 
+    <li>there are gaps between columns.</li>
+    </ul>
+    An <b>histogram</b> 
+    <ul>
+    <li>is used to represent the distribution of a <u>continuous</u> variable.</li>
+    <li>each column represents a range of values.</li>
+    <li>there are no gaps between columns.</li>
+    <li>the area of each column is proportional to the frequency.</li>
+    </ul>
+  image: bar_chart_histogram.png
 
+- question: At what is a histogram particulary good?
+  answer: >
+    A <b>histogram</b> is particularly good at representing grouped data. The frequency of each group is 
+    represented by the area of the column. Because the width of the columns is proportional to the width of 
+    the groups we can have columns with different column widths. The height of the column is then given by
+    frequency / width.
 
 - question: Can you draw a boxplot and explain it?
   answer: >

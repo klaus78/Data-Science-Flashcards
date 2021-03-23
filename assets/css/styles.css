@@ -158,3 +158,22 @@ div.flex-box {
       display:flex;
       justify-content: space-between;
 }
+
+
+.frac {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      letter-spacing: 0.001em;
+      text-align: center;
+  }
+  .frac > span {
+      display: block;
+      padding: 0.1em;
+  }
+  .frac span.bottom {
+      border-top: thin solid black;
+  }
+  .frac span.symbol {
+      display: none;
+  } 
