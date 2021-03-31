@@ -36,15 +36,28 @@
     is the temperature in a room. The temperature can take any value within a range.
 
 - h3: Probabilities
-  question: What is the definition of probability of occurence of event A, that is indicated by P(A)?
-  answer: P(A) = num cases for event A / num all cases
+  question: >
+    What is the definition of probability of occurence of event A, that is indicated by P(A)? 
+    What are the maximum and minimum values of P(A)?
+  answer: >
+    The <b>probability</b> of occurence of event A is indicated by P(A) and is given by the number of ways that event A can happen divided by
+    the number of all possible outcomes.
+    <br><br>For example when you toss a coin, the probability of getting head is given by the number of ways you can get
+    head (1 actually) divided by all possible outcomes (possible outcomes are 2: hear or tail), i.e. the probability of
+    getting head is equal to 1 / 2.
+    <br><br>In mathematical terms we have <b>P(A) = num cases for event A / num all cases</b>
+    <br><br>
+    P(A) is a value between 0 (event not happening) and 1 (event happening for sure).
 
 - question: What is the meaning of the complementary event of A, that is indicated by A’?
-  answer: A’ is the event that A does not happen and its probability is given by <br>P(A') = 1-P(A)
+  answer: >
+    P(A’) is the <b>complementary event</b> of A, i.e. it is the event that event A does not happen. 
+    The complementary event is given by 
+    <br>P(A') = 1-P(A)
 
 - question: What does it mean two events are mutually exclusive or disjoint? 
   answer: > 
-    Two events are mutually exclusive or disjoint when only one of the two events can occur.
+    Two events are <b>mutually exclusive</b> or disjoint when only one of the two events can occur.
 
 - question: What happens when two events intersect?
   answer: When two events intersect, they can occur simultaneously.
@@ -73,7 +86,17 @@
 - question: >
     What diagram is particularly useful for visualizing probabilities? Can you use it
     to visualize P(A), P(A'), P(A &cup; B), P(A &cap; B)? 
-  answer: The Venn diagram is very useful for visualizing probabilities.
+  answer: >
+    The <b>Venn diagram</b> is very useful for visualizing probabilities. The Venn diagram is
+    a diagram where the space of all possible outcomes is represented by a rectangle and events are 
+    represented by circles. <br><br>
+    In the following images you can see the following probabilities represented with the Venn diagram:
+    <ul>
+    <li>P(A) = probability of event A happening</li>
+    <li>P(A') = probability of event A' happening, i.e. probability of event A <u>not</u> happening</li>
+    <li>P(A &cup; B) = probability of event A <u>or</u> event B happening</li>
+    <li>P(A &cap; B) = probability of events A <u>and</u> B happening</li>
+    </ul>
   image: venn_diagrams.png 
 
 - question: What is the meaning of conditional probability P(A|B)?
@@ -147,7 +170,10 @@
 
 
 - h3: Averages
-  question: What is the difference between mean, median, mode?
+  question: What is the meaning of average of the data?
+  answer: You can think of the average as the center of the data.
+
+  question: There are three different sorts of average&#58; mean, median, mode. How do they differ?
   answer: >    
     <b>Mean</b> (&mu;) = <div class="frac">
           <span>sum all items</span>
@@ -165,11 +191,15 @@
     <br><br>
     For example given 1,3,4,5,6,8  we have 6 numbers. The median is given by the mean of the two middle values i.e. (4+5)/2
 
+
 - question: When is the mean more useful and when the median is more useful?
   answer: >
     The <b>mean</b> is more useful when there are no outliers. Indeed the mean is more affected
-    by outliers than the mean. 
+    by outliers than the median. The mean tends to move in the directions of the outliers.
     <br><br>The <b>median</b> is more useful when there are outliers.
+    <br><br>In other words, the mean 
+    is more representative when the data distribution is normal while the median is more representative when 
+    the data distribution is skewed.
 
 - question: >
     What does it mean when the median and the mean have the same value or different values?
@@ -182,11 +212,22 @@
 
 - question: Can you use the mean/median with categorical data?
   answer:  >
-    It is not possible to use the mean/median with categorical data. Mean/median can be used only
-    with numerical data.
-       
+    No, it is not possible to use the mean/median with categorical data. Mean/median can be used only
+    with numerical data. The average that you can use with categorical data is the mode.
 
-- question: >
+- question: When is the mode useful as an average quantity? 
+  answer: >
+    The <b>mode</b> is the most frequent value in a dataset. The mode is useful as an average quantity when
+    <ul>
+    <li>the data is <i>categorical</i>. Indeed in this case the mode is the only average that can be used since the mean and median
+    are used with numerical data.</li>
+    <li>the data is <i>numerical or categorical</i> and there are two or more <i>clusters</i>. In that case it is more representive to take
+    the node of each cluster. 
+    <br><br>For example if you have the numbers <code>(2,2,3,3,3,4,4,40,40,41,41,41,42,42)</code>, 
+    we have two clusters. The more representative average values are then the modes 3 (mode of first cluster) and 41 (mode of second cluster).</li>
+    </ul>
+- h3: Variability and Spread
+  question: >
     What quantities can you use to measure variability and spread?
   answer: >
     You can use the following quantities: range, interquartile range, 
@@ -195,18 +236,84 @@
 - question: What is the range?
   answer: >
     The <b>range</b> is given by the difference between the largest and the smallest values in a dataset.
-    <br><br>
     The range is one of the ways of measuring how much a dataset is spread out.
+
+- question: What are some advantages / disadvantages of the range?
+  answer: >
+    The <b>range</b> has the <i>advantage</i> that is pretty simple and thus easy to understand.
+    <br><br>
+    The <i>disadvantages</i> of the range are that it does not provide information about the data within the range
+    and it is heavily affected by outliers. Indeed outliers are always at the border of the dataset. 
 
 - question: What is the interquartile range?
   answer: >
-    The <b>interquartile range</b> is found as follows:
-    <br>Divide the interval into 4 equal parts Q1, Q2, Q3, Q4. 
-    <br>The interquartile range is then IQR = Q3 - Q1
+    The <b>interquartile range (IQR)</b> is another way of measung how spread a data is. The idea is to provide a value
+    that is less affected by outliers than it is the range. In simple terms the interquartile range can be thought of
+    as a mini range around the center of the data.
+    <br><br>
+    The <b>interquartile range</b> can be found as follows:
+    <ol>
+    <li>sort the data.</li>
+    <li>Find 3 values <code>Q1, Q2, Q3</code> that split your dataset into four equal parts. <code>Q1, Q2, Q3</code> are called <i>quartiles</i>.</li> 
+    <li>The interquartile range is then given by <code>IQR = Q3 - Q1</code>. 
+    <br><code>Q3</code> is called <i>upper quartile</i>, 
+    <code>Q1</code> is called <i>lower quartile</i>.</li>
+    </ol>
+    <br>
+    Notice that we take the quartiles around the center of the data. In this way outliers are excluded automatically from the computation
+    of IQR.
+- question: >
+    When you compute the interquartile range, you have to find the so-called quartiles, points that divide the dataset 
+    into four equal parts. The middle quartile is equal to a certain type of average. What average is that?
+  answer: The <b>middle quartile</b> is equal to the median.
 
-- question: What is Standard deviation?
+- question: What is the variance? What is its main disadvantage?
+  answer: > 
+    The <b>variance</b> is a way of measuring how the data is spread. The variance is defined as the average of the 
+    squared distance of all points from the mean.
+    <br>
+    <b> Variance&nbsp; = &nbsp;<div class="frac">
+          <span>&Sigma; (x - &mu;)<sup>2</sup></span>
+          <span class="symbol">/</span>
+          <span class="bottom">n</span>
+          </div>
+          &nbsp; = &nbsp; <div class="frac">
+          <span>&Sigma; x<sup>2</sup></span>
+          <span class="symbol">/</span>
+          <span class="bottom">n</span>
+          </div>&nbsp; - &nbsp; &mu;<sup>2</sup>
+        </b>
+
+    <br>where  &mu; = mean,    n = number of points
+    <br><br>The main <i>disadvantage</i> of the variance is that it describes the data spread using squared distances,
+     and this is less intuitive.
+- question: What is the standard deviation?
   answer: >
-    <b>Standard deviation</b> describes how spread data is. 
-    <br><br>A <u>small</u> standard deviation means that
-    most of the points are close to the mean value. 
-    <br><br>A <u>high</u> standard deviation means the points are spread out. 
+    The <b>standard deviation</b> &rho; describes how spread the data is. It is actually the squared value of the <i>variance</i>.
+    In this way the main weak point of the variance (the fact of using squared distances) is compensated.
+    <br><br>
+    &rho; = <span style="white-space: nowrap; font-size:larger">
+            &radic;<span style="text-decoration:overline;font-size:17px">variance</span>
+            </span> 
+
+    <br><br>A <u>small</u> standard deviation means that most of the points are close to the mean value. 
+    A <u>high</u> standard deviation means the points are spread out and far away from the mean. 
+
+- question: What is the minimum value of the standard deviation?
+  answer: The smallest value of the standard deviation is 0. This happens when all data points are equal.
+
+- question: What are standard scores? What is the main idea behind?
+  answer: >
+    <b>Standard scores</b> (denoted by z) are numerical quantities that allow you to compare data distributions with different
+    means and variances. In mathematical terms we have
+    <br>
+    <b> z &nbsp; = &nbsp;<div class="frac">
+          <span>x - &mu;</span>
+          <span class="symbol">/</span>
+          <span class="bottom">&rho;</span>
+          </div>
+    </b>
+    <br> where &mu; = mean, &rho; = standard deviation.
+    <br><br>
+    The <b>main idea</b> behind standard scores is that the data distributions to compare are transformed into a new theoretical data 
+    distribution with &mu; = 0 and &rho; = 1. This makes the comparison possible.

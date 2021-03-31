@@ -58,6 +58,12 @@
       background-color: #f8f8f8;
 }
 
+.divAnswer code  {
+      font-family: monospace;
+      font-size: 15px;
+      background-color: #eeeeee;
+}
+
 pre {
       overflow-x: auto;
       white-space: pre-wrap;

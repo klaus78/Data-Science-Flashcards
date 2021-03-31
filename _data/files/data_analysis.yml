@@ -260,7 +260,7 @@
   image: bar_chart.png
 
 
-- question:  What are some difference between a bar chart and an histogram?
+- question:  What are some difference between a bar chart and a histogram?
   answer: >
     A <b>bar chart</b> 
     <ul>
@@ -286,14 +286,31 @@
 
 - question: Can you draw a boxplot and explain it?
   answer: >
-    Upper extreme (95th Percentile) = exactly 5 percent of the values in the data are 
-    greater than this value. (May instead be the highest value if not displayed separately as dots).<br>
-    Lower extreme (5th Percentile) = exactly 5 percent of the values in the data are less than this value. 
-    (May instead be the smallest value if not displayed separately as dots).
+    A <b>boxplot</b> is a chart specialized in visualizing and comparing ranges.
+
+    <br><br>The elements of a boxplot are:
+    <ul>
+    <li><i>upper extreme (95th Percentile)</i> = exactly 5 percent of the values in the data are 
+    greater than this value (may instead be the highest value if not displayed separately as dots).</li>
+    <li>
+    <i>lower extreme (5th Percentile)</i> = exactly 5 percent of the values in the data are less than this value 
+    (may instead be the smallest value if not displayed separately as dots).
+    </li>
+    <li><i>lower quartile</i> = lowest value of all quartiles. Quartiles are a set of three points that divide the dataset 
+    into four equal parts.</li>
+    <li><i>upper quartile</i> = highest value of all quartiles</li>
+    <li><i>median</i> = middle value of the sorted dataset</li>
+    </ul>
   image: boxplot.png
 
 - question: How to find outliers with a plot?
   answer: >
-    You can use an histogram, a scatter plot or also some statistics values like to say that 
-    outliers are outside of the 1.5 IQR limit
-
+    Here are some tools and techniques you can use to find outliers. However notice that there are different 
+    opinions about that. 
+    <ul>
+    <li>a histogram.</li> 
+    <li>a scatter plot.</li>
+    <li>The interquartile range (IQR) and say that outliers are outside of the 1.5 IQR limit.</li>
+    <li>The standard deviation and consider as outliers those points that are far more than 3 standard deviations
+    from the mean.</li>
+    </ul>

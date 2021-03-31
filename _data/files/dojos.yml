@@ -138,8 +138,8 @@
     print(myDict.get('myKey2')) # prints None
 
 - question: >
-    Create a function1 that calls a function2. Function2 must create a tuple from input params x,y 
-    In addition call function1 with a lambda function that sums two params.
+    Create a function1 that calls a function2. Function2 must create a tuple from input params 
+    <code>x,y</code>.  In addition call function1 with a lambda function that sums two params.
   python: |
 
     def createTuple(x,y):
@@ -188,7 +188,7 @@
     </ul>
 
 - question: >
-    Create a Series with 3 values (4,5,7) and 3 indices ('a','b','c'). Then
+    Create a Series with 3 values <code>(4,5,7)</code> and 3 indices <code>('a','b','c')</code>. Then
     print the values and the index separately.
 
   python: |
