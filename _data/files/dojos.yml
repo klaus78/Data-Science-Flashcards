@@ -184,7 +184,7 @@
     <ul>
       <li><b>Series</b>: it is given by a one-dimensional arrays and an associated array of labels, called indices.</li>  
       <li><b>Dataframe</b>: it is a tabular data structure with rows and columns that behind the scenes 
-      is a collection of <i>Series></i></li>
+      is a collection of <i>Series</i>.</li>
     </ul>
 
 - question: >
@@ -201,7 +201,7 @@
         # print index 'a','b','c'
         mySeries.index
 
-- question: Given a series <code>pd.Series(['male', 'female', 'male'])</code>, map 'male' to 0 and 'female' to 1. 
+- question: Given a series <code>pd.Series(['male', 'female', 'male'])</code>, map <code>'male'</code> to 0 and <code>'female'</code> to 1. 
   python: |
 
     myseries = pd.Series(['male', 'female', 'male'])
@@ -217,7 +217,7 @@
     # -7 is replaced with 0
     mySeries[mySeries < 0] = 0
 
-- question: Given a series <code>pd.Series([5,np.nan,2])</code>, replace the nan number with the mean.
+- question: Given a series <code>pd.Series([5,np.nan,2])</code>, replace the <code>nan</code> number with the mean.
   python: |
 
     mySeries = pd.Series([5,np.nan,2])

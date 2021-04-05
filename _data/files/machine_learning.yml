@@ -427,7 +427,7 @@
 
 - question: What is Support Vector Machine particulary good at? What are some disadvantages? 
   answer: >
-      Support Vector Machine is particularly good at classifying high-dimensional data, i.e. data with a lot of features.
+      <b>Support Vector Machine (SVM)</b> is particularly good at classifying high-dimensional data, i.e. data with a lot of features.
       <br><br>
       SVM has some disadvantages like:
       <ul>

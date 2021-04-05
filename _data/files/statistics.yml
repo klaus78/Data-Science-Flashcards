@@ -1,7 +1,7 @@
 
 - h2: Statistics
   h3: Types of data
-  question: What are the three main types of data you can encounter?
+  question: What are the three main types of data you can encounter in data science?
   answer: >
     The three main types of data types are:
     <ul>
@@ -45,7 +45,8 @@
     <br><br>For example when you toss a coin, the probability of getting head is given by the number of ways you can get
     head (1 actually) divided by all possible outcomes (possible outcomes are 2: hear or tail), i.e. the probability of
     getting head is equal to 1 / 2.
-    <br><br>In mathematical terms we have <b>P(A) = num cases for event A / num all cases</b>
+    <br><br>In mathematical terms we have 
+    <br><b>P(A) = num cases for event A / num all cases</b>
     <br><br>
     P(A) is a value between 0 (event not happening) and 1 (event happening for sure).
 
@@ -53,7 +54,7 @@
   answer: >
     P(A’) is the <b>complementary event</b> of A, i.e. it is the event that event A does not happen. 
     The complementary event is given by 
-    <br>P(A') = 1-P(A)
+    <br><b>P(A') = 1-P(A)</b>
 
 - question: What does it mean two events are mutually exclusive or disjoint? 
   answer: > 
@@ -64,21 +65,33 @@
 
 - question: What is the meaning of the probability P(A &cup; B)? What is the formula for the probability P(A &cup; B)? 
   answer: >
-    P(A &cup; B) is the probability that either event A or event B happens. 
+    <b>P(A &cup; B)</b> is the probability that either event A or event B happens. 
     <br><br>
+    In mathematical terms we have<br>
     P(A &cup; B) = P(A) + P(B) - P(A &cap; B)
+    <br><br>
+    Notice that it is necessary to remove P(A &cap; B) because otherwise some probabilities would be counted twice.
+
 
 - question: > 
     If  events A and B are disjoint, what is the formula for the probability 
-    P(A &cup; B)
-  answer: P(A &cup; B) = P(A) + P(B)
+    P(A &cup; B)?
+  answer: >
+    Since events A and B are <i>disjoint</i>, we have that P(A &cap; B) = 0. As a result<br> 
+    <b>P(A &cup; B) = P(A) + P(B)</b>
+
+- question: Let su suppose that events A and B are exhaustive. What does this mean?
+  answer: >
+    Events A and B are <b>exhaustive</b> when P(A &cup; B) = 1.  
 
 - question: What does it mean that two events are independent?
   answer: >
-    Two independent events are two events that do not affect each other. If one event occurs, 
+    Two <b>independent events</b> are two events that do not affect each other. If one event occurs, 
     the probability of the other occuring remains exactly the same. 
-    <br>
-    P(A|B) = P(A)
+    <br><br>
+    When events A and B are independent, the conditional probability of A happening given that B has already happened is
+    equal to the probability of A happening. We can write 
+    <br><b>P(A|B) = P(A)</b>
 - question: >
     If events A and B are independent, what is the probability of both events happen?
   answer: P(A &cap; B) = P(A) x P(B)
@@ -90,24 +103,36 @@
     The <b>Venn diagram</b> is very useful for visualizing probabilities. The Venn diagram is
     a diagram where the space of all possible outcomes is represented by a rectangle and events are 
     represented by circles. <br><br>
-    In the following images you can see the following probabilities represented with the Venn diagram:
+    In the following image you can see the following probabilities represented with the Venn diagram:
     <ul>
-    <li>P(A) = probability of event A happening</li>
-    <li>P(A') = probability of event A' happening, i.e. probability of event A <u>not</u> happening</li>
-    <li>P(A &cup; B) = probability of event A <u>or</u> event B happening</li>
-    <li>P(A &cap; B) = probability of events A <u>and</u> B happening</li>
+    <li>P(A) = probability of event A happening.</li>
+    <li>P(A') = probability of event A' happening, i.e. probability of event A <u>not</u> happening.</li>
+    <li>P(A &cup; B) = probability of event A <u>or</u> event B happening.</li>
+    <li>P(A &cap; B) = probability of events A <u>and</u> B happening.</li>
     </ul>
   image: venn_diagrams.png 
 
-- question: What is the meaning of conditional probability P(A|B)?
+- question: What is the meaning of conditional probability P(A|B)? What is its formula?
   answer: >
-    The conditional probability P(A|B) is the probability that A happens
-    given that event B has already happened.
+    The <b>conditional probability P(A|B)</b> is the probability that event A happens
+    given that event B has already happened. P(A|B) can be calculated as follows
+    <br><br>
+    <b>P(A|B) = <div class="frac">
+    <span>P(A &cap; B)</span>
+    <span class="symbol">/</span>
+    <span class="bottom">P(B)</span>
+    </div></b>
 
 - question: > 
     What diagram is particularly useful for visualizing conditional probabilities? Can you use
     this diagram to visualize the conditional probability P(A|B)?
-  answer: Conditional probabilities can be well visualized with a <b>probability tree</b>.
+  answer: >
+    <b>Conditional probabilities</b> can be well visualized with <b>probability trees</b>, while Venn diagram are not
+    so useful for conditional probabilities. 
+    <br><br>In the picture below you can see an example of probability tree. It is a tree structure with the leaves A, A', B, B' that are
+    grouped as sets of exaustive events. More specifically B and B' are exhaustive as well as A and A'. The first set of branches shows
+    the probabilities P(B) and P(B'). The second set of branches shows the probabilities of P(A), P(A') given that the probabilities
+    of the first set of branches have happened. Notice that the probabilites of each set of branches sums to 1.
   image: conditional_tree.png
 
 - question: What is the law of total probability?
