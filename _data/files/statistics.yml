@@ -9,7 +9,7 @@
     Numerical data can be divided into 
     <ul>
       <li><i>discrete data</i>: it is integer based and can take a limited set of values, for example like the amount of money you have on your account.</li> 
-      <li><i>continuous data</i>: it has an infinite number of possible values like the weight of a person, which can be 60 Kg or 60,345 Kg or 60,345678 Kg. In this
+      <li><i>continuous data</i>: it has an infinite number of possible values like the weight of a person, which can be 60 Kg or 60.345 Kg or 60.345678 Kg. In this
       example you can take the weight with as many decimals as you like.</li> 
     </ul></li>
     <li><b>categorical data:</b> it is data that can have numerical values but those numbers have no intrinsic mathematical meaning. Some examples are gender, race, religion. 
@@ -135,11 +135,33 @@
     of the first set of branches have happened. Notice that the probabilites of each set of branches sums to 1.
   image: conditional_tree.png
 
+- question: >
+    Given the conditional tree in the picture in the answer, find the probabilities 
+    P(Cake|Coffee), P(Cake'&cap;Coffee), P(Cake), P(Coffee|Cake).
+  answer: >
+    P(Cake|Coffee), can be read directly from the conditional diagram.
+    <br><b>P(Cake|Coffee) = (3/4)</b>
+    <br><br>
+    To find P(Cake' &cap; Coffee), we use the formula of the conditional probability.
+    <br><b>P(Cake' &cap; Coffee) = P(Cake'|Coffee) * P(Coffee) = (1/4) * (2/3) = 1/6</b>
+    <br><br>
+    To find P(Cake), we need to add P(Cake &cap; Coffee) and P(Cake &cap; Coffee')
+    <br><b>P(Cake) = P(Cake &cap; Coffee) + P(Cake &cap; Coffee') = P(Cake|Coffee) * P(Coffee) + P(Cake|Coffee') * P(Coffee')
+    = (3/4)*(2/3) + (3/5)*(1/3) = 1/2 + 1/5 = 7/10 = 0.7</b>
+    <br><br>
+    To find P(Coffee|Cake), we use the formula for the conditional probability and P(Cake) found previously.
+    <br><b>P(Coffee|Cake) = P(Coffee &cap; Cake) / P(Cake) = P(Cake|Coffee) * P(Coffee) / P(Cake) = (3/4) * (2/3) / (7/10) = 1/2 * 10/7 = 0.71</b> 
+  image: conditional_tree_exercise.png
+
+
 - question: What is the law of total probability?
-  answer: > 
-    P(B) = P(B &cap; A) + P(B &cap; A’) = 
-    <br>
-    P(A) P(B|A) + P(A’) P(B|A’)
+  answer: >
+    The <b>law of total probability</b> allows you to find the probability of an event by using conditional probabilities. The key idea
+    is that we find the probability of an event by adding together the probabilities of all different ways that event can happen.
+    In the example below P(B) can happen in two ways, either with event A or without event A. In mathematical terms we have
+    <br><br>   
+    <b>P(B) = P(B &cap; A) + P(B &cap; A’) = 
+    P(A) P(B|A) + P(A’) P(B|A’)</b>
 
 - question: What is a probability distribution?
   answer: A probability distribution is a plot that displays the probabilities associated with all possible outcomes.

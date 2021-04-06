@@ -134,7 +134,7 @@
     myDict = {}
     myDict['myKey'] = 'myValue'
     print(myDict.get('myKey')) # prints myValue
-    # retrieve non-existing key
+    # retrieve the non-existing key
     print(myDict.get('myKey2')) # prints None
 
 - question: >
