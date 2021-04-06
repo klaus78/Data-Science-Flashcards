@@ -3,7 +3,7 @@
   h3: Types of data
   question: What are the three main types of data you can encounter in data science?
   answer: >
-    The three main types of data types are:
+    The three main types of data are:
     <ul>
     <li><b>numerical data</b>: the data represents some kind of quantitative value that you can measure. It could be a temperature or a weight. 
     Numerical data can be divided into 
