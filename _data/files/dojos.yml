@@ -1,5 +1,117 @@
 - h2: Coding Dojos
-  h3: SQL Dojos
+  h3: Statistics Dojos
+  question: >
+    Given the conditional tree in the picture in the answer, find the probabilities 
+    P(Cake|Coffee), P(Cake'&cap;Coffee), P(Cake), P(Coffee|Cake).
+  answer: >
+    P(Cake|Coffee), can be read directly from the conditional diagram.
+    <br><b>P(Cake|Coffee) = (3/4)</b>
+    <br><br>
+    To find P(Cake' &cap; Coffee), we use the formula of the conditional probability.
+    <br><b>P(Cake' &cap; Coffee) = P(Cake'|Coffee) * P(Coffee) = (1/4) * (2/3) = 1/6</b>
+    <br><br>
+    To find P(Cake), we need to add P(Cake &cap; Coffee) and P(Cake &cap; Coffee')
+    <br><b>P(Cake) = P(Cake &cap; Coffee) + P(Cake &cap; Coffee') = P(Cake|Coffee) * P(Coffee) + P(Cake|Coffee') * P(Coffee')
+    = (3/4)*(2/3) + (3/5)*(1/3) = 1/2 + 1/5 = 7/10 = 0.7</b>
+    <br><br>
+    To find P(Coffee|Cake), we use the formula for the conditional probability and P(Cake) found previously.
+    <br><b>P(Coffee|Cake) = P(Coffee &cap; Cake) / P(Cake) = P(Cake|Coffee) * P(Coffee) / P(Cake) = (3/4) * (2/3) / (7/10) = 1/2 * 10/7 = 0.71</b> 
+  image: conditional_tree_exercise.png
+
+- question: >
+    Given a set of people, 80% of them drink coffee while 20% drink tea. Out of those drinking coffee, 70% put sugar in the coffee.
+    Out of those drinking tea, 40% put sugar in the tea. Can you draw the probability tree for this scenario? Use the Bayes's Theorem
+    to compute P(coffee|sugar free).
+  answer: >
+    The probability tree is visible below. Given the Bayes formula
+    <br>
+    <b>
+    P(A|B) =
+    <div class="frac">
+    <span>P(A) * P(B|A)</span>
+    <span class="symbol">/</span>
+    <span class="bottom">P(A) * P(B|A) + P(A') * P(B|A')</span>
+    </div>
+    </b> 
+    <br><br>we can find <b>P(coffee|sugar free)</b> as follows
+    <br><br>
+    <b>
+    P(coffee|sugar free) =
+    <div class="frac">
+    <span>P(coffee) * P(sugar free|coffee)</span>
+    <span class="symbol">/</span>
+    <span class="bottom">P(coffee) * P(sugar free|coffee) + P(tea) * P(sugar free|tea)</span>
+    </div> 
+    =
+    <div class="frac">
+    <span>0.8 * 0.3</span>
+    <span class="symbol">/</span>
+    <span class="bottom">0.8 * 0.3 + 0.2 * 0.6</span>
+    </div> 
+     = 0.24 / 0.36 = 2/3
+    </b>
+  image: probability_tree_coffee_sugar.png
+
+- question: >
+    Given 10 people, 7 people likes coffe, 5 likes tea, 4 people likes both. 
+    Are the probabilities P(coffee) and P(tea) dependent or independent?
+  answer: >
+    P(coffee) and P(tea) are independent if P(coffee) x P(tea) = P(coffee &cap; tea).
+    <br><br>Let's check whether this is the case or not.
+    <b><br><br>P(coffee) = 7/10 = 0.7
+    <br>P(tea) = 5/10 = 0.5
+    <br>P(coffee &cap; tea) = 4 / 10 = 0.4
+    <br>P(coffee) x P(tea) = 0.7 x 0.5 = 0.35</b>
+    <br><br>Because P(coffee) x P(tea) is different from P(coffee &cap; tea), it follows that 
+    P(coffee) and P(tea) are <u>dependent</u> events.
+
+- question: >
+    At a local shop you can buy magic boxes that can contain some money prizes. The box costs 1$. The probability
+    of winning 5$ is 0.07 and the probability of winning 10$ is 0.03. If X is the net gain, what is
+    the probability distribution P(X)? What are the values of the expectation E(X) and the variance Var(X)?
+    How do P(X), E(X) and Var(X) change if the price of a magic box is increased to 1.5$?
+  answer: >
+    The possible values are -1$ (buying a magic box without winning), 4$ (buying a magic box and winning 5$) and 
+    9$ (buying a magic box and winning 10$).
+    The <b>probability distribution P(X)</b> is given by all possible values (-1, 7, 14) and their probabilities
+    (0.9, 0.07, 0.03). 
+    <br><br>
+    The <b>expectation E(X)</b> is<br>
+    <b>E(X) = &mu; = -1*0.9 + 4*0.07 + 9 * 0.03 = -0.9 + 0.28 + 0.27 = -0.35</b>
+    <br> The expected long term net gain is -0.35$
+    <br><br>
+    The <b>variance Var(X)</b> is<br>
+    <b>Var(X) = (-1+0.35)<sup>2</sup>*0.9 + (4+0.35)<sup>2</sup>*0.07 + (9+0.35)<sup>2</sup>*0.03 
+    = 0.38 + 1.32 + 2.62 = 4.32$</b>
+    <br><br>
+    If the price of the magic box is increased to 1.5$, the values change but the probabilities remain the same.
+    The new data distribution Y can then be obtained from a linear transformation of the original data distribution as follows
+    <br>
+    <b>P(Y) = aP(X) + b.</b> 
+    <br>
+    In this example a = 1 and b = 0.5. E(Y) and Var(Y) can be then computed as 
+    <br><br>
+    <b>E(Y) = a E(X) + b = -0.35 + 0.5 = 0.15$</b>
+    <br>
+    <b>Var(Y) = a<sup>2</sup>Var(X) = 4.32$</b>
+
+- question: >
+    Given a restaurant 1 with prices (3$,$4$,5$) and probability (0.6,0.3,0.1) and a restaurant 2 with prices (2$,6$,7$) and
+    probability (0.8,0.15,0.05), what is the difference in price between the two restaurants?
+  answer: >
+    The average price for each restaurant is
+    <br><b>E(R1) = 3*0.6 + 4*0.3 + 5*0.1 = 3.5$
+    <br><br>E(R2) = 2*0.8 + 6.0.15 + 7*0.05 = 2.85$</b>
+    <br><br>The variance of the price is 
+    <br><b>Var(R1) = (3-3.5)<sup>2</sup>*0.6 + (4-3.5)<sup>2</sup>*0.3 + (5-3.5)<sup>2</sup>*0.1 = 0.45
+    <br>Var(R2) = (2-2.85)<sup>2</sup>*0.8 + (6-2.85)<sup>2</sup>*0.15 + (7-2.85)<sup>2</sup>*0.05 = 2.93
+    </b>
+    <br><br>
+    The difference in price between the two restaurant and the respective variance is
+    <br><b>E(R1 - R2) = E(R1) - E(R2) = 3.5 - 2.85 = 0.65$ 
+    <br>Var(R1 - R2) = Var(R1) + Var(R2) = 0.45 + 2.93 = 3.38</b>   
+
+- h3: SQL Dojos
   question: Given a table <code>person(name,age)</code>, sort the records by age ascending and by name descending
   sql: | 
   

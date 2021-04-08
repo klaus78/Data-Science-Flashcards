@@ -13,18 +13,17 @@
       example you can take the weight with as many decimals as you like.</li> 
     </ul></li>
     <li><b>categorical data:</b> it is data that can have numerical values but those numbers have no intrinsic mathematical meaning. Some examples are gender, race, religion. 
-    You can maps values to number, like say male is 0 and female is 1. But those number have no mathematical meaning, i.e. the male value has no
+    You can map values to numbers, like say male is 0 and female is 1. But those numbers have no mathematical meaning, i.e. the male value has no
     numerical relationship with the female value.</li>
-    <li><b>ordinal data:</b> this is a mixture of numerical and categorical data. More specifically it is categorical data with mathematical
+    <li><b>ordinal data:</b> this is a mixture of numerical and categorical data. More specifically, it is categorical data with mathematical
     meaning. For example the hotel rating stars from 1 to 5 have a numerical meaning: a five star hotel
     is better than a two star hotel.</li>
 
 - question: What is a random variable?
   answer: > 
-    A random variable assigns a numeric value to each possile outcome of a random phenomenon. 
-    A numeric value is a necessary condition in 
-    the sense that something not numeric chosen at random is NOT a random variable. 
- 
+    A <b>random variable</b> assigns a numeric value to each possile outcome of a random phenomenon. 
+    Each numeric value is associated with a specific probability. 
+  
 - question: What is the difference between discrete and continuous random variables? Can you make a couple of examples of both?
   answer: >
     <b>Discrete random variables</b> have a finite number of possible 
@@ -34,187 +33,6 @@
     <b>Continuous random variables</b> have a non-finite number of possible outcomes. In other words a continuous random
     variable can assume any value in an interval. An example of continuous random variable
     is the temperature in a room. The temperature can take any value within a range.
-
-- h3: Probabilities
-  question: >
-    What is the definition of probability of occurence of event A, that is indicated by P(A)? 
-    What are the maximum and minimum values of P(A)?
-  answer: >
-    The <b>probability</b> of occurence of event A is indicated by P(A) and is given by the number of ways that event A can happen divided by
-    the number of all possible outcomes.
-    <br><br>For example when you toss a coin, the probability of getting head is given by the number of ways you can get
-    head (1 actually) divided by all possible outcomes (possible outcomes are 2: hear or tail), i.e. the probability of
-    getting head is equal to 1 / 2.
-    <br><br>In mathematical terms we have 
-    <br><b>P(A) = num cases for event A / num all cases</b>
-    <br><br>
-    P(A) is a value between 0 (event not happening) and 1 (event happening for sure).
-
-- question: What is the meaning of the complementary event of A, that is indicated by A’?
-  answer: >
-    P(A’) is the <b>complementary event</b> of A, i.e. it is the event that event A does not happen. 
-    The complementary event is given by 
-    <br><b>P(A') = 1-P(A)</b>
-
-- question: What does it mean two events are mutually exclusive or disjoint? 
-  answer: > 
-    Two events are <b>mutually exclusive</b> or disjoint when only one of the two events can occur.
-
-- question: What happens when two events intersect?
-  answer: When two events intersect, they can occur simultaneously.
-
-- question: What is the meaning of the probability P(A &cup; B)? What is the formula for the probability P(A &cup; B)? 
-  answer: >
-    <b>P(A &cup; B)</b> is the probability that either event A or event B happens. 
-    <br><br>
-    In mathematical terms we have<br>
-    P(A &cup; B) = P(A) + P(B) - P(A &cap; B)
-    <br><br>
-    Notice that it is necessary to remove P(A &cap; B) because otherwise some probabilities would be counted twice.
-
-
-- question: > 
-    If  events A and B are disjoint, what is the formula for the probability 
-    P(A &cup; B)?
-  answer: >
-    Since events A and B are <i>disjoint</i>, we have that P(A &cap; B) = 0. As a result<br> 
-    <b>P(A &cup; B) = P(A) + P(B)</b>
-
-- question: Let su suppose that events A and B are exhaustive. What does this mean?
-  answer: >
-    Events A and B are <b>exhaustive</b> when P(A &cup; B) = 1.  
-
-- question: What does it mean that two events are independent?
-  answer: >
-    Two <b>independent events</b> are two events that do not affect each other. If one event occurs, 
-    the probability of the other occuring remains exactly the same. 
-    <br><br>
-    When events A and B are independent, the conditional probability of A happening given that B has already happened is
-    equal to the probability of A happening. We can write 
-    <br><b>P(A|B) = P(A)</b>
-- question: >
-    If events A and B are independent, what is the probability of both events happen?
-  answer: P(A &cap; B) = P(A) x P(B)
-
-- question: >
-    What diagram is particularly useful for visualizing probabilities? Can you use it
-    to visualize P(A), P(A'), P(A &cup; B), P(A &cap; B)? 
-  answer: >
-    The <b>Venn diagram</b> is very useful for visualizing probabilities. The Venn diagram is
-    a diagram where the space of all possible outcomes is represented by a rectangle and events are 
-    represented by circles. <br><br>
-    In the following image you can see the following probabilities represented with the Venn diagram:
-    <ul>
-    <li>P(A) = probability of event A happening.</li>
-    <li>P(A') = probability of event A' happening, i.e. probability of event A <u>not</u> happening.</li>
-    <li>P(A &cup; B) = probability of event A <u>or</u> event B happening.</li>
-    <li>P(A &cap; B) = probability of events A <u>and</u> B happening.</li>
-    </ul>
-  image: venn_diagrams.png 
-
-- question: What is the meaning of conditional probability P(A|B)? What is its formula?
-  answer: >
-    The <b>conditional probability P(A|B)</b> is the probability that event A happens
-    given that event B has already happened. P(A|B) can be calculated as follows
-    <br><br>
-    <b>P(A|B) = <div class="frac">
-    <span>P(A &cap; B)</span>
-    <span class="symbol">/</span>
-    <span class="bottom">P(B)</span>
-    </div></b>
-
-- question: > 
-    What diagram is particularly useful for visualizing conditional probabilities? Can you use
-    this diagram to visualize the conditional probability P(A|B)?
-  answer: >
-    <b>Conditional probabilities</b> can be well visualized with <b>probability trees</b>, while Venn diagram are not
-    so useful for conditional probabilities. 
-    <br><br>In the picture below you can see an example of probability tree. It is a tree structure with the leaves A, A', B, B' that are
-    grouped as sets of exaustive events. More specifically B and B' are exhaustive as well as A and A'. The first set of branches shows
-    the probabilities P(B) and P(B'). The second set of branches shows the probabilities of P(A), P(A') given that the probabilities
-    of the first set of branches have happened. Notice that the probabilites of each set of branches sums to 1.
-  image: conditional_tree.png
-
-- question: >
-    Given the conditional tree in the picture in the answer, find the probabilities 
-    P(Cake|Coffee), P(Cake'&cap;Coffee), P(Cake), P(Coffee|Cake).
-  answer: >
-    P(Cake|Coffee), can be read directly from the conditional diagram.
-    <br><b>P(Cake|Coffee) = (3/4)</b>
-    <br><br>
-    To find P(Cake' &cap; Coffee), we use the formula of the conditional probability.
-    <br><b>P(Cake' &cap; Coffee) = P(Cake'|Coffee) * P(Coffee) = (1/4) * (2/3) = 1/6</b>
-    <br><br>
-    To find P(Cake), we need to add P(Cake &cap; Coffee) and P(Cake &cap; Coffee')
-    <br><b>P(Cake) = P(Cake &cap; Coffee) + P(Cake &cap; Coffee') = P(Cake|Coffee) * P(Coffee) + P(Cake|Coffee') * P(Coffee')
-    = (3/4)*(2/3) + (3/5)*(1/3) = 1/2 + 1/5 = 7/10 = 0.7</b>
-    <br><br>
-    To find P(Coffee|Cake), we use the formula for the conditional probability and P(Cake) found previously.
-    <br><b>P(Coffee|Cake) = P(Coffee &cap; Cake) / P(Cake) = P(Cake|Coffee) * P(Coffee) / P(Cake) = (3/4) * (2/3) / (7/10) = 1/2 * 10/7 = 0.71</b> 
-  image: conditional_tree_exercise.png
-
-
-- question: What is the law of total probability?
-  answer: >
-    The <b>law of total probability</b> allows you to find the probability of an event by using conditional probabilities. The key idea
-    is that we find the probability of an event by adding together the probabilities of all different ways that event can happen.
-    In the example below P(B) can happen in two ways, either with event A or without event A. In mathematical terms we have
-    <br><br>   
-    <b>P(B) = P(B &cap; A) + P(B &cap; A’) = 
-    P(A) P(B|A) + P(A’) P(B|A’)</b>
-
-- question: What is a probability distribution?
-  answer: A probability distribution is a plot that displays the probabilities associated with all possible outcomes.
-
-- question: What is the expectation of a probability distribution? Can you calculate it with an example?
-  answer: >
-    The expectation E(X) of a probability distribution X is basically the average value of the
-    probability distribution. It is defined as
-    <br><br>
-    E(X) = sum x * P(X = x)
-    <br><br>
-    For example given x = 1,2,3 and P(x) = 0.2, 0.5, 0.3 we have that E(X) equals 
-    1*0.2 + 2*0.5 + 3*0.3 = 2.1
-
-- question: What is an uniform distribution? Draw a plot of it.
-  answer: An uniform distribution is a distribution where all values have the same probability.
-  image: uniform_distribution.PNG
-
-- question: What types of discrete probability distributions are there?
-  answer: >
-     There are the Bernoulli distribution, the Binomial distribution and
-     the Poisson distribution.
-     <br><br>
-     The <b>Bernoulli distribution</b> is a random experiment that has 2 possible
-     outcomes with probability p and q, where p+q = 1
-     <br><br>
-     The <b>Binomial distribution</b> is a sequence of repeated Bernoulli trials
-     performed indipendently. 
-     <br>
-     n = number of items, k = num items I pickup
-     <br> All possible combinations are n! / ( (n-k)! * k! )
-     <br><br>
-     The <b>Poisson distribution</b> is a limiting version of the Binomial distribution
-     where the number of trials n gets really large but the probability of success p
-     gets smaller at the same time. In other words if you have a Binomial distribution
-     where you let n tends to infinite and p tends to zero such that np = &lambda;, then
-     that distribution approaches a Poisson distribution with parameter &lambda;.
-
-
-- question: What is the normal distribution?
-  answer: >
-    The normal distribution is a density distribution where the data is distributed 
-    around a central value in the form of a bell-shaped curve. Random variables 
-    have a normal distribution.
-
-- question: What is the Central Limit Theorem? Why is it important?
-  answer: >
-    The Central Limit Theorem states that the sampling distribution 
-    of the sample means approaches a normal distribution as the sample size gets larger.
-    <br><br>
-    The Central Limit Theorem is important because under certain conditions you can 
-    approximate a non-normal distribution with a normal distribution.
-
 
 - h3: Averages
   question: What is the meaning of average of the data?
@@ -364,3 +182,270 @@
     <br><br>
     The <b>main idea</b> behind standard scores is that the data distributions to compare are transformed into a new theoretical data 
     distribution with &mu; = 0 and &rho; = 1. This makes the comparison possible.
+
+
+- h3: Probabilities
+  question: >
+    What is the definition of probability of occurence of event A, that is indicated by P(A)? 
+    What are the maximum and minimum values of P(A)?
+  answer: >
+    The <b>probability</b> of occurence of event A is indicated by P(A) and is given by the number of ways that event A can happen divided by
+    the number of all possible outcomes.
+    <br><br>For example when you toss a coin, the probability of getting head is given by the number of ways you can get
+    head (1 actually) divided by all possible outcomes (possible outcomes are 2: hear or tail), i.e. the probability of
+    getting head is equal to 1 / 2.
+    <br><br>In mathematical terms we have 
+    <br><b>P(A) = num cases for event A / num all cases</b>
+    <br><br>
+    P(A) is a value between 0 (event not happening) and 1 (event happening for sure).
+
+- question: What is the meaning of the complementary event of A, that is indicated by A’?
+  answer: >
+    P(A’) is the <b>complementary event</b> of A, i.e. it is the event that event A does not happen. 
+    The complementary event is given by 
+    <br><b>P(A') = 1-P(A)</b>
+
+- question: What does it mean two events are mutually exclusive or disjoint? 
+  answer: > 
+    Two events are <b>mutually exclusive</b> or disjoint when only one of the two events can occur.
+
+- question: What happens when two events intersect?
+  answer: When two events intersect, they can occur simultaneously.
+
+- question: What is the meaning of the probability P(A &cup; B)? What is the formula for the probability P(A &cup; B)? 
+  answer: >
+    <b>P(A &cup; B)</b> is the probability that either event A or event B happens. 
+    <br><br>
+    In mathematical terms we have<br>
+    P(A &cup; B) = P(A) + P(B) - P(A &cap; B)
+    <br><br>
+    Notice that it is necessary to remove P(A &cap; B) because otherwise some probabilities would be counted twice.
+
+
+- question: > 
+    If  events A and B are disjoint, what is the formula for the probability 
+    P(A &cup; B)?
+  answer: >
+    Since events A and B are <i>disjoint</i>, we have that P(A &cap; B) = 0. As a result<br> 
+    <b>P(A &cup; B) = P(A) + P(B)</b>
+
+- question: When are events A and B exhaustive?
+  answer: >
+    Events A and B are <b>exhaustive</b> when P(A &cup; B) = 1.  
+
+- question: What does it mean that two events are independent?
+  answer: >
+    Two <b>independent events</b> are two events that do not affect each other. If one event occurs, 
+    the probability of the other occuring remains exactly the same. 
+    <br><br>
+    When events A and B are independent, the conditional probability of A happening given that B has already happened is
+    equal to the probability of A happening. We can write 
+    <br><b>P(A|B) = P(A)</b>
+- question: >
+    If events A and B are independent, what is the probability of both events happen?
+  answer: >
+    Since events A and B are independent, we can write <b>P(A|B) = P(A)</b>.<br>If we also recall that <b>P(A|B) =  P(A &cap; B) / P(B)</b> 
+    we can then write <br>  
+    <b>P(A &cap; B) = P(A) x P(B)</b>
+
+- question: >
+    What diagram is particularly useful for visualizing probabilities? Can you use it
+    to visualize P(A), P(A'), P(A &cup; B), P(A &cap; B)? 
+  answer: >
+    The <b>Venn diagram</b> is very useful for visualizing probabilities. The Venn diagram is
+    a diagram where the space of all possible outcomes is represented by a rectangle and events are 
+    represented by circles. <br><br>
+    In the following image you can see the following probabilities represented with the Venn diagram:
+    <ul>
+    <li>P(A) = probability of event A happening.</li>
+    <li>P(A') = probability of event A' happening, i.e. probability of event A <u>not</u> happening.</li>
+    <li>P(A &cup; B) = probability of event A <u>or</u> event B happening.</li>
+    <li>P(A &cap; B) = probability of events A <u>and</u> B happening.</li>
+    </ul>
+  image: venn_diagrams.png 
+
+- question: What is the meaning of conditional probability P(A|B)? What is its formula?
+  answer: >
+    The <b>conditional probability P(A|B)</b> is the probability that event A happens
+    given that event B has already happened. P(A|B) can be calculated as follows
+    <br><br>
+    <b>P(A|B) = <div class="frac">
+    <span>P(A &cap; B)</span>
+    <span class="symbol">/</span>
+    <span class="bottom">P(B)</span>
+    </div></b>
+
+- question: > 
+    What diagram is particularly useful for visualizing conditional probabilities? Can you use
+    this diagram to visualize the conditional probability P(A|B)?
+  answer: >
+    <b>Conditional probabilities</b> can be well visualized with <b>probability trees</b>, while Venn diagram are not
+    so useful for conditional probabilities. 
+    <br><br>In the picture below you can see an example of probability tree. It is a tree structure with the leaves A, A', B, B' that are
+    grouped as sets of exaustive events. More specifically, B and B' are exhaustive as well as A and A'. The first set of branches shows
+    the probabilities P(B) and P(B'). The second set of branches shows the probabilities of P(A), P(A') given that the probabilities
+    of the first set of branches have happened. Notice that the probabilites of each set of branches sums to 1.
+  image: conditional_tree.png
+
+- question: When is the Venn diagram useful and when is the probability tree useful?
+  answer: >
+    The <b>Venn diagram</b> is useful when you want to show intersecting and mutually exclusive events.
+    <br><br>
+    The <b>probability tree</b> is useful when you want to show conditional probabilities.
+
+- question: What is the Law of Total Probability?
+  answer: >
+    The <b>Law of Total Probability</b> allows you to find the probability of an event by using conditional probabilities. The key idea
+    is that we find the probability of an event by adding together the probabilities of all different ways that event can happen.
+    In the example below P(B) can happen in two ways, either with event A or without event A. In mathematical terms we have
+    <br><br>   
+    <b>P(B) = P(B &cap; A) + P(B &cap; A’) = 
+    P(A) P(B|A) + P(A’) P(B|A’)</b>
+
+- question: What is the Bayes' Theorem? Can you find its formula?
+  answer: >
+    The <b>Bayes' Theorem</b> allows you to find reverse conditional probabilites. In other words, given the probabilities
+    P(B|A) and P(B|A'), the Bayes' Theorem allows you to find the reverse conditional probability P(A|B).
+    <br><br>The formula for the Bayes' Theorem is
+    <br><br> 
+    <b>P(A|B) = 
+    <div class="frac">
+    <span>P(A &cap; B)</span>
+    <span class="symbol">/</span>
+    <span class="bottom">P(B)</span>
+    </div>
+    =<br>
+    <div class="frac">
+    <span>P(A) * P(B|A)</span>
+    <span class="symbol">/</span>
+    <span class="bottom">P(B  &cap; A) + P(B &cap; A')</span>
+    </div>
+    =<br>
+    <div class="frac">
+    <span>P(A) * P(B|A)</span>
+    <span class="symbol">/</span>
+    <span class="bottom">P(A) * P(B|A) + P(A') * P(B|A')</span>
+    </div>
+    </b>
+    <br><br>Notice that the denominator is the law of total probability.
+    
+- question: if two events are independent, can they be mutually exclusive?
+  answer: >
+    If two events A and B are independent, both events can happen so they <u>cannot</u> be mutually exclusive. Indeed
+    A and B would be mutually exclusive when only one of the events could happen.
+
+- h3: Discrete probability distributions
+  question: What is a probability distribution? 
+  answer: >
+    A <b>probability distribution</b> is a plot that displays the probabilities associated with all possible outcomes 
+    of a random variable.
+  
+- question: What is the symbol for a random variable and the symbol for the possible values it can take?
+  answer: >
+    A <b>random variable</b> is represented by a capital letter like X or Y. 
+    <br><br>
+    The <b>possible values</b> that the random variable can take are represented by a lowercase letter
+    like x or y.
+
+- question: What is the expectation of a probability distribution?
+  answer: >
+    The <b>expectation E(X)</b> (also indicated by <b>&mu;</b>) of a probability distribution X is basically the average value of the
+    probability distribution. In other words, the expectation is the expected long-term average value.  It is defined as
+    <br><br>
+    <b>E(X) = &Sigma; x * P(X = x)</b>
+    <br><br>
+    For example given x = 1,2,3 and P(x) = 0.2, 0.5, 0.3 we have that E(X) equals 
+    1*0.2 + 2*0.5 + 3*0.3 = 2.1
+
+- question: What are the formulas for the variance and standard deviation of a probability distribution?
+  answer: >
+    The <b>variance</b> of a probability distribution is defined as:
+    <br>
+    <b>
+    Var(X) = E(x - &mu;)<sup>2</sup> = &Sigma; (x - &mu;)<sup>2</sup> P(X=x)
+    </b>
+    <br><br>
+    The <b>standard deviation</b> of a probability distribution is defined as the root square of the variance.
+    <br>
+    <b>
+    &rho; = <span style="white-space: nowrap; font-size:larger">
+            &radic;<span style="text-decoration:overline;font-size:17px">Var(X)</span>
+            </span>
+    </b>
+- question: > 
+    Let us suppose you know the expectation and variance of a probability distribution X, write the formulas
+    of expectation and variance of the distribution <code>Y = aX + b</code>.
+  answer: >
+    <code>Y = aX + b</code> means that <code>Y</code> is obtained from a linear transformation of <code>X</code>. 
+    With linear transformations the values are changed but the probabilities remain the same. This means that in 
+    the given example <code>Y</code> has different values from <code>X</code> but the same probabilities. 
+    As a result we can use the following shortcuts
+    to compute <code>E(Y)</code> from <code>E(X)</code> and <code>Var(Y)</code> from <code>Var(X)</code>. 
+    <br><br>
+    <b>E(Y) = E(aX + b) = a E(x) + b</b>
+    <br>
+    <b>Var(Y) = Var(aX+b) = a<sup>2</sup> Var(X)</b>
+
+- question: >
+    Given a probability distribution X, what are the expectation and variance of <code>n</code> independent 
+    observations (X<sub>1</sub>, X<sub>2</sub>, ...X<sub>n</sub>) that follow the same distribution?
+  answer:
+    Given <code>n</code> independent observations (X<sub>1</sub>, X<sub>2</sub>, ...X<sub>n</sub>) we have
+    <br><br>
+    <b>
+    E(X<sub>1</sub>, X<sub>2</sub>, ...X<sub>n</sub>) = n X(n)
+    <br><br>
+    Var(X<sub>1</sub>, X<sub>2</sub>, ...X<sub>n</sub>) = n Var(x)
+    </b>
+
+- question: >
+    Given two independent probability distributions P(X) and P(Y) with expectations E(X) and E(Y) 
+    and variances Var(X) and Var(Y) respectively, what are the expectations and variances of the 
+    probability distributions P(X + Y) and P(X - Y)? 
+  answer: >
+    Because P(X) and P(Y) are <u>independent</u> probability distributions, we can write
+    <br><br><b>E(X + Y) = E(X) + E(Y)
+    <br><br>Var(X + Y) = Var(X) + Var(Y)
+    <br><br>E(X - Y) = E(X) - E(Y)
+    <br><br>Var(X - Y) = Var(X) + Var(Y)
+    </b>
+    <br>Notice that even if we subtract X and Y, the variance increases. 
+- question: What is an uniform distribution? Draw a plot of it.
+  answer: An uniform distribution is a distribution where all values have the same probability.
+  image: uniform_distribution.PNG
+
+- question: What types of discrete probability distributions are there?
+  answer: >
+     There are the Bernoulli distribution, the Binomial distribution and
+     the Poisson distribution.
+     <br><br>
+     The <b>Bernoulli distribution</b> is a random experiment that has 2 possible
+     outcomes with probability p and q, where p+q = 1
+     <br><br>
+     The <b>Binomial distribution</b> is a sequence of repeated Bernoulli trials
+     performed indipendently. 
+     <br>
+     n = number of items, k = num items I pickup
+     <br> All possible combinations are n! / ( (n-k)! * k! )
+     <br><br>
+     The <b>Poisson distribution</b> is a limiting version of the Binomial distribution
+     where the number of trials n gets really large but the probability of success p
+     gets smaller at the same time. In other words if you have a Binomial distribution
+     where you let n tends to infinite and p tends to zero such that np = &lambda;, then
+     that distribution approaches a Poisson distribution with parameter &lambda;.
+
+
+- question: What is the normal distribution?
+  answer: >
+    The normal distribution is a density distribution where the data is distributed 
+    around a central value in the form of a bell-shaped curve. Random variables 
+    have a normal distribution.
+
+- question: What is the Central Limit Theorem? Why is it important?
+  answer: >
+    The Central Limit Theorem states that the sampling distribution 
+    of the sample means approaches a normal distribution as the sample size gets larger.
+    <br><br>
+    The Central Limit Theorem is important because under certain conditions you can 
+    approximate a non-normal distribution with a normal distribution.
+
