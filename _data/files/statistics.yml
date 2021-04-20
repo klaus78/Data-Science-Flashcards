@@ -410,6 +410,30 @@
     <br><br>Var(X - Y) = Var(X) + Var(Y)
     </b>
     <br>Notice that even if we subtract X and Y, the variance increases. 
+
+- h3: Permutations and combinations
+  question: >
+    Given <code>n</code> objects, in how many ways can you arrange them in a line? In how many ways can you arrange
+    them in a circle?
+  answer: >
+    Given <code>n</code> objects, you can arrange them 
+    <br><br><b>n!</b> times in a line
+    <br><br><b>(n-1)!</b> times in a circle
+  
+- question: >
+    Given <code>n</code> objects where <code>k</code> of them are of a type and <code>j</code> of them of another type, 
+    in how many way can you arrange them by type?
+  answer: >
+    Given <code>n</code> objects, where <code>k</code> are of a type and <code>j</code> are of another type, the total
+    numbers of ways the objects can be arranged by type is
+    <br>
+    <b><div class="frac">
+      <span>n!</span>
+      <span class="symbol">/</span>
+      <span class="bottom">j! k!</span>
+    </div></b>
+
+
 - question: What is an uniform distribution? Draw a plot of it.
   answer: An uniform distribution is a distribution where all values have the same probability.
   image: uniform_distribution.PNG
