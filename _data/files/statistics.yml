@@ -433,10 +433,94 @@
       <span class="bottom">j! k!</span>
     </div></b>
 
+- question: >
+    In how many ways can you choose <code>k</code> items out of <code>n</code> items when the order matters? In how many ways
+    can you choose <code>k</code> items when the order <u>does not</u> matter? How is it called the number ways when the order counts
+    and does not count? 
+  answer: >
+    Given <code>n</code> objects, you can pick <code>k</code> items in a fixed order in a number of ways that is indicated by
+    <b><sup>n</sup>P<sub>k</sub></b> and is defined as
+    <br>
+    <b><sup>n</sup>P<sub>k</sub> = <div class="frac">
+      <span>n!</span>
+      <span class="symbol">/</span>
+      <span class="bottom">(n - k)!</span>
+    </div></b>
+    <br><br>
+    Given <code>n</code> objects, you can pick <code>k</code> items without caring of the order in a number of ways that is 
+    indicated by <b><sup>n</sup>C<sub>k</sub></b> and is defined as
+    <br>
+    <b><sup>n</sup>C<sub>k</sub> = <div class="frac">
+      <span>n!</span>
+      <span class="symbol">/</span>
+      <span class="bottom">k! (n - k)!</span>
+    </div></b>
+    <br><br>
+    <b><sup>n</sup>P<sub>k</sub></b> is the number of <b>permutations</b> (for which the order matters) 
+    while <b><sup>n</sup>C<sub>k</sub></b> is the <b>combinations</b> (for which the order does <u>not</u> matter).
+
+- question: >
+    Given <code>n</code> items, when you pick <code>k</code> items, what is the difference 
+    between permutations and combinations?
+  answer: >
+    <b>Permutations</b> are about choosing <code>k</code> items in a particular order. 
+    <br><br>
+    <b>Combinations</b> are about choosing <code>k</code> items without caring of the order.
+    <br><br>
+    For example if you pick an apple and then a banana or if you pick a banana and then an apple, we have
+    two different permutations (order matters) but only one combination (order does not matter).
+
+- question: Can it happen that the permutations are less than the combinations?
+  answer: No, it can never happen that permutations and less than combinations.
 
 - question: What is an uniform distribution? Draw a plot of it.
   answer: An uniform distribution is a distribution where all values have the same probability.
   image: uniform_distribution.PNG
+
+- h3: Binomial, poisson and geometric distributions
+  question: >
+    If the probability of success of an event is <code>p</code> and its probability of failure is
+    <code>q = 1 - p</code>, what is the formula of the probability that the event succeeds after <code>n</code> attempts? 
+    What is the name of this formula?
+  answer: >
+    Let <code>p</code> be the probability of success and <code>q = 1 - p</code> the probability of failure. The probability
+    of success after <code>n</code> attempts is
+    <br><br>
+    <b>P(X = n) = q<sup>n-1</sup> p</b>
+    <br><br>
+    This formula is called the <b>geometric distribution</b>.    
+
+- question: What real-world scenarios are described by a geometric distribution? What is its formula and distribution?
+  answer: >
+    The scenarios that are described by a <b>geometric distribution</b> are those where
+    <ul>
+    <li>you have independent trials</li>
+    <li>each trial can either succeed or fail with the same probability</li>
+    <li>you are interested in the probability of succeeding after <code>n</code> trials</li>
+    </ul>
+    <br>
+    Let <code>X</code> be the number of trials needed to get a successful outcome. The probability
+    of <code>X</code> being a certain value <code>r</code> is
+    <br><b>P(X = r) = q<sup>r-1</sup> p</b>
+    <br><br>
+    The probability distribution of a geometric distribution 
+  image: geometric_distribution.png
+
+- question: >
+    Given a geometric distribution <code>X</code>, what is the probability that more than <code>r</code> trials
+    are needed to get the first successful outcome? What is the probability that less than <code>r</code> trials are needed?
+    The probability of success of each trial is denoted by <code>p</code>.
+  answer: >
+    In order to need more than <code>r</code> trials to succeed, we must fail at least <code>r</code> times. We can then write
+    <br>
+    <b>P(X > r) = (1 - p)<sup>r</sup></b>
+    <br><br>
+    The probability of needing less than <code>r</code> trials to succeed is given by
+    <br>
+    <b>P(X <= r) = 1 - P(X < r) = 1 - (1 - p)<sup>r</sup></b></b>
+
+
+
 
 - question: What types of discrete probability distributions are there?
   answer: >

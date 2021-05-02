@@ -113,15 +113,15 @@
 
 - question: >
     There is a race between 12 Ferrari cars, 8 Mercedes cars and 5 Lamborghini cars. What is the probability
-    that the 5 Lamborghini cars will finish the race consecutively (suppose that each Lamborghini has the same probability
-    of winning)?
+    that the 5 Lamborghini cars will finish the race consecutively? Suppose that each Lamborghini has the same probability
+    of winning.
   answer:
     We are not interested in the order of the individual cars but on the car type at each position. Since the Lamborghini
     cars are at consecutive positions, they can be treated as a single item. We need to find the number of ways in which
     the 5 Lamborghini cars can finish the race consecutively. We also need to find the number of ways the race can be finished
-    in general.  
+    irrespective of the car types.  
     We use the formula for computing the number of arrangements of k objects where j and k of them are of the same type
-    <b><div class="frac">
+    <br><b><div class="frac">
       <span>n!</span>
       <span class="symbol">/</span>
       <span class="bottom">j! k!</span>
@@ -131,22 +131,22 @@
       <span>(20 + 1)!</span>
       <span class="symbol">/</span>
       <span class="bottom">12! 8!</span>
-    </div> = </b>
+    </div></b>. Notice that we added 1 to the numerator because we consider the 5 Lamborghini cars as a single item.
     <br>
-    The number of ways the race can be finished in general is
+    The number of ways the race can be finished irrespective of the car types is
     <b><div class="frac">
       <span>25!</span>
       <span class="symbol">/</span>
       <span class="bottom">12! 8! 5!</span>
     </div></b>.
-    The searched probability is 
+    <br>The searched probability is 
     <b><div class="frac">
       <span>(20 + 1))!</span>
       <span class="symbol">/</span>
       <span class="bottom">12! 8!</span>
     </div> &middot; 
     <div class="frac">
-      <span>12! 8!</span>
+      <span>12! 8! 5!</span>
       <span class="symbol">/</span>
       <span class="bottom">25!</span>
     </div> = 
@@ -155,6 +155,20 @@
       <span class="symbol">/</span>
       <span class="bottom">25!</span>
     </div> = 3.95 &middot; 10<sup>-4</sup></b>
+
+- question: Given 12 animals, how many distinct arrangements are there if you pick 5 of them?
+  answer: >
+    To find the number of distinct arrangements we can use the formula for the combinations
+    <br><b><div class="frac">
+      <span>n!</span>
+      <span class="symbol">/</span>
+      <span class="bottom">k! (n-k)!</span>
+    </div></b> = 
+    <b><div class="frac">
+      <span>12!</span>
+      <span class="symbol">/</span>
+      <span class="bottom">5! (12-5)!</span>
+    </div></b> = 792
 
 - h3: SQL Dojos
   question: Given a table <code>person(name,age)</code>, sort the records by age ascending and by name descending
