@@ -360,7 +360,7 @@
 
 - question: >
     Create a Series with 3 values <code>(4,5,7)</code> and 3 indices <code>('a','b','c')</code>. Then
-    print the values and the index separately.
+    print the values and the indices separately.
 
   python: |
 
