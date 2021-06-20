@@ -169,6 +169,52 @@
       <span class="symbol">/</span>
       <span class="bottom">5! (12-5)!</span>
     </div></b> = 792
+  
+- question: >
+    The probability of winning a game is 0.2. Can you find
+    <ul>
+    <li>the probability you will succeed at your 5th attempt after 4 failures</li>
+    <li>the probability you will succeed in 7 or less attempts</li>
+    <li>the probability you will need more than 7 attempts to succeed</li>
+    <li>the expected number of attempts you need to succeed</li>
+    <li>the variance of the expected number of attempts you need to succeed</li>
+    </ul>
+  answer: >
+    This is an example of geometric distribution. 
+    Let <code>p = 0.2</code> be the probability of success and <code>q = 1-p = 0.8</code> the probability of failure.
+    <ul>
+      <li>The probability you will succeed at your 5th attempt after 4 failures is
+      <br><b>P(X=5) = q<sup>4</sup> &middot; p = 0.8<sup>4</sup> &middot; 0.2 = 0.082</b>
+      </li>
+      <li>The probability you will succeed in 7 or less attempts is 1 minus the probability of failing 7 times.
+      <br><b>P(X<=7) = 1 - q<sup>7</sup> = 1 - 0.8<sup>7</sup> = 0.79</b>
+      </li>
+      <li>The expected number of attempts you need to succeed is the expectation of the geometric distribution 
+      <br><b>E(X) = 1 / p = 1 / 0.2 = 5</b>
+      </li>
+      <li>the variance of the expected number of attempts you need to succeed is found with the variance of a geometric distribution
+      <br><b>Var(X) = q / p<sup>2</sup> = 0.8 / 0.2<sup>2</sup> = 20</b>
+      </li>
+    </ul>
+- question: Given 6 questions where each question has 4 possible answers, what is the probability of answering 5 questions correctly?
+  answer: >
+    For this case we can use the formula of the binomial distribution 
+    <b>P(X = r) = <sup>n</sup>C<sub>r</sub> &nbsp; p<sup>r</sup> &nbsp; q<sup>n - r</sup></b>. 
+    Indeed we have the following conditions, that are typical for a binomial distribution&colon;
+    <ul>
+    <li>a limited number of trials (5)</li>
+    <li>the probability of answering correctly a question is independent of the other questions</li>
+    <li>each answer can either be correct or wrong.</li>
+    </ul>
+    <br>In our case we have <code>r = 5</code> number of answers correct, <code>p = 0.25</code> probability of answering correctly a question,
+    <code>q = 0.75</code> probability of answering wrongly a question, <code>n = 6</code> total number of questions.
+    <br><b>P(X = 5) = <sup>6</sup>C<sub>5</sub> &nbsp; 0.25<sup>4</sup> &nbsp; 0.75<sup>6 - 5</sup> = 
+    <div class="frac">
+      <span>6!</span>
+      <span class="symbol">/</span>
+      <span class="bottom">5! (6-5)!</span>
+    </div>
+    &nbsp; 0.25<sup>4</sup> &nbsp; 0.75 = 0.018</b>
 
 - h3: SQL Dojos
   question: Given a table <code>person(name,age)</code>, sort the records by age ascending and by name descending

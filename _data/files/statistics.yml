@@ -362,7 +362,7 @@
     The <b>variance</b> of a probability distribution is defined as:
     <br>
     <b>
-    Var(X) = E(x - &mu;)<sup>2</sup> = &Sigma; (x - &mu;)<sup>2</sup> P(X=x)
+    Var(X) = E(X - &mu;)<sup>2</sup> = &Sigma; (x - &mu;)<sup>2</sup> P(X=x)
     </b>
     <br><br>
     The <b>standard deviation</b> of a probability distribution is defined as the root square of the variance.
@@ -422,7 +422,7 @@
   
 - question: >
     Given <code>n</code> objects where <code>k</code> of them are of a type and <code>j</code> of them of another type, 
-    in how many way can you arrange them by type?
+    in how many ways can you arrange them by type?
   answer: >
     Given <code>n</code> objects, where <code>k</code> are of a type and <code>j</code> are of another type, the total
     numbers of ways the objects can be arranged by type is
@@ -435,7 +435,7 @@
 
 - question: >
     In how many ways can you choose <code>k</code> items out of <code>n</code> items when the order matters? In how many ways
-    can you choose <code>k</code> items when the order <u>does not</u> matter? How is it called the number ways when the order counts
+    can you choose <code>k</code> items when the order <u>does not</u> matter? How is it called the number of ways when the order counts
     and does not count? 
   answer: >
     Given <code>n</code> objects, you can pick <code>k</code> items in a fixed order in a number of ways that is indicated by
@@ -456,8 +456,8 @@
       <span class="bottom">k! (n - k)!</span>
     </div></b>
     <br><br>
-    <b><sup>n</sup>P<sub>k</sub></b> is the number of <b>permutations</b> (for which the order matters) 
-    while <b><sup>n</sup>C<sub>k</sub></b> is the <b>combinations</b> (for which the order does <u>not</u> matter).
+    <b><sup>n</sup>P<sub>k</sub></b> is the number of <b>permutations</b> (for which the order matters). 
+    <b><sup>n</sup>C<sub>k</sub></b> is the number of <b>combinations</b> (for which the order does <u>not</u> matter).
 
 - question: >
     Given <code>n</code> items, when you pick <code>k</code> items, what is the difference 
@@ -470,8 +470,14 @@
     For example if you pick an apple and then a banana or if you pick a banana and then an apple, we have
     two different permutations (order matters) but only one combination (order does not matter).
 
-- question: Can it happen that the permutations are less than the combinations?
-  answer: No, it can never happen that permutations and less than combinations.
+- question: Can it happen that the number of permutations is less than the number of combinations?
+  answer: >
+    No, it can never happen that the number of permutations is less than the number of combinations. This is due to the 
+    fact that the order does matter for permutations. For example if we have an apple and a banana to pick,
+    we have one possible combination but two possible permutations because picking first the banana is
+    a different permutation from picking first the apple. On the contrary it is the same combination if we
+    pick first the banana or the apple since the order does not matter for combinations.
+
 
 - question: What is an uniform distribution? Draw a plot of it.
   answer: An uniform distribution is a distribution where all values have the same probability.
@@ -490,32 +496,35 @@
     <br><br>
     This formula is called the <b>geometric distribution</b>.    
 
-- question: What real-world scenarios are described by a geometric distribution? What is its formula and distribution?
+- question: >
+    What real-world scenarios are described by a geometric distribution? What is its formula and distribution? 
+    What is the mode of any geometric distribution?
   answer: >
     The scenarios that are described by a <b>geometric distribution</b> are those where
     <ul>
     <li>you have independent trials</li>
-    <li>each trial can either succeed or fail with the same probability</li>
-    <li>you are interested in the probability of succeeding after <code>n</code> trials</li>
+    <li>each trial can either succeed or fail. The probability of success at each trial is the same</li>
+    <li>you are interested in the probability of succeeding after <code>n</code> trials.</li>
     </ul>
     <br>
     Let <code>X</code> be the number of trials needed to get a successful outcome. The probability
     of <code>X</code> being a certain value <code>r</code> is
     <br><b>P(X = r) = q<sup>r-1</sup> p</b>
     <br><br>
-    The probability distribution of a geometric distribution is
+    The probability distribution of a geometric distribution is given by the image below. 
+    <br><br>The mode of any geometric distribution is 1.
   image: geometric_distribution.png
 
 - question: >
     Given a geometric distribution <code>X</code>, what is the probability that more than <code>r</code> trials
-    are needed to get the first successful outcome? What is the probability that less than <code>r</code> trials are needed?
-    The probability of success of each trial is denoted by <code>p</code>.
+    are needed to get the first successful outcome? What is the probability that <code>r</code> or less trials are needed to get
+    the first succesful outcome? The probability of success of each trial is denoted by <code>p</code>.
   answer: >
     In order to need more than <code>r</code> trials to succeed, we must fail at least <code>r</code> times. We can then write
     <br>
     <b>P(X > r) = (1 - p)<sup>r</sup></b>
     <br><br>
-    The probability of needing less than <code>r</code> trials to succeed is given by
+    The probability of needing <code>r</code> or less trials to succeed is given by
     <br>
     <b>P(X <= r) = 1 - P(X > r) = 1 - (1 - p)<sup>r</sup></b></b>
 
@@ -524,7 +533,7 @@
     of success of a single trial? What is the meaning of the expectation of a geometric distribution? What is the formula
     of the variance instead?
   answer: >
-    The <b>expectation E(X)</b> of a geometric distribution <code>X</code> with p being the probability of success of a single
+    The <b>expectation E(X)</b> of a geometric distribution <code>X</code> with <code>p</code> being the probability of success of a single
     trial is given by
     <br>
     <b>E(X) = <div class="frac">
@@ -543,8 +552,25 @@
         <span class="symbol">/</span>
         <span class="bottom">p<sup>2</sup></span>
       </div>
-      &nbsp;&nbsp; where q = 1 - p.
-    </b>
+      </b>
+      &nbsp;&nbsp; where <b>q = 1 - p</b>.
+    
+- question: >
+    What are the conditions where we have a binomial distribution? What is the formula of a binomial distribution
+    where we have <code>n</code> trials, probabilities of success <code>p</code> and insuccess <code>q</code> of each trial,  
+    and <code>r</code> successes?
+  answer: >
+    A <b>binomial distribution</b> describes the following cases
+    <ul>
+      <li>we have a number of independent trials</li>
+      <li>each trial can either succeed or fail. The probability of success at each trial is the same</li>
+      <li>the number of trials is finite.</li>
+    </ul>
+    <br><br>
+    Let <code>X</code> be the number of succesful outcomes out of <code>n</code> trials, <code>r</code> the number of successes, <code>p</code> the probability of success
+    and <code>q</code> the probability of insuccess of each trial. The formula of a binomial distribution is
+    <br>
+    <b>P(X = r) = <sup>n</sup>C<sub>r</sub> &nbsp; p<sup>r</sup> &nbsp; q<sup>n - r</sup></b> 
 - question: What types of discrete probability distributions are there?
   answer: >
      There are the Bernoulli distribution, the Binomial distribution and
