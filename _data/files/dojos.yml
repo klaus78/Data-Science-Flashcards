@@ -319,13 +319,13 @@
 
 - h3: Python Dojos
   question: >
-    Given a list <code>[3,5,7,9,2,4,7]</code>, print the first two items, everything from the third element and the last two elements
+    Given a list <code>[3,5,7,9,2,4,7]</code>, print the first two items, all items from the third element and the last two items
   python: |
 
     mylist = [3,5,7,9,2,4,7]
     # first two items
     mylist[:2]
-    # all items from third
+    # all items from the third
     mylist[3:]
     # last two items
     mylist[-2:]
@@ -343,7 +343,8 @@
   python: |
 
     myTuple = (3,5)
-    print(myTuple[1]) # prints 5
+    # prints 5
+    print(myTuple[1]) 
 
 - question: Create a dictionary, add a (key, value) pair, try to retrieve that key then a non-existing key.
   python: |

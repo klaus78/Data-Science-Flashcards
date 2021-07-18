@@ -373,7 +373,7 @@
             </span>
     </b>
 - question: > 
-    Let us suppose you know the expectation and variance of a probability distribution X, write the formulas
+    Let's suppose you know the expectation and variance of a probability distribution X, write the formulas
     of expectation and variance of the distribution <code>Y = aX + b</code>.
   answer: >
     <code>Y = aX + b</code> means that <code>Y</code> is obtained from a linear transformation of <code>X</code>. 
@@ -483,7 +483,7 @@
   answer: An uniform distribution is a distribution where all values have the same probability.
   image: uniform_distribution.PNG
 
-- h3: Binomial, poisson and geometric distributions
+- h3: Binomial, Poisson and geometric distributions
   question: >
     If the probability of success of an event is <code>p</code> and its probability of failure is
     <code>q = 1 - p</code>, what is the formula of the probability that the event succeeds after <code>n</code> attempts? 
@@ -512,7 +512,8 @@
     <br><b>P(X = r) = q<sup>r-1</sup> p</b>
     <br><br>
     The probability distribution of a geometric distribution is given by the image below. 
-    <br><br>The mode of any geometric distribution is 1.
+    <br><br>The mode of any geometric distribution is 1 because <code>P(X=r)</code> has the maximum value at <code>r</code>=1 
+    and decreases as <code>r</code> increases.  
   image: geometric_distribution.png
 
 - question: >
@@ -564,13 +565,61 @@
     <ul>
       <li>we have a number of independent trials</li>
       <li>each trial can either succeed or fail. The probability of success at each trial is the same</li>
-      <li>the number of trials is finite.</li>
+      <li>You are interested in the number of successes out of <code>n</code> trials. 
+        The number of trials <code>n</code> is finite.</li>
     </ul>
     <br><br>
     Let <code>X</code> be the number of succesful outcomes out of <code>n</code> trials, <code>r</code> the number of successes, <code>p</code> the probability of success
     and <code>q</code> the probability of insuccess of each trial. The formula of a binomial distribution is
     <br>
-    <b>P(X = r) = <sup>n</sup>C<sub>r</sub> &nbsp; p<sup>r</sup> &nbsp; q<sup>n - r</sup></b> 
+    <b>P(X = r) = <sup>n</sup>C<sub>r</sub> &nbsp; p<sup>r</sup> &nbsp; q<sup>n - r</sup></b>
+- question: What are the formulas of expectation and variance of a binomial distribution?
+  answer: >
+    The <b>expectation</b> of a binomial distribution is defined as
+    <br>
+    <b>E(X) = np</b>
+    <br><br>
+    The variance of a binomial distribution is defined as 
+    <br>
+    <b>Var(X) = npq</b>
+
+
+- question: What scenarios are covered by a Poisson distribution?
+  answer: >
+    The <b>Poisson distribution</b> covers scenarios where&colon;
+    <ol>
+      <li>we have a set of independent events occurring at random in a given interval of space or time.</li>
+      <li>we know the mean number of occurrences in that interval. This mean is represented by the symbol <code>&lambda;</code> (lambda).</li>
+    </ol>
+- question: >
+    How to indicate that the variable <code>X</code> follows a Poisson distribution with a mean of occurencies 
+    of <code>&lambda;</code>? What is the formula for finding the probability that there are <code>r</code> occurencies
+    in a specific interval?
+  answer: >
+    To indicate that <code>X</code> follows a <b>Poisson distribution</b> with a mean of occurencies of <code>&lambda;</code> 
+    we can write 
+    <br>
+    <b>
+    <code>X ~ Po(&lambda;)</code>
+    </b>
+    <br><br>
+    The formula for finding the probability of having <code>r</code> occurencies in a specific interval is
+    <br>
+    <b>P(X = r) = 
+    <div class="frac">
+    <span>e<sup>-&lambda;</sup> &lambda;<sup>r</sup></span>
+    <span class="symbol">/</span>
+    <span class="bottom">r!</span>
+    </div>
+    </b>
+
+- question: What are the expectation and variance for the Poisson distribution?
+  answer: >
+    Given a <b>Poisson distribution</b> <code>X ~ Po(&lambda;)</code>, 
+    the expectation E(X) and variance Var(X) are
+    <br>
+    <b>E(X) = Var(X) = &lambda;</b> 
+
 - question: What types of discrete probability distributions are there?
   answer: >
      There are the Bernoulli distribution, the Binomial distribution and
@@ -606,4 +655,3 @@
     <br><br>
     The Central Limit Theorem is important because under certain conditions you can 
     approximate a non-normal distribution with a normal distribution.
-

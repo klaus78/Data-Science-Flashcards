@@ -6,7 +6,7 @@ At first you have to install the [Jekyll static site generator](https://jekyllrb
 The files with the questions-answers are in the **_data\files** folder. There is one file for each major topic. The order of the topics is defined in the **_data\sort.yml** file.
 
 ## Add a question
-Let us say you want to add a new question-answer about Statistics. You can do this by editing the **_data\files\statistics.yml** file. 
+Let's say you want to add a new question-answer about Statistics. You can do this by editing the **_data\files\statistics.yml** file. 
 
 Each question-answer has the form
 
