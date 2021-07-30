@@ -180,7 +180,7 @@
     <li>the variance of the expected number of attempts you need to succeed</li>
     </ul>
   answer: >
-    This is an example of geometric distribution. 
+    This is an example of geometric distribution because we have a set of independent trials. 
     Let <code>p = 0.2</code> be the probability of success and <code>q = 1-p = 0.8</code> the probability of failure.
     <ul>
       <li>The probability you will succeed at your 5th attempt after 4 failures is
@@ -216,6 +216,32 @@
     </div>
     &nbsp; 0.25<sup>4</sup> &nbsp; 0.75 = 0.018</b>
 
+- question: >
+    Suppose that you live in a town where in average it can rain twice a week. What is the probability that next week
+    it will not rain?
+  answer: >
+    You know that in this town it rains twice a week. Let <code>X</code> be the distribution of the number of times
+    it rains. Since we have the scenario with a set of events happening in a certain interval (in a week it can rain twice) 
+    and we know the mean values of times it rains in a week, we can say that <code>X</code> follows a <b>Poisson distribution</b>: 
+    <br> <code>X ~ Po(&lambda;)</code> with <code>&lambda; = 2</code> (number of times it rains in a week).
+    <br>To calculate the probability that next week it will not rain, we can use the formula of the Poisson distribution:
+    <br><b>
+    P(X = r)
+    <div class="frac">
+    <span>e<sup>-&lambda;</sup> &lambda;<sup>r</sup></span>
+    <span class="symbol">/</span>
+    <span class="bottom">r!</span>
+    </div></b>. 
+    <br>In our case we have <code>&lambda; = 2</code> and <code>r = 0</code> (0 rains in a week). It follows that the
+    probability that it will not rain next week is
+    <br>
+    <b>
+    P(X = 0) =
+    <div class="frac">
+    <span>e<sup>-2</sup> 2<sup>0</sup></span>
+    <span class="symbol">/</span>
+    <span class="bottom">0!</span>
+    </div> = e<sup>-2</sup> = 0.153</b>
 - h3: SQL Dojos
   question: Given a table <code>person(name,age)</code>, sort the records by age ascending and by name descending
   sql: | 

@@ -502,7 +502,7 @@
   answer: >
     The scenarios that are described by a <b>geometric distribution</b> are those where
     <ul>
-    <li>you have independent trials</li>
+    <li>you have a set of independent trials</li>
     <li>each trial can either succeed or fail. The probability of success at each trial is the same</li>
     <li>you are interested in the probability of succeeding after <code>n</code> trials.</li>
     </ul>
@@ -619,6 +619,30 @@
     the expectation E(X) and variance Var(X) are
     <br>
     <b>E(X) = Var(X) = &lambda;</b> 
+
+- question: >
+    What is the main difference between the Poisson distribution and the binomial 
+    and geometric distributions?
+  answer: >
+    The biggest difference between the <b>Poisson distribution</b> and the 
+    binomial and geometric distributions is that the Poisson distribution
+    does not involve a series of independent trials. The Poisson distribution
+    describes the number of occurencies in a particular time or space interval.
+    By contrast binomial and geometric distributions do involve
+    a set of independent trials. 
+
+- question: >
+    Given two independent Poisson distributions <code>X ~ Po(&lambda;<sub>x</sub>)</code> and 
+    <code>Y ~ Po(&lambda;<sub>y</sub>), what is the distribution of <code>X+Y</code></code>
+  answer: >
+    If two distributions <code>X</code> and <code>Y</code> are independent, then
+    <br><b>P(X + Y) = P(X) + P(Y)</b> 
+    <br><b>E(X + Y) = E(X) + E(Y)</b>.
+    <br>It follows that 
+    <br><b><b>X + Y ~ Po(&lambda;<sub>x</sub> + &lambda;<sub>y</sub>)</b>.
+    <br>In other words, if <code>X</code> and <code>Y</code> are Poisson distributions, so
+    is <code>X + Y</code> a Poisson distribution.
+
 
 - question: What types of discrete probability distributions are there?
   answer: >
