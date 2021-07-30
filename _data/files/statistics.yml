@@ -633,13 +633,13 @@
 
 - question: >
     Given two independent Poisson distributions <code>X ~ Po(&lambda;<sub>x</sub>)</code> and 
-    <code>Y ~ Po(&lambda;<sub>y</sub>), what is the distribution of <code>X+Y</code></code>
+    <code>Y ~ Po(&lambda;<sub>y</sub>)</code>, what is the distribution of <code>X+Y</code>
   answer: >
     If two distributions <code>X</code> and <code>Y</code> are independent, then
     <br><b>P(X + Y) = P(X) + P(Y)</b> 
     <br><b>E(X + Y) = E(X) + E(Y)</b>.
     <br>It follows that 
-    <br><b><b>X + Y ~ Po(&lambda;<sub>x</sub> + &lambda;<sub>y</sub>)</b>.
+    <br><b>X + Y ~ Po(&lambda;<sub>x</sub> + &lambda;<sub>y</sub>)</b>.
     <br>In other words, if <code>X</code> and <code>Y</code> are Poisson distributions, so
     is <code>X + Y</code> a Poisson distribution.
 
