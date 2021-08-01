@@ -4,109 +4,109 @@ title: Data Science Interview Questions
 
 <html>
 
-  <head>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <script type="text/javascript" src="./assets/js/main.js"></script>
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="{{ page.title }}"/>
-    <meta name="twitter:description" content="Large collection of interview questions and answers on Data Science and Machine Learning"/>
-    <meta name="twitter:url" content="https://klaus78.github.io/Data_Science_Flashcards/"/>
-    <meta name="twitter:image" content="https://klaus78.github.io/Data_Science_Flashcards/assets/images/logo.png" />
-    <meta property="og:image" content="https://klaus78.github.io/Data_Science_Flashcards/assets/images/logo.png">
-  </head>
+<head>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ page.title }}" />
+  <meta name="twitter:description"
+    content="Large collection of interview questions and answers on Data Science and Machine Learning" />
+  <meta name="twitter:url" content="https://klaus78.github.io/Data_Science_Flashcards/" />
+  <meta name="twitter:image" content="https://klaus78.github.io/Data_Science_Flashcards/assets/images/logo.png" />
+  <meta property="og:image" content="https://klaus78.github.io/Data_Science_Flashcards/assets/images/logo.png">
+</head>
 
-  <body>
+<body>
 
-    <div class="flex-box">
-      <span><h1 class="h1-inline">Data Science Flashcards</h1></span>
-      <span><a href="https://github.com/klaus78/Data_Science_Questions_Answers">Contribute</a></span>
-    </div>
+  <div class="flex-box">
+    <span>
+      <h1 class="h1-inline">Data Science Flashcards</h1>
+    </span>
+    <span><a href="https://github.com/klaus78/Data_Science_Questions_Answers">Contribute</a></span>
+  </div>
 
-    <p>
-      Large collection of interview questions and answers on <b>Data Science</b> and <b>Machine Learning</b>.
-    </p>
+  <p>
+    Large collection of interview questions and answers on <b>Data Science</b> and <b>Machine Learning</b>.
+  </p>
 
-        
+
+  {% for file in site.data.sort %}
+  {% for item in site.data.files.[file.topic] in %}
+
+  {% if item.h2 %}
+  <!-- <a href="#{{item.h2}}"><h2>{{item.h2}}</h2></a> -->
+  <button class="collapsible" onclick="showHideMenus()">
+    <a href="#{{item.h2}}">{{item.h2}}</a>
+  </button>
+  {% endif %}
+
+  {% if item.h3 %}
+  <ul class="hideable_h3">
+    <li><a href="#{{item.h3}}">
+        <h3>{{item.h3}}</h3>
+      </a></li>
+  </ul>
+  {% endif %}
+
+  {% endfor %}
+  {% endfor %}
+
+  <ol>
+
     {% for file in site.data.sort %}
-      {% for item in site.data.files.[file.topic] in %}
-      
-        {% if item.h2 %}
-          <!-- <a href="#{{item.h2}}"><h2>{{item.h2}}</h2></a> -->
-          <button class="collapsible" onclick="showHideMenus()">
-            <a href="#{{item.h2}}">{{item.h2}}</a>
-          </button>
+    {% for item in site.data.files.[file.topic] in %}
+
+    {% if item.h2 %}
+    <h2 id="{{item.h2}}" style="margin-top: 0px;margin-bottom: 4px; background-color: aliceblue;">{{item.h2}} </h2>
+    {% endif %}
+
+    {% if item.h3 %}
+    <h3 id="{{item.h3}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h3}}</h3>
+    <a href="#top">Top</a>
+    {% endif %}
+
+    <li>
+
+      <div class="divQuestion" onclick="showHideAnswer()">
+        {{item.question}}
+      </div>
+
+      {% if item.answer %}
+      <div class="divAnswer">
+        {{item.answer}}
+
+        {% if item.image %}
+        <br>
+        <img src="./assets/images/{{item.image}}" alt="not found">
         {% endif %}
 
-        {% if item.h3 %}
-          <ul class="hideable_h3">
-            <li><a href="#{{item.h3}}"><h3>{{item.h3}}</h3></a></li>
-          </ul>
-        {% endif %}
-      
-      {% endfor %}
+      </div>
+      {% endif %}
+
+
+      {% if item.python %}
+      <div class="divCode">
+        {% highlight python %}
+        {{item.python}}
+        {% endhighlight %}
+      </div>
+      {% endif %}
+
+      {% if item.sql %}
+      <div class="divCode">
+        {% highlight sql %}
+        {{item.sql}}
+        {% endhighlight %}
+      </div>
+      {% endif %}
+
+
+    </li>
     {% endfor %}
+    {% endfor %}
+  </ol>
 
-    <ol>
-
-      {% for file in site.data.sort %}
-      {% for item in site.data.files.[file.topic] in %}
-      
-        {% if item.h2 %}
-          <hr class="hr-thick">
-          <h2 id="{{item.h2}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h2}} </h2>
-          <a href="#top">Top</a>
-        {% endif %}
-
-        {% if item.h3 %}
-          <hr class="hr-thin">
-          <h3 id="{{item.h3}}" style="margin-top: 0px;margin-bottom: 4px;">{{item.h3}}</h3>
-          <a href="#top" >Top</a>
-        {% endif %}
-
-        <li>
-          <div class="divQuestion">
-            {{item.question}}
-          </div>
-
-          <button onclick="showHideAnswer()" class="buttonAnswer">Answer</button>
-
-          {% if item.answer %}
-            <div class="divAnswer">
-            {{item.answer}}
-
-            {% if item.image %}
-            <br>
-            <img src="./assets/images/{{item.image}}" alt="not found">
-            {% endif %}
-        
-            </div>
-          {% endif %}
-
-        
-        {% if item.python %}
-         <div class="divCode">
-          {% highlight python %}
-            {{item.python}}
-          {% endhighlight %}
-          </div>
-        {% endif %}
-
-        {% if item.sql %}
-         <div class="divCode">
-          {% highlight sql %}
-            {{item.sql}}
-          {% endhighlight %}
-          </div>
-        {% endif %}
-
-
-        </li>
-        {% endfor %}
-      {% endfor %}
-    </ol>
-
-  </body>
+</body>
 
 </html>

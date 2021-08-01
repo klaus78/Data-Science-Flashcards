@@ -5,7 +5,6 @@
 
 *:not(.divCode) {
       font-family: Calibri, Open Sans;
-      /* font-size:20px; */
 }
 
 
@@ -37,6 +36,15 @@
       content: "\25B2"; /* Unicode character for "arrow up" sign  */
 }
 
+.divQuestion:after {
+      content: '\025BC'; /* Unicode character for "arrow down" sign  */
+      font-size: 18px;
+      color: #aaa;
+      float: right;
+      margin-left: 5px;
+}
+
+
 .hideable_h3 {
       display: none;
 }
@@ -45,17 +53,13 @@
       width: 99%;
       text-align: left;
       background-color: #fcfcfc;
-      margin-top:5px;
-      padding:2px;
+      padding:4px;
       border:1px solid #d8d8d8;
       display: none;
+      border-left: 8px solid #5b82d7;
+      border-radius: 0px 0px 8px 8px;
 }
 
-.divQuestion code  {
-      font-family: monospace;
-      font-size: 15px;
-      background-color: #f8f8f8;
-}
 
 .divAnswer code  {
       font-family: monospace;
@@ -87,7 +91,27 @@ pre {
 
 
 .divQuestion {
-      padding-top: 15px;
+      /* margin-bottom: 8px; */
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      cursor: pointer;
+      vertical-align:middle;
+      border-bottom: 1px solid #d7d7d7;
+}
+
+.divQuestion code  {
+      font-family: monospace;
+      font-size: 15px;
+      background-color: #f8f8f8;
+}
+
+.divQuestion:hover {
+      background-color: #cae1e2;
+}
+.divQuestion:active {
+      transform: translateY(1px);
 }
 
 h1{
@@ -152,6 +176,7 @@ img {
 
 .hr-thin {
       border:1px solid #d7d7d7;
+      border-radius: 1px;
 }
 
 .hr-thick {
