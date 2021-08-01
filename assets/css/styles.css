@@ -20,7 +20,7 @@
       font-size: 26px;
 }
 
-.active:not(a), .collapsible:not(a):hover {
+.active:not(a, .divQuestion), .collapsible:not(a):hover {
       background-color: #d7d7d7;
 }
 
@@ -32,18 +32,45 @@
       margin-left: 5px;
 }
 
-.active:not(a):after {
+.active:not(a, .divQuestion):after {
       content: "\25B2"; /* Unicode character for "arrow up" sign  */
 }
 
+.divQuestion {
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      cursor: pointer;
+      vertical-align:middle;
+      border-bottom: 1px solid #d7d7d7;
+}
+
+.divQuestion code  {
+      font-family: monospace;
+      font-size: 15px;
+      background-color: #f8f8f8;
+}
+ 
+.divQuestion:hover {
+      background-color: #cae1e2;
+} 
+.divQuestion:active {
+      transform: translateY(1px);
+}
+
 .divQuestion:after {
-      content: '\025BC'; /* Unicode character for "arrow down" sign  */
+      content: '\025BD'; /* Unicode character for "arrow down" symbol  */
       font-size: 18px;
       color: #aaa;
       float: right;
       margin-left: 5px;
-}
+} 
 
+ 
+.divQuestion.active:after {
+      content: '\025B3'; /* arrow up symbol */
+} 
 
 .hideable_h3 {
       display: none;
@@ -57,7 +84,6 @@
       border:1px solid #d8d8d8;
       display: none;
       border-left: 8px solid #5b82d7;
-      border-radius: 0px 0px 8px 8px;
 }
 
 
@@ -80,8 +106,8 @@ pre {
 .divCode  {
       text-align: left;
       background-color: #f8f8f8;
-      margin-left: -20px;
-      display: none;      
+      display: none;
+      border-left: 8px solid #5b82d7;
 }
 
 .divCode * {
@@ -89,30 +115,6 @@ pre {
       font-size: 14px;
 }
 
-
-.divQuestion {
-      /* margin-bottom: 8px; */
-      padding-left: 4px;
-      padding-right: 4px;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      cursor: pointer;
-      vertical-align:middle;
-      border-bottom: 1px solid #d7d7d7;
-}
-
-.divQuestion code  {
-      font-family: monospace;
-      font-size: 15px;
-      background-color: #f8f8f8;
-}
-
-.divQuestion:hover {
-      background-color: #cae1e2;
-}
-.divQuestion:active {
-      transform: translateY(1px);
-}
 
 h1{
       margin-top: 0px;

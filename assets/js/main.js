@@ -1,6 +1,5 @@
 function showHideAnswer() {
 
-      event.target.classList.toggle("active")
 
       var divQuestion = event.target;
       
@@ -9,6 +8,7 @@ function showHideAnswer() {
       while (divQuestion.className == '')
             divQuestion = divQuestion.parentElement;
 
+      divQuestion.classList.toggle("active")
 
       var divAnswer = divQuestion.parentElement.getElementsByClassName('divAnswer')[0];
 
