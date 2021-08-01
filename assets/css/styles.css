@@ -65,6 +65,7 @@
       color: #aaa;
       float: right;
       margin-left: 5px;
+      vertical-align: text-top;
 } 
 
  
@@ -77,7 +78,7 @@
 }
 
 .divAnswer {
-      width: 99%;
+      width: 98%;
       text-align: left;
       background-color: #fcfcfc;
       padding:4px;
