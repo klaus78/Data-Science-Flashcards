@@ -88,7 +88,7 @@
     are used with numerical data.</li>
     <li>the data is <i>numerical or categorical</i> and there are two or more <i>clusters</i>. In that case it is more representive to take
     the node of each cluster. 
-    <br><br>For example if you have the numbers <code>(2,2,3,3,3,4,4,40,40,41,41,41,42,42)</code>, 
+    <br><br>For example if you have the numbers <code>(2, 2, 3, 3, 3, 4, 4, 40, 40, 41, 41, 41, 42, 42)</code>, 
     we have two clusters. The more representative average values are then the modes 3 (mode of first cluster) and 41 (mode of second cluster).</li>
     </ul>
 - h3: Variability and spread
