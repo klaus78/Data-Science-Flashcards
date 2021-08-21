@@ -226,7 +226,7 @@
     <br> <code>X ~ Po(&lambda;)</code> with <code>&lambda; = 2</code> (number of times it rains in a week).
     <br>To calculate the probability that next week it will not rain, we can use the formula of the Poisson distribution:
     <br><b>
-    P(X = r)
+    P(X = r) =
     <div class="frac">
     <span>e<sup>-&lambda;</sup> &lambda;<sup>r</sup></span>
     <span class="symbol">/</span>
@@ -242,6 +242,34 @@
     <span class="symbol">/</span>
     <span class="bottom">0!</span>
     </div> = e<sup>-2</sup> = 0.153</b>
+
+- question: >
+    Suppose that you have a restaurant with a kitchen where, in average, the oven can break once a year and the fridge
+    can break twice a year. What is the probability that nothing will break in the kitchen next year?
+  answer: >
+    Let <code>X</code> and <code>Y</code> be the distributions of the number of malfunctions of the oven and the fridge. 
+    Because we know the number of malfunctions in a certain time interval (one year), it follows that <code>X</code> and 
+    <code>Y</code> follow a Poisson distribution. Thus we can write <code>X ~ Po(1)</code> and <code>Y ~ Po(2)</code>.
+    <br><br>
+    To find the probability that nothing breaks in the kitchen next year we need to find <code>P(X + Y) = 0</code>. 
+    Because <code>X</code> and <code>Y</code> are indipendent distributions, we can sum the distributions as follows
+    <br><code>X + Y ~ Po(3)</code>. 
+    <br><br>
+    <b>P(X + Y = 0) =
+    <div class="frac">
+    <span>e<sup>-&lambda;</sup> &lambda;<sup>r</sup></span>
+    <span class="symbol">/</span>
+    <span class="bottom">r!</span>
+    </div> =  
+    <div class="frac">
+    <span>e<sup>-3</sup> 3<sup>0</sup></span>
+    <span class="symbol">/</span>
+    <span class="bottom">0!</span>
+    </div> = e<sup>-3</sup> = 0.05</b>
+    <br>The probability that nothing in the kitchen will break next year is 5%.
+    
+
+  
 - h3: SQL Dojos
   question: Given a table <code>person(name,age)</code>, sort the records by age ascending and by name descending
   sql: | 

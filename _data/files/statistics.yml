@@ -664,6 +664,37 @@
      where you let n tends to infinite and p tends to zero such that np = &lambda;, then
      that distribution approaches a Poisson distribution with parameter &lambda;.
 
+- h3: Continuous probability distributions
+  question: >
+    When you have measured data, is this usually discrete or continuous data?
+    When you have data that you can count, is this discrete or continuous data?
+  answer: >
+    <b>Measured data</b> is <b>continuous data</b> because in that case you have an infinite
+    number of values you can measure depending on the accuracy of the instrument of measure.
+    For example a distance can be 4.5mm or 4.56mm, but there are potentially an infinite number
+    of decimal numbers that are given by the accuracy of the measurement.
+    <br><br>
+    Data that you can count is discrete data since it has a finite number of values.
+
+- question: >
+    What is the difference between what we want to find for discrete and continuous 
+    probability distributions?
+  answer: >
+    For <b>discrete probabilitiy distributions</b> we are interested in finding the
+    probability of getting a particular value.
+
+    <br><br>For <b>continuous probabilitiy distributions</b> we are interested in the
+    probability of getting a range of values. The size of the range is given
+    by the degree of accuracy. Indeed for continuous data you cannot get the probability
+    of a specific value because that value can have an infinite number of decimals.
+
+- question: What is a probability density function? How to find the probabilities?
+  answer: >
+    A <b>probability density function</b> describes the probability distribution of a continuous
+    random variable. 
+    <br><br>
+    The probabilities are given by the area under the curve.
+
 
 - h3: Normal distribution
   question: What is the normal distribution?

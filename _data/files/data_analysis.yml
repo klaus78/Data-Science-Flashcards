@@ -9,26 +9,29 @@
 - question: You can divide numerical data into two types. What are they?
   answer: >
     The two types of numerical data are:
-    <br><br>- <b>interval data</b>. Interval data is a data type that is measured on a scale where all 
+    <ul>
+    <li><b>interval data</b>. Interval data is a data type that is measured on a scale where all 
     points are at the same distance. Interval data does not have a zero point.
     Without a zero point the concept of multiplication and division is not
     applicable and thus only sum and difference operations can be applied to interval data.
     An example of interval data is the temperature in C and F. You cannot say that 20C is twice
-    as hot as 10C. This is equivalent to 50F and 68F which is clearly not as twice as hot.
-    <br><br>- <b>ratio data</b>. Ratio data is similar to interval data except that it has a 
+    as hot as 10C. This is equivalent to 50F and 68F which is clearly not as twice as hot.</li>
+    <li> <b>ratio data</b>. Ratio data is similar to interval data except that it has a 
     meaningful zero value so that all the sum, subtraction, multiplication and division operations
-    can be applied. Some examples of ratio data are the length and the weight.
-       
+    can be applied. Some examples of ratio data are the length and the weight.</li>
+    </ul>
+
 - question: You can divide categorical data into two types. What are they?
   answer: >
     There are two types of categorical data:
-    <br><br>- <b>ordinal data</b> = this data has some kind of order but the difference between
+    <ul>
+    <li><b>ordinal data</b> = this data has some kind of order but the difference between
     items is not important. An example of ordinal data are the months or the
-    happiness state (sad, happy, very happy etc)
-    <br><br>- <b>nominal data</b> = data without order and without any quantitative value.
+    happiness state (sad, happy, very happy etc).</li>
+    <li><b>nominal data</b> = data without order and without any quantitative value.
     Some examples of nominal data are all cities in the USA, the gender (male/female),
-    the color hair (brown, black, blonde etc)
-
+    the color hair (brown, black, blonde etc).</li>
+    </ul>
 
 - h3: Distance metrices
   question: What is the hamming distance?
