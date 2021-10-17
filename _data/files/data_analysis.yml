@@ -56,16 +56,17 @@
 
 
 - h3: Feature engineering
-  question: What are the main techniques of feature engineering
+  question: What are the main techniques of feature engineering?
   answer: >
     The main techniques of feature engineering are
-    <br><br>- feature selection. It selects a subset of features without
-    transforming them
-    <br><br>- feaure learning. Use ML learning algorithms to extract the best features
-    <br><br>- feature extraction. transform the existing features into new features. This
-    is usually done by dim reduction
-    <br><br>- feature combination. Combine single features into a more powerful feature
-         
+    <ul>
+    <li><b>feature selection</b>. It selects a subset of features without
+    transforming them</li>
+    <li><b>feaure learning</b>. Use ML learning algorithms to extract the best features</li>
+    <li><b>feature extraction</b>. transform the existing features into new features. This
+    is usually done by dim reduction</li>
+    <li><b>feature combination</b>. Combine single features into a more powerful feature</li>
+     </ul>    
 
 - question: What are the main purposes of feature selection?
   answer: >

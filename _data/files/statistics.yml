@@ -697,11 +697,24 @@
 
 
 - h3: Normal distribution
-  question: What is the normal distribution?
+  question: What is the normal distribution? What parameters do define the normal distribution?
   answer: >
-    The normal distribution is a density distribution where the data is distributed 
+    The <b>normal distribution</b> is a density distribution where the data is distributed 
     around a central value in the form of a bell-shaped curve. Random variables 
-    have a normal distribution.
+    typically have a normal distribution.
+    <br><br>
+    The normal distribution is defined by the <b>mean &mu;</b> and the <b>standard deviation &sigma;<sup>2</sup></b>. 
+    &mu; defines the center of the curve and &sigma;<sup>2</sup> defines the spread of the data. 
+    <br><br>In mathematical terms the normal distribution is indicated as <b>X ~ N(&mu;,&sigma;<sup>2</sup>)</b>
+    <br><br>
+    A normal distribution looks like the following image. In this example we have <code>&mu; = 4</code> and <code>&sigma; = 1</code>.
+  image: normal_distribution.png
+
+- question: Why is the normal distribution called <i>normal</i>?
+  answer: >
+    The <b>normal distribution</b> is called <i>normal</i> because it is seen as 
+    the distribution that you would expect for many continuous data in real life.
+    In practice many distributions of continuous data resemble the normal distribution.
 
 - question: What is the Central Limit Theorem? Why is it important?
   answer: >
