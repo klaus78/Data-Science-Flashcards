@@ -1,13 +1,19 @@
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () { handleWindowScroll() };
 
-window.onload = function() {
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function handleWindowScroll() {
       // Get the header
       header = document.getElementById("myHeader");
       
       // Get the offset position of the navbar
       sticky = header.offsetTop;
-      header.classList.add("sticky");
+      if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+      } else {
+            header.classList.remove("sticky");
+      }
 }
-
 
 function showHideAnswer() {
       var divQuestion = event.target;
