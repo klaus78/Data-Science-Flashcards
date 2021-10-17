@@ -36,6 +36,28 @@
       content: "\25B2"; /* Unicode character for "arrow up" sign  */
 }
 
+.header {
+      padding: 10px;
+      text-align: center;
+      background: #5b82d7;
+      color: white;
+}
+
+.content {
+      padding: 16px;
+}
+
+.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+}
+
+.sticky + .content {
+      padding-top: 102px;
+}
+
 .divQuestion {
       padding-left: 4px;
       padding-right: 4px;

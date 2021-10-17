@@ -1,8 +1,24 @@
-function showHideAnswer() {
 
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () { handleWindowScroll() };
 
-      var divQuestion = event.target;
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function handleWindowScroll() {
+      // Get the header
+      header = document.getElementById("myHeader");
       
+      // Get the offset position of the navbar
+      sticky = header.offsetTop;
+      if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+      } else {
+            header.classList.remove("sticky");
+      }
+}
+
+function showHideAnswer() {
+      var divQuestion = event.target;
+
       // in case we clicked on a child element, we move back to the parent element
       // in order to find the proper controls
       while (divQuestion.className == '')
@@ -60,3 +76,4 @@ function showHideElement(elem) {
             }
       }
 }
+

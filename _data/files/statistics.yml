@@ -705,7 +705,7 @@
     <br><br>
     The normal distribution is defined by the <b>mean &mu;</b> and the <b>standard deviation &sigma;<sup>2</sup></b>. 
     &mu; defines the center of the curve and &sigma;<sup>2</sup> defines the spread of the data. 
-    <br><br>In mathematical terms the normal distribution is indicated as <b>X ~ N(&mu;,&sigma;<sup>2</sup>)</b>
+    <br><br>In mathematical terms the normal distribution is indicated as <b>X ~ N(&mu;,&sigma;<sup>2</sup>)</b>.
     <br><br>
     A normal distribution looks like the following image. In this example we have <code>&mu; = 4</code> and <code>&sigma; = 1</code>.
   image: normal_distribution.png
