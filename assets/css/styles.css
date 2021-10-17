@@ -43,6 +43,7 @@
       color: white;
 }
 
+
 .content {
       padding: 16px;
 }
@@ -100,7 +101,6 @@
 }
 
 .divAnswer {
-      width: 98%;
       text-align: left;
       background-color: #fcfcfc;
       padding:4px;
