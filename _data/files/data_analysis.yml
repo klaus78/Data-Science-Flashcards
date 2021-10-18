@@ -70,12 +70,13 @@
 
 - question: What are the main purposes of feature selection?
   answer: >
-    Reducing the number of features by feature selection are useful for
-    <br><br>- making models more understandable
-    <br><br>- reducing the training times
-    <br><br>- avoid the curse of dimensionality
-    <br><br>- reduce the risk of overfitting by removing noise in the data
-   
+    Reducing the number of features by feature selection is useful for
+    <ul>
+    <li>making models more understandable</li>
+    <li>reducing the training times</li>
+    <li>avoid the curse of dimensionality</li>
+    <li>reduce the risk of overfitting by removing noise in the data</li>
+    </ul>
 - question: What are the main techniques of feature selection?
   answer: >
     The main techniques of feature selection are
