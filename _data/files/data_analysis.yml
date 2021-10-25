@@ -44,11 +44,6 @@
     It is the number of horizontal and/or vertical steps to go from point p1 to point 
     p2
 
-- question: What is the distance matrix?
-  answer: >
-    It is a square matrix (two-dimensional array) containing the distances, taken 
-    pairwise, between the elements of a set of points
-
 - question: What is the Levenshtein distance?
   answer: >
     The Levenshtein distance is the minimum number of single-character edits 

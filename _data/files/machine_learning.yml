@@ -320,22 +320,30 @@
     can be classified as class zero (class one).
 
 - h3: K-Nearest neighbor algorithm (KNN)
-  question: What is the KNN algorithm?
+  question: What is the K-nearest neighbor (KNN) algorithm? For what is KNN used?
   answer: >
-    A k-nearest neighbor (KNN) method scores an example by finding the k training examples 
-    nearest to the example and then taking the average of their outcomes as the score.
+    The <b>k-nearest neighbor (KNN) </b>algorithm is a machine learning algorithm that finds the 
+    <code>K</code> closest (= most similar) data points of a given data point
+    based on a certain metric, typically the Eucledian distance. 
+    <br><br>
+    The KNN algorithm can be used both for classification and regression. If you want to classify a data point, 
+    you can assign assign it to the most common class among the <code>K</code> neighbors. 
+    If you want to predict a value, you can compute the average value among the <code>K</code> neighbors. 
 
 - question: What are some advantages and disadvantages of the KNN algorithm?
   answer: >
-    Some advantages are
-    <br>- simple concept
-    <br>- builiding a model is cheap
-    <br>- no assumption is made about the data distrubution
-    <br><br>Some disadvantages are
-    <br>- classifying unknown records is expensive, in particular with big data sets, 
-         since you have to find the K nearest neighbors
-    <br>- pretty affected by data missing and data scaling
-
+    Some advantages of the KNN algorithm are
+    <ul>
+    <li>simple concept</li>
+    <li>builiding a model is cheap</li>
+    <li>no assumption is made about the data distrubution</li>
+    </ul>
+    <br><br>Some disadvantages of the KNN algorithm are
+    <ul>
+    <li>classifying unknown records is expensive, in particular with big data sets, 
+         since you have to find the K nearest neighbors</li>
+    <li>pretty affected by data missing and data scaling</li>
+    </ul>
 - question: Make an example of a real user-case for the KNN algorithm
   answer: >
     You can use the KNN algorithm to recommend a product to a customer 

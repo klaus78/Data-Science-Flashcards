@@ -45,7 +45,7 @@
 
 
 .content {
-      padding: 16px;
+      padding: 8px;
 }
 
 .sticky {
@@ -138,6 +138,9 @@ pre {
       font-size: 14px;
 }
 
+ul {
+      list-style-type: disc;
+}
 
 h1{
       margin-top: 0px;
