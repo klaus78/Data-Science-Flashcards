@@ -52,7 +52,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: 1;
+      z-index: 10;
 }
 
 .sticky + .content {
@@ -186,11 +186,13 @@ button {
 
 a:link {
       color: #4265b3;
+      text-decoration: none;
 }
 
 /* visited link */
 a:visited {
       color: #4265b3;
+      text-decoration: none;
 }
 
 
