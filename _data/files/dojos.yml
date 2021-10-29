@@ -469,9 +469,16 @@
         import pandas as pd
         mySeries = Series([4, 7, 5], index=['a','b','c'])
         # print values 4,7,5
-        mySeries.values
+        print(mySeries.values)
         # print index 'a','b','c'
-        mySeries.index
+        print(mySeries.index)
+
+- question: Given a series <code>pd.Series([4,6,7,4])</code>, find the number of distinct values in it.
+  python: |
+
+    mySeries = pd.Series([4,6,7,4])
+    num_distinct_values = mySeries.nunique()
+    # num_distinct_values is equal to 3. The distinct values are 4,6,7. 
 
 - question: Given a series <code>pd.Series(['male', 'female', 'male'])</code>, map <code>'male'</code> to 0 and <code>'female'</code> to 1. 
   python: |
