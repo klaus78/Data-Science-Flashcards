@@ -40,8 +40,22 @@
       padding: 8px;
       text-align: center;
       background: #5b82d7;
-      color: white;
 }
+
+.header_link   {
+      color: white;
+      text-decoration: none;
+}
+
+a:link:not(.header_link) {
+      color: #4265b3;
+      text-decoration: none;
+}
+
+a:visited:not(.header_link) {
+      color: #4265b3;
+      text-decoration: none;
+} 
 
 
 .content {
@@ -182,19 +196,6 @@ button {
 .buttonAnswer:active {
       transform: translateY(1px);
 }
-
-
-a:link {
-      color: #4265b3;
-      text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-      color: #4265b3;
-      text-decoration: none;
-}
-
 
 
 img {

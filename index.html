@@ -27,7 +27,7 @@ title: Data Science Interview Questions
   </div> -->
 
     <div class="header" id="myHeader">
-        <h1>Data Science Flashcards</h1>
+        <a class="header_link" href="#top"><h1>Data Science Flashcards</h1></a>
     </div>
 
     <div class="content">
@@ -65,13 +65,11 @@ title: Data Science Interview Questions
             <h2 id="{{item.h2}}" style="margin-top: 8px;margin-bottom: 4px; background-color: aliceblue;">{{item.h2}}
             </h2>
             {% unless item.h3 %}
-            <a href="#top">Top</a>
             {% endunless %}
             {% endif %}
 
             {% if item.h3 %}
             <h3 id="{{item.h3}}" style="margin-top: 8px;margin-bottom: 4px;">{{item.h3}}</h3>
-            <a href="#top">Top</a>
             {% endif %}
 
 
