@@ -42,7 +42,7 @@
       background: #5b82d7;
 }
 
-.header_link   {
+.header_link, .header_link:visited {
       color: white;
       text-decoration: none;
 }
