@@ -1,7 +1,7 @@
 - h2: Coding Dojos
   h3: Statistics Dojos
   question: >
-    Given the conditional tree in the picture in the answer, find the probabilities 
+    Given the conditional tree in the picture in the answer, find the probabilities
     P(Cake|Coffee), P(Cake'&cap;Coffee), P(Cake), P(Coffee|Cake).
   answer: >
     P(Cake|Coffee), can be read directly from the conditional diagram.
@@ -15,7 +15,7 @@
     = (3/4)*(2/3) + (3/5)*(1/3) = 1/2 + 1/5 = 7/10 = 0.7</b>
     <br><br>
     To find P(Coffee|Cake), we use the formula for the conditional probability and P(Cake) found previously.
-    <br><b>P(Coffee|Cake) = P(Coffee &cap; Cake) / P(Cake) = P(Cake|Coffee) * P(Coffee) / P(Cake) = (3/4) * (2/3) / (7/10) = 1/2 * 10/7 = 0.71</b> 
+    <br><b>P(Coffee|Cake) = P(Coffee &cap; Cake) / P(Cake) = P(Cake|Coffee) * P(Coffee) / P(Cake) = (3/4) * (2/3) / (7/10) = 1/2 * 10/7 = 0.71</b>
   image: conditional_tree_exercise.png
 
 - question: >
@@ -32,7 +32,7 @@
     <span class="symbol">/</span>
     <span class="bottom">P(A) * P(B|A) + P(A') * P(B|A')</span>
     </div>
-    </b> 
+    </b>
     <br><br>we can find <b>P(coffee|sugar free)</b> as follows
     <br><br>
     <b>
@@ -41,19 +41,19 @@
     <span>P(coffee) * P(sugar free|coffee)</span>
     <span class="symbol">/</span>
     <span class="bottom">P(coffee) * P(sugar free|coffee) + P(tea) * P(sugar free|tea)</span>
-    </div> 
+    </div>
     =
     <div class="frac">
     <span>0.8 * 0.3</span>
     <span class="symbol">/</span>
     <span class="bottom">0.8 * 0.3 + 0.2 * 0.6</span>
-    </div> 
+    </div>
      = 0.24 / 0.36 = 2/3
     </b>
   image: probability_tree_coffee_sugar.png
 
 - question: >
-    Given 10 people, 7 people likes coffe, 5 likes tea, 4 people likes both. 
+    Given 10 people, 7 people likes coffe, 5 likes tea, 4 people likes both.
     Are the probabilities P(coffee) and P(tea) dependent or independent?
   answer: >
     P(coffee) and P(tea) are independent if P(coffee) x P(tea) = P(coffee &cap; tea).
@@ -62,7 +62,7 @@
     <br>P(tea) = 5/10 = 0.5
     <br>P(coffee &cap; tea) = 4 / 10 = 0.4
     <br>P(coffee) x P(tea) = 0.7 x 0.5 = 0.35</b>
-    <br><br>Because P(coffee) x P(tea) is different from P(coffee &cap; tea), it follows that 
+    <br><br>Because P(coffee) x P(tea) is different from P(coffee &cap; tea), it follows that
     P(coffee) and P(tea) are <u>dependent</u> events.
 
 - question: >
@@ -71,25 +71,25 @@
     the probability distribution P(X)? What are the values of the expectation E(X) and the variance Var(X)?
     How do P(X), E(X) and Var(X) change if the price of a magic box is increased to 1.5$?
   answer: >
-    The possible values are -1$ (buying a magic box without winning), 4$ (buying a magic box and winning 5$) and 
+    The possible values are -1$ (buying a magic box without winning), 4$ (buying a magic box and winning 5$) and
     9$ (buying a magic box and winning 10$).
     The <b>probability distribution P(X)</b> is given by all possible values (-1, 7, 14) and their probabilities
-    (0.9, 0.07, 0.03). 
+    (0.9, 0.07, 0.03).
     <br><br>
     The <b>expectation E(X)</b> is<br>
     <b>E(X) = &mu; = -1*0.9 + 4*0.07 + 9 * 0.03 = -0.9 + 0.28 + 0.27 = -0.35</b>
     <br> The expected long term net gain is -0.35$
     <br><br>
     The <b>variance Var(X)</b> is<br>
-    <b>Var(X) = (-1+0.35)<sup>2</sup>*0.9 + (4+0.35)<sup>2</sup>*0.07 + (9+0.35)<sup>2</sup>*0.03 
+    <b>Var(X) = (-1+0.35)<sup>2</sup>*0.9 + (4+0.35)<sup>2</sup>*0.07 + (9+0.35)<sup>2</sup>*0.03
     = 0.38 + 1.32 + 2.62 = 4.32$</b>
     <br><br>
     If the price of the magic box is increased to 1.5$, the values change but the probabilities remain the same.
     The new data distribution Y can then be obtained from a linear transformation of the original data distribution as follows
     <br>
-    <b>P(Y) = aP(X) + b.</b> 
+    <b>P(Y) = aP(X) + b.</b>
     <br>
-    In this example a = 1 and b = 0.5. E(Y) and Var(Y) can be then computed as 
+    In this example a = 1 and b = 0.5. E(Y) and Var(Y) can be then computed as
     <br><br>
     <b>E(Y) = a E(X) + b = -0.35 + 0.5 = 0.15$</b>
     <br>
@@ -102,14 +102,14 @@
     The average price for each restaurant is
     <br><b>E(R1) = 3*0.6 + 4*0.3 + 5*0.1 = 3.5$
     <br><br>E(R2) = 2*0.8 + 6.0.15 + 7*0.05 = 2.85$</b>
-    <br><br>The variance of the price is 
+    <br><br>The variance of the price is
     <br><b>Var(R1) = (3-3.5)<sup>2</sup>*0.6 + (4-3.5)<sup>2</sup>*0.3 + (5-3.5)<sup>2</sup>*0.1 = 0.45
     <br>Var(R2) = (2-2.85)<sup>2</sup>*0.8 + (6-2.85)<sup>2</sup>*0.15 + (7-2.85)<sup>2</sup>*0.05 = 2.93
     </b>
     <br><br>
     The difference in price between the two restaurant and the respective variance is
-    <br><b>E(R1 - R2) = E(R1) - E(R2) = 3.5 - 2.85 = 0.65$ 
-    <br>Var(R1 - R2) = Var(R1) + Var(R2) = 0.45 + 2.93 = 3.38</b>   
+    <br><b>E(R1 - R2) = E(R1) - E(R2) = 3.5 - 2.85 = 0.65$
+    <br>Var(R1 - R2) = Var(R1) + Var(R2) = 0.45 + 2.93 = 3.38</b>
 
 - question: >
     There is a race between 12 Ferrari cars, 8 Mercedes cars and 5 Lamborghini cars. What is the probability
@@ -119,7 +119,7 @@
     We are not interested in the order of the individual cars but on the car type at each position. Since the Lamborghini
     cars are at consecutive positions, they can be treated as a single item. We need to find the number of ways in which
     the 5 Lamborghini cars can finish the race consecutively. We also need to find the number of ways the race can be finished
-    irrespective of the car types.  
+    irrespective of the car types.
     We use the formula for computing the number of arrangements of k objects where j and k of them are of the same type
     <br><b><div class="frac">
       <span>n!</span>
@@ -139,17 +139,17 @@
       <span class="symbol">/</span>
       <span class="bottom">12! 8! 5!</span>
     </div></b>.
-    <br>The searched probability is 
+    <br>The searched probability is
     <b><div class="frac">
       <span>(20 + 1))!</span>
       <span class="symbol">/</span>
       <span class="bottom">12! 8!</span>
-    </div> &middot; 
+    </div> &middot;
     <div class="frac">
       <span>12! 8! 5!</span>
       <span class="symbol">/</span>
       <span class="bottom">25!</span>
-    </div> = 
+    </div> =
     <div class="frac">
       <span>21! 5!</span>
       <span class="symbol">/</span>
@@ -163,13 +163,13 @@
       <span>n!</span>
       <span class="symbol">/</span>
       <span class="bottom">k! (n-k)!</span>
-    </div></b> = 
+    </div></b> =
     <b><div class="frac">
       <span>12!</span>
       <span class="symbol">/</span>
       <span class="bottom">5! (12-5)!</span>
     </div></b> = 792
-  
+
 - question: >
     The probability of winning a game is 0.2. Can you find
     <ul>
@@ -180,7 +180,7 @@
     <li>the variance of the expected number of attempts you need to succeed</li>
     </ul>
   answer: >
-    This is an example of geometric distribution because we have a set of independent trials. 
+    This is an example of geometric distribution because we have a set of independent trials.
     Let <code>p = 0.2</code> be the probability of success and <code>q = 1-p = 0.8</code> the probability of failure.
     <ul>
       <li>The probability you will succeed at your 5th attempt after 4 failures is
@@ -189,7 +189,7 @@
       <li>The probability you will succeed in 7 or less attempts is 1 minus the probability of failing 7 times.
       <br><b>P(X<=7) = 1 - q<sup>7</sup> = 1 - 0.8<sup>7</sup> = 0.79</b>
       </li>
-      <li>The expected number of attempts you need to succeed is the expectation of the geometric distribution 
+      <li>The expected number of attempts you need to succeed is the expectation of the geometric distribution
       <br><b>E(X) = 1 / p = 1 / 0.2 = 5</b>
       </li>
       <li>the variance of the expected number of attempts you need to succeed is found with the variance of a geometric distribution
@@ -198,8 +198,8 @@
     </ul>
 - question: Given 6 questions where each question has 4 possible answers, what is the probability of answering 5 questions correctly?
   answer: >
-    For this case we can use the formula of the binomial distribution 
-    <b>P(X = r) = <sup>n</sup>C<sub>r</sub> &nbsp; p<sup>r</sup> &nbsp; q<sup>n - r</sup></b>. 
+    For this case we can use the formula of the binomial distribution
+    <b>P(X = r) = <sup>n</sup>C<sub>r</sub> &nbsp; p<sup>r</sup> &nbsp; q<sup>n - r</sup></b>.
     Indeed we have the following conditions, that are typical for a binomial distribution&colon;
     <ul>
     <li>a limited number of trials (5)</li>
@@ -208,7 +208,7 @@
     </ul>
     <br>In our case we have <code>r = 5</code> number of answers correct, <code>p = 0.25</code> probability of answering correctly a question,
     <code>q = 0.75</code> probability of answering wrongly a question, <code>n = 6</code> total number of questions.
-    <br><b>P(X = 5) = <sup>6</sup>C<sub>5</sub> &nbsp; 0.25<sup>4</sup> &nbsp; 0.75<sup>6 - 5</sup> = 
+    <br><b>P(X = 5) = <sup>6</sup>C<sub>5</sub> &nbsp; 0.25<sup>4</sup> &nbsp; 0.75<sup>6 - 5</sup> =
     <div class="frac">
       <span>6!</span>
       <span class="symbol">/</span>
@@ -221,8 +221,8 @@
     it will not rain?
   answer: >
     You know that in this town it rains twice a week. Let <code>X</code> be the distribution of the number of times
-    it rains. Since we have the scenario with a set of events happening in a certain interval (in a week it can rain twice) 
-    and we know the mean values of times it rains in a week, we can say that <code>X</code> follows a <b>Poisson distribution</b>: 
+    it rains. Since we have the scenario with a set of events happening in a certain interval (in a week it can rain twice)
+    and we know the mean values of times it rains in a week, we can say that <code>X</code> follows a <b>Poisson distribution</b>:
     <br> <code>X ~ Po(&lambda;)</code> with <code>&lambda; = 2</code> (number of times it rains in a week).
     <br>To calculate the probability that next week it will not rain, we can use the formula of the Poisson distribution:
     <br><b>
@@ -231,7 +231,7 @@
     <span>e<sup>-&lambda;</sup> &lambda;<sup>r</sup></span>
     <span class="symbol">/</span>
     <span class="bottom">r!</span>
-    </div></b>. 
+    </div></b>.
     <br>In our case we have <code>&lambda; = 2</code> and <code>r = 0</code> (0 rains in a week). It follows that the
     probability that it will not rain next week is
     <br>
@@ -247,78 +247,78 @@
     Suppose that you have a restaurant with a kitchen where, in average, the oven can break once a year and the fridge
     can break twice a year. What is the probability that nothing will break in the kitchen next year?
   answer: >
-    Let <code>X</code> and <code>Y</code> be the distributions of the number of malfunctions of the oven and the fridge. 
-    Because we know the number of malfunctions in a certain time interval (one year), it follows that <code>X</code> and 
+    Let <code>X</code> and <code>Y</code> be the distributions of the number of malfunctions of the oven and the fridge.
+    Because we know the number of malfunctions in a certain time interval (one year), it follows that <code>X</code> and
     <code>Y</code> follow a Poisson distribution. Thus we can write <code>X ~ Po(1)</code> and <code>Y ~ Po(2)</code>.
     <br><br>
-    To find the probability that nothing breaks in the kitchen next year we need to find <code>P(X + Y) = 0</code>. 
+    To find the probability that nothing breaks in the kitchen next year we need to find <code>P(X + Y) = 0</code>.
     Because <code>X</code> and <code>Y</code> are indipendent distributions, we can sum the distributions as follows
-    <br><code>X + Y ~ Po(3)</code>. 
+    <br><code>X + Y ~ Po(3)</code>.
     <br><br>
     <b>P(X + Y = 0) =
     <div class="frac">
     <span>e<sup>-&lambda;</sup> &lambda;<sup>r</sup></span>
     <span class="symbol">/</span>
     <span class="bottom">r!</span>
-    </div> =  
+    </div> =
     <div class="frac">
     <span>e<sup>-3</sup> 3<sup>0</sup></span>
     <span class="symbol">/</span>
     <span class="bottom">0!</span>
     </div> = e<sup>-3</sup> = 0.05</b>
     <br>The probability that nothing in the kitchen will break next year is 5%.
-    
 
-  
+
+
 - h3: SQL Dojos
   question: Given a table <code>person(name,age)</code>, sort the records by age ascending and by name descending
-  sql: | 
-  
-    SELECT * FROM person 
+  sql: |
+
+    SELECT * FROM person
     ORDER BY age ASC,name DESC
-    
+
 - question: Given a table <code>person(name,age)</code>, select the minimum age, the maximum age, the average age. In addition
     rename the average age to <code>meanAge</code>
   sql: |
-  
+
     SELECT MIN(age), MAX(age), AVG(age) AS meanAge
     FROM person
-    
+
 - question: Given a table <code>person(name,age)</code>, select all names that do not start with <code>'R'</code>
   sql: |
-  
-    SELECT name FROM person 
+
+    SELECT name FROM person
     WHERE name NOT LIKE 'R%'
 
 - question: >
-    Given a table <code>person(name,age)</code>, select all names that start with <code>'R'</code> and end 
+    Given a table <code>person(name,age)</code>, select all names that start with <code>'R'</code> and end
     with <code>'A'</code> and do not contain <code>'C'</code>
   sql: |
-  
-    SELECT name FROM person 
-    WHERE name LIKE 'R%A' 
+
+    SELECT name FROM person
+    WHERE name LIKE 'R%A'
     and name NOT LIKE '%C%'
 
-- question: > 
+- question: >
     Given a table <code>person(name,age)</code>, select all names where the second letter is a <code>'i'</code> and the letter before the last
     letter is a <code>'n'</code>
   sql: |
 
-    SELECT * FROM person 
-    WHERE name LIKE '_i%' 
+    SELECT * FROM person
+    WHERE name LIKE '_i%'
     AND name LIKE '%n_'
 
 - question: >
     Given a table <code>person(name,age)</code>, select all items whose age is one of the following values: 23,56,75.
     Then select all items whose age is NOT one of the previous values.
   sql: |
-    
+
     -- query 1: items with one of the ages below
-    SELECT * FROM person 
+    SELECT * FROM person
     WHERE age IN (23,56,75)
 
     -- query 2: items with NONE of the ages below
-    SELECT * FROM person 
+    SELECT * FROM person
     WHERE age NOT IN (23,56,75)
 
 - question: >
@@ -354,12 +354,12 @@
     ON person.name = salary.name
 
 - question: >
-    Given the tables <code>person(name,age), salary(name,money)</code>, select all records from <code>person</code> and all 
+    Given the tables <code>person(name,age), salary(name,money)</code>, select all records from <code>person</code> and all
     matching records from <code>salary</code>.
   sql: |
 
     SELECT * FROM salary
-    LEFT JOIN person 
+    LEFT JOIN person
     ON person.name = salary.name
 
 - question: >
@@ -369,6 +369,26 @@
     SELECT name, COUNT(*) as n
     FROM person
     GROUP BY name
+
+- question: >
+    Given a table <code>person(name,age,gender)</code>, show the number of records for each gender, labeling the result as either <code>MALE</code> or <code>FEMALE</code> depending on the value of the <code>gender</code> column. Assume that the <code>gender</code> column can have only values <code>M</code> or <code>F</code>.
+  sql: |
+
+    SELECT count( * ),
+           CASE gender
+                WHEN 'M' THEN 'male'
+                WHEN 'F' THEN 'female'
+           END AS gender
+    FROM person
+    GROUP BY gender
+
+- question: >
+    Given a table <code>person(name)</code> find out the people with the longest <code>name</code> (as number of chars).
+  sql : |
+    SELECT name
+    FROM person
+    WHERE length( name ) = ( SELECT max( length( name ) )
+                             FROM person );
 
 
 - h3: Python Dojos
@@ -383,7 +403,7 @@
     mylist[3:]
     # last two items
     mylist[-2:]
-    
+
 - question: Take a list and concatenate it with another list
   python: |
 
@@ -398,7 +418,7 @@
 
     myTuple = (3,5)
     # prints 5
-    print(myTuple[1]) 
+    print(myTuple[1])
 
 - question: Create a dictionary, add a (key, value) pair, try to retrieve that key then a non-existing key.
   python: |
@@ -410,7 +430,7 @@
     print(myDict.get('myKey2')) # prints None
 
 - question: >
-    Create a function1 that calls a function2. Function2 must create a tuple from input params 
+    Create a function1 that calls a function2. Function2 must create a tuple from input params
     <code>x,y</code>.  In addition call function1 with a lambda function that sums two params.
   python: |
 
@@ -427,11 +447,11 @@
 
 - question: Loop over the first 10 integers and print only the even numbers.
   python: |
-  
+
     for i in range(10):
       if i%2 == 0:
           print(i)
-          
+
 - question: Given a list of integers, add 1 to each element of the list by using <i>list comprehension</i>.
   python: |
 
@@ -452,10 +472,10 @@
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
   answer: >
-    The two main data structures of Pandas are 
+    The two main data structures of Pandas are
     <ul>
-      <li><b>Series</b>: it is given by a one-dimensional arrays and an associated array of labels, called indices.</li>  
-      <li><b>Dataframe</b>: it is a tabular data structure with rows and columns that behind the scenes 
+      <li><b>Series</b>: it is given by a one-dimensional arrays and an associated array of labels, called indices.</li>
+      <li><b>Dataframe</b>: it is a tabular data structure with rows and columns that behind the scenes
       is a collection of <i>Series</i>.</li>
     </ul>
 
@@ -478,9 +498,9 @@
 
     mySeries = pd.Series([4,6,7,4])
     num_distinct_values = mySeries.nunique()
-    # num_distinct_values is equal to 3. The distinct values are 4,6,7. 
+    # num_distinct_values is equal to 3. The distinct values are 4,6,7.
 
-- question: Given a series <code>pd.Series(['male', 'female', 'male'])</code>, map <code>'male'</code> to 0 and <code>'female'</code> to 1. 
+- question: Given a series <code>pd.Series(['male', 'female', 'male'])</code>, map <code>'male'</code> to 0 and <code>'female'</code> to 1.
   python: |
 
     myseries = pd.Series(['male', 'female', 'male'])
@@ -488,7 +508,7 @@
     # map 'male' to 0 and 'female' to 1
     myseries.map(mapping)
 
-- question: > 
+- question: >
     Given a series <code>pd.Series([5,-7,2])</code>, replace the negative numbers with 0.
   python: |
 
@@ -512,9 +532,9 @@
 
 
 - question: >
-    Open a csv file, show the first and last two rows, show the number of rows and columns and show the column names  
+    Open a csv file, show the first and last two rows, show the number of rows and columns and show the column names
   python: |
-    
+
     # content of file.csv
     # name,age,money
     # john,43,2500
@@ -546,15 +566,15 @@
     data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
             'Role':['Tecnician', 'Programmer','Student',np.nan],
             'Salary':[46000,57000,8000,120000]}
-    ds = pd.DataFrame(data) 
+    ds = pd.DataFrame(data)
     # show all columns of row 2
     ds.loc[2,:]
     # number of null values for each column
     ds.isnull().sum()
 
 - question: >
-    Given list of ages, divide the ages into groups of range ages. For examples ages between 0 and 5 are babys, 
-    between 5 and 10 are children and so on. 
+    Given list of ages, divide the ages into groups of range ages. For examples ages between 0 and 5 are babys,
+    between 5 and 10 are children and so on.
 
   python: |
 
