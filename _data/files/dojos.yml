@@ -439,6 +439,43 @@
     # 5,6,7
     b = [x+1 for x in a]
 
+- question: >
+    Given a string <code>'hello everybody'</code>, print the first three characters, 
+    the last two characters and the substring between the third and fifth characters included.  
+  python: |
+    
+    s = 'hello everybody'
+    # first three characters
+    print(s[:3])
+    # last two characters
+    print(s[-2:])
+    # substring between third and fifth characters included
+    print(s[2:6])
+
+- question: >
+    Given a string <code>'hello everybody'</code>, find at what position the word 
+    <code>'everybody'</code> starts.
+  python: |
+    
+    s = 'hello everybody'
+    # let's find the position of 'everyboey'. It starts at position 6.
+    pos =  s.find('everybody')
+
+- question: >
+    Create a dictionary, add the key-value pairs <code>('one', 1)</code> and <code>('two', 2)</code> and
+    retrieve the value related with key <code>'two'</code>.
+  python: |
+
+    # create dictionary
+    mydict = dict()
+    # insert key-value ('one', 1)
+    mydict['one'] = 1
+    # insert key-value ('two', 2)
+    mydict['two'] = 2
+    # retrieve value for key 'two'
+    print(mydict['two'])
+
+
 - h3: Matplotlib and Seaborn Dojos
   question: Visualize a pie chart using Matplotlib
   python: |
@@ -510,6 +547,13 @@
     # for each string return the first char
     mySeries.apply(lambda s : s[0]) # [J,P,R]
 
+- question: >
+    Given list of ages, divide the ages into groups of range ages. For examples ages between 0 and 5 are babys, 
+    between 5 and 10 are children and so on. 
+
+  python: |
+
+    pd.cut([3,4,13,14,23,24],bins=[0,5,15,25], labels=['Baby','Child','Young'])
 
 - question: >
     Open a csv file, show the first and last two rows, show the number of rows and columns and show the column names  
@@ -535,12 +579,12 @@
 - question: Given a dataframe, sort the values by a column and show how many different items there are in that column
   python: |
 
-    # sort by column 1
+    # sort by column 'name'
     ds.sort_values(['name'])
-    # show different number of items
+    # show different number of items in column
     ds['name'].value_counts()
 
-- question: Given a dataframe, show all columns of row 2, show the number of null values for all columns
+- question: Given a dataframe, show all columns of row 2, show the number of null values for all columns.
   python: |
 
     data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
@@ -552,10 +596,13 @@
     # number of null values for each column
     ds.isnull().sum()
 
-- question: >
-    Given list of ages, divide the ages into groups of range ages. For examples ages between 0 and 5 are babys, 
-    between 5 and 10 are children and so on. 
-
+- question: Given a dataframe, drop the <code>name</code> and <code>age</code> columns. Try to use at least two different approaches.
   python: |
 
-    pd.cut([3,4,13,14,23,24],bins=[0,5,15,25], labels=['Baby','Child','Young'])
+    # let's suppose you have a dataframe df
+
+    # approach 1 to remove the columns. 
+    df.drop(['name','age'], axis=1)
+
+    # approach 2
+    df.drop(columns = ['name','age'])
