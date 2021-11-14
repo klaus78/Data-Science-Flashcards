@@ -370,6 +370,28 @@
     FROM person
     GROUP BY name
 
+- question: >
+    Given a table <code>person(name,age,gender)</code>, show the number of records for each gender, labeling the result as 
+    either <code>MALE</code> or <code>FEMALE</code> depending on the value of the <code>gender</code> column. 
+    Assume that the <code>gender</code> column can have only values <code>M</code> or <code>F</code>.
+  sql: |
+  
+    SELECT count( * ),
+           CASE gender
+                WHEN 'M' THEN 'male'
+                WHEN 'F' THEN 'female'
+           END AS gender
+    FROM person
+    GROUP BY gender
+- question: >
+    Given a table <code>person(name)</code> find out the people with the longest <code>name</code> (as number of chars).
+  sql : |
+
+    SELECT name
+    FROM person
+    WHERE length( name ) = ( SELECT max( length( name ) )
+                             FROM person );
+
 
 - h3: Python Dojos
   question: >
@@ -410,8 +432,9 @@
     print(myDict.get('myKey2')) # prints None
 
 - question: >
-    Create a function1 that calls a function2. Function2 must create a tuple from input params 
-    <code>x,y</code>.  In addition call function1 with a lambda function that sums two params.
+    Create a <code>doSomething</code> function that calls a <code>createTuple</code> function. 
+    <code>createTuple</code> must create a tuple from input params 
+    <code>x,y</code>.  In addition call <code>doSomething</code> with a lambda function that sums two params.
   python: |
 
     def createTuple(x,y):
@@ -463,7 +486,7 @@
 
 - question: >
     Create a dictionary, add the key-value pairs <code>('one', 1)</code> and <code>('two', 2)</code> and
-    retrieve the value related with key <code>'two'</code>.
+    retrieve the value for key <code>'two'</code>.
   python: |
 
     # create dictionary
@@ -472,8 +495,22 @@
     mydict['one'] = 1
     # insert key-value ('two', 2)
     mydict['two'] = 2
+
+    # you could also insert both pairs with a single command
+    # mydict.update({'one':1, 'two':2})
+
     # retrieve value for key 'two'
     print(mydict['two'])
+
+- question: >
+    Given a dictionary <code>myDic = {'one':1, 'two':2}</code>, get the value for key 'three' and take 3 as default in case the key
+    does not exist.
+  python: |
+
+    myDic = {'one':1, 'two':2}
+    # since the key 'three' does not exist, the default value 3 is returned
+    print(myDic.get('three', 3))
+  
 
 
 - h3: Matplotlib and Seaborn Dojos
