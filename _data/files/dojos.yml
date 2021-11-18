@@ -511,7 +511,53 @@
     # since the key 'three' does not exist, the default value 3 is returned
     print(myDic.get('three', 3))
   
+- h3: Numpy Dojos
+  question: What is Numpy?
+  answer: >
+    <b>Numpy</b> is a Python library for numerical computation. Numpy uses libraries written in C and Fortran and this make it 
+    very efficient to work with arrays and matrices. 
+    <br><br>
+    An interesting aspect of Numpy is that you can define upfront how many bytes a variable will need in memory. This feature
+    is not supported in Python standard. 
 
+- question: Create a Numpy array with values (2,6,4) where each value takes 1 byte. Then print out the first and third elements.
+  python: |
+
+    import numpy as np
+    a = np.array([2,6,4], dtype = np.int8)
+    # print first and third elements
+    print(a[[0,2]])
+
+- question: >
+    Create a Numpy array with values from 0 to 4. Then add 3 to each element. Finally show those elements
+    that are smaller than 6.
+
+  python: |
+
+    # create array 0..4
+    a = np.arange(5)
+    # add 3 to each element
+    a += 3
+    # show elements smaller than 6.
+    print(a[a < 6])
+
+
+- question: Create a two-dimensional Numpy array with values from 1 to 4. Then sum the elements by row and by column.
+  python: |
+
+    # create a two-dim array
+    A = np.array([[1,2],[3,4]])
+    # A = array([[1, 2],
+    #            [3, 4]])
+
+
+    # sums by row
+    A.sum(axis=0)
+    # = array([4, 6])
+
+    # sums by column 
+    A.sum(axis=1)
+    # = array([3, 7])
 
 - h3: Matplotlib and Seaborn Dojos
   question: Visualize a pie chart using Matplotlib
@@ -528,24 +574,50 @@
   answer: >
     The two main data structures of Pandas are 
     <ul>
-      <li><b>Series</b>: it is given by a one-dimensional arrays and an associated array of labels, called indices.</li>  
+      <li><b>Series</b>: it is given by a one-dimensional arrays and an associated array of labels, called indices. Each element
+      in the array has a respective index.</li>  
       <li><b>Dataframe</b>: it is a tabular data structure with rows and columns that behind the scenes 
       is a collection of <i>Series</i>.</li>
     </ul>
 
+- question: What is the differences between a Pandas series and a standard Python list?
+  answer: >
+    A Python list and a Pandas series look at first sight equal. The difference is that a Pandas
+    series has a set of indices, one for each element. By default these indices are integers
+    but they can be changed to another data type, strings for example.
+  python: |
+
+    import pandas as pd
+    standard_array = [2,4,6]
+    pandas_series = pd.Series([2,4,6])
+    # default values are integers
+    pandas_series.index
+    # let's change them to chars
+    pandas_series.index = ['a','b','c']
+  
+
 - question: >
-    Create a Series with 3 values <code>(4,5,7)</code> and 3 indices <code>('a','b','c')</code>. Then
+    Create a series with 3 values <code>(4,5,7)</code> and 3 indices <code>('a','b','c')</code>. Then
     print the values and the indices separately.
 
   python: |
 
-        from pandas import Series, DataFrame
-        import pandas as pd
+        from pandas import Series
         mySeries = Series([4, 7, 5], index=['a','b','c'])
         # print values 4,7,5
         print(mySeries.values)
         # print index 'a','b','c'
         print(mySeries.index)
+
+- question: >
+    Given a series with values <code>(3,5,7)</code>, return the values less than 4 or the values bigger than 6
+  
+  python: |
+  
+    import pandas as pd
+    s = pd.Series([3,5,7])
+    # prints [3,7]
+    print(s[ (s < 4) | (s > 6) ])
 
 - question: Given a series <code>pd.Series([4,6,7,4])</code>, find the number of distinct values in it.
   python: |
