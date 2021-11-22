@@ -649,12 +649,23 @@
     # replace all nan numbers with the mean of the remaining numbers
     mySeries[mySeries.isnull()] = mySeries.mean()
 
-- question: Given a series <code>pd.Series(['John','Paul','Ringo'])</code>, return a new series where each string is replaced with its first character.
+- question: >
+    Given a series <code>pd.Series(['John','Paul','Ringo'])</code>, return a new series where each string is 
+    replaced with its first character.
   python: |
 
     mySeries = pd.Series(['John','Paul','Ringo'])
     # for each string return the first char
     mySeries.apply(lambda s : s[0]) # [J,P,R]
+
+- question: >
+    Given a series <code>pd.Series([4,6,8])</code>, transform it to a new series where values less than 5 are mapped to 0
+    and the other values are mapped to 1.
+  python: |
+
+    mylist = pd.Series([4,6,9])
+    # lambda function with conditional statement
+    mylist.apply(lambda x: 0 if x < 5 else 1)
 
 - question: >
     Given list of ages, divide the ages into groups of range ages. For examples ages between 0 and 5 are babys, 
