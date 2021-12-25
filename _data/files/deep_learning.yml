@@ -1,0 +1,21 @@
+- h2: Deep Learning
+  h3: Basic concepts
+  question: What is Deep Learning? Why is it called deep?
+  answer: >
+    <b>Deep Learning</b> is a subdomain of machine learning that makes use of artificial
+    neural networks to learn from complex data structures like images and sound. 
+    <br><br>
+    Artificial neural networks (ANN) are computing structures that try to emulate the 
+    human brain. ANN basic blacks are called neurons. A neuron can be thought of as
+    a function that has a number of inputs and computes an output. These neurons are 
+    organized in layers and a simple form of ANN has an input layout, a middle layer and
+    an output layer. All layers between the input layer and the output layer are called
+    <i>hidden layers</i>. An ANN with one of two hidden layers is called a 
+    <i>shallow neural network</i>. 
+    <br><br>Deep Learning neural networks have many hidden layers. The word <b>deep</b> refers
+    to this fact.
+
+
+
+
+     
