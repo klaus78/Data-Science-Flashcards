@@ -3,11 +3,17 @@
 
   question: What is the difference between data science and machine learning
   answer: >
-    <b>Data science</b> = statistical analysis + data engineering in order to get 
-    information from the data.
+    <b>Data science</b> and <b>Machine learning</b> are closely related fields but they differ
+    in their goals.
+    <br><br> 
+    <b>Data science</b> is more focused on the gathering and analysis of data. Data science
+    includes gathering data from different sources, cleaning the data and analyzing the data
+    in order to extract useful information. 
     <br><br>
-    <b>Machine learning</b> = create a model to predict something. You can also define 
-    it as teaching computers to learn by examples.
+    <b>Machine learning</b> is more focused on creating a mathematical model from a dataset in order to 
+    predict something. For example given a dataset of house prices, you would like to predict 
+    how the house prices evolves in the next months based on the historical data in the dataset. With
+    machine learning algorithms you can create mathematical models that can make such a prediction.
 
 - question: What are the typical steps of the creation of a machine learning model?
   answer: > 

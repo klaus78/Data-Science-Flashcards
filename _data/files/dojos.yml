@@ -704,17 +704,18 @@
     # show different number of items in column
     ds['name'].value_counts()
 
-- question: Given a dataframe, show all columns of row 2, show the number of null values for all columns.
+- question: Given a dataframe, show all columns of row 2, then show the number of null values for all columns.
   python: |
-
+    
+    import pandas as pd
     data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
             'Role':['Tecnician', 'Programmer','Student',np.nan],
             'Salary':[46000,57000,8000,120000]}
-    ds = pd.DataFrame(data) 
+    df = pd.DataFrame(data) 
     # show all columns of row 2
-    ds.loc[2,:]
+    df.loc[2,:]
     # number of null values for each column
-    ds.isnull().sum()
+    df.isnull().sum()
 
 - question: Given a dataframe, drop the <code>name</code> and <code>age</code> columns. Try to use at least two different approaches.
   python: |
@@ -726,3 +727,19 @@
 
     # approach 2
     df.drop(columns = ['name','age'])
+  
+- question: >
+      Given a dataframe with a numeric column <code>Age</code> that has some null values, replace the null values with the
+      average age.
+  python: |
+
+      # Lets create a dataframe that has a column Age where one value is null
+      pd.DataFrame(data)
+      data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[np.nan,26,17,64]}
+      df = pd.DataFrame(data)
+      # let's find the average age
+      mean_age = df.Age.mean()
+      # replace null values with mean_age.
+      df.Age.fillna(mean_age, inplace=True)
+      
+
