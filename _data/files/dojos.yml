@@ -558,6 +558,7 @@
     # sums by column 
     A.sum(axis=1)
     # = array([3, 7])
+    
 
 - h3: Matplotlib and Seaborn Dojos
   question: Visualize a pie chart using Matplotlib
@@ -741,5 +742,35 @@
       mean_age = df.Age.mean()
       # replace null values with mean_age.
       df.Age.fillna(mean_age, inplace=True)
-      
 
+
+- question: >
+    Given a list of ages <code>[3,7,14,18,20,25,29]</code>, divide the ages into three bins: child (0-14), 
+    young (14-21) and adult (> 21).
+  python: |
+
+    # define a list of ages
+    ages = [3,7,14,18,20,25,29]
+    # define the bins (0-14), (14-21), (21-100)
+    mybins = [0,14,21,100]
+    # each bin is assigned a label
+    mylabels = ['child', 'young', 'adult']
+    res = pd.cut(ages, bins = mybins, labels = mylabels)
+    # the result is 
+    # ['child', 'child', 'child', 'young', 'young', 'adult', 'adult']  
+
+- question: >
+    Given a dataset <code>'age':[35,40,45,56,22,19], 'salary':[32,43,56,75,18,16]</code>, divide the salary into three bins: 
+    poor (0-20), medium(20-45), rich(>45). Then find the average age for the poor, medium and rich bins.
+  python: |
+
+    # create the dataset
+    df = pd.DataFrame({'age':[35,40,45,56,22,19], 'salary':[32,43,56,75,18,16]})
+    # define salary bins
+    mybins = [0,20,45,100]
+    # define a label for each bin
+    mylabels = ['poor','medium','rich']
+    # create a new column 'salary_bin'
+    df['salary_bin'] = pd.cut(df.salary, bins = mybins, labels = mylabels)
+    # create a pivot table with 
+    df.pivot_table(values='age',index='salary_bin')
