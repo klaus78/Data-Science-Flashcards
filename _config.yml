@@ -27,7 +27,7 @@ url: "https://klaus78.github.io" # the base hostname & protocol for your site, e
 
 
 # Build settings
-theme: minima
+theme: jekyll-theme-time-machine
 
 #highlighter: rouge
 # Exclude from processing.
