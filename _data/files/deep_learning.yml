@@ -15,6 +15,26 @@
     <br><br>Deep Learning neural networks have many hidden layers. The word <b>deep</b> refers
     to this fact.
 
+- question: What are the differences between machine learning and deep learning?
+  answer: >
+    <b>Deep learning</b> is a subset of <b>machine learning</b>. Both machine learning
+    and deep learning tries to create a mathematical model of a dataset. This mathematical
+    model can then be used to make predictions on new input data. However these technologies
+    differ in some points:
+    <ul>
+    <li><b>Techniques used</b>: machine learning can use several different techniques to create a mathematical model, 
+    like regression, neural networks, nearest neighbors and decision trees.  By contrast, deep learning is
+    based only on neural networks. These neural networks have a large number of hidden layers, which is what the 
+    word <i>deep</i> refers to.</li>
+    <li><b>quantity of data</b>: while machine learning algorithms can also work with small datasets, deep learning requires
+    very large datasets.</li>
+    <li><b>Feature selection</b>: in machine learning, the user selects the most important features or creates new ones 
+    for the task at hand. By contrast, in deep learning the feature selection is done automatically by the algorithms during
+    the training process.</li>
+    </ul>
+
+ 
+
 - question: What kind of neural networks works particularly well with image data?
   answer: >
     <b>Convolutional neural networks</b> are a kind of neural network that works
@@ -36,6 +56,21 @@
     A recurrent neural network has an intern loop, that means the data is not processed all at once 
     but rather it is processed in different steps. In particular in the case of text, each word is 
     processed once at a time. This process is similar to the way humans read text.
+
+- question: What is transfer learning? What are some typical use cases?
+  answer: >
+    <b>Transfer learning</b> is a technique in which a model, that was tried tried on a task,
+    is applied to a different but related task. For example you have a model trained to
+    recognize cars and you use that model to recognize trucks.
+    <br><br>The obvious advantage of transfer learning is that you can reuse an existing model with
+    minimal effort. 
+    <br><br>Some typical use cases of transfer learning are
+    <ul>
+    <li>You do not have enough data to train a model from scratch. Starting with a pre-trained can allow you
+    to train the model for your task.</li>
+    <li>You do not have enough time to train a model from scratch. Because training models can take days or even
+    weeks, using a pre-trained model is much more faster.</li>
+    </ul>
 
 
 
