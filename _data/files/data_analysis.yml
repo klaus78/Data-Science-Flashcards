@@ -33,6 +33,21 @@
     the color hair (brown, black, blonde etc).</li>
     </ul>
 
+
+- question: How to find outliers in a dataset?
+  answer: >
+    Here are some tools and techniques you can use to find outliers: 
+    <ul>
+    <li>a histogram.</li> 
+    <li>a scatter plot.</li>
+    <li>a boxplot.</li>
+    <li>the interquartile range (IQR) and say that outliers are outside of the 1.5 IQR limit.</li>
+    <li>The standard deviation and consider as outliers those points that are far more than 3 standard deviations
+    from the mean.</li>
+    <li>sort the data and look for unusual low or high values.
+    </ul>
+
+
 - h3: Distance metrices
   question: What is the hamming distance?
   answer: >
@@ -302,15 +317,3 @@
     <li><i>median</i> = middle value of the sorted dataset</li>
     </ul>
   image: boxplot.png
-
-- question: How to find outliers with a plot?
-  answer: >
-    Here are some tools and techniques you can use to find outliers. However notice that there are different 
-    opinions about that. 
-    <ul>
-    <li>a histogram.</li> 
-    <li>a scatter plot.</li>
-    <li>The interquartile range (IQR) and say that outliers are outside of the 1.5 IQR limit.</li>
-    <li>The standard deviation and consider as outliers those points that are far more than 3 standard deviations
-    from the mean.</li>
-    </ul>
