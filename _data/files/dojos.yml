@@ -531,7 +531,6 @@
 - question: >
     Create a Numpy array with values from 0 to 4. Then add 3 to each element. Finally show those elements
     that are smaller than 6.
-
   python: |
 
     # create array 0..4
@@ -540,6 +539,11 @@
     a += 3
     # show elements smaller than 6.
     print(a[a < 6])
+
+- question: Create a numpy array with values (1,4,7,10).
+  python: |
+
+    np.arange(start=1, stop=11, step=3)
 
 
 - question: Create a two-dimensional Numpy array with values from 1 to 4. Then sum the elements by row and by column.
@@ -550,7 +554,6 @@
     # A = array([[1, 2],
     #            [3, 4]])
 
-
     # sums by row
     A.sum(axis=0)
     # = array([4, 6])
@@ -559,6 +562,11 @@
     A.sum(axis=1)
     # = array([3, 7])
     
+- question: Create a 2x2 array of random integers with values from 0 to 10 inclusive.
+  python: |
+    
+    np.random.randint(low=1, high=11, size=(2,2))
+
 
 - h3: Matplotlib and Seaborn Dojos
   question: Visualize a pie chart using Matplotlib
