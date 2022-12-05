@@ -1,4 +1,6 @@
 # Data Science Flashcards
+![Logo](./assets/images/logo.png)
+
 This is a collection of questions-answers on **Data Science** and **Machine Learning** in the form of flashcards. By answering these questions you can test your knowledge of Machine Learning, Data Analysis, Statistics and other related topics. 
 
 # Take me to the questions
