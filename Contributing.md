@@ -30,4 +30,4 @@ For this purpose, in the home directory of your project you can type the
 
 command. This command will try to generate the site. 
 
-If the site generation is successful, you can check the generated website at http://127.0.0.1:4000/Data_Science_Flashcards/.
+If the site generation is successful, you can check the generated website at http://127.0.0.1:4000/Data-Science-Flashcards/.

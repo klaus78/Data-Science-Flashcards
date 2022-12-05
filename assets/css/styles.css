@@ -74,10 +74,10 @@ a:visited:not(.header_link) {
 }
 
 .divQuestion {
-      padding-left: 4px;
-      padding-right: 4px;
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       cursor: pointer;
       vertical-align:middle;
       border-bottom: 1px solid #d7d7d7;
@@ -117,7 +117,7 @@ a:visited:not(.header_link) {
 .divAnswer {
       text-align: left;
       background-color: #fcfcfc;
-      padding:4px;
+      padding: 8px;
       border:1px solid #d8d8d8;
       display: none;
       border-left: 8px solid #5b82d7;
