@@ -567,6 +567,13 @@
     
     np.random.randint(low=1, high=11, size=(2,2))
 
+- question: Create an 3x2 array of only zeros. Then print the type of data.
+  python: |
+    
+    z = np.zeros(shape=(3,2))
+    # print the type of data
+    print(z.dtype)
+
 
 - h3: Matplotlib and Seaborn Dojos
   question: Visualize a pie chart using Matplotlib
