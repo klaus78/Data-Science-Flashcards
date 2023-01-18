@@ -692,7 +692,7 @@
     pd.cut([3,4,13,14,23,24],bins=[0,5,15,25], labels=['Baby','Child','Young'])
 
 - question: >
-    Open a csv file, show the first and last two rows, show the number of rows and columns and show the column names  
+    Open a csv file, show the first and last two rows, show the number of rows and columns and show the column names.
   python: |
     
     # content of file.csv
@@ -711,6 +711,22 @@
     ds.shape
     # column names
     ds.columns
+
+- question: 
+    Create a dataframe with values <code>[4,6,8]</code> for column <code>c1</code>, 
+    <code>[6,7,2]</code> for column <code>c2</code> and <code>[3,5,6]</code> for the index.
+    Retrieve the row with index value equals to 3 and the row at position 1. 
+  python: |
+
+    # create the dataframe
+    df = pd.DataFrame({"c1":[4,6,8], "c2": [6,7,2]})
+    # set the index array
+    df.index = [3,5,6]
+    # get row with index 3
+    df.loc[3]
+    # get row at position 1
+    df.iloc[1]
+
 
 - question: Given a dataframe, sort the values by a column and show how many different items there are in that column
   python: |
