@@ -1,8 +1,8 @@
 # Data Science Flashcards
 
-<div style="align: center;">
+<p align="center" >
   <img src="./assets/images/logo.png" alt="logo" />
-</div>
+</p>
 
 
 This is a collection of questions and answers on **Data Science** and **Machine Learning** in the form of flashcards that allows you
