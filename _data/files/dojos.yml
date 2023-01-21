@@ -666,11 +666,11 @@
     mySeries[mySeries.isnull()] = mySeries.mean()
 
 - question: >
-    Given a series <code>pd.Series(['John','Paul','Ringo'])</code>, return a new series where each string is 
+    Given a series <code>pd.Series(['John', 'Paul', 'Ringo'])</code>, return a new series where each string is 
     replaced with its first character.
   python: |
 
-    mySeries = pd.Series(['John','Paul','Ringo'])
+    mySeries = pd.Series(['John', 'Paul', 'Ringo'])
     # for each string return the first char
     mySeries.apply(lambda s : s[0]) # [J,P,R]
 
