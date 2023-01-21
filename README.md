@@ -1,7 +1,7 @@
 # Data Science Flashcards
 
 <div style="text-align: center;">
-![Logo](./assets/images/logo.png)
+  <img src="./assets/images/logo.png" alt="logo" />
 </div>
 
 
