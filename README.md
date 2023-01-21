@@ -1,7 +1,11 @@
 # Data Science Flashcards
-![Logo](./assets/images/logo.png)
+![Logo](./assets/images/logo.png){ 
+    display: block;
+    margin: auto;
+}
 
-This is a collection of questions-answers on **Data Science** and **Machine Learning** in the form of flashcards. By answering these questions you can test your knowledge of Machine Learning, Data Analysis, Statistics and other related topics. 
+This is a collection of questions and answers on **Data Science** and **Machine Learning** in the form of flashcards that allows you
+to expand your knowledge of Machine Learning, Data Analysis, Statistics and other related topics. 
 
 # Take me to the questions
 The list of questions-answers is [HERE](https://klaus78.github.io/Data-Science-Flashcards). 
