@@ -1,6 +1,6 @@
 # Data Science Flashcards
 
-<div style="text-align: center;">
+<div style="align: center;">
   <img src="./assets/images/logo.png" alt="logo" />
 </div>
 
