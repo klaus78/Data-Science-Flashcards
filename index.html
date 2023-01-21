@@ -32,16 +32,17 @@ title: Data Science Flashcards
 
     <div class="content">
 
-        <p style="font-size: 20px;">Expand your knowledge on <b>Data Science</b> and <b>Machine Learning</b> with this large set of questions and answers 
-                    in form of flashcards. <span><a href="https://github.com/klaus78/Data-Science-Questions-Answers"><u>Contribute</u></a></span>
-                    </p>     
+        <p style="font-size: 20px;">
+            Expand your knowledge on <b>Data Science</b> and <b>Machine Learning</b> with this large set of questions and answers 
+            in form of flashcards. <span><a href="https://github.com/klaus78/Data-Science-Questions-Answers"><u>Contribute</u></a></span>
+            </p>     
 
         {% for file in site.data.sort %}
         {% for item in site.data.files.[file.topic] in %}
 
         {% if item.h2 %}
         <button class="collapsible" onclick="showHideMenus()">
-            <a href="#">{{item.h2}}</a>
+            <a href="#" style="pointer-events: none; cursor: default;">{{item.h2}}</a>
         </button>
         {% endif %}
 
