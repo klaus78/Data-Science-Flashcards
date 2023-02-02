@@ -97,7 +97,7 @@ a:visited:not(.header_link) {
 }
 
 .divQuestion:after {
-      content: '\025BD'; /* Unicode character for "arrow down" symbol  */
+      content: '\2295'; /* Unicode character for "arrow down" symbol  */
       font-size: 18px;
       color: #aaa;
       float: right;
@@ -107,7 +107,7 @@ a:visited:not(.header_link) {
 
  
 .divQuestion.active:after {
-      content: '\025B3'; /* arrow up symbol */
+      content: '\0229D'; /* arrow up symbol */
 } 
 
 .hideable_h3 {

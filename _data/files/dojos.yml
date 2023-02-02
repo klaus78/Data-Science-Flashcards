@@ -576,7 +576,9 @@
 
 
 - h3: Matplotlib and Seaborn Dojos
-  question: Visualize a pie chart using Matplotlib
+  question: >
+    Visualize a pie chart using Matplotlib for the data <code>fruits = ["Apples", "Bananas", "Cherries", "Apricots", "Pears"]</code> 
+    and <code>values = [14, 35, 23, 25, 15]</code>.
   python: |
 
     import matplotlib.pyplot as plt
@@ -584,6 +586,18 @@
     fruits = ["Apples", "Bananas", "Cherries", "Apricots", "Pears"]
     plt.pie(values, labels = fruits)
     plt.show()
+
+- question: >
+    Create a chart  with <code>plt.subplots()</code>, plot the values <code>x=[2,3,4]</code>, <code>y=[3,5,4]</code>.
+    Assign <code>chart test</code> to the title, <code>test x</code> to the x-axis and <code>test y</code> to the y axis. 
+  python: |
+
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots()
+    x = [2,3,4]
+    y = [3,5,4]
+    ax.plot(x,y)
+    ax.set(title="chart test", xlabel="test x", ylabel="test y")
 
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?

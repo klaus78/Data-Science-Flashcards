@@ -21,8 +21,8 @@
 
 - question: What is a random variable?
   answer: > 
-    A <b>random variable</b> assigns a numeric value to each possile outcome of a random phenomenon. 
-    Each numeric value is associated with a specific probability. 
+    A <b>random variable</b> is a variable that assigns a numeric value to each possile outcome of a random phenomenon. 
+    Each numeric value is associated with a specific probability according to a certain density distribution.
   
 - question: What is the difference between discrete and continuous random variables? Can you make a couple of examples of both?
   answer: >
