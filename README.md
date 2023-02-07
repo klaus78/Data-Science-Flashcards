@@ -4,8 +4,7 @@
   <img src="./assets/images/logo.png" alt="logo" />
 </div>
 
-This is a collection of questions and answers on **Data Science** and **Machine Learning** in the form of flashcards that allows you
-to expand your knowledge of Machine Learning, Data Analysis, Statistics and other related topics. 
+This project is a comprehensive collection of questions and answers on **Data Science** and **Machine Learning** in the form of flashcards that allows you to expand your knowledge of Machine Learning, Data Analysis, Statistics and other related topics. 
 
 # Take me to the questions
 Here you can check out [the collection of questions and answers](https://klaus78.github.io/Data-Science-Flashcards). 
