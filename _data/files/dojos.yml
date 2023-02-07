@@ -613,6 +613,18 @@
     ax.set_xlabel('Fruit')
     ax.set_ylabel('Quantity')
 
+- question: >
+    Given <code>x=[3,5,7]</code> and <code>y=[6,8,2]</code>, create two subplots. 
+    In the first one draw the linear plot of x,y and in the second one draw a scatter plot of x,y.
+  python: |
+
+    import matplotlib.pyplot as plt
+    x = [3,5,7]
+    y = [6,8,2]
+    fig, ax = plt.subplots(ncols=2)
+    ax[0].plot(x,y)
+    ax[1].scatter(x,y)
+
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
   answer: >
