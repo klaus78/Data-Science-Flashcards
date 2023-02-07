@@ -588,7 +588,7 @@
     plt.show()
 
 - question: >
-    Create a chart  with <code>plt.subplots()</code>, plot the values <code>x=[2,3,4]</code>, <code>y=[3,5,4]</code>.
+    Create a chart with <code>plt.subplots()</code>, plot the values <code>x=[2,3,4]</code>, <code>y=[3,5,4]</code>.
     Assign <code>chart test</code> to the title, <code>test x</code> to the x-axis and <code>test y</code> to the y axis. 
   python: |
 
@@ -598,6 +598,20 @@
     y = [3,5,4]
     ax.plot(x,y)
     ax.set(title="chart test", xlabel="test x", ylabel="test y")
+
+- question: >
+    Create a Python dictionary containing 5 bananas, 4 apples and 2 cherries. Then create a plot with <code>plt.subplots()</code>, 
+    display the values in a bar chart. Set the chart title to <code>Fruit quantities</code>, the x-axis to <code>Fruit</code> and
+    the y-axis to <code>Quantity</code>.
+  python: |
+
+    fruits = {'banana': 5, 'apple':4, 'cherry': 2}
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots()
+    ax.bar(fruits.keys(), fruits.values())
+    ax.set_title('Fruit quantities')
+    ax.set_xlabel('Fruit')
+    ax.set_ylabel('Quantity')
 
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
