@@ -625,6 +625,21 @@
     ax[0].plot(x,y)
     ax[1].scatter(x,y)
 
+- question: >
+    Generate two random arrays <code>x</code> and <code>y</code> with a normal distribution, each of 100 samples. Then create
+    three plots: plot the histogram of <code>x</code>, the histogram of <code>y</code> and the scatter plot of <code>x</code> versus
+    <code>y</code>.
+    
+  python: |
+
+    import matplotlib.pyplot as plt
+    x = np.random.normal(size=100)
+    y = np.random.normal(size=100)
+    fig, ax = plt.subplots(ncols=3, figsize=(12,5))
+    ax[0].hist(x)
+    ax[1].hist(y)
+    ax[2].scatter(x,y)
+
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
   answer: >
