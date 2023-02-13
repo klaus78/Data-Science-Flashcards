@@ -640,6 +640,21 @@
     ax[1].hist(y)
     ax[2].scatter(x,y)
 
+- question: >
+    Generate a dataframe with three columns <code>a,b,c</code>, where each column contains 10 values with an uniform distribution. 
+    Then plot the three columns in a bar chart.
+  
+  python: |
+
+    import pandas as pd
+    import numpy as np
+    # create a 2D array with 10 rows and 3 columns. Each column
+    # has then 10 values with uniform distribution
+    x = np.random.rand(10,3)
+    # create a dataframe
+    df = pd.DataFrame(x, columns=['a','b','c'])
+    df.plot.bar()
+
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
   answer: >
