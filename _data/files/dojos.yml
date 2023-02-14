@@ -655,6 +655,20 @@
     df = pd.DataFrame(x, columns=['a','b','c'])
     df.plot.bar()
 
+- question: >
+    Create the following dataset <code>
+    df = pd.DataFrame({'age':[44, 67, np.nan], 'money':[500,700,550], 'color':['red', 'green','blue']})</code>. Replace the nan value
+    with the mean of the other ages. Then display a scatter plot where each point has the given color.
+
+  python: |
+
+    # create dataframe
+    df = pd.DataFrame({'age':[44, 67, np.nan], 'money':[500,700,550], 'color':['red', 'green','blue']})
+    # replace na value with mean age
+    df.fillna(df.age.mean(), inplace=True)
+    # display the scatter plot
+    df.plot.scatter(x='age', y='money', c='color')
+
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
   answer: >
