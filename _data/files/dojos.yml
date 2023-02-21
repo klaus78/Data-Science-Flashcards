@@ -669,6 +669,26 @@
     # display the scatter plot
     df.plot.scatter(x='age', y='money', c='color')
 
+- question: >
+    Create two arrays <code>x</code> and <code>y</code>, each containing 30 values that are normally distributed. Then
+    display them in a scatter plot and include a vertical and a horizontal line that divide each axis into two approximately
+    equal parts.
+
+  python: |
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    # generate x,y with random distr.
+    x = np.random.randn(30)
+    y = np.random.randn(30)
+    fig, ax = plt.subplots()
+    # scatter plot
+    ax.scatter(x,y)
+    # horizontal line
+    ax.axhline(0)
+    # vertical line
+    ax.axvline(0) 
+
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
   answer: >
