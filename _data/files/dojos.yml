@@ -671,7 +671,7 @@
 
 - question: >
     Create two arrays <code>x</code> and <code>y</code>, each containing 30 values that are normally distributed. Then
-    display them in a scatter plot and include a vertical and a horizontal line that divide each axis into two approximately
+    display them in a scatter plot and include a vertical and a horizontal line that divide each axis into two
     equal parts.
 
   python: |
@@ -685,9 +685,28 @@
     # scatter plot
     ax.scatter(x,y)
     # horizontal line
-    ax.axhline(0)
+    ax.axhline(y.mean())
     # vertical line
-    ax.axvline(0) 
+    ax.axvline(x.mean()) 
+
+- question: >
+    Generate two random arrays: <code>x1</code>, which should contain 30 integers between 2 and 20, 
+    and <code>x2</code>, which should contain 100 integers between 1 and 10, both uniformly distributed. 
+    Next, create two plots side by side that share the same y-axis, one for <code>x1</code> and one for <code>x2</code>. 
+    Label the title of each plot as <b>x1 plot</b> and <b>x2 plot</b> respectively. 
+    Lastly, give the entire figure a common title such as <b>My Plots</b>. 
+
+  python: |
+
+    fig, (ax1,ax2) = plt.subplots(nrows=1, ncols=2, sharey = True)
+    x1 = np.random.randint(2,20,30)
+    x2 = np.random.randint(1,10,100)
+    ax1.plot(x1)
+    ax1.set_title("x1 plot")
+    ax2.plot(x2)
+    ax2.set_title("x2 plot")
+    # set common title
+    fig.suptitle("My plots")
 
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
