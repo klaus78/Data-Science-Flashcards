@@ -708,6 +708,24 @@
     # set common title
     fig.suptitle("My plots")
 
+- question: >
+    Generate a random array with 10 rows and 3 columns. Display the values in a bar chart with the 
+    <code>dark_background</code> style.
+
+  python: |
+
+    import matplotlib.pyplot as plt
+    import numpy as np
+    import pandas as pd
+    # create a random array of size 10x4
+    data = np.random.randn(10,4)
+    df = pd.DataFrame(data)
+    # use the 'dark_background' style 
+    plt.style.use('dark_background')
+    # display a bar chart
+    df.plot.bar()
+
+
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
   answer: >
