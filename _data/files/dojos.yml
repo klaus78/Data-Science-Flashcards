@@ -725,6 +725,20 @@
     # display a bar chart
     df.plot.bar()
 
+- question: >
+    Generate a random dataset with 10 rows and 2 columns. Display the values in a scatter plot and limit the x-axis between
+    0.2 and 0.6.
+
+  python: |
+
+    import matplotlib.pyplot as plt
+    import numpy as np
+    import pandas as pd
+    x = np.random.rand(10,2)
+    df = pd.DataFrame(x, columns=['a','b'])
+    fig, ax = plt.subplots()
+    ax.set_xlim([0.2, 0.6])
+    ax.scatter(x=df['a'],y=df['b'])
 
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
