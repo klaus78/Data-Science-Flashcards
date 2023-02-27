@@ -25,7 +25,7 @@
 }
 
 .collapsible:not(a):after {
-      content: '\025BC'; /* Unicode character for "arrow down" sign  */
+      content: '\2295'; /* Unicode character for "arrow down" sign  */
       font-size: 20px;
       color: #5b82d7;
       float: right;
@@ -33,7 +33,7 @@
 }
 
 .active:not(a, .divQuestion):after {
-      content: "\25B2"; /* Unicode character for "arrow up" sign  */
+      content: "\229D"; /* Unicode character for "arrow up" sign  */
 }
 
 .header {
