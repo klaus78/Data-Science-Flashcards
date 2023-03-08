@@ -117,21 +117,34 @@
 
 - question: What is the Z-score normalization (also called standardization)?
   answer: > 
-    It is a technique that scales the values so that they will have the properties
-    of a standard distribution with mean &mu; = 0  and standard deviation &sigma; = 1.
-    <br>The formula for the normalization is z = (x - &mu;) / &sigma;
+    The <b>Z-score normalization</b> is a technique that scales the values so that they will have the properties
+    of a standard distribution with mean <code>&mu; = 0</code>  and standard deviation <code>&sigma; = 1</code>.
+    <br>The formula for the normalization is 
+    <br> z = 
+    <div class="frac">
+      <span>x - &mu;</span>
+      <span class="symbol">/</span>
+      <span class="bottom">&sigma;</span>
+    </div>
+    
 
 - question: What is the min-max scaling (also called normalization)?
   answer: >
     It is a technique that scales the values between 0 and 1. 
     <br>The formula for the min max scaling is 
-    <br>scaled = (toscale - min) / (max - min)
+    <br> 
+    value_scaled = 
+    <div class="frac">
+      <span>value_to_scale - min</span>
+      <span class="symbol">/</span>
+      <span class="bottom">max - min</span>
+    </div>
 
 - question: When is Z-score normalization used? When is min-max scaling used instead?
   answer: >
-    The Z-score normalization is used when the data has a gaussian distribution.
+    The <b>Z-score normalization</b> is used when the data has a gaussian distribution.
     <br><br>
-    The min-max scaling is more used when the distribution is not gaussian or not known.
+    The <b>min-max scaling</b> is more used when the distribution is not gaussian or not known.
     In addition, the min-max scaling works better than the Z-normalization when the 
     standard deviation is very small. Indeed in such case the effect of scaling the data
     between 0 and 1 will not affect the standard deviation significantly since it 
@@ -159,20 +172,23 @@
 
 - question: How to treat missing values?
   answer: >
-    There are several possible approaches<br>
-    a) remove items with missing values<br>
-    b) replace the missing value
+    There are several possible approaches to treat missing values:
+    <ul>
+    <li>remove items with missing values</li>
+    <li>replace the missing values</li>
+    </ul>
 
 - question: When is it reasonably possible to drop items with missing values?
   answer: When the items to remove are few compared to the size of the training set 
 
 - question: What are the common techniques for replacing missing values?
   answer: >
-    when values are missing randomly you can:<br>
-    a) replace the missing values with the mean<br>
-    b) interpolate values<br>
-    c) take the previous or next value
-
+    When values are missing randomly you can:
+    <ul>
+    <li>replace the missing values with the mean</li>
+    <li>interpolate values</li>
+    <li>take the previous or next value</li>
+    </ul>
 
 - h3: Correlation
   question: What is correlation? Is correlation related with causation?

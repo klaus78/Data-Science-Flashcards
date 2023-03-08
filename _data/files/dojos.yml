@@ -960,3 +960,50 @@
     df['salary_bin'] = pd.cut(df.salary, bins = mybins, labels = mylabels)
     # create a pivot table with 
     df.pivot_table(values='age',index='salary_bin')
+  
+- h3: Machine Learning Dojos
+  question: >
+    Create a dataframe from <code>{'a': [2,4,6], 'b': [9,5,3], 'y':[1,2,5]}</code>,
+    where <code>y</code> denotes the label column. Create a <code>X</code> dataframe with the feature columns
+    and a <code>y</code> dataframe with the label column. Finally split each dataframe into a training and
+    a test dataframe, where the test dataframe has 30% of the items.
+  python: |
+
+    import pandas as pd
+    from sklearn.model_selection import train_test_split
+    df = pd.DataFrame({'a':[2,4,6], 'b':[9,5,3], 'y':[1,2,5]})
+    X = df.drop(columns='y', axis=1)
+    y = df['y']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3) 
+
+- question: >
+    Create a daraframe from <code>{'a':['a','b','c']}</code> and convert the text feature to a
+    numerical feature using the <code>OneHotEncoder</code> class of the <code>sklearn</code> library. 
+
+  python: |
+
+    import pandas as pd
+    from sklearn.preprocessing import OneHotEncoder
+    from sklearn.compose import ColumnTransformer
+    df = pd.DataFrame({'a':['a','b','c']})
+    one_hot = OneHotEncoder()
+    transformer = ColumnTransformer([('one_hot',
+                                      one_hot,
+                                      ['a'] )],
+                                      remainder='passthrough')
+    transformed_df = pd.DataFrame(transformer.fit_transform(df))
+
+- question: >
+    Create a dataframe from <code>{'a':[6,8,6, np.NaN]}</code> and replace the <code>NaN</code> value
+    with the most frequent value using the <code>SimpleImputer</code> class of the <code>sklearn</code> library.
+
+  python: |
+
+    import pandas as pd
+    import numpy as np
+    from sklearn.impute import SimpleImputer
+    from sklearn.compose import ColumnTransformer
+    my_imputer = SimpleImputer(strategy="most_frequent")
+    df = pd.DataFrame({'a':[6,8,6, np.NaN]})
+    imputer = ColumnTransformer([('imp',my_imputer, ['a'])])
+    df_filled = pd.DataFrame(imputer.fit_transform(df))
