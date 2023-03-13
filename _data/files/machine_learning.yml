@@ -1,7 +1,7 @@
 
 - h2: Machine Learning
-
-  question: What is the difference between data science and machine learning
+  h3: Basic concepts
+  question: What is the difference between data science and machine learning?
   answer: >
     <b>Data science</b> and <b>Machine learning</b> are closely related fields but they differ
     in their goals.
@@ -88,13 +88,13 @@
 
 - question: What is the curse of dimensionality?
   answer: >
-    The curse of dimensionality is a tendency that it is easier to overfit a dataset 
+    The <b>curse of dimensionality</b> is a tendency that it is easier to overfit a dataset 
     when there are few points and many features. Data needs to increase exponentially 
     with the number of features in order not to have overfitting.
 
 - question: What is unsupervised learning? Make also some examples of algorithms
   answer: > 
-    Unsupervised learning is a machine learning process with unlabeled data.
+    <b>Unsupervised learning</b> is a machine learning process with unlabeled data.
     <br><br>
     Some examples of unsupervised learning are
     <br> - Clustering algorithms (K-means, hierarchical custering, Probabilistic clustering)
@@ -116,16 +116,26 @@
 
 - question: Can you mention some supervised machine learning algorithms?
   answer: >
-    The most common supervised machine learning algorithms are 
+    The most common <b>supervised machine learning algorithms</b> are 
     <br>K-nearest neighbor, Naive Bayes, Decision Trees, Linear Regression, 
     Support Vector Machines.
 
 - question: What are hyperparameters?
   answer: >
-    Hyperparameters are parameters used by the training model and 
+    <b>Hyperparameters</b> are parameters used by the training model and 
     they must be obviously set before starting the training process. 
     An example is the the k value in the k-nearest neighbor algorithm.
 
+- question: What are ensemble methods in machine learning?
+  answer: >
+    <b>Ensemble methods</b> are techniques that combine the results of a number of machine learning models rather
+    than using a single model. The basic idea behind ensemble methods is than the combination of the results of a number of models 
+    should be more accurate than using a single model.
+    <br><br>
+    To provide an example in real life, ensemble methods can be compared to asking several doctors for a diagnosis 
+    rather than relying on a single doctor. In the former case, one would expect the diagnosis to be more accurate.
+
+    
 - h3: Evaluate machine learning methods
   question: What is the difference between model evaluation and model validation?
   answer: >
@@ -208,7 +218,7 @@
 
 - question: What is the meaning and use of the F-measure (also called F-score)?
   answer: >
-    The F-measure combines the precision and recall using the harmonic mean.
+    The <b>F-measure</b> combines the precision and recall using the harmonic mean.
     <br><br>
     F-measure = 2 (Precision X Recall) / (Precision + Recall)
     <br><br>
@@ -216,8 +226,6 @@
     when you want to compare the performance of two classifiers w.r.t. precision and recall
     but you are not sure which of the two values to pick. So with the F-measure you seek
     a balance between precision and recall.
-
-
 
 - question: If you want to evaluate a classifier with a curve what do you use?
   answer: >
@@ -237,10 +245,6 @@
     <br>
     The distance of the curve from point (0,1) can be measured with the AUC (area under the curve)
     that should be close to 1 as much as possible.
-
-    
-    answers to the question 
-    “for a particular false positive rate what is the corresponding true positive rate?
   image: roc_curve.png
 
 - h3: Naive Bayes
@@ -304,7 +308,7 @@
 
 - question: What is logistic regression?
   answer: >
-    It is a statistical technique that is used to analyze a dataset and predict the binary outcome. 
+    <b>Logistic regression</b> is a statistical technique that is used to analyze a dataset and predict the binary outcome. 
     The outcome has to be a binary outcome that is either zero or one or a yes or no. 
     In other words the output of a logistic regression is always categorical (= discrete)
 
@@ -328,7 +332,7 @@
 - h3: K-Nearest neighbor algorithm (KNN)
   question: What is the K-nearest neighbor (KNN) algorithm? For what is KNN used?
   answer: >
-    The <b>k-nearest neighbor (KNN) </b>algorithm is a machine learning algorithm that finds the 
+    The <b>k-nearest neighbor (KNN)</b> algorithm is a machine learning algorithm that finds the 
     <code>K</code> closest (= most similar) data points of a given data point
     based on a certain metric, typically the Eucledian distance. 
     <br><br>
@@ -352,7 +356,7 @@
     </ul>
 - question: Make an example of a real user-case for the KNN algorithm
   answer: >
-    You can use the KNN algorithm to recommend a product to a customer 
+    You can use the <b>KNN algorithm</b> to recommend a product to a customer 
     based on the purchases of other similar customers.
     
 
@@ -413,7 +417,7 @@
    What are the main techniques used to combine decision trees to obtain a more accurate model 
    (so called ensemble techniques)?
   answer: >
-    There are two main ensemble techniques
+    There are two main ensemble techniques:
     <ul>
     <li><b>Boosting algorithms</b>: this is a sequential process. In boosting algorithms learners 
     are learned sequentially with early learners fitting simple models to the data and then analyzing 
@@ -421,7 +425,7 @@
     Misclassified data gets an increased weight so that this data will be more on focus in the 
     next train step.</li>
     <li><b>Bagging techniques</b>: this is a parallel process. In a bagging technique the dataset is 
-    divided into n samples using randomized sampling.Then a model is build on each sample. 
+    divided into <code>n</code> samples using randomized sampling. Then a model is build on each sample. 
     After that the resulting models are combined using voting or averaging.</li>
     </ul>
     
