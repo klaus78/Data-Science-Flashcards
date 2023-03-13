@@ -1007,3 +1007,29 @@
     df = pd.DataFrame({'a':[6,8,6, np.NaN]})
     imputer = ColumnTransformer([('imp',my_imputer, ['a'])])
     df_filled = pd.DataFrame(imputer.fit_transform(df))
+
+- question: >
+    Load the <code>california housing</code> dataset from sklearn and create a training and a test dataset.
+    The test dataset must contains 20% of the total data points. Then train a linear regression with 
+    the <code>Ridge</code> algorithm and print the score.
+
+  python: |
+
+    import numpy as np
+    import pandas as pd
+    from sklearn.datasets import fetch_california_housing
+    from sklearn.model_selection import train_test_split
+    from sklearn.linear_model import Ridge
+
+    np.random.seed(42)
+    ds = fetch_california_housing()
+    df = pd.DataFrame(ds['data'], columns = ds['feature_names'])
+    df['MedHouseVal'] = ds['target']
+    X = df.drop('MedHouseVal', axis=1)
+    y = df['MedHouseVal']
+    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2)
+    model = Ridge()
+    model.fit(X_train, y_train)
+    score = model.score(X_test, y_test)
+    print(score)
+    # With seed 42 you should get score = 0.575
