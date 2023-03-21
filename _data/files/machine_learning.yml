@@ -63,22 +63,6 @@
     <br>
     To prevent overfitting you can for example use regularization and cross-validation.
 
-- question: What is cross-validation in machine learning?
-  answer: > 
-    <b>Cross-validation</b> refers to the process of splitting a dataset into a 
-    training set (usually 80%) and test set (usually 20%) and evaluate
-    the performance of the model with those two datasets. 
-
-- question: What is K-fold cross-validation?
-  answer: >
-    <b>K-fold cross-validation</b> is a kind of cross-validation. The steps are
-    <br><br>- split a dataset into k parts. Each part is called fold.
-    <br><br>- take one fold i as test set and take the remaining (k-1) folds as training set.
-    <br><br>- train you classification algorithm with the two datasets from previous point. Finally for 
-    each fold we get an accuracy value. i.e. in total we get K accuracy values.
-    <br><br>- the final accuracy value for your classification algorithm is given by the average of
-    the K accuracy values.
-
 - question: What is regularization?
   answer: >
     <b>Regularization</b> adds a penalty on the different parameters of the model to reduce the 
@@ -144,6 +128,30 @@
     on the training set.
     <br><br><b>model validation</b> is used to ensure that a model performs well also on a test set.
 
+- question: What is cross-validation in machine learning?
+  answer: > 
+    <b>Cross-validation</b> is a technique used in machine learning to evaluate the performance
+    of a model. Cross-validation involves splitting a dataset into a 
+    training set (usually 80% of the data) and test set (usually 20% of the data), training the model
+    on the training set and evaluating it on the test set. 
+    <br><br>
+    The process is repeated multiple times
+    using different splits and the result is the average evaluation over all the iterations.
+
+- question: What is K-fold cross-validation?
+  answer: >
+    <b>K-fold cross-validation</b> is a specific type of cross-validation where the dataset is split into <i>K</i> equal parts. 
+    <br>The steps of <b>K-fold cross-validation</b> are:
+    <ul> 
+    <li>split a dataset into <i>K</i> equal parts. Each part is called fold.</li>
+    <li>take one fold <i>i</i> as the test set and take the remaining <i>(K-1)</i> folds as the training set.</li>
+    <li>train you classification algorithm on the training set and evaluate its performance of the test set.</li> 
+    <li>Repeat the process for each fold. As a result, for each fold we get an accuracy value and 
+    in total we get <i>K</i> accuracy values.</li>
+    <li>the final accuracy value for your classification algorithm is given by the average of
+    the <i>K</i> accuracy values.</li>
+    </ul>
+
 - question: What matrix do you construct to evaluate the performance of a classifier?
   answer: >
     To evaluate the performance of a classifier you construct a confusion matrix
@@ -199,7 +207,7 @@
     for class-unbalanced datasets? 
   answer: >
     When the dataset is class-balanced, the accuracy is a good metric. 
-    <br><br>If the dataset is class-unbalanced, precision and recall
+    <br><br>When the dataset is class-unbalanced, precision and recall
     are better metrices. 
 
 - question: To evaluate a generic machine learning model what metrics do you typically use?
