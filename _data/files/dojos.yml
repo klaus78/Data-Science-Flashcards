@@ -1033,3 +1033,25 @@
     score = model.score(X_test, y_test)
     print(score)
     # With seed 42 you should get score = 0.575
+
+- question: >
+    Load the <code>Iris</code> dataset from the <code>sklearn</code> library. 
+    Train the <code>RandomForestClassifier</code> on it and then evaluate the result with the <code>cross_val_score</code> 
+    metric.
+- python: |
+
+    import numpy as np
+    import pandas as pd
+    from sklearn.datasets import load_iris
+    from sklearn.model_selection import train_test_split
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.model_selection import cross_val_score
+    np.random.seed(12)
+    ds = load_iris()
+    df = pd.DataFrame(ds.data, columns=ds.feature_names)
+    df['target'] = pd.Series(ds.target)
+    X = df.drop('target', axis=1)
+    y = df['target']
+    model = RandomForestClassifier()
+    cross_val_score(model, X,y)
+    # As result you should get array([0.96666667, 0.96666667, 0.93333333, 0.96666667, 1.])
