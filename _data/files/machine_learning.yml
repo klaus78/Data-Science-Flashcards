@@ -152,9 +152,9 @@
     the <i>K</i> accuracy values.</li>
     </ul>
 
-- question: What matrix do you construct to evaluate the performance of a classifier?
+- question: What matrix can you use to evaluate the performance of a classifier?
   answer: >
-    To evaluate the performance of a classifier you construct a confusion matrix
+    To evaluate the performance of a classifier you can use a <b>confusion matrix</b>
     <table>
       <tr>
         <td></td>
@@ -186,7 +186,7 @@
 - question: Can you mention some metrics used to evaluate classifiers?
   answer: >
     Accuracy = (TP + TN) / n
-    <br>true positive rate or sentitivity  or recall = TP / (TP + FN)
+    <br>true positive rate or sensitivity  or recall = TP / (TP + FN)
     <br>true negative rate or specificity = TN / (TN + FP)
     <br>Precision  = TP / (TP + FP)
     <br>False positive rate (FPR)  = FP / (TN + FP)
@@ -235,19 +235,18 @@
     but you are not sure which of the two values to pick. So with the F-measure you seek
     a balance between precision and recall.
 
-- question: If you want to evaluate a classifier with a curve what do you use?
+- question: If you want to evaluate the performance of a classifier with a curve what do you use?
   answer: >
-    You can use an ROC curve. The ROC curve plots the sensitivity (= TPF) against
-    1-specificity (=FPR) for different values of a parameter that affects the classifier.
+    To evaluate the performance of a classifier you can use the <b>ROC curve</b> 
+    (Receiver Operating Characteristic). The ROC curve plots the <b>sensitivity</b> (= True Positive Rate) against
+     <b>1-specificity</b> (= False Positive Rate) for different values of a parameter that affects the classifier.
     <br><br>
-    Sensitivity = probability of predicting that a real positive will be positive. This can
-    be seen as the accuracy of positives.
+    Sensitivity = probability of predicting that a real positive will be positive.
     <br>
-    Specificity = probability of predicting that a real negative will be negative. This can
-    be seen as the accuracy of negatives.
+    Specificity = probability of predicting that a real negative will be negative.
     <br><br>
-    The best result is high sensitivity and low specificity which means the closest the curve
-    is to point (0,1), the better. This can be also expressed as the farther the curve is
+    The best result for a classifier is high sensitivity and low 1-specificity, which means the closest the curve
+    is to point (0,1) (top-left), the better. This can be also expressed as the farther the curve is
     from the diagonal line (0,0)-(1,1) the better. This diagonal line represents the line of 
     a classifier working at random. 
     <br>
