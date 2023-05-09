@@ -152,36 +152,61 @@
     the <i>K</i> accuracy values.</li>
     </ul>
 
-- question: What matrix can you use to evaluate the performance of a classifier?
+- question: What matrix can you use to evaluate the performance of a classifier? How does an ideal matrix look like?
   answer: >
-    To evaluate the performance of a classifier you can use a <b>confusion matrix</b>
+    Let's suppose we have a binary classifier that can assign an item to two
+    possible classes, which are typically labeled as positive (1) and negative (0). 
+    <br><br>
+    To evaluate the performance of the classifier you can use the <b>confusion matrix</b>. 
+    The confusion matrix displays the number of true positives (TP), true negatives (TN),
+    false positives (FP) and false negatives (FN). 
+    <br>
+    <ul>
+    <li>True positives = number of items with label positive (1) that 
+    are classified correctly as positive.</li>
+    <li>True negatives = number of items with label negative (0) that 
+    are classified correctly as positive.</li>
+    <li>False positives = number of items with label negative (0) that
+    are classified wrongly as positive.</li>
+    <li>False negatives = number of items with label positive (1) that
+    are classified wrongly as negative.</li>
+    </ul>
+    <br>
+    The confusion matrix looks like
+
+    <br><br>
     <table>
       <tr>
         <td></td>
-        <th>y = 1</th> 
-        <th>y = -1</th>
+        <th><b>actual 1</b></th> 
+        <th><b>actual 0</b></th>
       </tr>
       <tr>
-        <td>y# = 1</td>
-        <td>TP</td> 
-        <td>FP</td>
+        <td><b>predicted 1</b></td>
+        <td class="true-positive">TP</td> 
+        <td class="false-positive">FP</td>
       </tr>
       <tr>
-        <td>y# = -1</td>
-        <td>FN</td> 
-        <td>TN</td>
+        <td><b>predicted 0</b></td>
+        <td class="false-negative">FN</td> 
+        <td class="true-negative">TN</td>
       </tr>
     </table>
-    <br>
-    where 
-    y = actual label, y# = predicted label, TP = true positives, FP = false positives, FN = false negatives
-    TN = true negatives.
     <br><br>
-    True positives (negatives) = number of items with label y = 1 (-1) that 
-    are classified correctly.
+    An ideal confusion matrix has high values of TP and TN because these quantities indicate the correctly
+    classified items.
+
+- question: Why is the confusion matrix called like that?
+  answer: >
+    The <b>confusion matrix</b> is a table that is used to evaluate the performance of a classifier.
+    It displays the number of correctly classified items (true positives and true negatives) and
+    wrongly classified items (false positives and false negatives).
     <br><br>
-    False positives (negatives) = number of items with labels y = -1 (1) that
-    are classified wrongly.
+    The <b>confusion matrix</b> is called like that because it helps you identify where the 
+    classifier has made wrong predictions, which is where the classifier was <b><i>confused</i></b>.
+    As a result you can gain insight about the performance of the classifier and take corrective
+    action to minimize the number of wrongly classified items.
+    
 
 - question: Can you mention some metrics used to evaluate classifiers?
   answer: >

@@ -238,3 +238,29 @@ div.flex-box {
   .frac span.symbol {
       display: none;
   } 
+
+table {
+      border-collapse: collapse;
+      margin: auto;
+}
+th,td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+}
+
+.true-positive {
+      background-color: #9acd32;
+}
+
+.false-positive {
+      background-color: #ff7f50;
+}
+
+.false-negative {
+      background-color: #00bfff;
+}
+
+.true-negative {
+      background-color: #ffa500;
+}
