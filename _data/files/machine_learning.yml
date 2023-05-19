@@ -121,14 +121,7 @@
 
     
 - h3: Evaluate machine learning methods
-  question: What is the difference between model evaluation and model validation?
-  answer: >
-    The difference between model evaluation and model validation is that
-    <br><br><b>model evaluation</b> is used to check the performance of a machine learning model
-    on the training set.
-    <br><br><b>model validation</b> is used to ensure that a model performs well also on a test set.
-
-- question: What is cross-validation in machine learning?
+  question: What is cross-validation in machine learning?
   answer: > 
     <b>Cross-validation</b> is a technique used in machine learning to evaluate the performance
     of a model. Cross-validation involves splitting a dataset into a 
@@ -278,6 +271,23 @@
     The distance of the curve from point (0,1) can be measured with the AUC (area under the curve)
     that should be close to 1 as much as possible.
   image: roc_curve.png
+
+- question:  >
+    To evaluate the performance of regression models you can use R-squared (<code>R<sup>2</sup></code>). 
+    What is R-squared? How is it computed?
+  answer: >
+    Given a regression model, the <b>R-squared</b> (\(R^2\)) metrics, also known as <b>coefficient
+    of determination</b>, is a measure that represents how 
+    well the variables of the regression model describe the variance of the target variable. 
+    <br><br>
+    \(R^2\) ranges from 0 to 1. A value close to 1 means that variables of the model describe
+    well the variance of the target variable. A value close to 0 means obviously the opposite.
+    <br><br>
+    Given the real values \(yreal_i\) and the predicted values \(ypred_i\), 
+    the formula of R-squared is
+    
+    $$R^2 = 1 - \frac{\sum_{i=1}^{n} (yreal_i - ypred_i)^2}
+    {\sum_{i=1}^{n} (yreal_i - \overline{yreal})^2} $$
 
 - h3: Naive Bayes
   question: What is Naive Bayes?
