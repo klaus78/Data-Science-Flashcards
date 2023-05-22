@@ -308,7 +308,7 @@
     </ul>
   image: bar_chart_histogram.png
 
-- question: At what is a histogram particulary good?
+- question: What is a histogram particularly good at?
   answer: >
     A <b>histogram</b> is particularly good at representing grouped data. The frequency of each group is 
     represented by the area of the column. Because the width of the columns is proportional to the width of 
