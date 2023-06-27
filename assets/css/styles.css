@@ -1,12 +1,8 @@
 @import "colorful.css";
 
-
-
-
 *:not(.divCode) {
       font-family: Calibri, Open Sans;
 }
-
 
 .collapsible:not(a) {
       background-color: #efefef;
@@ -20,12 +16,14 @@
       font-size: 26px;
 }
 
-.active:not(a, .divQuestion), .collapsible:not(a):hover {
+.active:not(a, .divQuestion),
+.collapsible:not(a):hover {
       background-color: #d7d7d7;
 }
 
 .collapsible:not(a):after {
-      content: '\2295'; /* Unicode character for "arrow down" sign  */
+      content: '\2295';
+      /* Unicode character for "arrow down" sign  */
       font-size: 20px;
       color: #5b82d7;
       float: right;
@@ -33,7 +31,8 @@
 }
 
 .active:not(a, .divQuestion):after {
-      content: "\229D"; /* Unicode character for "arrow up" sign  */
+      content: "\229D";
+      /* Unicode character for "arrow up" sign  */
 }
 
 .header {
@@ -42,7 +41,8 @@
       background: #5b82d7;
 }
 
-.header_link, .header_link:visited {
+.header_link,
+.header_link:visited {
       color: white;
       text-decoration: none;
 }
@@ -55,7 +55,7 @@ a:link:not(.header_link) {
 a:visited:not(.header_link) {
       color: #4265b3;
       text-decoration: none;
-} 
+}
 
 
 .content {
@@ -69,7 +69,7 @@ a:visited:not(.header_link) {
       z-index: 10;
 }
 
-.sticky + .content {
+.sticky+.content {
       padding-top: 102px;
 }
 
@@ -79,36 +79,39 @@ a:visited:not(.header_link) {
       padding-top: 20px;
       padding-bottom: 20px;
       cursor: pointer;
-      vertical-align:middle;
+      vertical-align: middle;
       border-bottom: 1px solid #d7d7d7;
 }
 
-.divQuestion code  {
+.divQuestion code {
       font-family: monospace;
       font-size: 15px;
       background-color: #f8f8f8;
 }
- 
+
 .divQuestion:hover {
       background-color: #cae1e2;
-} 
+}
+
 .divQuestion:active {
       transform: translateY(1px);
 }
 
 .divQuestion:after {
-      content: '\2295'; /* Unicode character for "arrow down" symbol  */
+      content: '\2295';
+      /* Unicode character for "arrow down" symbol  */
       font-size: 18px;
       color: #aaa;
       float: right;
       margin-left: 5px;
       vertical-align: text-top;
-} 
+}
 
- 
+
 .divQuestion.active:after {
-      content: '\0229D'; /* arrow up symbol */
-} 
+      content: '\0229D';
+      /* arrow up symbol */
+}
 
 .hideable_h3 {
       display: none;
@@ -118,13 +121,13 @@ a:visited:not(.header_link) {
       text-align: left;
       background-color: #fcfcfc;
       padding: 8px;
-      border:1px solid #d8d8d8;
+      border: 1px solid #d8d8d8;
       display: none;
       border-left: 8px solid #5b82d7;
 }
 
 
-.divAnswer code  {
+.divAnswer code {
       font-family: monospace;
       font-size: 15px;
       background-color: #eeeeee;
@@ -140,7 +143,7 @@ pre {
 }
 
 
-.divCode  {
+.divCode {
       text-align: left;
       background-color: #f8f8f8;
       display: none;
@@ -156,7 +159,7 @@ ul {
       list-style-type: disc;
 }
 
-h1{
+h1 {
       margin-top: 0px;
       margin-bottom: 0px;
       font-size: 30px;
@@ -173,11 +176,12 @@ h3 {
 }
 
 body {
- font-size: 18px;
+      font-size: 18px;
+      line-height: 26px;
 }
 
 button {
-      background-color: #5b82d7; 
+      background-color: #5b82d7;
       border: none;
       outline: none;
       cursor: pointer;
@@ -185,14 +189,15 @@ button {
       color: white;
       text-align: center;
       display: inline-block;
-      padding:8px;
-      margin-top:3px;
+      padding: 8px;
+      margin-top: 3px;
       font-size: 17px;
 }
 
 .buttonAnswer:hover {
       background-color: #4265b3;
 }
+
 .buttonAnswer:active {
       transform: translateY(1px);
 }
@@ -206,17 +211,17 @@ img {
 }
 
 .hr-thin {
-      border:1px solid #d7d7d7;
+      border: 1px solid #d7d7d7;
       border-radius: 1px;
 }
 
 .hr-thick {
-      border: 4px solid  #d7d7d7;
+      border: 4px solid #d7d7d7;
       border-radius: 4px;
 }
 
 div.flex-box {
-      display:flex;
+      display: flex;
       justify-content: space-between;
 }
 
@@ -227,23 +232,28 @@ div.flex-box {
       vertical-align: middle;
       letter-spacing: 0.001em;
       text-align: center;
-  }
-  .frac > span {
+}
+
+.frac>span {
       display: block;
       padding: 0.1em;
-  }
-  .frac span.bottom {
+}
+
+.frac span.bottom {
       border-top: thin solid black;
-  }
-  .frac span.symbol {
+}
+
+.frac span.symbol {
       display: none;
-  } 
+}
 
 table {
       border-collapse: collapse;
       margin: auto;
 }
-th,td {
+
+th,
+td {
       border: 1px solid black;
       padding: 10px;
       text-align: center;

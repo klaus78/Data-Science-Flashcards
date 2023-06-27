@@ -281,19 +281,28 @@
     that should be close to 1 as much as possible.
   image: roc_curve.png
 
-- question:  >
+- question: >
     To evaluate the performance of regression models you can use R-squared (\(R^2\)). 
     What is R-squared? How is it computed?
   answer: >
     Given a regression model, the <b>R-squared</b> (\(R^2\)) metric, also known as <b>coefficient
-    of determination</b>, is a measure that represents how 
-    well the variables of the regression model describe the variance of the target variable. 
+    of determination</b>, is a measure that represents how well the variables of the regression 
+    model describe the variance of the target variable. 
     <br><br>
-    \(R^2\) ranges from 0 to 1. A value close to 1 means that the variables of the model describe
-    well the variance of the target variable. A value close to 0 means the opposite.
+    \(R^2\) ranges from negative infinity to 1:
+    <ul>
+    <li>\(R^2\) = 1 indicates that all the variance of the target variable is explained by the independent
+    variable(s)</li>
+    <li>\(R^2\) > 0 indicates that a portion of the variance of the target variable is explained by the independent
+    variable(s)</li>
+    <li>\(R^2\) = 0 indicates that no information variance of the target variable is explained by the independent
+    variable(s)</li>
+    <li>\(R^2\) < 0 suggests that the independent variable(s) have no predictive power or may be 
+    negatively correlated with the target variable.</li>
+    </ul>
     <br><br>
     Given the real values \(yreal_i\) and the predicted values \(ypred_i\), 
-    the formula of R-squared is
+    the formula of R-squared \(R^2\) is
     
     $$R^2 = 1 - \frac{\sum_{i=1}^{n} (yreal_i - ypred_i)^2}
     {\sum_{i=1}^{n} (yreal_i - \overline{yreal})^2} $$
