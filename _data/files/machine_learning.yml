@@ -281,32 +281,6 @@
     that should be close to 1 as much as possible.
   image: roc_curve.png
 
-- question: >
-    To evaluate the performance of regression models you can use R-squared (\(R^2\)). 
-    What is R-squared? How is it computed?
-  answer: >
-    Given a regression model, the <b>R-squared</b> (\(R^2\)) metric, also known as <b>coefficient
-    of determination</b>, is a measure that represents how well the variables of the regression 
-    model describe the variance of the target variable. 
-    <br><br>
-    \(R^2\) ranges from negative infinity to 1:
-    <ul>
-    <li>\(R^2\) = 1 indicates that all the variance of the target variable is explained by the independent
-    variable(s)</li>
-    <li>\(R^2\) > 0 indicates that a portion of the variance of the target variable is explained by the independent
-    variable(s)</li>
-    <li>\(R^2\) = 0 indicates that no information variance of the target variable is explained by the independent
-    variable(s)</li>
-    <li>\(R^2\) < 0 suggests that the independent variable(s) have no predictive power or may be 
-    negatively correlated with the target variable.</li>
-    </ul>
-    <br><br>
-    Given the real values \(yreal_i\) and the predicted values \(ypred_i\), 
-    the formula of R-squared \(R^2\) is
-    
-    $$R^2 = 1 - \frac{\sum_{i=1}^{n} (yreal_i - ypred_i)^2}
-    {\sum_{i=1}^{n} (yreal_i - \overline{yreal})^2} $$
-
 - h3: Naive Bayes
   question: What is Naive Bayes?
   answer: >
@@ -372,7 +346,6 @@
     The outcome has to be a binary outcome that is either zero or one or a yes or no. 
     In other words the output of a logistic regression is always categorical (= discrete)
 
-
 - question: What do you predict with logistic regression?
   answer: >
     Logistic regression predicts the probabilty that a variable belongs to one 
@@ -388,6 +361,45 @@
     To turn logistic regression into a classifier you can use a threshold. If the 
     output of the logistic regression is above (below) the threshold, then the output
     can be classified as class zero (class one).
+
+- question: >
+    What are some metrics that you can use to evaluate regression models?
+  answer: >
+    To evaluate regression models you can use a number of metrics including
+    <ul>
+    <li><b>\(R^2\)</b> (also known as coefficient of determination) represents how well the variables
+    of the regression model describe the variance of the target variable.</li>
+    <li><b>Mean absolute error (MAE)</b> is the average of the absolute distances between predictions and actual values.</li>
+    <li><b>Mean squared error (MSE)</b> is the mean of the square of the absolute distances between predictions and actual 
+    values. Notice that larger values, i.e. outliers, are amplified because the values are squared.</li>
+    </ul>
+
+- question: >
+    To evaluate the performance of regression models you can use the R-squared (\(R^2\)) metric. 
+    What is R-squared? How is it computed?
+  answer: >
+    Given a regression model, the <b>R-squared</b> (\(R^2\)) metric, also known as <b>coefficient
+    of determination</b>, is a measure that represents how well the variables of the regression 
+    model describe the variance of the target variable. 
+    <br><br>
+    \(R^2\) ranges from negative infinity to 1:
+    <ul>
+    <li>\(R^2\) = 1 indicates that all the variance of the target variable is explained by the independent
+    variable(s)</li>
+    <li>\(R^2\) > 0 indicates that a portion of the variance of the target variable is explained by the independent
+    variable(s)</li>
+    <li>\(R^2\) = 0 indicates that no information variance of the target variable is explained by the independent
+    variable(s)</li>
+    <li>\(R^2\) < 0 suggests that the independent variable(s) have no predictive power or may be 
+    negatively correlated with the target variable.</li>
+    </ul>
+    <br><br>
+    Given the real values \(yreal_i\) and the predicted values \(ypred_i\), 
+    the formula of R-squared \(R^2\) is
+    
+    $$R^2 = 1 - \frac{\sum_{i=1}^{n} (yreal_i - ypred_i)^2}
+    {\sum_{i=1}^{n} (yreal_i - \overline{yreal})^2} $$
+
 
 - h3: K-Nearest neighbor algorithm (KNN)
   question: What is the K-nearest neighbor (KNN) algorithm? For what is KNN used?
