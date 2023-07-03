@@ -615,7 +615,7 @@
 
 - question: >
     Given <code>x=[3,5,7]</code> and <code>y=[6,8,2]</code>, create two subplots. 
-    In the first one draw the linear plot of x,y and in the second one draw a scatter plot of x,y.
+    In the first one draw the line plot of <code>x</code>, <code>y</code> and in the second one draw a scatter plot of x,y.
   python: |
 
     import matplotlib.pyplot as plt
@@ -657,8 +657,8 @@
 
 - question: >
     Create the following dataset <code>
-    df = pd.DataFrame({'age':[44, 67, np.nan], 'money':[500,700,550], 'color':['red', 'green','blue']})</code>. Replace the nan value
-    with the mean of the other ages. Then display a scatter plot where each point has the given color.
+    df = pd.DataFrame({'age':[44, 67, np.nan], 'money':[500,700,550], 'color':['red', 'green','blue']})</code>. Replace the 
+    <code>np.nan</code> value with the mean of the other ages. Then display a scatter plot where each point has the given color.
 
   python: |
 
@@ -739,6 +739,27 @@
     fig, ax = plt.subplots()
     ax.set_xlim([0.2, 0.6])
     ax.scatter(x=df['a'],y=df['b'])
+
+- question: >
+    Given the two series <code>s1 = [3,4]</code> and <code>s2 = [5,7]</code>, create a dataframe
+    and call the columns <code>c1</code> and <code>c2</code>. Finally display the dataframe in a 
+    heatmap with title <code>My heatmap</code>.
+
+  python: |
+
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    # create dataframe
+    s1 = [3,4]
+    s2 = [5,7]
+    df = pd.DataFrame([s1,s2], columns=['c1','c2'])
+    # Creating the heatmap using Seaborn
+    sns.heatmap(df, annot=True)
+    # set the title
+    plt.title('My heatmap')
+    plt.show()
+
 
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?
