@@ -333,3 +333,25 @@
     <li><i>median</i> = middle value of the sorted dataset</li>
     </ul>
   image: boxplot.png
+  
+- question: What is a heatmap? When is it used?
+  answer: >
+    A <b>heatmap</b> is a two-dimensional grid that is used for visualizing numerical data organized in a
+    table-like format.
+    <br><br> 
+    Each cell of the heatmap corresponds to a specific row and column in the data, while the cell color
+    represents the magnitude of the corresponding value. As a result, different values are mapped to different 
+    colors, allowing to identify similarities in the data.
+    <br><br>
+    Heatmaps are used to explore relationships and patterns in datasets. Some common uses are
+    <ul>
+      <li>Correlation Analysis: positive and negative correlations between variables are visualized as
+      different colors and thus easy to recognize.</li>
+      <li>Confusion Matrix Analysis: the performance of classification models can be put in matrix form
+      and displayed by heatmaps.</li>
+      <li>Genome Analysis: heatmaps are widely used in genomics to visualize gene expression levels.</li>
+    </ul> 
+    <br>
+    An example of table-like dataset and respective heatmap is shown below: 
+  image: heatmap.png
+
