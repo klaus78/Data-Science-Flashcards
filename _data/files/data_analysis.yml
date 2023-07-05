@@ -237,24 +237,31 @@
   question: What are the main techniques of dimensionality reduction?
   answer: >
     The main techniques of dimensionality reduction are
-    <br>- projection
-    <br>- manifold learning
-    <br>- autoencoding
+    <ul>
+    <li>projection</li>
+    <li>manifold learning</li>
+    <li>autoencoding</li>
+    </ul>
+    HELP WANTED
 
 - question: >
     PCA is affected by scale. To get the optimal performance out of PCA, 
     which is a crucial first step?
-  answer: It is necessary to standardize the data using z-score
+  answer: >
+    It is necessary to standardize the data using z-score.
+    HELP WANTED
 
 - h3: Text processing
   question: What are some steps involved in the preprocessing of a text?
   answer: >
     The preprocessing of a text can involve
-    <br>- make text lower case
-    <br>- remove punctuation
-    <br>- tokenize the text (split up the words in a sentence)
-    <br>- remove stop words as they convey grammar rather than meaning
-    <br>- word stemming (reduce words to their stems)
+    <ul>
+    <li>make text lower case</li>
+    <li>remove punctuation</li>
+    <li>tokenize the text (split up the words in a sentence)</li>
+    <li>remove stop words as they convey grammar rather than meaning</li>
+    <li>word stemming (reduce words to their stems)</li>
+    </ul>
 - question: What is a word cloud?
   answer: >
     The word cloud is a visualization technique for text processing where the most frequent
@@ -354,4 +361,23 @@
     <br>
     An example of table-like dataset and respective heatmap is shown below: 
   image: heatmap.png
+
+- question: What is a violin plot? When is it particularly useful?
+  answer: >
+    A <b>violin plot</b> is a statistical data visualization that can be thought of as an extension
+    of a boxplot. To be more precise, a violin plot includes all the information contained in a boxplot 
+    with the addition of a kernel density plot.
+    <br><br>
+    While a boxplot shows statistical data such as mean, median and interquartile ranges, a violin plot 
+    also includes the data distribution. 
+    <br><br>
+    A violin plot is particularly useful in the following scenarios:
+    <ul>
+    <li><b>comparing distributions</b>: by placing the distributions side by side, it is easier
+    to compare distributions, allowing for a better exploratory analysis.</li>
+    <li><b>multiple modes, skewness or outliers in the data</b>: detecting such elements gives you a
+    better understanding of the data.</li>
+    </ul>
+    
+
 
