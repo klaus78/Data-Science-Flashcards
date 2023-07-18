@@ -760,6 +760,30 @@
     plt.title('My heatmap')
     plt.show()
 
+- question: >
+    Given some salaries of engineers <code>[70,72,76,82,69,75]</code> and workers <code>[50,52,56,32,49,55]</code>,
+    create a dataframe with a column for each salary group and display the dataframe in a violin plot.
+
+  python: |
+
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    import pandas as pd
+    import numpy as np
+
+    engineer_salary = [70,72,76,82,69,75]
+    worker_salary = [50,52,56,32,49,55]
+    data = {
+        'engineer salary': [70,72,76,82,69,75],
+        'worker salary': [50,52,56,32,49,55]
+    }
+    df = pd.DataFrame(data=data) 
+    sns.violinplot(data=df, palette='muted', inner='quart')
+    plt.title('Salary Distribution')
+    plt.xlabel('Job')
+    plt.ylabel('Salary')
+    plt.show()
+
 
 - h3: Pandas Dojos
   question: What are the two main data structures of Pandas?

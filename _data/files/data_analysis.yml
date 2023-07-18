@@ -378,6 +378,9 @@
     <li><b>multiple modes, skewness or outliers in the data</b>: detecting such elements gives you a
     better understanding of the data.</li>
     </ul>
-    
+    A violin plot is shown in the following image. You can see the distributions of the average salaries
+    for engineers and workers in a violin shape. 
+    The three dotted lines in a violin plot represent the lower quartile, the median, and the upper quartile of the data set. 
+  image: violin_plot.png
 
 
