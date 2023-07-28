@@ -1,5 +1,5 @@
 - h2: Deep Learning
-  h3: Basic concepts
+  h3: Deep Learning basic concepts
   question: What is Deep Learning? Why is it called deep?
   answer: >
     <b>Deep Learning</b> is a subdomain of machine learning that makes use of artificial
@@ -18,7 +18,7 @@
 - question: What are the differences between machine learning and deep learning?
   answer: >
     <b>Deep learning</b> is a subset of <b>machine learning</b>. Both machine learning
-    and deep learning tries to create a mathematical model of a dataset. This mathematical
+    and deep learning try to create a mathematical model of a dataset. This mathematical
     model can then be used to make predictions on new input data. However these technologies
     differ in some points:
     <ul>
@@ -32,8 +32,6 @@
     for the task at hand. By contrast, in deep learning the feature selection is done automatically by the algorithms during
     the training process.</li>
     </ul>
-
- 
 
 - question: What kind of neural networks works particularly well with image data?
   answer: >
@@ -54,7 +52,7 @@
     <b>recurrent neural networks</b>.
     <br><br>
     A recurrent neural network has an intern loop, that means the data is not processed all at once 
-    but rather it is processed in different steps. In particular in the case of text, each word is 
+    but rather is processed in different steps. In particular in the case of text, each word is 
     processed once at a time. This process is similar to the way humans read text.
 
 - question: What is transfer learning? What are some typical use cases?
