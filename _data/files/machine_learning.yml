@@ -164,13 +164,13 @@
     false positives (FP) and false negatives (FN). 
     <br>
     <ul>
-    <li>True positives = number of items with label positive (1) that 
+    <li>True positives (TP) = number of items with label positive (1) that 
     are classified correctly as positive.</li>
-    <li>True negatives = number of items with label negative (0) that 
-    are classified correctly as positive.</li>
-    <li>False positives = number of items with label negative (0) that
+    <li>True negatives (TN) = number of items with label negative (0) that 
+    are classified correctly as negative.</li>
+    <li>False positives (FP) = number of items with label negative (0) that
     are classified wrongly as positive.</li>
-    <li>False negatives = number of items with label positive (1) that
+    <li>False negatives (FN) = number of items with label positive (1) that
     are classified wrongly as negative.</li>
     </ul>
     <br>
@@ -210,24 +210,78 @@
     action to minimize the number of wrongly classified items.
     
 
-- question: Can you mention some metrics used to evaluate classifiers?
+- question: Can you mention some of the most common metrics used to evaluate binary classifiers?
   answer: >
-    Accuracy = (TP + TN) / n
-    <br>true positive rate or sensitivity  or recall = TP / (TP + FN)
-    <br>true negative rate or specificity = TN / (TN + FP)
-    <br>Precision  = TP / (TP + FP)
-    <br>False positive rate (FPR)  = FP / (TN + FP)
-    <br>False  negative rate (FNR)  = FN / (TP + FN)
-    <br><br>
-    <b>Accuracy</b> is the percentage of the correctly classified items.
-    <br><br>
-    <b>Precision</b> is the percentage of the items classified as positive that are actually positive
-    <br><br>
-    <b>Sensitivity</b> or <b>Recall</b> is the percentage of the positive items that
-    were actually classified as positive.
-    <br><br>
-    <b>Specificity</b> is the percentage of the negative items that
-    were actually classified as negative.
+    A binary classifier is a machine learning model that assigns an item to one of two possible classes.
+    The two classes are typically referred to as the positive class and the negative class. 
+    <br>
+    In order to evaluate the performance of binary classifiers, the following terms are used: 
+    <ul>
+    <li>True positives (TP) = number of the positive class items that 
+    are classified correctly as positive.</li>
+    <li>True negatives (TN) = number of the negative class items that 
+    are classified correctly as negative.</li>
+    <li>False positives (FP) = number the negative class items that
+    are classified wrongly as positive.</li>
+    <li>False negatives (FN) = number of the positive class items that are classified 
+    wrongly as negative.</li>
+    </ul>
+    <br>
+    Now that we have defined TP, TN, FP and FN and given <code>n</code> as the total number of items,
+    we can introduce some of the most common metrics for evaluating binary classifiers. 
+    <ul>
+    <li><b>Accuracy</b> is the percentage of the correctly classified items. 
+    <br>Accuracy = 
+      <div class="frac">
+        <span>TP + TN</span>
+        <span class="symbol">/</span>
+        <span class="bottom">n</span>
+      </div>
+    </li>
+    <li><b>true positive rate or sensitivity  or recall</b> is the percentage of the positive class items that
+    are actually classified as positive.
+    <br>Sensitivity = 
+      <div class="frac">
+        <span>TP</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TP + FN</span>
+      </div>
+    </li>
+    <li><b>true negative rate or specificity</b> is the percentage of the negative class items that
+    are actually classified as negative. 
+    <br>Specificity = 
+      <div class="frac">
+        <span>TN</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TN + FP</span>
+      </div>
+    </li>
+    <li><b>Precision</b> is the percentage of the items classified as positive that actually belong to the positive class. 
+    <br>Precision = 
+      <div class="frac">
+        <span>TP</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TP + FP</span>
+      </div>
+    </li>
+    <li><b>False positive rate (FPR)</b> represents the proportion of negative class items 
+    that are incorrectly classified as positive. 
+      <br>FPR = 
+      <div class="frac">
+        <span>FP</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TN + FP</span>
+      </div>
+    <li><b>False negative rate (FNR)</b> represents the proportion of positive class items 
+    that are incorrectly classified as negative.
+      <br>FNR = 
+      <div class="frac">
+        <span>TN</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TP + FN</span>
+      </div>
+    </li>
+    <ul>
 
 - question: > 
     What metrics are more meaningful with class-balanced datasets and what work better 
