@@ -287,9 +287,54 @@
     What metrics are more meaningful with class-balanced datasets and what work better 
     for class-unbalanced datasets? 
   answer: >
-    When the dataset is class-balanced, the accuracy is a good metric. 
-    <br><br>When the dataset is class-unbalanced, precision and recall
-    are better metrices. 
+    In a class-balanced dataset, the number of items in each class is approximately the same.
+    
+    <br><br>When the dataset is class-balanced, <b>accuracy</b> is a good metric. Indeed, accuracy assigns
+    equal weight to both true positives and true negatives. Accuracy is calculated as the ratio of correctly 
+    classified instances (both true positives and true negatives) to the total number of instances, 
+    as indicated by the formula
+    <br>Accuracy = 
+      <div class="frac">
+        <span>TP + TN</span>
+        <span class="symbol">/</span>
+        <span class="bottom">n</span>
+      </div>
+    
+    <br><br>When the dataset is class-unbalanced, one class has significantly more items than the
+    other classes. In that case <b>precision</b> and <b>recall</b>
+    are better metrices. In class-imbalanced scenarios, 
+    the class with fewer instances is often the class of more significance. 
+    For example, in fraud detection, the number of actual fraud cases is much lower than non-fraud cases, 
+    but correctly identifying fraud is crucial. 
+    <br>Let TP represent the number of correctly identified frauds. 
+    Precision and recall provide a better indication of the model's ability to 
+    identify the minority class accurately, as they have TP in the numerator as follows
+    <br>Precision = 
+      <div class="frac">
+        <span>TP</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TP + FP</span>
+      </div> 
+    <br>Recall = 
+      <div class="frac">
+        <span>TP</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TP + FN</span>
+      </div>
+    <br><br>By focusing on the true positives, precision and recall provide 
+    insights into how well the model performs in the context that matters most.
+    <br><br>
+    Precision: High precision indicates that when the model predicts the positive class, it is often correct. 
+    This is important when misclassifying positive instances (false positives) could have significant consequences. 
+    Precision tells you the proportion of correctly identified positive predictions out of all predicted positive instances.
+    <br><br>
+    Recall: High recall indicates that the model is effective at capturing most of the actual positive instances. 
+    This is crucial when you want to make sure you don't miss many of the positive instances. 
+    Recall tells you the proportion of correctly identified positive predictions out of all actual positive instances.
+    <br><br>
+    However, it's important to remember that precision and recall are trade-offs: increasing one can sometimes 
+    lead to a decrease in the other. Therefore, you should choose the metric that aligns with your specific goals 
+    and priorities in your application.
 
 - question: To evaluate a generic machine learning model what metrics do you typically use?
   answer: > 
