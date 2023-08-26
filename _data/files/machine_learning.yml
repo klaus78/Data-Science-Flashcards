@@ -14,6 +14,25 @@
     how the house prices evolves in the next months based on the historical data in the dataset. With
     machine learning algorithms you can create mathematical models that can make such a prediction.
 
+- question: What are the most common types of problems that machine learning can help solve?
+  answer: >
+    Machine learning can help solve a large number of problems which can be grouped into
+    the following types:
+    <ul>
+    <li><b>Classification</b>: the goal of classification is to predict the category of an input item. Examples
+    of classification are email spam detection and desease diagnosis.</li>
+    <li><b>Regression</b>: the goal of regression is the prediction of a numerical value. Examples of
+    regression are predicting the price of houses or the future demand for products.</li>
+    <li><b>Clustering</b>: the goal of clustering is to group items in a way that similar items are within
+    the same group. Examples of clustering are grouping customers based on purchasing behavior or grouping documents by topic.</li>
+    <li><b>Recommendation</b>: the goal of recommendation is to provide personalized suggestions. Examples
+    of recommendation are movie recommendation and personal marketing based on personal preferencies.</li>
+    <li><b>Anomality detection</b>: the goal of anomality detection is to identify unusual patterns in the data.
+    Examples of anomality detection are credit fraud detection and intrusion detection in computer networks.</li>
+    <li><b>Time series analysis</b>: the goal of time series analysis is to analyze data points collected at
+    specific time intervals. Examples of time series analysis are energy consumption prediction and weather forecasting.</li>
+    </ul>
+
 - question: What are the typical steps of the creation of a machine learning model?
   answer: > 
     The typical steps of a machine learning process are:
@@ -130,6 +149,17 @@
 
     
 - h3: Evaluate machine learning methods
+  question: To evaluate a generic machine learning model what metrics do you typically use?
+  answer: > 
+    The metrics to use for the evaluation of a machine learning model depend on the type of problem
+    we are trying to solve.
+
+
+
+    You would probably use the misclassification error or accuracy. 
+    However, notice that accuracy works well when all classes are equally important and the 
+    training dataset is balanced.	
+
   question: What is cross-validation in machine learning?
   answer: > 
     <b>Cross-validation</b> is a technique used in machine learning to evaluate the performance
@@ -335,12 +365,6 @@
     However, it's important to remember that precision and recall are trade-offs: increasing one can sometimes 
     lead to a decrease in the other. Therefore, you should choose the metric that aligns with your specific goals 
     and priorities in your application.
-
-- question: To evaluate a generic machine learning model what metrics do you typically use?
-  answer: > 
-    You would probably use the misclassification error or accuracy. 
-    However, notice that accuracy works well when all classes are equally important and the 
-    training dataset is balanced.
 
 - question: > 
     To evaluate a machine learning model for cancer detection what metrics do 
