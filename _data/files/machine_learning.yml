@@ -367,13 +367,27 @@
     and priorities in your application.
 
 - question: > 
-    To evaluate a machine learning model for cancer detection what metrics do 
+    To evaluate machine learning models for cancer detection what metrics do 
     doctors typically use?
   answer: > 
-    Doctors would use sensitivity and specificity because the cost of a misclassified cancer 
-    is much higher than the cost of a healthy tissue classified as cancer. In addition a typical
-    cancer dataset is strongly unbalanced, with few cancel samples and many healthy samples.
-
+    Machine learning models for <b>cancer detection</b> aim to classify patients as having cancer (positive)
+    or healthy (negative). In cancer detection it is important to keep in mind that the datasets
+    are typically strongly unbalanced, with few cancer samples and many healthy samples.
+    <br><br>
+    Because of this, it is evident that accuracy cannot be used since it requires balanced datasets.
+    The typical metrics used for cancer detection are rather:
+    <ul>
+      <li><b>Sensitivity</b>: sensitivity measures the ability of the model to 
+      correctly identify patients who have cancer among all the patients who actually have cancer.
+      A high sensitivity indicates that the model is good at catching cancer cases.</li>
+      <li><b>Specificity</b>: specificity measures the ability of the model to correctly identify patients who do 
+      not have cancer among all the patients who do not have cancer. A high specificity indicates that the model is 
+      good at avoiding false alarms for patients without cancer.</li>
+    </ul> 
+    <br>
+    The choice of what metric to use should be tailored to the specific clinical context, as different cancer types and 
+    clinical scenarios may have varying requirements.
+ 
 - question: What is the meaning and use of the F-measure (also called F-score)?
   answer: >
     The <b>F-measure</b> combines the precision and recall using the harmonic mean.
