@@ -388,16 +388,21 @@
     The choice of what metric to use should be tailored to the specific clinical context, as different cancer types and 
     clinical scenarios may have varying requirements.
  
-- question: What is the meaning and use of the F-measure (also called F-score)?
+- question: What is the meaning and use of the F-measure (also called F1-score)?
   answer: >
-    The <b>F-measure</b> combines the precision and recall using the harmonic mean.
+    The <b>F-measure</b>, also known as the F1-score, is a metric for the evaluation of binary classifiers that combines 
+    precision and recall using the harmonic mean.
+    <br><br> F-measure = 
+    <div class="frac">
+      <span>2 * (Precision * Recall)</span>
+      <span class="symbol">/</span>
+      <span class="bottom">(Precision + Recall)</span>
+    </div>
     <br><br>
-    F-measure = 2 (Precision X Recall) / (Precision + Recall)
-    <br><br>
-    The F-measure value is between 0 (worst case) and 1 (best case). It can be used
-    when you want to compare the performance of two classifiers w.r.t. precision and recall
-    but you are not sure which of the two values to pick. So with the F-measure you seek
-    a balance between precision and recall.
+    The F-measure value ranges between 0 (worst case) and 1 (best case). The F-measure can be used
+    when you want to evaluate the performance of a binary classifier, taking into account both precision and recall.
+    A high F-measure value suggests a good balance between precision and recall, while a low F-measure value
+    indicates that either precision or recall might be low, highlighting potential issues with the classifier's performance.
 
 - question: If you want to evaluate the performance of a classifier with a curve what do you use?
   answer: >
