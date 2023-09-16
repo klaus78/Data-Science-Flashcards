@@ -134,9 +134,27 @@
 
 - question: What are hyperparameters?
   answer: >
-    <b>Hyperparameters</b> are parameters used by the training model and 
-    they must be obviously set before starting the training process. 
-    An example is the the k value in the k-nearest neighbor algorithm.
+    <b>Hyperparameters</b> are parameters that are passed to machine learning models to control the learning process. 
+    The hyperparameters are set before starting the training model and their selection plays a critical role
+    in achieving optimal results.
+    <br><br>
+    Examples of hyperparameters are the <code>k</code> value in the k-nearest neighbor algorithm or the number of nodes 
+    in a neural network.
+
+- question: What are the main differences between parameters and hyperparameters?
+  answer: >
+    <b>Parameters</b> and <b>hyperparameters</b> are crucial in machine learning models, but 
+    they play different roles. Here are the key differences between them:
+    <br><br>
+    <b>Parameters</b> are internal variables within machine learning models. They are computed
+    automatically by the machine learning algorithms during the training process.
+    The purpose of parameters is to fine-tune the model's performance based on the training data, 
+    with the goal of minimizing the model error or loss function.  
+    <br><br>
+    <b>Hyperparameters</b> are passed to machine learning algorithms before the training process begins.
+    Hyperparameters influence how the algorithms learn and generalize from data. 
+    Data scientists or machine learning engineers set these values, often utilizing various 
+    hyperparameter tuning techniques to optimize the model's performance.
 
 - question: What are ensemble methods in machine learning?
   answer: >
