@@ -75,14 +75,22 @@
 
 - question: What is the variance of a machine learning model?
   answer: > 
-    <b>Variance</b> is the amount that the estimate of the target function will change if different training 
-    data was used.
-
-- question: What does high variance mean for a machine learning model?
+    <b>Variance</b> in machine learning is the amount by which a model's predictions change when it is trained 
+    on different subsets of the training data.
+    <br><br>
+    In other words, variance measures how much the model overfits the training data. A model with high variance
+    will work well with the training data but not generalize well to the test data.
+    <br><br>
+    A model with low variance will be less sensitive to the training data and will perform well also with the test data. 
+    
+- question: What are the implications of high variance in a machine learning model?
   answer: > 
-    High variance means the model is overfitting, i.e. small changes in the training data set lead 
-    to big changes in the output of the model.
-
+    A machine learning with <b>high variance</b> is a model for which small changes in the training data set lead to big changes 
+    in the model prediction. This is equivalent to saying that the model overfits the training data, i.e. the model works well 
+    on the training data but does not generalize well on the test data.
+    <br><br>
+    In general, high variance in a machine learning model can lead to poor generalization performance, meaning that the model will 
+    not perform well on new data that it has not seen before.
 
 - question: What is overfitting and what are some techniques for preventing it?
   answer: >
