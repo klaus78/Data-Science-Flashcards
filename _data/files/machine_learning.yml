@@ -64,11 +64,23 @@
     <br>- make a new prediction that reduces the error above
     <br>- repeat until the error is minimized
 
-  question: What is bias in a machine learning model?
+  question: What is bias in machine learning?
   answer: >
-    <b>Bias</b> is the error that is introduced by analyzing a complex model using a too simple model. 
-    In other words bias is the inability of the model to capture the real nature of the true 
-    relationship in the data.
+    <b>Bias</b> in machine learning is a phenomenon that occurs when a model produces results that are consistently unfair 
+    or inaccurate for certain groups of people due to erroneous assumptions in the machine learning (ML) process. 
+    <br><br>
+    Bias can happen for a number of reasons:
+    <ul>
+    <li>
+      <b>data bias</b>: data bias can occur when the training data fails to adequately capture the diversity 
+      and complexity present in the real-world data for a specific problem.
+    </li>
+    <li></b>algorithms bias</b>: an algorithm itself can be biased, either due to the way it is trained or designed.
+    For example, it can occur that an algorithm inadvertently learn biased patterns in the data. This can happen if
+    an algorithm is not carefully designed to account for bias in the training data.
+    </li>
+    </ul>
+
 
 - question: What does high bias mean for a machine learning model?
   answer: High bias means the model is underfitting the data.
