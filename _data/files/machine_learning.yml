@@ -606,12 +606,37 @@
          since you have to find the K nearest neighbors</li>
     <li>pretty affected by data missing and data scaling</li>
     </ul>
+
 - question: Make an example of a real user-case for the KNN algorithm
   answer: >
     You can use the <b>KNN algorithm</b> to recommend a product to a customer 
     based on the purchases of other similar customers.
-    
 
+- question: "Why does KNN work better on smaller datasets?"
+  answer: >
+    KNN (k-nearest neighbors) tends to perform better on smaller datasets due to several factors:
+
+    1. **Simplicity and No Training Phase:**
+       KNN does not involve a complex training phase where it learns intricate patterns from the data. Instead, it memorizes the entire dataset. This simplicity is advantageous when dealing with smaller datasets, making it easier to manage and interpret the model's behavior.
+
+    2. **Non-Parametric Nature:**
+       KNN is a non-parametric algorithm, meaning it doesn't assume a specific data distribution. It can capture complex and nonlinear relationships within the data, making it adaptable to the irregular patterns often found in smaller datasets.
+
+    3. **Flexibility in Capturing Patterns:**
+       Small datasets might exhibit diverse and intricate patterns. KNN's flexibility in capturing these patterns without imposing strong assumptions makes it a suitable choice. It considers the local structure of the data, which can be essential when dealing with limited data points.
+
+    4. **Ease of Interpretation and Manual Inspection:**
+       KNN's predictions are based on the actual data points in the vicinity of a query point. This makes it transparent and interpretable, allowing domain experts to manually inspect and verify the predictions. In situations where domain knowledge is crucial, this interpretability can be valuable.
+
+    5. **Few Hyperparameters:**
+       KNN has relatively few hyperparameters, with 'k' (the number of neighbors) being the primary one. The simplicity of the model and the limited number of parameters make it easier to fine-tune and experiment with different values of 'k' on smaller datasets.
+
+    6. **Robustness to Noise:**
+       Small datasets might contain noise and outliers. KNN can handle these situations reasonably well, especially when noise removal and data cleaning techniques are applied. With careful preprocessing, KNN can be made robust to noise in smaller datasets.
+
+    Despite its advantages, it's essential to note that the performance of KNN heavily depends on choosing an appropriate 'k' value, selecting a suitable distance metric, and handling potential outliers. Careful experimentation and validation are necessary to ensure its effectiveness on any dataset size."
+
+   
 - h3: Decision trees
   question: What is a decision tree?
   answer: >
