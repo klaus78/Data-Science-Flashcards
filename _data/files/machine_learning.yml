@@ -717,3 +717,57 @@
         <li>it does not perform well with large datasets because of high computational costs.</li>
         <li>the kernel must be chosen carefully and this can be tricky.</li>
       </ul> 
+ Machine Learning Interview Questions:
+  - question: What is the difference between supervised and unsupervised learning?
+    answer: |
+      Supervised learning is a type of machine learning where the algorithm is trained on a labeled dataset, meaning that the input data is paired with corresponding output labels. The goal is to learn a mapping from inputs to outputs, making it suitable for tasks like classification and regression.
+
+      Unsupervised learning, on the other hand, deals with unlabeled data. The algorithm tries to find patterns or structure in the data without the guidance of labeled output. It includes tasks like clustering and dimensionality reduction.
+
+  - question: Explain overfitting and underfitting in the context of machine learning models.
+    answer: |
+      Overfitting occurs when a machine learning model performs exceptionally well on the training data but poorly on new, unseen data. It happens when the model is too complex, capturing noise and random fluctuations in the training data, rather than the underlying patterns.
+
+      Underfitting, on the other hand, happens when a model is too simple to capture the underlying patterns in the data. It performs poorly both on the training data and unseen data. It is characterized by high bias and low variance.
+
+  - question: What is cross-validation, and why is it important in machine learning?
+    answer: |
+      Cross-validation is a technique used to assess the performance and generalization of a machine learning model. It involves splitting the dataset into multiple subsets, typically a training set and a validation set, multiple times. The model is trained and evaluated on different subsets to get a more accurate estimate of its performance.
+
+      Cross-validation is essential because it helps in:
+      - Detecting overfitting or underfitting.
+      - Providing a more reliable estimate of a model's performance.
+      - Ensuring that the model can generalize well to new, unseen data.
+
+  - question: Explain the concept of regularization in machine learning.
+    answer: |
+      Regularization is a technique used to prevent overfitting in machine learning models. It involves adding a penalty term to the loss function during training, which discourages the model from assigning too much importance to any particular feature. Common forms of regularization include L1 (Lasso) and L2 (Ridge) regularization.
+
+      Regularization helps in reducing the complexity of the model, leading to better generalization to unseen data. It is controlled by a regularization parameter, which determines the trade-off between fitting the training data well and keeping the model's complexity in check.
+
+  - question: What is the ROC curve, and what does it measure in binary classification?
+    answer: |
+      The ROC (Receiver Operating Characteristic) curve is a graphical representation of the performance of a binary classification model as its discrimination threshold is varied. It plots the True Positive Rate (TPR or Sensitivity) against the False Positive Rate (FPR or 1-specificity) at various threshold values.
+
+      The ROC curve measures the model's ability to distinguish between the positive and negative classes across different threshold values. A model with a higher area under the ROC curve (AUC-ROC) is considered better at classification, as it indicates better trade-offs between true positives and false positives.
+
+  - question: What is the difference between precision and recall in binary classification? How are they related?
+    answer: |
+      Precision and recall are two important metrics in binary classification:
+
+      - Precision measures the proportion of true positive predictions among all positive predictions made by the model. It is calculated as TP / (TP + FP), where TP is true positives, and FP is false positives.
+
+      - Recall (Sensitivity) measures the proportion of true positive predictions among all actual positive instances. It is calculated as TP / (TP + FN), where FN is false negatives.
+
+      Precision and recall are related through a trade-off. Increasing one often leads to a decrease in the other. A model with high precision makes fewer false positive errors but may miss some true positives. Conversely, a model with high recall captures more true positives but may produce more false positives.
+
+  - question: Explain the bias-variance trade-off in the context of model complexity.
+    answer: |
+      The bias-variance trade-off is a fundamental concept in machine learning that deals with the relationship between model complexity and its performance:
+
+      - High Bias (Underfitting): When a model is too simple or has too few parameters to capture the underlying patterns in the data, it exhibits high bias. This leads to underfitting, where the model performs poorly on both training and test data.
+
+      - High Variance (Overfitting): When a model is overly complex or has too many parameters, it becomes highly sensitive to the noise and random variations in the training data. This results in high variance, leading to overfitting, where the model performs well on training data but poorly on new, unseen data.
+
+      Achieving a balance between bias and variance is crucial. Regularization techniques, cross-validation, and hyperparameter tuning can help manage the bias-variance trade-off.
+
