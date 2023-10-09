@@ -55,14 +55,6 @@
     <li><b>Monitoring performance</b>: monitor the performance of the model over time and collect feedback. If necessary
     retrain and update the model.</li>
     </ul>
-- question: >
-    All machine learning algorithms work essentially in a similar way. What is it?
-  answer: >
-    All machine learning algorithms work essentially like
-    <br>- make a prediction
-    <br>- compute the error given by (predicted values - real values)
-    <br>- make a new prediction that reduces the error above
-    <br>- repeat until the error is minimized
 
   question: What is bias in machine learning?
   answer: >
@@ -104,25 +96,46 @@
     In general, high variance in a machine learning model can lead to poor generalization performance, meaning that the model will 
     not perform well on new data that it has not seen before.
 
-- question: What is overfitting and what are some techniques for preventing it?
+- question: Explain overfitting and underfitting in the context of machine learning models.
   answer: >
-    Overfitting happens when your model works well with the training dataset but
+    <b>Overfitting</b> occurs when a machine learning model performs very well on the training data but 
+    poorly on new, unseen data. Overfitting happens when the model is too complex, capturing noise and random fluctuations 
+    in the training data, rather than the underlying patterns. 
+    <br><br>
+    <b>Underfitting</b>, on the other hand, happens when a model is too simple to capture the underlying patterns in the data. 
+    It performs poorly both on the training data and unseen data. It is characterized by high bias and low variance.
+
+- question: What are some techniques that you can use to prevent overfitting in machine learning?
+  answer: >
+    <b>Overfitting</b> happens when your model works well with the training dataset but
     does not work well with new data, which means the model cannot generalize well. 
-    <br>
+    <br><br>
     To prevent overfitting you can for example use regularization and cross-validation.
 
 - question: What is regularization?
   answer: >
-    <b>Regularization</b> adds a penalty on the different parameters of the model to reduce the 
-    freedom of the model. Regularization is usually done by adding a correction term to 
-    the formula for a mathematical model. This correction term penalizes the higher order 
-    terms so that the model is forced to be simpler.
+    <b>Regularization</b> is a technique used to prevent overfitting in machine learning models. Regularization involves adding a 
+    penalty term to the loss function during training, which discourages the model from assigning too much importance 
+    to any particular feature. Common forms of regularization include L1 (Lasso) and L2 (Ridge) regularization.
+    <br><br> 
+    Regularization helps in reducing the complexity of the model, leading to better generalization to unseen data. 
+    It is controlled by a regularization parameter, which determines the trade-off between fitting the training data 
+    well and keeping the model's complexity in check.
 
 - question: What is the curse of dimensionality?
   answer: >
     The <b>curse of dimensionality</b> is a tendency that it is easier to overfit a dataset 
     when there are few points and many features. Data needs to increase exponentially 
     with the number of features in order not to have overfitting.
+
+- question: What is supervised learning?
+  answer: >
+    <b>Supervised learning</b> is a machine learning process where the learning algorithms are trained on
+    labeled datasets, which means that each point in the dataset is associated with a class or label.
+    <br><br>
+    The primary goal of supervised learning is to create a mathematical model that maps input data to the corresponding output 
+    or target variable, so that the model can make accurate predictions or classifications 
+    when given new, unseen input data.
 
 - question: What is unsupervised learning? Make also some examples of algorithms
   answer: > 
@@ -132,14 +145,14 @@
     <br> - Clustering algorithms (K-means, hierarchical custering, Probabilistic clustering)
     <br> - Dimension reduction algorithms (PCA, Single Value Decomposition SVD)
 
-- question: What is reinforcement learning?
-  answer: >
-    <b>Reinforcement learning</b> is a machine learning algorithm that receives feedback on its output so that the accuracy
-    of the output is improved based on this feedback. In other words the algorithm learns through trial
-    and error.
-
-- question: What is supervised learning?
-  answer: <b>Supervised learning</b> is a machine learning process with a labeled training dataset.
+- question: What is the difference between supervised and unsupervised learning?
+  answer: |
+      <b>Supervised learning</b> is a type of machine learning where the algorithm is trained on a labeled dataset, meaning 
+      that the input data is paired with corresponding output labels. The goal of supervised learning is to learn a mapping 
+      from inputs to outputs, making it suitable for tasks like classification and regression.
+      <br><br>
+      <b>Unsupervised learning</b>, on the other hand, deals with unlabeled data. The algorithm tries to find patterns or 
+      structure in the data without the guidance of labeled output. It includes tasks like clustering and dimensionality reduction.
 
 - question: What are the two main types of supervised learning algorithms?
   answer: >
@@ -151,6 +164,12 @@
     The most common <b>supervised machine learning algorithms</b> are 
     <br>K-nearest neighbor, Naive Bayes, Decision Trees, Linear Regression, 
     Support Vector Machines.
+  
+- question: What is reinforcement learning?
+  answer: >
+    <b>Reinforcement learning</b> is a machine learning algorithm that receives feedback on its output so that the accuracy
+    of the output is improved based on this feedback. In other words the algorithm learns through trial
+    and error.
 
 - question: What are hyperparameters?
   answer: >
@@ -728,22 +747,12 @@
       <ul>
         <li>it does not perform well with large datasets because of high computational costs.</li>
         <li>the kernel must be chosen carefully and this can be tricky.</li>
-      </ul> 
- Machine Learning Interview Questions:
-  - question: What is the difference between supervised and unsupervised learning?
-    answer: |
-      Supervised learning is a type of machine learning where the algorithm is trained on a labeled dataset, meaning that the input data is paired with corresponding output labels. The goal is to learn a mapping from inputs to outputs, making it suitable for tasks like classification and regression.
+      </ul>
 
-      Unsupervised learning, on the other hand, deals with unlabeled data. The algorithm tries to find patterns or structure in the data without the guidance of labeled output. It includes tasks like clustering and dimensionality reduction.
 
-  - question: Explain overfitting and underfitting in the context of machine learning models.
-    answer: |
-      Overfitting occurs when a machine learning model performs exceptionally well on the training data but poorly on new, unseen data. It happens when the model is too complex, capturing noise and random fluctuations in the training data, rather than the underlying patterns.
-
-      Underfitting, on the other hand, happens when a model is too simple to capture the underlying patterns in the data. It performs poorly both on the training data and unseen data. It is characterized by high bias and low variance.
-
-  - question: What is cross-validation, and why is it important in machine learning?
-    answer: |
+- h3: Machine Learning Interview Questions
+- question: What is cross-validation, and why is it important in machine learning?
+  answer: |
       Cross-validation is a technique used to assess the performance and generalization of a machine learning model. It involves splitting the dataset into multiple subsets, typically a training set and a validation set, multiple times. The model is trained and evaluated on different subsets to get a more accurate estimate of its performance.
 
       Cross-validation is essential because it helps in:
@@ -751,20 +760,14 @@
       - Providing a more reliable estimate of a model's performance.
       - Ensuring that the model can generalize well to new, unseen data.
 
-  - question: Explain the concept of regularization in machine learning.
-    answer: |
-      Regularization is a technique used to prevent overfitting in machine learning models. It involves adding a penalty term to the loss function during training, which discourages the model from assigning too much importance to any particular feature. Common forms of regularization include L1 (Lasso) and L2 (Ridge) regularization.
-
-      Regularization helps in reducing the complexity of the model, leading to better generalization to unseen data. It is controlled by a regularization parameter, which determines the trade-off between fitting the training data well and keeping the model's complexity in check.
-
-  - question: What is the ROC curve, and what does it measure in binary classification?
-    answer: |
+- question: What is the ROC curve, and what does it measure in binary classification?
+  answer: |
       The ROC (Receiver Operating Characteristic) curve is a graphical representation of the performance of a binary classification model as its discrimination threshold is varied. It plots the True Positive Rate (TPR or Sensitivity) against the False Positive Rate (FPR or 1-specificity) at various threshold values.
 
       The ROC curve measures the model's ability to distinguish between the positive and negative classes across different threshold values. A model with a higher area under the ROC curve (AUC-ROC) is considered better at classification, as it indicates better trade-offs between true positives and false positives.
 
-  - question: What is the difference between precision and recall in binary classification? How are they related?
-    answer: |
+- question: What is the difference between precision and recall in binary classification? How are they related?
+  answer: |
       Precision and recall are two important metrics in binary classification:
 
       - Precision measures the proportion of true positive predictions among all positive predictions made by the model. It is calculated as TP / (TP + FP), where TP is true positives, and FP is false positives.
@@ -773,8 +776,8 @@
 
       Precision and recall are related through a trade-off. Increasing one often leads to a decrease in the other. A model with high precision makes fewer false positive errors but may miss some true positives. Conversely, a model with high recall captures more true positives but may produce more false positives.
 
-  - question: Explain the bias-variance trade-off in the context of model complexity.
-    answer: |
+- question: Explain the bias-variance trade-off in the context of model complexity.
+  answer: |
       The bias-variance trade-off is a fundamental concept in machine learning that deals with the relationship between model complexity and its performance:
 
       - High Bias (Underfitting): When a model is too simple or has too few parameters to capture the underlying patterns in the data, it exhibits high bias. This leads to underfitting, where the model performs poorly on both training and test data.
