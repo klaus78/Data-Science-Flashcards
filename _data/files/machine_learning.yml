@@ -67,15 +67,20 @@
       <b>data bias</b>: data bias can occur when the training data fails to adequately capture the diversity 
       and complexity present in the real-world data for a specific problem.
     </li>
-    <li></b>algorithms bias</b>: an algorithm itself can be biased, either due to the way it is trained or designed.
+    <li><b>algorithms bias</b>: an algorithm itself can be biased, either due to the way it is trained or designed.
     For example, it can occur that an algorithm inadvertently learn biased patterns in the data. This can happen if
     an algorithm is not carefully designed to account for bias in the training data.
     </li>
     </ul>
 
-
 - question: What does high bias mean for a machine learning model?
-  answer: High bias means the model is underfitting the data.
+  answer: >
+    In machine learning, <b>high bias</b> refers to a situation where a model has a strong and often simplistic bias or 
+    assumption about the underlying data. 
+    <br><br>
+    High bias can lead to the model underfitting the data, meaning it fails to capture 
+    the true underlying patterns and relationships in the data. In other words, the model is too simple or constrained to represent 
+    the complexity of the data, resulting in poor performance.
 
 - question: What is the variance of a machine learning model?
   answer: > 
@@ -95,6 +100,21 @@
     <br><br>
     In general, high variance in a machine learning model can lead to poor generalization performance, meaning that the model will 
     not perform well on new data that it has not seen before.
+
+- question: Explain the bias-variance trade-off in the context of model complexity.
+  answer: >
+      The <b>bias-variance trade-off</b> is a fundamental concept in machine learning that deals with the relationship between model 
+      complexity and its performance:
+      <ul>
+      <li><i>High Bias (Underfitting)</i>: When a model is too simple or has too few parameters to capture the underlying patterns in the data, it exhibits high bias. 
+      This leads to underfitting, where the model performs poorly on both training and test data.</li>
+
+      <li><i>High Variance (Overfitting)</i>: When a model is overly complex or has too many parameters, it becomes highly sensitive to the 
+      noise and random variations in the training data. This results in high variance, leading to overfitting, where the model 
+      performs well on training data but poorly on new, unseen data.</li>
+      </ul>
+      Achieving a balance between bias and variance is crucial. Regularization techniques, cross-validation, and hyperparameter tuning can help manage 
+      the bias-variance trade-off.
 
 - question: Explain overfitting and underfitting in the context of machine learning models.
   answer: >
@@ -219,13 +239,17 @@
 
   question: What is cross-validation in machine learning?
   answer: > 
-    <b>Cross-validation</b> is a technique used in machine learning to evaluate the performance
-    of a model. Cross-validation involves splitting a dataset into a 
-    training set (usually 80% of the data) and test set (usually 20% of the data), training the model
-    on the training set and evaluating it on the test set. 
+    <b>Cross-validation</b> is a technique used to assess the performance and generalization 
+    of a machine learning model. It involves splitting the dataset into multiple subsets, typically a 
+    training set and a validation set, multiple times. The model is trained and evaluated on different 
+    subsets to get a more accurate estimate of its performance.
     <br><br>
-    The process is repeated multiple times
-    using different splits and the result is the average evaluation over all the iterations.
+    Cross-validation is essential because it helps in:
+    <ul>
+      <li>Detecting overfitting or underfitting.</li>
+      <li>Providing a more reliable estimate of a model's performance.</li>
+      <li>Ensuring that the model can generalize well to new, unseen data.</li>
+    </ul>
 
 - question: What is K-fold cross-validation?
   answer: >
@@ -751,20 +775,15 @@
 
 
 - h3: Machine Learning Interview Questions
-- question: What is cross-validation, and why is it important in machine learning?
+  question: What is the ROC curve, and what does it measure in binary classification?
   answer: |
-      Cross-validation is a technique used to assess the performance and generalization of a machine learning model. It involves splitting the dataset into multiple subsets, typically a training set and a validation set, multiple times. The model is trained and evaluated on different subsets to get a more accurate estimate of its performance.
+      The ROC (Receiver Operating Characteristic) curve is a graphical representation of the performance of a binary classification 
+      model as its discrimination threshold is varied. It plots the True Positive Rate (TPR or Sensitivity) against the False Positive 
+      Rate (FPR or 1-specificity) at various threshold values.
 
-      Cross-validation is essential because it helps in:
-      - Detecting overfitting or underfitting.
-      - Providing a more reliable estimate of a model's performance.
-      - Ensuring that the model can generalize well to new, unseen data.
-
-- question: What is the ROC curve, and what does it measure in binary classification?
-  answer: |
-      The ROC (Receiver Operating Characteristic) curve is a graphical representation of the performance of a binary classification model as its discrimination threshold is varied. It plots the True Positive Rate (TPR or Sensitivity) against the False Positive Rate (FPR or 1-specificity) at various threshold values.
-
-      The ROC curve measures the model's ability to distinguish between the positive and negative classes across different threshold values. A model with a higher area under the ROC curve (AUC-ROC) is considered better at classification, as it indicates better trade-offs between true positives and false positives.
+      The ROC curve measures the model's ability to distinguish between the positive and negative classes across different threshold values. 
+      A model with a higher area under the ROC curve (AUC-ROC) is considered better at classification, as it indicates better trade-offs 
+      between true positives and false positives.
 
 - question: What is the difference between precision and recall in binary classification? How are they related?
   answer: |
@@ -776,13 +795,4 @@
 
       Precision and recall are related through a trade-off. Increasing one often leads to a decrease in the other. A model with high precision makes fewer false positive errors but may miss some true positives. Conversely, a model with high recall captures more true positives but may produce more false positives.
 
-- question: Explain the bias-variance trade-off in the context of model complexity.
-  answer: |
-      The bias-variance trade-off is a fundamental concept in machine learning that deals with the relationship between model complexity and its performance:
-
-      - High Bias (Underfitting): When a model is too simple or has too few parameters to capture the underlying patterns in the data, it exhibits high bias. This leads to underfitting, where the model performs poorly on both training and test data.
-
-      - High Variance (Overfitting): When a model is overly complex or has too many parameters, it becomes highly sensitive to the noise and random variations in the training data. This results in high variance, leading to overfitting, where the model performs well on training data but poorly on new, unseen data.
-
-      Achieving a balance between bias and variance is crucial. Regularization techniques, cross-validation, and hyperparameter tuning can help manage the bias-variance trade-off.
 
