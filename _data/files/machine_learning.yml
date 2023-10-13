@@ -488,20 +488,27 @@
 - question: If you want to evaluate the performance of a classifier with a curve what do you use?
   answer: >
     To evaluate the performance of a classifier you can use the <b>ROC curve</b> 
-    (Receiver Operating Characteristic). The ROC curve plots the <b>sensitivity</b> (= True Positive Rate) against
-     <b>1-specificity</b> (= False Positive Rate) for different values of a parameter that affects the classifier.
+    (Receiver Operating Characteristic). The ROC curve is a graphical 
+    representation of the performance of a binary classification model for different values of a threshold that affects the 
+    classification performance.
+    The ROC curve illustrates the trade-off between the classifier's sensitivity (True Positive Rate) and its specificity 
+    (the complement of True Negative Rate, often referred to as False Positive Rate) as you vary that threshold.
     <br><br>
     Sensitivity = probability of predicting that a real positive will be positive.
     <br>
     Specificity = probability of predicting that a real negative will be negative.
     <br><br>
-    The best result for a classifier is high sensitivity and low 1-specificity, which means the closest the curve
-    is to point (0,1) (top-left), the better. This can be also expressed as the farther the curve is
-    from the diagonal line (0,0)-(1,1) the better. This diagonal line represents the line of 
-    a classifier working at random. 
-    <br>
-    The distance of the curve from point (0,1) can be measured with the AUC (area under the curve)
-    that should be close to 1 as much as possible.
+    The goal when assessing a classifier's performance is to maximize sensitivity while minimizing the False 
+    Positive Rate (1-specificity). In other words, a high sensitivity and low False Positive Rate are desirable.
+    <br><br>
+    The ROC curve is a graphical representation of this trade-off. It is a plot of <code>sensitivity</code> against <code>1-specificity</code> 
+    for different threshold values. The closer the ROC curve is to the top-left corner (point <code>[0, 1]</code>), the better the classifier's 
+    performance. Alternatively, the farther the curve is from the diagonal line connecting points <code>[0, 0]</code> and <code>[1, 1]</code>, 
+    the better the classifier performs. This diagonal line represents the expected performance of a random classifier.
+    <br><br>
+    To quantify the overall performance, the area under the ROC curve (AUC) is calculated. A perfect classifier would have an AUC 
+    of 1, indicating perfect discrimination. A random classifier would have an AUC of 0.5, corresponding to the diagonal line. 
+    Therefore, a higher AUC value indicates better classifier performance, with a value close to 1 being the ideal outcome."
   image: roc_curve.png
 
 - h3: Naive Bayes
@@ -775,17 +782,7 @@
 
 
 - h3: Machine Learning Interview Questions
-  question: What is the ROC curve, and what does it measure in binary classification?
-  answer: |
-      The ROC (Receiver Operating Characteristic) curve is a graphical representation of the performance of a binary classification 
-      model as its discrimination threshold is varied. It plots the True Positive Rate (TPR or Sensitivity) against the False Positive 
-      Rate (FPR or 1-specificity) at various threshold values.
-
-      The ROC curve measures the model's ability to distinguish between the positive and negative classes across different threshold values. 
-      A model with a higher area under the ROC curve (AUC-ROC) is considered better at classification, as it indicates better trade-offs 
-      between true positives and false positives.
-
-- question: What is the difference between precision and recall in binary classification? How are they related?
+  question: What is the difference between precision and recall in binary classification? How are they related?
   answer: |
       Precision and recall are two important metrics in binary classification:
 
