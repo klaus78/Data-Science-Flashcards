@@ -394,6 +394,35 @@
     </li>
     <ul>
 
+- question: What is the difference between precision and recall in binary classification? How are they related?
+  answer: >
+    <b>Precision</b> and <b>recall</b> are two important metrics in binary classification. 
+    <ul>
+    <li><b>Precision</b> measures the proportion of 
+    true positive predictions among all positive predictions made by the model. 
+    <br>
+    Precision is calculated as 
+    <div class="frac">
+        <span>TP</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TP + FP</span>
+      </div>, 
+    where TP is true positives, and FP is false positives.</li>
+    <li><b>Recall</b> (Sensitivity) measures the proportion of true positive 
+    predictions among all actual positive instances.
+    <br> 
+    Recall is calculated as 
+    <div class="frac">
+        <span>TP</span>
+        <span class="symbol">/</span>
+        <span class="bottom">TP + FN</span>
+      </div>, where FN is false negatives. 
+    </li>
+    </ul>
+    Precision and recall are related through a trade-off. Increasing one often leads to a decrease in the other. 
+    A model with high precision makes fewer false positive errors but may miss some true positives. Conversely, a model 
+    with high recall captures more true positives but may produce more false positives.
+
 - question: > 
     What metrics are more meaningful with class-balanced datasets and what work better 
     for class-unbalanced datasets? 
@@ -779,17 +808,3 @@
         <li>it does not perform well with large datasets because of high computational costs.</li>
         <li>the kernel must be chosen carefully and this can be tricky.</li>
       </ul>
-
-
-- h3: Machine Learning Interview Questions
-  question: What is the difference between precision and recall in binary classification? How are they related?
-  answer: |
-      Precision and recall are two important metrics in binary classification:
-
-      - Precision measures the proportion of true positive predictions among all positive predictions made by the model. It is calculated as TP / (TP + FP), where TP is true positives, and FP is false positives.
-
-      - Recall (Sensitivity) measures the proportion of true positive predictions among all actual positive instances. It is calculated as TP / (TP + FN), where FN is false negatives.
-
-      Precision and recall are related through a trade-off. Increasing one often leads to a decrease in the other. A model with high precision makes fewer false positive errors but may miss some true positives. Conversely, a model with high recall captures more true positives but may produce more false positives.
-
-
