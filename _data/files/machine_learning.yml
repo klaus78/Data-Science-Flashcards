@@ -691,30 +691,30 @@
     You can use the <b>KNN algorithm</b> to recommend a product to a customer 
     based on the purchases of other similar customers.
 
-- question: "Why does KNN work better on smaller datasets?"
+- question: What are some advantages of using the KNN algorithm on smaller datasets?
   answer: >
-    KNN (k-nearest neighbors) tends to perform better on smaller datasets due to several factors:
-
-    1. **Simplicity and No Training Phase:**
-       KNN does not involve a complex training phase where it learns intricate patterns from the data. Instead, it memorizes the entire dataset. This simplicity is advantageous when dealing with smaller datasets, making it easier to manage and interpret the model's behavior.
-
-    2. **Non-Parametric Nature:**
-       KNN is a non-parametric algorithm, meaning it doesn't assume a specific data distribution. It can capture complex and nonlinear relationships within the data, making it adaptable to the irregular patterns often found in smaller datasets.
-
-    3. **Flexibility in Capturing Patterns:**
-       Small datasets might exhibit diverse and intricate patterns. KNN's flexibility in capturing these patterns without imposing strong assumptions makes it a suitable choice. It considers the local structure of the data, which can be essential when dealing with limited data points.
-
-    4. **Ease of Interpretation and Manual Inspection:**
-       KNN's predictions are based on the actual data points in the vicinity of a query point. This makes it transparent and interpretable, allowing domain experts to manually inspect and verify the predictions. In situations where domain knowledge is crucial, this interpretability can be valuable.
-
-    5. **Few Hyperparameters:**
-       KNN has relatively few hyperparameters, with 'k' (the number of neighbors) being the primary one. The simplicity of the model and the limited number of parameters make it easier to fine-tune and experiment with different values of 'k' on smaller datasets.
-
-    6. **Robustness to Noise:**
-       Small datasets might contain noise and outliers. KNN can handle these situations reasonably well, especially when noise removal and data cleaning techniques are applied. With careful preprocessing, KNN can be made robust to noise in smaller datasets.
-
-    Despite its advantages, it's essential to note that the performance of KNN heavily depends on choosing an appropriate 'k' value, selecting a suitable distance metric, and handling potential outliers. Careful experimentation and validation are necessary to ensure its effectiveness on any dataset size."
-
+    The <b>KNN (K-nearest neighbors) algorithm</b> has some advantages when used on smaller datasets:
+    <ol>
+      <li><b>computational complexity</b>: the computational complexity of the KNN algorithm does increase
+      as the dataset size increases because KNN needs to calculate all the distances between datapoints. This process
+      is obviously faster when the dataset is smaller.</li>
+      <li><b>curse of dimensionality</b>: the performance of the KNN algorithm can degrade with high dimensional datasets.
+      Indeed, in high-dimensional spaces, the data points become more sparsely distributed and this makes it more challenging
+      to find the nearest neighbors. This can affect negatively the model performance. 
+      </li>
+      <li><b>data density</b>: in smaller datasets, the data points are often more densely distributed. As a result, there is
+      a higher likelihood of finding nearby data points that are relevant to capturing complex and nonlinear relationships 
+      within the datasets.</li>
+      <li><b>ease of interpretation and manual inspection</b>: KNN provides interpretable results by directly identifying 
+      the nearest neighbors that affect a prediction. This makes KNN transparent and interpretable, allowing domain experts to 
+      manually inspect and verify the predictions. In situations where domain knowledge is crucial, this interpretability 
+      can be valuable.
+      <li><b>simplicity</b>: KNN is conceptually a simple algorithm that has only one parameter, that is
+      the <code>k</code> the number of neighbors. 
+      The simplicity of the model and the limited number of parameters make it easier to fine-tune and experiment with 
+      different <code>k</code> values, particularly on smaller datasets.</li>
+      </li>
+    </ol>
    
 - h3: Decision trees
   question: What is a decision tree?
