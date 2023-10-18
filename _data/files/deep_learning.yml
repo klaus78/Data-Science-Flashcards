@@ -33,6 +33,38 @@
     the training process.</li>
     </ul>
 
+- question: What is reinforcement learning?
+  answer: >
+    Reinforcement Learning allows to take actions to max cumulative reward. It learns by trial and error
+    through reward/penalty system. Environment rewards agent so by time agent makes better decisions.
+
+- question: What are Artificial Neural Networks?
+  answer: >
+    Artificial Neural networks are a specific set of algorithms that have revolutionized machine learning. They
+    are inspired by biological neural networks. Neural Networks can adapt to changing the input, so the
+    network generates the best possible result without needing to redesign the output criteria.
+
+- question: How Are Weights Initialized in a Network?
+  answer: >
+    There are two methods here:
+    <ul>
+      <li>Initialize the weights to zero</li> 
+      <li>Assign them randomly.</li>
+    </ul>
+    <br/>
+    <b>Initializing all weights to 0:</b> This makes your model similar to a linear model. All the neurons and every
+    layer perform the same operation, giving the same output and making the deep net useless.
+    <br/><br/>
+    <b>Initializing all weights randomly:</b> Here, the weights are assigned randomly by initializing them very close
+    to 0. It gives better accuracy to the model since every neuron performs different computations. This is the
+    most commonly used method.
+
+- question: What Is the Cost Function?
+  answer: >
+    Also referred to as “loss” or “error,” cost function is a measure to evaluate how good your model’s
+    performance is. It’s used to compute the error of the output layer during backpropagation. We push that
+    error backwards through the neural network and use that during the different training functions.
+
 - question: What kind of neural networks works particularly well with image data?
   answer: >
     <b>Convolutional neural networks</b> are a kind of neural network that works
@@ -69,9 +101,3 @@
     <li>You do not have enough time to train a model from scratch. Because training models can take days or even
     weeks, using a pre-trained model is much more faster.</li>
     </ul>
-
-
-
-
-
-     
