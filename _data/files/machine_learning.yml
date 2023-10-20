@@ -540,6 +540,23 @@
     Therefore, a higher AUC value indicates better classifier performance, with a value close to 1 being the ideal outcome."
   image: roc_curve.png
 
+- question: >
+    To evaluate the performance of a machine learning model, you can use metrics like accuracy, precision, recall and F1-score.
+    When to use what?
+  answer: >
+    The most common metrics that you can use for evaluating the performance of a machine learning model are accuracy, precision,
+    recall and F1-score. It is important to be aware in what case a metric better fits for evaluation.
+    <br><br>
+    <li>Accuracy:</li> is a good choice to start with if the classes are balanced.
+    <br><br>
+    <li>Precision</li> and <li>Recall</li> become more important when the classes are unbalanced. 
+    If the false positive predictions are worse than false negatives, aim for higher precision.
+    If the false negative predictions are worse than false positive, aim for higher recall.
+    <br><br>
+    <b>F1-score</b> is a combination of precision and recall. It is a good choice when you need to consider 
+    both false positives and false negatives. The F1-score is especially useful when you want a single metric 
+    that combines both precision and recall, and you are dealing with imbalanced datasets.
+
 - h3: Naive Bayes
   question: What is Naive Bayes?
   answer: >
@@ -685,11 +702,6 @@
          since you have to find the K nearest neighbors</li>
     <li>pretty affected by data missing and data scaling</li>
     </ul>
-
-- question: Make an example of a real user-case for the KNN algorithm
-  answer: >
-    You can use the <b>KNN algorithm</b> to recommend a product to a customer 
-    based on the purchases of other similar customers.
 
 - question: What are some advantages of using the KNN algorithm on smaller datasets?
   answer: >
