@@ -33,11 +33,6 @@
     the training process.</li>
     </ul>
 
-- question: What is reinforcement learning?
-  answer: >
-    Reinforcement Learning allows to take actions to max cumulative reward. It learns by trial and error
-    through reward/penalty system. Environment rewards agent so by time agent makes better decisions.
-
 - question: What are Artificial Neural Networks?
   answer: >
     Artificial Neural networks are a specific set of algorithms that have revolutionized machine learning. They

@@ -162,8 +162,10 @@
     <b>Unsupervised learning</b> is a machine learning process with unlabeled data.
     <br><br>
     Some examples of unsupervised learning are
-    <br> - Clustering algorithms (K-means, hierarchical custering, Probabilistic clustering)
-    <br> - Dimension reduction algorithms (PCA, Single Value Decomposition SVD)
+    <ul>
+      <li>Clustering algorithms (K-means, hierarchical custering, Probabilistic clustering)</li>
+      <li>Dimension reduction algorithms (PCA, Single Value Decomposition SVD)</li>
+    </ul>
 
 - question: What is the difference between supervised and unsupervised learning?
   answer: |
@@ -224,56 +226,11 @@
     To provide an example in real life, ensemble methods can be compared to asking several doctors for a diagnosis 
     rather than relying on a single doctor. In the former case, one would expect the diagnosis to be more accurate.
 
-- question: What is PCA? When do you use it?
-  answer: >
-    Principal component analysis (PCA) is a statistical method used in Machine Learning. It consists in
-    projecting data in a higher dimensional space into a lower dimensional space by maximizing
-    the variance of each dimension.
-    <br><br>
-    PCA is mostly used as a tool in exploratory data analysis and for making predictive models. It is often used
-    to visualize genetic distance and relatedness between populations.
-
-- question: What is linear regression?
-  answer: >
-    Linear Regression is a supervised Machine Learning algorithm. It is used to find the linear
-    relationship between the dependent and the independent variables for predictive analysis
-
-- question: What are the drawbacks of the Linear Model?
-  answer: >
-    Some drawbacks of the linear model are:
-    <ul>
-      <li>The assumption of linearity of the model</li>
-      <li>It can't be used for count outcomes or binary outcomes</li>
-      <li>There are overfitting or underfitting problems that it can't solve</li>
-    </ul>
-
-- question: What is a Random Forest? How does it work?
-  answer: >
-    Random forest is a versatile machine learning method capable of performing:
-    <ul>
-      <li>Regression</li>
-      <li>Classification</li>
-      <li>Dimensionality Reduction</li>
-      <li>Treat Missing values</li>
-    </ul>
-    <br><br>
-    It is a type of ensemble learning method, where a group of weak models combine to form a powerful
-    model. The random forest starts with a standard machine learning technique called a “decision tree”
-    which, in ensemble terms, corresponds to our weak learner. In a decision tree, an input is entered at the
-    top and as it traverses down the tree the data gets bucketed into smaller and smaller sets.
-    <br><br>
-    In Random Forest, we grow multiple trees as opposed to a single tree. To classify a new object based on
-    attributes, each tree gives a classification. The forest chooses the classification having the most votes
-    (Over all the trees in the forest) and in case of regression, it takes the average of outputs by different
-    trees.
-
 - h3: Evaluate machine learning methods
   question: To evaluate a generic machine learning model what metrics do you typically use?
   answer: > 
     The metrics to use for the evaluation of a machine learning model depend on the type of problem
     we are trying to solve.
-
-
 
     You would probably use the misclassification error or accuracy. 
     However, notice that accuracy works well when all classes are equally important and the 
@@ -589,9 +546,9 @@
     The most common metrics that you can use for evaluating the performance of a machine learning model are accuracy, precision,
     recall and F1-score. It is important to be aware in what case a metric better fits for evaluation.
     <br><br>
-    <li>Accuracy:</li> is a good choice to start with if the classes are balanced.
+    <b>Accuracy:</b> is a good choice to start with if the classes are balanced.
     <br><br>
-    <li>Precision</li> and <li>Recall</li> become more important when the classes are unbalanced. 
+    <b>Precision</b> and <b>Recall</b> become more important when the classes are unbalanced. 
     If the false positive predictions are worse than false negatives, aim for higher precision.
     If the false negative predictions are worse than false positive, aim for higher recall.
     <br><br>
@@ -645,7 +602,21 @@
     is assumed.
 
 - h3: Regression
-  question: What do you predict with linear regression?
+  question: What is linear regression?
+  answer: >
+    Linear Regression is a supervised Machine Learning algorithm. It is used to find the linear
+    relationship between the dependent and the independent variables for predictive analysis
+
+- question: What are the drawbacks of a Linear Model?
+  answer: >
+    Some <b>drawbacks</b>s of a linear model are:
+    <ul>
+      <li>the assumption of linearity of the model</li>
+      <li>it can't be used for count outcomes or binary outcomes</li>
+      <li>there are overfitting or underfitting problems that it can't solve</li>
+    </ul>
+
+- question: What do you predict with linear regression?
   answer: Linear regression predicts a real value
 
 - question: What are the most common techniques used for computing the coefficients in linear regression?
@@ -839,6 +810,26 @@
     After that the resulting models are combined using voting or averaging.</li>
     </ul>
     
+- question: What is Random Forest? How does it work?
+  answer: >
+    <b>Random forest</b> is a versatile machine learning method capable of performing:
+    <ul>
+      <li>Regression</li>
+      <li>Classification</li>
+      <li>Dimensionality Reduction</li>
+      <li>Treat Missing values</li>
+    </ul>
+    <br>
+    Random forest is a type of ensemble learning method, where a group of weak models combine to form a powerful
+    model. The random forest starts with a standard machine learning technique called a “decision tree”
+    which, in ensemble terms, corresponds to our weak learner. In a decision tree, an input is entered at the
+    top and as it traverses down the tree the data gets bucketed into smaller and smaller sets.
+    <br><br>
+    In Random Forest, we grow multiple trees as opposed to a single tree. To classify a new object based on
+    attributes, each tree gives a classification. The forest chooses the classification having the most votes
+    (Over all the trees in the forest) and in case of regression, it takes the average of outputs by different
+    trees.
+
 - h3: Support Vector Machine
   question: What is Support Vector Machine and what is its main idea?
   answer: >

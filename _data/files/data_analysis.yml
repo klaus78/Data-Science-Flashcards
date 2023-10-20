@@ -244,6 +244,15 @@
     </ul>
     HELP WANTED
 
+- question: What is PCA? When do you use it?
+  answer: >
+    Principal component analysis (PCA) is a statistical method used in Machine Learning. It consists in
+    projecting data in a higher dimensional space into a lower dimensional space by maximizing
+    the variance of each dimension.
+    <br><br>
+    PCA is mostly used as a tool in exploratory data analysis and for making predictive models. It is often used
+    to visualize genetic distance and relatedness between populations.
+
 - question: >
     PCA is affected by scale. To get the optimal performance out of PCA, 
     which is a crucial first step?
