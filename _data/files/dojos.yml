@@ -1022,7 +1022,7 @@
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3) 
 
 - question: >
-    Create a daraframe from <code>{'a':['a','b','c']}</code> and convert the text feature to a
+    Create a dataframe from <code>{'a':['a','b','c']}</code> and convert the text feature to a
     numerical feature using the <code>OneHotEncoder</code> class of the <code>sklearn</code> library. 
 
   python: |
