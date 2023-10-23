@@ -234,9 +234,39 @@
     any information.
 
 - h3: Dimensionality reduction
-  question: What are the main techniques of dimensionality reduction?
+  question: What is dimensionality reduction?
   answer: >
-    The main techniques of dimensionality reduction are:
+    <b>Dimensionality reduction</b> is a technique employed to decrease the number of features in a dataset 
+    while retaining as much relevant information as possible. 
+    <br><br>
+    The primary goal of dimensionality reduction 
+    is to produce a simplified and more compact representation of the data. By reducing the dimensionality of a 
+    dataset, it addresses various challenges associated with high-dimensional data, including the curse of 
+    dimensionality, computational complexity, and overfitting in machine learning models.
+    
+- question: What are the main types of dimensional reduction? 
+  answer: >
+    The main types of dimensionality reduction are:
+    <ul>
+    <li><b>Linear Dimensionality Reduction</b>: These techniques focus on linear transformations to reduce dimensionality while 
+    preserving the most important information in the data. Examples include Principal Component Analysis (PCA) and Linear 
+    Discriminant Analysis (LDA).</li>
+    <li><b>Nonlinear Dimensionality Reduction</b>: Nonlinear techniques are used when the relationships between variables are 
+    not well captured by linear methods. They aim to preserve the inherent structure in the data without imposing a linear constraint. 
+    Examples include t-Distributed Stochastic Neighbor Embedding (t-SNE), Isomap, and Locally Linear Embedding (LLE).</li>
+    <li><b>Neural Network-Based Dimensionality Reduction</b>: These methods use neural networks, specifically autoencoders, to learn 
+    reduced-dimensional representations of the data. Autoencoders can be adapted for both linear and nonlinear dimensionality reduction.</li>
+    <li><b>Sparse Dimensionality Reduction</b>: Sparse coding techniques aim to represent data points using a sparse combination of 
+    basis vectors, effectively reducing dimensionality while maintaining a sparse representation.</li>
+    <li><b>Manifold Learning</b>: Manifold learning techniques focus on modeling the underlying structure of data as a 
+    lower-dimensional manifold embedded within a high-dimensional space. Examples include Isomap, LLE, and spectral embedding.</li>
+    <li><b>Feature Selection</b>: Instead of transforming the data, feature selection techniques choose a subset of the most 
+    informative features to reduce dimensionality. This can be done through filter, wrapper, or embedded methods.</li>
+    </ul>
+
+- question: What are some common algorithms of dimensionality reduction?
+  answer: >
+    Some common algorithms of dimensionality reduction are:
     <ul>
         <li><strong>Principal Component Analysis (PCA):</strong> PCA is a linear technique that reduces the dimensionality of data by transforming it into a new coordinate system based on the principal components, which are orthogonal and capture the most variance in the data.</li>
         <li><strong>t-Distributed Stochastic Neighbor Embedding (t-SNE):</strong> t-SNE is a non-linear technique used for visualization and dimensionality reduction by preserving pairwise similarities between data points, making it suitable for exploring high-dimensional data.</li>
@@ -249,7 +279,7 @@
 
 - question: What is PCA? When do you use it?
   answer: >
-    Principal component analysis (PCA) is a statistical method used in Machine Learning. It consists in
+    <b>Principal component analysis (PCA)</b> is a statistical method used in Machine Learning. It consists in
     projecting data in a higher dimensional space into a lower dimensional space by maximizing
     the variance of each dimension.
     <br><br>
@@ -260,7 +290,6 @@
     PCA is affected by scale. To get the optimal performance out of PCA, 
     which is a crucial first step?
   answer: >
-    Crucial First Step for Optimal PCA Performance is:
     <p>For optimal performance in Principal Component Analysis (PCA), a crucial first step is <strong>standardization or scaling of the data</strong>. This is essential because PCA is affected by the scale of the input features.</p>
     <p>Standardizing the data involves transforming each feature to have a mean of 0 and a standard deviation of 1. This ensures that all features are on the same scale and prevents features with larger variances from dominating the PCA results. Standardization is typically performed using the following formula for each feature:</p>
     <p><em>Standardized Value = (Original Value - Mean) / Standard Deviation</em></p>
