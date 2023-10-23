@@ -236,13 +236,16 @@
 - h3: Dimensionality reduction
   question: What are the main techniques of dimensionality reduction?
   answer: >
-    The main techniques of dimensionality reduction are
+    The main techniques of dimensionality reduction are:
     <ul>
-    <li>projection</li>
-    <li>manifold learning</li>
-    <li>autoencoding</li>
+        <li><strong>Principal Component Analysis (PCA):</strong> PCA is a linear technique that reduces the dimensionality of data by transforming it into a new coordinate system based on the principal components, which are orthogonal and capture the most variance in the data.</li>
+        <li><strong>t-Distributed Stochastic Neighbor Embedding (t-SNE):</strong> t-SNE is a non-linear technique used for visualization and dimensionality reduction by preserving pairwise similarities between data points, making it suitable for exploring high-dimensional data.</li>
+        <li><strong>Linear Discriminant Analysis (LDA):</strong> LDA is a supervised technique that aims to maximize the separation between classes by projecting data points onto a lower-dimensional space.</li>
+        <li><strong>Autoencoders:</strong> Autoencoders are neural network-based models that can learn efficient representations of data by encoding it into a lower-dimensional space and then decoding it back to the original dimension. Variational Autoencoders (VAEs) are a popular variant.</li>
+        <li><strong>Isomap:</strong> Isomap is a non-linear technique that computes a lower-dimensional representation of data while preserving geodesic distances between data points in a manifold, which is useful for data with non-linear structures.</li>
+        <li><strong>Locally Linear Embedding (LLE):</strong> LLE is another non-linear method that preserves local relationships between data points, making it suitable for capturing the intrinsic structure of data.</li>
     </ul>
-    HELP WANTED
+    
 
 - question: What is PCA? When do you use it?
   answer: >
@@ -257,8 +260,11 @@
     PCA is affected by scale. To get the optimal performance out of PCA, 
     which is a crucial first step?
   answer: >
-    It is necessary to standardize the data using z-score.
-    HELP WANTED
+    Crucial First Step for Optimal PCA Performance is:
+    <p>For optimal performance in Principal Component Analysis (PCA), a crucial first step is <strong>standardization or scaling of the data</strong>. This is essential because PCA is affected by the scale of the input features.</p>
+    <p>Standardizing the data involves transforming each feature to have a mean of 0 and a standard deviation of 1. This ensures that all features are on the same scale and prevents features with larger variances from dominating the PCA results. Standardization is typically performed using the following formula for each feature:</p>
+    <p><em>Standardized Value = (Original Value - Mean) / Standard Deviation</em></p>
+    
 
 - h3: Text processing
   question: What are some steps involved in the preprocessing of a text?
