@@ -853,3 +853,17 @@
         <li>it does not perform well with large datasets because of high computational costs.</li>
         <li>the kernel must be chosen carefully and this can be tricky.</li>
       </ul>
+      ### What is Support Vector Machine particularly good at? What are some disadvantages?
+
+- question: What is the difference between bias and variance in machine learning?
+  answer : 
+    <p> Bias and variance are two important concepts in machine learning. Bias is the error that occurs when the model is not able to learn the true relationship between the input and output variables. Variance is the error that occurs when the model is too sensitive to the training data and does not generalize well to new data.A model with high bias will underfit the training data and will not be able to capture the true relationship between the input and output variables. A model with high variance will overfit the training data and will not generalize well to new data.It is important to find a balance between bias and variance to create a model that is both accurate and generalizes well to new data.</p>
+
+-question: How do you handle imbalanced datasets in machine learning?
+ answer: 
+    <p> Imbalanced datasets are datasets where the target variable is not evenly distributed. For example, a dataset of fraudulent transactions may be imbalanced, with only a small percentage of transactions being fraudulent.
+    There are a number of ways to handle imbalanced datasets in machine learning. One approach is to oversample the minority class. This involves creating synthetic data points for the minority class so that it is represented more evenly in the dataset. Another approach is to undersample the majority class. This involves removing data points from the majority class so that it is represented more evenly in the dataset.</p>
+    <p>It is important to carefully select the approach to handling imbalanced datasets, as the wrong approach can lead to biased models.</p>
+
+
+

@@ -427,4 +427,17 @@
     The three dotted lines in a violin plot represent the lower quartile, the median, and the upper quartile of the data set. 
   image: violin_plot.png
 
+-question: What is the difference between correlation and causation?
+  answer: 
+    <p>Correlation is a measure of the strength and direction of the relationship between two variables. Causation is the relationship between two variables where one variable causes the other variable to change.
+    Just because two variables are correlated does not mean that there is a causal relationship between them. For example, there is a correlation between the number of ice creams sold and the number of shark attacks. However, this does not mean that eating ice cream causes shark attacks.</p>
+    <p>To determine whether there is a causal relationship between two variables, it is necessary to conduct a controlled experiment. In a controlled experiment, the researcher manipulates one variable (the independent variable) and observes the effect on the other variable (the dependent variable). If the dependent variable changes when the independent variable is changed, then the researcher can conclude that there is a causal relationship between the two variables.</p>
+
+-question: What is A/B testing?
+  answer: 
+    <p>A/B testing is a method of testing two versions of a website or app to see which version performs better. In an A/B test, two versions of the website or app are randomly assigned to users, and the performance of the two versions is compared.</p>
+    <p>A/B testing is a valuable tool for optimizing the performance of websites and apps. It can be used to test different designs, features, and content to see what works best for users.</p>
+
+
+
 
