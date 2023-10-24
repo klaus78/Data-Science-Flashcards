@@ -101,6 +101,17 @@
     In general, high variance in a machine learning model can lead to poor generalization performance, meaning that the model will 
     not perform well on new data that it has not seen before.
 
+- question: What is the difference between bias and variance in machine learning?
+  answer : 
+    <b>Bias</b> and <b>variance</b> are two important concepts in machine learning. 
+    <b>Bias</b> is the error that occurs when the model is not able to learn the true relationship between the input and output variables. 
+    <b>Variance</b> is the error that occurs when the model is too sensitive to the training data and does not generalize well to new data.
+    <br><br>
+    A model with high bias will underfit the training data and will not be able to capture the true relationship between the input 
+    and output variables. A model with high variance will overfit the training data and will not generalize well to new data.
+    It is important to find a balance between bias and variance to create a model that is both accurate and generalizes well to 
+    new data.
+
 - question: Explain the bias-variance trade-off in the context of model complexity.
   answer: >
       The <b>bias-variance trade-off</b> is a fundamental concept in machine learning that deals with the relationship between model 
@@ -192,6 +203,16 @@
     <b>Reinforcement learning</b> is a machine learning algorithm that receives feedback on its output so that the accuracy
     of the output is improved based on this feedback. In other words the algorithm learns through trial
     and error.
+
+- question: How do you handle imbalanced datasets in machine learning?
+  answer: 
+    Imbalanced datasets are datasets where the target variable is not evenly distributed. For example, a dataset of fraudulent 
+    transactions may be imbalanced, with only a small percentage of transactions being fraudulent.
+    There are a number of ways to handle imbalanced datasets in machine learning. One approach is to oversample the minority class. 
+    This involves creating synthetic data points for the minority class so that it is represented more evenly in the dataset. 
+    Another approach is to undersample the majority class. This involves removing data points from the majority class so that it 
+    is represented more evenly in the dataset.
+    It is important to carefully select the approach to handling imbalanced datasets, as the wrong approach can lead to biased models.
 
 - question: What are hyperparameters?
   answer: >
@@ -853,17 +874,6 @@
         <li>it does not perform well with large datasets because of high computational costs.</li>
         <li>the kernel must be chosen carefully and this can be tricky.</li>
       </ul>
-      ### What is Support Vector Machine particularly good at? What are some disadvantages?
-
-- question: What is the difference between bias and variance in machine learning?
-  answer : 
-    <p> Bias and variance are two important concepts in machine learning. Bias is the error that occurs when the model is not able to learn the true relationship between the input and output variables. Variance is the error that occurs when the model is too sensitive to the training data and does not generalize well to new data.A model with high bias will underfit the training data and will not be able to capture the true relationship between the input and output variables. A model with high variance will overfit the training data and will not generalize well to new data.It is important to find a balance between bias and variance to create a model that is both accurate and generalizes well to new data.</p>
-
--question: How do you handle imbalanced datasets in machine learning?
- answer: 
-    <p> Imbalanced datasets are datasets where the target variable is not evenly distributed. For example, a dataset of fraudulent transactions may be imbalanced, with only a small percentage of transactions being fraudulent.
-    There are a number of ways to handle imbalanced datasets in machine learning. One approach is to oversample the minority class. This involves creating synthetic data points for the minority class so that it is represented more evenly in the dataset. Another approach is to undersample the majority class. This involves removing data points from the majority class so that it is represented more evenly in the dataset.</p>
-    <p>It is important to carefully select the approach to handling imbalanced datasets, as the wrong approach can lead to biased models.</p>
 
 
 
