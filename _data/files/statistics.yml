@@ -723,3 +723,10 @@
     <br><br>
     The Central Limit Theorem is important because under certain conditions you can 
     approximate a non-normal distribution with a normal distribution.
+
+- question: What is the difference between a parametric and a non-parametric test?
+  answer:
+    <p>Parametric tests are statistical tests that make assumptions about the distribution of the data. For example, a t-test assumes that the data is normally distributed. Non-parametric tests do not make assumptions about the distribution of the data.
+    Parametric tests are generally more powerful than non-parametric tests, but they are only valid if the data meets the assumptions of the test. Non-parametric tests are less powerful than parametric tests, but they can be used on any type of data, regardless of the distribution.
+    It is important to choose the right type of test for your data.</p>
+
