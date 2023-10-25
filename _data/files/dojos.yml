@@ -1299,6 +1299,75 @@
     y_pred = model.predict(X_test)
     r2_score(y_test, y_pred)
     # you should get 0.8049
+    
+-question:
+  Write a Python script to perform a web scraping task. Visit a website, such as "https://example.com," and scrape 
+  the titles and links of the top articles on the homepage. Use the requests library to fetch the HTML content and
+  BeautifulSoup for parsing.
+
+
+  python:
+   
+    import requests
+    from bs4 import BeautifulSoup
+    url = "https://example.com"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    # Find and print the titles and links of the top articles
+    top_articles = soup.find_all("div", class_="article")
+    for article in top_articles:
+    title = article.find("h2").text
+    link = article.find("a")["href"]
+    print(f"Title: {title}")
+    print(f"Link: {link}")
+
+-question:
+
+  python:
+
+    import pandas as pd
+    from sklearn.metrics.pairwise import cosine_similarity
+
+    # Load user ratings dataset
+    ratings_data = pd.read_csv("user_ratings.csv")
+
+    # Calculate the similarity matrix between users
+    user_similarity = cosine_similarity(ratings_data)
+
+    # Recommend top 3 movies for a specific user (e.g., user 123)
+    user_id = 123
+    similar_users = list(enumerate(user_similarity[user_id]))
+    similar_users.sort(key=lambda x: x[1], reverse=True)
+
+    # Extract and print the top 3 movie recommendations
+    top_movie_ids = [user[0] for user in similar_users[1:4]]
+    recommended_movies = ratings_data.columns[top_movie_ids]
+
+-question:
+  Implement a Python script that simulates a basic multiplayer game. The game should involve multiple players, each with unique 
+  attributes, and allow them to interact in a virtual world. Create classes and methods for character creation, movement, and combat.
+
+  python:
+    class Player:
+    def __init__(self, name, health, attack):
+        self.name = name
+        self.health = health
+        self.attack = attack
+
+    def move(self, direction):
+        # Implement movement logic
+        pass
+
+    def attack_player(self, target_player):
+        # Implement combat logic
+        pass
+    # Create multiple player objects
+    player1 = Player("Alice", 100, 20)
+    player2 = Player("Bob", 120, 15)
+
+    # Simulate player interactions, movement, and combat
+    player1.move("north")
+    player2.attack_player(player1)
 
 - question: >
     Create a DataFrame with sample data where you have features ('X1', 'X2', 'X3') and a target column ('y'). Split the data into training and test sets using a 70/30 split ratio.
@@ -1339,7 +1408,9 @@
       print(scores.mean())
 
 - question: >
-    Apply Principal Component Analysis (PCA) to reduce the dimensionality of a dataset and then train a machine learning model on the reduced data. Compare the model's performance before and after dimensionality reduction.
+    Apply Principal Component Analysis (PCA) to reduce the dimensionality of a dataset and then train a machine learning model on the reduced data. Compare the model's performance 
+    before and after dimensionality reduction.
+    
   python: |
   
       import pandas as pd
@@ -1368,7 +1439,8 @@
       # you should get 0.9999
 
 - question: >
-    Load a dataset with imbalanced classes and implement strategies to deal with class imbalance, such as oversampling, undersampling, or using different evaluation metrics like F1-score or AUC-ROC.
+    Load a dataset with imbalanced classes and implement strategies to deal with class imbalance, such as oversampling, undersampling, or using different evaluation 
+    metrics like F1-score or AUC-ROC.
 
   python: |
   
