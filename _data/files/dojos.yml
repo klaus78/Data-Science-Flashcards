@@ -573,7 +573,45 @@
     z = np.zeros(shape=(3,2))
     # print the type of data
     print(z.dtype)
+- question: Create a NumPy array with values (3.14, 2.71, 1.62) with a specified data type, and then convert it to a Python list.
+  python: |
+    
+    a = np.array([3.14, 2.71, 1.62], dtype=np.float32)
+    # convert to list
+    a.tolist()
 
+- question: Create a NumPy array with 10 equally spaced values between 0 and 1.
+  python: |
+    
+    np.linspace(start=0, stop=1, num=10)
+
+- question: Given two NumPy arrays arr1 = [1, 2, 3] and arr2 = [4, 5, 6], perform element-wise addition and multiplication. 
+  python: |
+    
+    arr1 = np.array([1, 2, 3])
+    arr2 = np.array([4, 5, 6])
+    # element-wise addition
+    arr1 + arr2
+    # element-wise multiplication
+    arr1 * arr2
+
+- question: Reshape the following 1D NumPy array [1, 2, 3, 4, 5, 6] into a 2D array with 2 rows and 3 columns.
+  python: |
+    
+    a = np.array([1, 2, 3, 4, 5, 6])
+    # reshape to 2x3
+    a.reshape(2,3)
+
+- question: Compute the mean, median, and standard deviation of a NumPy array with random values.
+  python: |
+    
+    a = np.random.rand(10)
+    # mean
+    a.mean()
+    # median
+    np.median(a)
+    # standard deviation
+    a.std()
 
 - h3: Matplotlib and Seaborn Dojos
   question: >
@@ -783,6 +821,65 @@
     plt.xlabel('Job')
     plt.ylabel('Salary')
     plt.show()
+
+ 
+- question: >
+   Create a line plot for the function y = x^2 for x values ranging from -5 to 5. Label the axes and give the plot a title.
+  python: |
+
+    import matplotlib.pyplot as plt
+    import numpy as np
+    x = np.arange(-5,5)
+    y = x**2
+    plt.plot(x,y)
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('y = x^2')
+
+- question: >
+   Visualize a horizontal bar chart for the top 10 countries with the highest population. Use sample data or fetch real data from a dataset. Label the countries on the y-axis and their populations on the x-axis.
+  python:  |
+  
+      import matplotlib.pyplot as plt
+      import pandas as pd
+      import numpy as np
+      # create a dataframe with countries and population
+      countries = ['China', 'India', 'USA', 'Indonesia', 'Pakistan', 'Brazil', 'Nigeria', 'Bangladesh', 'Russia', 'Mexico']
+      population = [1439323776, 1380004385, 331002651, 273523615, 220892340, 212559417, 206139589, 164689383, 145934462, 128932753]
+      df = pd.DataFrame({'country':countries, 'population':population})
+      # sort by population
+      df.sort_values('population', ascending=False, inplace=True)
+      # plot horizontal bar chart
+      plt.barh(df.country[:10], df.population[:10])
+      plt.xlabel('Population')
+      plt.ylabel('Country')
+      plt.title('Top 10 countries by population')
+
+- question: >
+   Visualize a 3D surface plot of a mathematical function, such as z = x^2 + y^2. Add labels to the axes and a title to the plot.
+  python:  |
+
+      import matplotlib.pyplot as plt
+      import numpy as np
+      from mpl_toolkits.mplot3d import Axes3D
+      # create a 3D plot
+      fig = plt.figure()
+      ax = fig.add_subplot(111, projection='3d')
+      # create x,y
+      x = np.arange(-5,5)
+      y = np.arange(-5,5)
+      # create a meshgrid
+      X, Y = np.meshgrid(x, y)
+      # create z
+      Z = X**2 + Y**2
+      # plot the surface
+      ax.plot_surface(X, Y, Z)
+      # set labels
+      ax.set_xlabel('x')
+      ax.set_ylabel('y')
+      ax.set_zlabel('z')
+      # set title
+      ax.set_title('z = x^2 + y^2')
 
 
 - h3: Pandas Dojos
@@ -1005,6 +1102,58 @@
     df['salary_bin'] = pd.cut(df.salary, bins = mybins, labels = mylabels)
     # create a pivot table with 
     df.pivot_table(values='age',index='salary_bin')
+
+
+- question: >
+    Create a DataFrame from a dictionary where each key represents a column name and the corresponding value is a list of values for that column. Display the first few rows of the DataFrame.
+  python: |
+  
+      import pandas as pd
+      data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
+              'Role':['Tecnician', 'Programmer','Student','Manager'],
+              'Salary':[46000,57000,8000,120000]}
+      df = pd.DataFrame(data) 
+      df.head()
+
+- question: >
+    Filter a DataFrame to show only rows that meet specific conditions. For example, display rows where a certain column's value is greater than a particular threshold.
+  python: |
+  
+      import pandas as pd
+      data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
+              'Role':['Tecnician', 'Programmer','Student','Manager'],
+              'Salary':[46000,57000,8000,120000]}
+      df = pd.DataFrame(data) 
+      # show only rows where salary is greater than 50000
+      df[df['Salary'] > 50000]
+
+- question: >
+    Reshape a DataFrame using pivot tables or other reshaping techniques to make it suitable for analysis or visualization.
+  python: |
+  
+      import pandas as pd
+      data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
+              'Role':['Tecnician', 'Programmer','Student','Manager'],
+              'Salary':[46000,57000,8000,120000]}
+      df = pd.DataFrame(data) 
+      # reshape the dataframe
+      df.pivot_table(values='Age',index='Role')
+
+- question: >
+    Merge two DataFrames together based on a common column or index and display the resulting merged DataFrame.
+  python: |
+  
+      import pandas as pd
+      data1 = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
+              'Role':['Tecnician', 'Programmer','Student','Manager'],
+              'Salary':[46000,57000,8000,120000]}
+      data2 = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
+              'Role':['Tecnician', 'Programmer','Student','Manager'],
+              'Salary':[46000,57000,8000,120000]}
+      df1 = pd.DataFrame(data1) 
+      df2 = pd.DataFrame(data2) 
+      # merge the two dataframes
+      pd.merge(df1, df2, on='Name')
   
 - h3: Machine Learning Dojos
   question: >
@@ -1219,3 +1368,95 @@
     # Simulate player interactions, movement, and combat
     player1.move("north")
     player2.attack_player(player1)
+
+- question: >
+    Create a DataFrame with sample data where you have features ('X1', 'X2', 'X3') and a target column ('y'). Split the data into training and test sets using a 70/30 split ratio.
+  python: |
+  
+      import pandas as pd
+      from sklearn.model_selection import train_test_split
+      # create a dataframe with sample data
+      data = {'X1':[1,2,3,4,5,6,7,8,9,10], 'X2':[11,12,13,14,15,16,17,18,19,20],
+              'X3':[21,22,23,24,25,26,27,28,29,30], 'y':[31,32,33,34,35,36,37,38,39,40]}
+      df = pd.DataFrame(data) 
+      # split the data into training and test sets
+      X = df.drop('y', axis=1)
+      y = df['y']
+      X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+
+- question: >
+    Implement k-fold cross-validation on a dataset and use it to train and evaluate a machine learning model. Print the cross-validation scores and metrics.
+  python: |
+  
+      import pandas as pd
+      from sklearn.model_selection import cross_val_score
+      from sklearn.linear_model import LinearRegression
+      # create a dataframe with sample data
+      data = {'X1':[1,2,3,4,5,6,7,8,9,10], 'X2':[11,12,13,14,15,16,17,18,19,20],
+              'X3':[21,22,23,24,25,26,27,28,29,30], 'y':[31,32,33,34,35,36,37,38,39,40]}
+      df = pd.DataFrame(data) 
+      # split the data into training and test sets
+      X = df.drop('y', axis=1)
+      y = df['y']
+      # create a linear regression model
+      model = LinearRegression()
+      # perform k-fold cross-validation
+      scores = cross_val_score(model, X, y, cv=5)
+      # print the scores
+      print(scores)
+      # print the mean score
+      print(scores.mean())
+
+- question: >
+    Apply Principal Component Analysis (PCA) to reduce the dimensionality of a dataset and then train a machine learning model on the reduced data. Compare the model's performance 
+    before and after dimensionality reduction.
+    
+  python: |
+  
+      import pandas as pd
+      from sklearn.model_selection import train_test_split
+      from sklearn.decomposition import PCA
+      from sklearn.linear_model import LinearRegression
+      from sklearn.metrics import r2_score
+      # create a dataframe with sample data
+      data = {'X1':[1,2,3,4,5,6,7,8,9,10], 'X2':[11,12,13,14,15,16,17,18,19,20],
+              'X3':[21,22,23,24,25,26,27,28,29,30], 'y':[31,32,33,34,35,36,37,38,39,40]}
+      df = pd.DataFrame(data) 
+      # split the data into training and test sets
+      X = df.drop('y', axis=1)
+      y = df['y']
+      X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+      # apply PCA
+      pca = PCA(n_components=2)
+      X_train_pca = pca.fit_transform(X_train)
+      X_test_pca = pca.transform(X_test)
+      # train a linear regression model
+      model = LinearRegression()
+      model.fit(X_train_pca, y_train)
+      # evaluate the model
+      y_pred = model.predict(X_test_pca)
+      r2_score(y_test, y_pred)
+      # you should get 0.9999
+
+- question: >
+    Load a dataset with imbalanced classes and implement strategies to deal with class imbalance, such as oversampling, undersampling, or using different evaluation 
+    metrics like F1-score or AUC-ROC.
+
+  python: |
+  
+      import pandas as pd
+      from sklearn.datasets import make_classification
+      from sklearn.model_selection import train_test_split
+      from sklearn.linear_model import LogisticRegression
+      from sklearn.metrics import f1_score
+      # create a dataset with imbalanced classes
+      X, y = make_classification(n_samples=1000, n_classes=2, weights=[0.99, 0.01], random_state=1)
+      # split the data into training and test sets
+      X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+      # train a logistic regression model
+      model = LogisticRegression()
+      model.fit(X_train, y_train)
+      # evaluate the model
+      y_pred = model.predict(X_test)
+      f1_score(y_test, y_pred)
+      # you should get 0.0
