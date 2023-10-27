@@ -77,3 +77,10 @@ function showHideElement(elem) {
       }
 }
 
+// Back To Top Button
+function scrollToTop() {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+  }
