@@ -1300,13 +1300,12 @@
     r2_score(y_test, y_pred)
     # you should get 0.8049
     
--question:
-  Write a Python script to perform a web scraping task. Visit a website, such as "https://example.com," and scrape 
-  the titles and links of the top articles on the homepage. Use the requests library to fetch the HTML content and
-  BeautifulSoup for parsing.
+- question: >
+    Write a Python script to perform a web scraping task. Visit a website, such as "https://example.com," and scrape 
+    the titles and links of the top articles on the homepage. Use the requests library to fetch the HTML content and
+    BeautifulSoup for parsing.
 
-
-  python:
+  python: |
    
     import requests
     from bs4 import BeautifulSoup
@@ -1321,9 +1320,9 @@
     print(f"Title: {title}")
     print(f"Link: {link}")
 
--question:
+- question:
 
-  python:
+  python: |
 
     import pandas as pd
     from sklearn.metrics.pairwise import cosine_similarity
@@ -1343,11 +1342,12 @@
     top_movie_ids = [user[0] for user in similar_users[1:4]]
     recommended_movies = ratings_data.columns[top_movie_ids]
 
--question:
-  Implement a Python script that simulates a basic multiplayer game. The game should involve multiple players, each with unique 
-  attributes, and allow them to interact in a virtual world. Create classes and methods for character creation, movement, and combat.
+- question: >
+    Implement a Python script that simulates a basic multiplayer game. The game should involve multiple players, each with unique 
+    attributes, and allow them to interact in a virtual world. Create classes and methods for character creation, movement, and 
+    combat.
 
-  python:
+  python: |
     class Player:
     def __init__(self, name, health, attack):
         self.name = name
@@ -1370,7 +1370,8 @@
     player2.attack_player(player1)
 
 - question: >
-    Create a DataFrame with sample data where you have features ('X1', 'X2', 'X3') and a target column ('y'). Split the data into training and test sets using a 70/30 split ratio.
+    Create a DataFrame with sample data where you have features ('X1', 'X2', 'X3') and a target column ('y'). Split the data 
+    into training and test sets using a 70/30 split ratio.
   python: |
   
       import pandas as pd

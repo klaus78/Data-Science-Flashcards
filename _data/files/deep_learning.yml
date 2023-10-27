@@ -109,19 +109,24 @@
 
 - question: What is the vanishing gradient problem in deep learning, and how can it be mitigated?
   answer: >
-   <p>The vanishing gradient problem is a challenge in training deep neural networks, particularly in recurrent neural networks (RNNs) and deep feedforward networks. It occurs when gradients become extremely small during backpropagation, causing the network's weights to update very slowly or not at all. This can lead to slow convergence and difficulty in training deep models.</p>
-
-  <p>To mitigate the vanishing gradient problem, several techniques can be used:</p>
-
-  <ul>
-    <li><strong>Activation Functions:</strong> Replace activation functions like sigmoid with alternatives such as ReLU (Rectified Linear Unit), which are less prone to vanishing gradients.</li>
-    <li><strong>Weight Initialization:</strong> Use appropriate weight initialization techniques like Xavier/Glorot initialization to ensure that weights have reasonable initial values.</li>
-    <li><strong>Batch Normalization:</strong> Apply batch normalization to normalize the inputs at each layer, helping gradients to flow more smoothly.</li>
-    <li><strong>Gated Architectures:</strong> Architectures like LSTMs and GRUs use gating mechanisms to control the flow of information, reducing the vanishing gradient problem in sequential data models.</li>
-    <li><strong>Gradient Clipping:</strong> Clip gradients during training to prevent them from becoming excessively large or small.</li>
-  </ul>
-
-
+    The vanishing gradient problem is a challenge in training deep neural networks, particularly in recurrent 
+    neural networks (RNNs) and deep feedforward networks. It occurs when gradients become extremely small during 
+    backpropagation, causing the network's weights to update very slowly or not at all. This can lead to slow convergence 
+    and difficulty in training deep models.
+    <br><br>
+    To mitigate the vanishing gradient problem, several techniques can be used:
+    <ul>
+      <li><strong>Activation Functions:</strong> Replace activation functions like sigmoid with alternatives such as 
+                ReLU (Rectified Linear Unit), which are less prone to vanishing gradients.</li>
+      <li><strong>Weight Initialization:</strong> Use appropriate weight initialization techniques like Xavier/Glorot 
+                initialization to ensure that weights have reasonable initial values.</li>
+      <li><strong>Batch Normalization:</strong> Apply batch normalization to normalize the inputs at each layer, helping 
+            gradients to flow more smoothly.</li>
+      <li><strong>Gated Architectures:</strong> Architectures like LSTMs and GRUs use gating mechanisms to control the flow of 
+            information, reducing the vanishing gradient problem in sequential data models.</li>
+      <li><strong>Gradient Clipping:</strong> Clip gradients during training to prevent them from becoming excessively large 
+          or small.</li>
+    </ul>
 
 
 
