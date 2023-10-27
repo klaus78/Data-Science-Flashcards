@@ -1460,3 +1460,37 @@
       y_pred = model.predict(X_test)
       f1_score(y_test, y_pred)
       # you should get 0.0
+
+- h3: Deep learning dojos
+  question: >
+    Implement a simple feedforward neural network using TensorFlow and Keras. Train it on a dataset to perform image 
+    classification.
+  
+  python: |
+
+    # Here's a basic example of a feedforward neural network using TensorFlow and Keras for image classification:
+
+    import tensorflow as tf
+    from tensorflow import keras
+    # Load the dataset (e.g., MNIST)
+    (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+    # Preprocess the data
+    x_train, x_test = x_train / 255.0, x_test / 255.0
+    # Build the neural network model
+    model = keras.Sequential([
+        keras.layers.Flatten(input_shape=(28, 28)),
+        keras.layers.Dense(128, activation='relu'),
+        keras.layers.Dropout(0.2),
+        keras.layers.Dense(10)
+    ])
+    # Compile the model
+    model.compile(optimizer='adam',
+                  loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+                  metrics=['accuracy'])
+
+    # Train the model
+    model.fit(x_train, y_train, epochs=5)
+    # Evaluate the model
+    test_loss, test_acc = model.evaluate(x_test, y_test)
+
+    # This code demonstrates building a simple neural network for image classification on the MNIST dataset.
