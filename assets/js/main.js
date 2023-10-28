@@ -1,20 +1,20 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () { handleWindowScroll() };
+window.onscroll = function () {
+      handleWindowScroll();
+};
 
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function handleWindowScroll() {
       // Get the header
-      header = document.getElementById("myHeader");
-      
+      var header = document.getElementById("myHeader");
+
       // Get the offset position of the navbar
-      sticky = header.offsetTop;
+      var sticky = header.offsetTop;
+
       if (window.pageYOffset > sticky) {
             header.classList.add("sticky");
       } else {
             header.classList.remove("sticky");
       }
 }
-
 
 function showHideAnswer() {
       var divQuestion = event.target;
@@ -48,11 +48,8 @@ function showHideAnswer() {
 }
 
 function showHideMenus() {
-
       event.target.classList.toggle("active")
-
       next = event.target.nextElementSibling;
-
       while (next && next.classList.contains("hideable_h3")) {
             if (next) {
                   showHideElement(next);
@@ -60,11 +57,6 @@ function showHideMenus() {
             }
             else return;
       }
-
-      if (!next) {
-
-      }
-
 }
 
 function showHideElement(elem) {
@@ -75,5 +67,13 @@ function showHideElement(elem) {
                   elem.style.display = "block";
             }
       }
+}
+
+// Back To Top Button
+function scrollToTop() {
+      window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+      });
 }
 
