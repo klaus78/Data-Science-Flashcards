@@ -1,26 +1,18 @@
 - h2: Deep Learning
-  h3: Deep Learning basic concepts
-  question: What is Deep Learning? Why is it called deep?
+  h3: Introduction to Deep Learning
+  question: What is Deep Learning? Why it is called deep?
   answer: >
-    <b>Deep Learning</b> is a subdomain of machine learning that makes use of artificial
-    neural networks to learn from complex data structures like images and sounds. 
-    <br><br>
-    Artificial neural networks (ANN) are computing structures that try to emulate the 
-    human brain. ANN basic blocks are called neurons. A neuron can be thought of as
-    a function that has a number of weighted inputs and computes an output. These neurons are 
-    organized in layers and a simple form of ANN has an input layout, a middle layer and
-    an output layer. All layers between the input layer and the output layer are called
-    <i>hidden layers</i>. An ANN with one of two hidden layers is called a 
-    <i>shallow neural network</i>. 
-    <br><br>Deep Learning neural networks have many hidden layers. The word <b>deep</b> refers
-    to this fact.
+    <b>Deep Learning</b> is a subset of machine learning that uses artificial neural networks to model and solve complex tasks. 
+    These neural networks are composed of multiple layers (hence <b>"deep"</b>), and they are trained on large datasets to make 
+    predictions or decisions. These deep NNs can lean from complex and unstructured data like texts, images or even sounds.
 
-- question: What are the differences between machine learning and deep learning?
+  question: What are the differences between machine learning and deep learning?
   answer: >
     <b>Deep learning</b> is a subset of <b>machine learning</b>. Both machine learning
     and deep learning try to create a mathematical model of a dataset. This mathematical
-    model can then be used to make predictions on new input data. However these technologies
-    differ in some points:
+    model can then be used to make predictions on new input data.
+    <br>
+    However ML & DL differ in some points:
     <ul>
     <li><b>Techniques used</b>: machine learning can use several different techniques to create a mathematical model, 
     like regression, neural networks, nearest neighbors and decision trees.  By contrast, deep learning is
@@ -33,43 +25,109 @@
     the training process.</li>
     </ul>
 
-- question: What are Artificial Neural Networks?
+- question: What is Deep Learning used for?
   answer: >
-    Artificial Neural networks are a specific set of algorithms that have revolutionized machine learning. They
-    are inspired by biological neural networks. Neural Networks can adapt to changing the input, so the
-    network generates the best possible result without needing to redesign the output criteria.
+    Deep learning is used in a wide range of applications, including image and speech recognition, natural language processing, 
+    autonomous vehicles, recommendation systems, and more.
 
-- question: How Are Weights Initialized in a Network?
+- h3: Neural Networks
+  question: What is an Artificial Neural Network (ANN)?
+  answer: >
+    An artificial neural network is a computational model inspired by the structure and functioning of the human brain. It 
+    consists of interconnected nodes (neurons) organized in layers, typically an input layer, one or more hidden layers, 
+    and an output layer.
+
+- question: What is a Neuron in a Neural Network?
+  answer: >
+    Neurons (also called nodes) in a neural network are basic computational units that receive inputs, perform a weighted sum 
+    of those inputs, and apply an activation function to produce an output. They are the building blocks of the network.
+
+- question: What is a Shallow Neural Network and Deep Neural Network?
+  answer: > 
+    A shallow neural network typically has only one or two hidden layers (layers between the input layer and the output layer), 
+    while a deep neural network has multiple hidden layers.
+    <br>
+    Deep networks are capable of learning complex representations, whereas shallow networks are less capable of capturing 
+    intricate patterns.
+
+- h3: Training and Optimization
+  question: How Are Weights Initialized in a Network?
   answer: >
     There are two methods here:
     <ul>
       <li>Initialize the weights to zero</li> 
       <li>Assign them randomly.</li>
     </ul>
-    <br/>
     <b>Initializing all weights to 0:</b> This makes your model similar to a linear model. All the neurons and every
     layer perform the same operation, giving the same output and making the deep net useless.
-    <br/><br/>
+    <br>
     <b>Initializing all weights randomly:</b> Here, the weights are assigned randomly by initializing them very close
     to 0. It gives better accuracy to the model since every neuron performs different computations. This is the
     most commonly used method.
 
-- question: What Is the Cost Function?
+- question: What is an Activation Function?
   answer: >
-    Also referred to as “loss” or “error,” cost function is a measure to evaluate how good your model’s
-    performance is. It’s used to compute the error of the output layer during backpropagation. We push that
-    error backwards through the neural network and use that during the different training functions.
+    An activation function introduces non-linearity into a neural network. It determines whether a neuron should be 
+    activated (output a non-zero value) or not. Common activation functions include ReLU (Rectified Linear Unit), 
+    Sigmoid, and Tanh.
+
+- question: What is a Cost Function?
+  answer: >
+    A cost function (or loss function) is a mathematical measure that quantifies how well a neural network's predictions match 
+    the actual target values. The goal in training a neural network is to minimize this function.
+    <br>
+    It is primarily used for two purposes:
+    <ul>
+    <li><b>Model Training</b>: During the training phase, it quantifies the disparity between a machine learning model's 
+    predictions and the true target values, guiding the adjustment of model parameters for better predictions. </li>
+    <li><b>Evaluation</b>: After training, the cost function serves as an evaluation metric, measuring how well the model 
+    generalizes to new data. Lower cost function values indicate better model performance. </li>
+    </ul>
+
+- question: What is Backpropagation?
+  answer: >
+    Backpropagation is a fundamental algorithm used to train neural networks. It involves iteratively adjusting the network's 
+    weights and biases to minimize the difference between the predicted output and the actual target values.
+
+- h3: Types of Neural Networks
+  question: What are some types of deep neural networks? and what are they used for?
+  answer: > 
+    <ul>
+    <li><b>Convolutional Neural Networks (CNNs)</b>: Used for image and video analysis, object recognition, and computer 
+    vision tasks. </li>
+    <li><b>Recurrent Neural Networks (RNNs)</b>: Ideal for sequence data, like natural language processing, time series 
+    analysis, and speech recognition. </li>
+    <li><b>Long Short-Term Memory (LSTM) Networks</b>: A type of RNN that's effective at learning long-term dependencies in 
+    sequences. </li>
+    <li><b>Gated Recurrent Unit (GRU) Networks</b>: Another variant of RNNs, useful for many of the same tasks as LSTMs but 
+    with lower computational complexity. </li>
+    <li><b>Autoencoders</b>: Often employed for dimensionality reduction, feature learning, and data denoising. </li>
+    <li><b>Generative Adversarial Networks (GANs)</b>: Used for generating new data samples, image-to-image translation, and 
+    creating realistic images. </li>
+    <li><b>Transformers</b>: Ideal for natural language processing tasks, like machine translation, language understanding, 
+    and text generation. </li>
+    </ul>
+    
+- question: What is a Convolutional Neural Network (CNN)?
+  answer: >
+    CNNs are a type of neural network designed for processing grid-like data, such as images and video. They use convolutional 
+    layers to automatically learn features from the input data.
+
+- question: What is a Recurrent Neural Network (RNN)?
+  answer: >
+    RNNs are neural networks with loops that allow information to be passed from one step of the network to the next. They 
+    are commonly used for sequential data, like time series and natural language processing.
 
 - question: What kind of neural networks works particularly well with image data?
   answer: >
     <b>Convolutional neural networks</b> are a kind of neural network that works
     particularly well with image data.
-    <br><br>
+    <br>
     The basic idea behind convolutional neural networks is to 
     divide the input image into small fragments and apply a number of filters on 
     each fragment. Applying a filter is equivalent to searching for a pattern in the fragment.
-    Each filter has a specific task, like searching for edges or for circles. 
-    <br><br>
+    Each filter has a specific task, like searching for edges or for circles.
+    <br>
     In this way convolutional neural networks can better deal with images that are not very similar,
     for example because the images are rotated differently.
 
@@ -77,20 +135,27 @@
   answer: >
     A kind neural network that is particulary good at processing text data is 
     <b>recurrent neural networks</b>.
-    <br><br>
+    <br>
     A recurrent neural network has an intern loop, that means the data is not processed all at once 
     but rather is processed in different steps. In particular in the case of text, each word is 
     processed once at a time. This process is similar to the way humans read text.
 
-- question: What is transfer learning? What are some typical use cases?
+- h3: Transfer Learning
+  question: What is Transfer Learning? and when to use it?
   answer: >
-    <b>Transfer learning</b> is a technique in which a model, that was tried tried on a task,
-    is applied to a different but related task. For example you have a model trained to
-    recognize cars and you use that model to recognize trucks.
-    <br><br>The obvious advantage of transfer learning is that you can reuse an existing model with
-    minimal effort. 
-    <br><br>Some typical use cases of transfer learning are
+    <b>Transfer learning</b> is a technique where a pre-trained neural network is adapted for a new, related task. This can 
+    significantly reduce the amount of data and training time required for the new task.
+    <br>
+    The most important scenarios to consider using transfer learning are:
     <ul>
+    <li><b>Limited Data</b>: When you have a small dataset that is insufficient to train a deep model effectively, transfer learning 
+    can provide a substantial boost in performance. </li>
+    <li><b>Similar Tasks</b>: If your problem is closely related to a task for which a pre-trained model exists, transfer learning 
+    is highly advantageous, as it leverages the knowledge from the related task. </li>
+    <li><b>Resource Constraints</b>: When computational resources, including time and hardware, are limited, using pre-trained models 
+    is efficient compared to training a model from scratch. </li>
+    <li><b>Domain Adaptation</b>: When you need to work in a new domain but have access to data from a related domain, transfer 
+    learning can be used to adapt the model from the related domain to the new one. </li>
     <li>You do not have enough data to train a model from scratch. Starting with a pre-trained can allow you
     to train the model for your task.</li>
     <li>You do not have enough time to train a model from scratch. Because training models can take days or even
@@ -127,11 +192,4 @@
       <li><strong>Gradient Clipping:</strong> Clip gradients during training to prevent them from becoming excessively large 
           or small.</li>
     </ul>
-
-
-
-
-
-
-
 
