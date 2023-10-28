@@ -33,6 +33,33 @@
     the training process.</li>
     </ul>
 
+- question: What are Artificial Neural Networks?
+  answer: >
+    Artificial Neural networks are a specific set of algorithms that have revolutionized machine learning. They
+    are inspired by biological neural networks. Neural Networks can adapt to changing the input, so the
+    network generates the best possible result without needing to redesign the output criteria.
+
+- question: How Are Weights Initialized in a Network?
+  answer: >
+    There are two methods here:
+    <ul>
+      <li>Initialize the weights to zero</li> 
+      <li>Assign them randomly.</li>
+    </ul>
+    <br/>
+    <b>Initializing all weights to 0:</b> This makes your model similar to a linear model. All the neurons and every
+    layer perform the same operation, giving the same output and making the deep net useless.
+    <br/><br/>
+    <b>Initializing all weights randomly:</b> Here, the weights are assigned randomly by initializing them very close
+    to 0. It gives better accuracy to the model since every neuron performs different computations. This is the
+    most commonly used method.
+
+- question: What Is the Cost Function?
+  answer: >
+    Also referred to as “loss” or “error,” cost function is a measure to evaluate how good your model’s
+    performance is. It’s used to compute the error of the output layer during backpropagation. We push that
+    error backwards through the neural network and use that during the different training functions.
+
 - question: What kind of neural networks works particularly well with image data?
   answer: >
     <b>Convolutional neural networks</b> are a kind of neural network that works
@@ -70,8 +97,41 @@
     weeks, using a pre-trained model is much more faster.</li>
     </ul>
 
+- question: Explain the concept of transfer learning in deep learning. Provide a real-world example.
+  answer: >
+    Transfer learning in deep learning is a technique where a pre-trained neural network, typically on a large dataset, is 
+    used as a starting point to solve a different but related problem. The idea is to leverage the knowledge gained during 
+    training on the initial task and adapt it to the new task, often with less training data and computation.
+    For example, a pre-trained convolutional neural network (CNN) that has learned to recognize a wide range of 
+    objects in images can be fine-tuned for a specific image classification task, like classifying different species of flowers.
+    The pre-trained model already possesses features that are generally useful for recognizing edges, shapes, and textures, 
+    making it easier to adapt to the new task with a smaller dataset.
+
+- question: What is the vanishing gradient problem in deep learning, and how can it be mitigated?
+  answer: >
+    The vanishing gradient problem is a challenge in training deep neural networks, particularly in recurrent 
+    neural networks (RNNs) and deep feedforward networks. It occurs when gradients become extremely small during 
+    backpropagation, causing the network's weights to update very slowly or not at all. This can lead to slow convergence 
+    and difficulty in training deep models.
+    <br><br>
+    To mitigate the vanishing gradient problem, several techniques can be used:
+    <ul>
+      <li><strong>Activation Functions:</strong> Replace activation functions like sigmoid with alternatives such as 
+                ReLU (Rectified Linear Unit), which are less prone to vanishing gradients.</li>
+      <li><strong>Weight Initialization:</strong> Use appropriate weight initialization techniques like Xavier/Glorot 
+                initialization to ensure that weights have reasonable initial values.</li>
+      <li><strong>Batch Normalization:</strong> Apply batch normalization to normalize the inputs at each layer, helping 
+            gradients to flow more smoothly.</li>
+      <li><strong>Gated Architectures:</strong> Architectures like LSTMs and GRUs use gating mechanisms to control the flow of 
+            information, reducing the vanishing gradient problem in sequential data models.</li>
+      <li><strong>Gradient Clipping:</strong> Clip gradients during training to prevent them from becoming excessively large 
+          or small.</li>
+    </ul>
 
 
 
 
-     
+
+
+
+
