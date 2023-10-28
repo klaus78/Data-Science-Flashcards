@@ -1320,7 +1320,9 @@
     print(f"Title: {title}")
     print(f"Link: {link}")
 
-- question:
+- question: >
+    Create a movie recommendation system using user ratings data. The goal is to recommend the top 3 movies for a specific 
+    user based on their similarity to other users. For the solution you can use the <code>user_ratings.csv</code> dataset.
 
   python: |
 
