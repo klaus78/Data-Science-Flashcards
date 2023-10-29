@@ -6,12 +6,12 @@
     in their goals.
     <br><br> 
     <b>Data science</b> is more focused on the gathering and analysis of data. Data science
-    includes gathering data from different sources, cleaning the data and analyzing the data
-    in order to extract useful information. 
+    includes gathering data from different sources, cleaning the data, and analyzing the data
+    to extract useful information. 
     <br><br>
-    <b>Machine learning</b> is more focused on creating a mathematical model from a dataset in order to 
+    <b>Machine learning</b> is more focused on creating a mathematical model from a dataset to 
     predict something. For example given a dataset of house prices, you would like to predict 
-    how the house prices evolves in the next months based on the historical data in the dataset. With
+    how the house prices will evolve in the next months based on the historical data in the dataset. With
     machine learning algorithms you can create mathematical models that can make such a prediction.
 
 - question: What are the most common types of problems that machine learning can help solve?
@@ -20,15 +20,15 @@
     the following types:
     <ul>
     <li><b>Classification</b>: the goal of classification is to predict the category of an input item. Examples
-    of classification are email spam detection and desease diagnosis.</li>
+    of classification are email spam detection and disease diagnosis.</li>
     <li><b>Regression</b>: the goal of regression is the prediction of a numerical value. Examples of
     regression are predicting the price of houses or the future demand for products.</li>
     <li><b>Clustering</b>: the goal of clustering is to group items in a way that similar items are within
     the same group. Examples of clustering are grouping customers based on purchasing behavior or grouping documents by topic.</li>
     <li><b>Recommendation</b>: the goal of recommendation is to provide personalized suggestions. Examples
-    of recommendation are movie recommendation and personal marketing based on personal preferencies.</li>
-    <li><b>Anomality detection</b>: the goal of anomality detection is to identify unusual patterns in the data.
-    Examples of anomality detection are credit fraud detection and intrusion detection in computer networks.</li>
+    of recommendations are movie recommendations and personal marketing based on personal preferences.</li>
+    <li><b>Anomality detection</b>: the goal of anomaly detection is to identify unusual patterns in the data.
+    Examples of anomaly detection are credit fraud detection and intrusion detection in computer networks.</li>
     <li><b>Time series analysis</b>: the goal of time series analysis is to analyze data points collected at
     specific time intervals. Examples of time series analysis are energy consumption prediction and weather forecasting.</li>
     </ul>
@@ -40,12 +40,12 @@
     <li><b>Problem definition and domain knowledge</b>: understand what problem you want to solve and gain 
     domain knowledge related to that problem.
     </li>
-    <li><b>Data preparation</b>: gather, clean the data (es. handling missing values and outliers) and perform feature engineering 
+    <li><b>Data preparation</b>: gather, and clean the data (es. handling missing values and outliers) and perform feature engineering 
     (es. select features or create new ones to be used in a machine learning algorithm).</li>
     <li><b>Data splitting</b>: split the dataset into a training dataset and a test dataset. The machine learning model
     will be trained on the training dataset and validated on the test dataset.</li>
     <li><b>Model selection</b>: select an appropriate machine learning algorithm depending on the problem at hand.</li>
-    <li><b>Training</b>: train the selected machine learning algorithm on the training dataset. During the training
+    <li><b>Training</b>: train the selected machine learning algorithm on the training dataset. During the training,
     the machine learning algorithm learns structures and relationships contained in the training data.</li>
     <li><b>Evaluation</b>: evaluate the performance of the trained model using the test dataset. The model
     makes predictions using the items in the test dataset and the predicted values are compared with the real values.</li>
@@ -58,17 +58,17 @@
 
   question: What is bias in machine learning?
   answer: >
-    <b>Bias</b> in machine learning is a phenomenon that occurs when a model produces results that are consistently unfair 
+    <b>Bias</b> in machine learning is a phenomenon that occurs when a model produces consistently unfair results 
     or inaccurate for certain groups of people due to erroneous assumptions in the machine learning (ML) process. 
     <br><br>
-    Bias can happen for a number of reasons:
+    Bias can happen for several reasons:
     <ul>
     <li>
       <b>data bias</b>: data bias can occur when the training data fails to adequately capture the diversity 
       and complexity present in the real-world data for a specific problem.
     </li>
-    <li><b>algorithms bias</b>: an algorithm itself can be biased, either due to the way it is trained or designed.
-    For example, it can occur that an algorithm inadvertently learn biased patterns in the data. This can happen if
+    <li><b> Algorithms bias</b>: an algorithm itself can be biased, either due to the way it is trained or designed.
+    For example, it can occur that an algorithm inadvertently learns biased patterns in the data. This can happen if
     an algorithm is not carefully designed to account for bias in the training data.
     </li>
     </ul>
@@ -120,7 +120,7 @@
       <li><i>High Bias (Underfitting)</i>: When a model is too simple or has too few parameters to capture the underlying patterns in the data, it exhibits high bias. 
       This leads to underfitting, where the model performs poorly on both training and test data.</li>
 
-      <li><i>High Variance (Overfitting)</i>: When a model is overly complex or has too many parameters, it becomes highly sensitive to the 
+      <li><i>High Variance (Overfitting)</i>: When a model is overly complex or has too many parameters, it becomes highly sensitive to  
       noise and random variations in the training data. This results in high variance, leading to overfitting, where the model 
       performs well on training data but poorly on new, unseen data.</li>
       </ul>
@@ -149,7 +149,7 @@
     penalty term to the loss function during training, which discourages the model from assigning too much importance 
     to any particular feature. Common forms of regularization include L1 (Lasso) and L2 (Ridge) regularization.
     <br><br> 
-    Regularization helps in reducing the complexity of the model, leading to better generalization to unseen data. 
+    Regularization helps in reducing the complexity of the model, leading to better generalization of unseen data. 
     It is controlled by a regularization parameter, which determines the trade-off between fitting the training data 
     well and keeping the model's complexity in check.
 
@@ -201,14 +201,14 @@
 - question: What is reinforcement learning?
   answer: >
     <b>Reinforcement learning</b> is a machine learning algorithm that receives feedback on its output so that the accuracy
-    of the output is improved based on this feedback. In other words the algorithm learns through trial
+    of the output is improved based on this feedback. In other words, the algorithm learns through trial
     and error.
 
 - question: How do you handle imbalanced datasets in machine learning?
   answer: 
     Imbalanced datasets are datasets where the target variable is not evenly distributed. For example, a dataset of fraudulent 
     transactions may be imbalanced, with only a small percentage of transactions being fraudulent.
-    There are a number of ways to handle imbalanced datasets in machine learning. One approach is to oversample the minority class. 
+    There are several ways to handle imbalanced datasets in machine learning. One approach is to oversample the minority class. 
     This involves creating synthetic data points for the minority class so that it is represented more evenly in the dataset. 
     Another approach is to undersample the majority class. This involves removing data points from the majority class so that it 
     is represented more evenly in the dataset.
@@ -231,7 +231,7 @@
     <b>Parameters</b> are internal variables within machine learning models. They are computed
     automatically by the machine learning algorithms during the training process.
     The purpose of parameters is to fine-tune the model's performance based on the training data, 
-    with the goal of minimizing the model error or loss function.  
+    to minimize the model error or loss function.  
     <br><br>
     <b>Hyperparameters</b> are passed to machine learning algorithms before the training process begins.
     Hyperparameters influence how the algorithms learn and generalize from data. 
@@ -240,8 +240,8 @@
 
 - question: What are ensemble methods in machine learning?
   answer: >
-    <b>Ensemble methods</b> are techniques that combine the results of a number of machine learning models rather
-    than using a single model. The basic idea behind ensemble methods is than the combination of the results of a number of models 
+    <b>Ensemble methods</b> are techniques that combine the results of several machine learning models rather
+    than using a single model. The basic idea behind ensemble methods is that the combination of the results of several models 
     should be more accurate than using a single model.
     <br><br>
     To provide an example in real life, ensemble methods can be compared to asking several doctors for a diagnosis 
@@ -276,12 +276,12 @@
     <b>K-fold cross-validation</b> is a specific type of cross-validation where the dataset is split into <i>K</i> equal parts. 
     <br>The steps of <b>K-fold cross-validation</b> are:
     <ul> 
-    <li>split a dataset into <i>K</i> equal parts. Each part is called fold.</li>
+    <li>split a dataset into <i>K</i> equal parts. Each part is called a fold.</li>
     <li>take one fold <i>i</i> as the test set and take the remaining <i>(K-1)</i> folds as the training set.</li>
-    <li>train you classification algorithm on the training set and evaluate its performance of the test set.</li> 
-    <li>Repeat the process for each fold. As a result, for each fold we get an accuracy value and 
-    in total we get <i>K</i> accuracy values.</li>
-    <li>the final accuracy value for your classification algorithm is given by the average of
+    <li> Train your classification algorithm on the training set and evaluate its performance in the test set.</li> 
+    <li>Repeat the process for each fold. As a result, for each fold, we get an accuracy value and 
+    in total, we get <i>K</i> accuracy values.</li>
+    <li> The final accuracy value for your classification algorithm is given by the average of
     the <i>K</i> accuracy values.</li>
     </ul>
 
@@ -292,7 +292,7 @@
     <br><br>
     To evaluate the performance of the classifier you can use the <b>confusion matrix</b>. 
     The confusion matrix displays the number of true positives (TP), true negatives (TN),
-    false positives (FP) and false negatives (FN). 
+    false positives (FP), and false negatives (FN). 
     <br>
     <ul>
     <li>True positives (TP) = number of items with label positive (1) that 
@@ -337,7 +337,7 @@
     <br><br>
     The <b>confusion matrix</b> is called like that because it helps you identify where the 
     classifier has made wrong predictions, which is where the classifier was <b><i>confused</i></b>.
-    As a result you can gain insight about the performance of the classifier and take corrective
+    As a result, you can gain insight about the performance of the classifier and take corrective
     action to minimize the number of wrongly classified items.
     
 
@@ -427,7 +427,7 @@
         <span class="symbol">/</span>
         <span class="bottom">TP + FP</span>
       </div>, 
-    where TP is true positives, and FP is false positives.</li>
+    where TP is true positive, and FP is false positive.</li>
     <li><b>Recall</b> (Sensitivity) measures the proportion of true positive 
     predictions among all actual positive instances.
     <br> 
@@ -436,7 +436,7 @@
         <span>TP</span>
         <span class="symbol">/</span>
         <span class="bottom">TP + FN</span>
-      </div>, where FN is false negatives. 
+      </div>, where FN is false negative. 
     </li>
     </ul>
     Precision and recall are related through a trade-off. Increasing one often leads to a decrease in the other. 
@@ -444,7 +444,7 @@
     with high recall captures more true positives but may produce more false positives.
 
 - question: > 
-    What metrics are more meaningful with class-balanced datasets and what work better 
+    What metrics are more meaningful with class-balanced datasets and what works better 
     for class-unbalanced datasets? 
   answer: >
     In a class-balanced dataset, the number of items in each class is approximately the same.
@@ -462,7 +462,7 @@
     
     <br><br>When the dataset is class-unbalanced, one class has significantly more items than the
     other classes. In that case <b>precision</b> and <b>recall</b>
-    are better metrices. In class-imbalanced scenarios, 
+    are better metrics. In class-imbalanced scenarios, 
     the class with fewer instances is often the class of more significance. 
     For example, in fraud detection, the number of actual fraud cases is much lower than non-fraud cases, 
     but correctly identifying fraud is crucial. 
@@ -501,14 +501,14 @@
     doctors typically use?
   answer: > 
     Machine learning models for <b>cancer detection</b> aim to classify patients as having cancer (positive)
-    or healthy (negative). In cancer detection it is important to keep in mind that the datasets
+    or healthy (negative). In cancer detection, it is important to keep in mind that the datasets
     are typically strongly unbalanced, with few cancer samples and many healthy samples.
     <br><br>
     Because of this, it is evident that accuracy cannot be used since it requires balanced datasets.
-    The typical metrics used for cancer detection are rather:
+    The typical metrics used for cancer detection are as follows:
     <ul>
       <li><b>Sensitivity</b>: sensitivity measures the ability of the model to 
-      correctly identify patients who have cancer among all the patients who actually have cancer.
+      correctly identify patients who have cancer among all the patients who have cancer.
       A high sensitivity indicates that the model is good at catching cancer cases.</li>
       <li><b>Specificity</b>: specificity measures the ability of the model to correctly identify patients who do 
       not have cancer among all the patients who do not have cancer. A high specificity indicates that the model is 
@@ -547,7 +547,7 @@
     <br>
     Specificity = probability of predicting that a real negative will be negative.
     <br><br>
-    The goal when assessing a classifier's performance is to maximize sensitivity while minimizing the False 
+    The goal when assessing a classifier's performance is to maximize sensitivity while minimizing False 
     Positive Rate (1-specificity). In other words, a high sensitivity and low False Positive Rate are desirable.
     <br><br>
     The ROC curve is a graphical representation of this trade-off. It is a plot of <code>sensitivity</code> against <code>1-specificity</code> 
@@ -561,20 +561,20 @@
   image: roc_curve.png
 
 - question: >
-    To evaluate the performance of a machine learning model, you can use metrics like accuracy, precision, recall and F1-score.
+    To evaluate the performance of a machine learning model, you can use metrics like accuracy, precision, recall, and F1-score.
     When to use what?
   answer: >
     The most common metrics that you can use for evaluating the performance of a machine learning model are accuracy, precision,
-    recall and F1-score. It is important to be aware in what case a metric better fits for evaluation.
+    recall, and score. It is important to be aware of in what case a metric better fits for evaluation.
     <br><br>
     <b>Accuracy:</b> is a good choice to start with if the classes are balanced.
     <br><br>
     <b>Precision</b> and <b>Recall</b> become more important when the classes are unbalanced. 
     If the false positive predictions are worse than false negatives, aim for higher precision.
-    If the false negative predictions are worse than false positive, aim for higher recall.
+    If the false negative predictions are worse than the false positive, aim for higher recall.
     <br><br>
     <b>F1-score</b> is a combination of precision and recall. It is a good choice when you need to consider 
-    both false positives and false negatives. The F1-score is especially useful when you want a single metric 
+    both false positives and false negatives. The F1 score is especially useful when you want a single metric 
     that combines both precision and recall, and you are dealing with imbalanced datasets.
 
 - h3: Naive Bayes
@@ -588,7 +588,7 @@
     Because the Naive Bayes is based on the idea that the predictor variables are independent of 
     each other while in nature this is often not the case.
     <br><br>
-    A Naive Bayes classifier calculates the probability of an item of belonging to each possible
+    A Naive Bayes classifier calculates the probability of an item belonging to each possible
     output class. The class with the highest probability is then chosen as output.
 
 - question: What is the Bayes theorem?
@@ -618,8 +618,8 @@
 
 - question: How does the Naive Bayes perform with categorical variables?
   answer: > 
-    It performs well with categorical variables since no assumpion is made on
-    the data distribution. By contrast with numerical variables a normal distribution
+    It performs well with categorical variables since no assumption is made on
+    the data distribution. By contrast with numerical variables, a normal distribution
     is assumed.
 
 - h3: Regression
@@ -632,9 +632,9 @@
   answer: >
     Some <b>drawbacks</b>s of a linear model are:
     <ul>
-      <li>the assumption of linearity of the model</li>
-      <li>it can't be used for count outcomes or binary outcomes</li>
-      <li>there are overfitting or underfitting problems that it can't solve</li>
+      <li> The assumption of linearity of the model</li>
+      <li> It can't be used for count outcomes or binary outcomes</li>
+      <li> There are overfitting or underfitting problems that it can't solve</li>
     </ul>
 
 - question: What do you predict with linear regression?
@@ -643,10 +643,10 @@
 - question: What are the most common techniques used for computing the coefficients in linear regression?
   answer: >
     The most common techniques used for computing the coefficients in linear regression are 
-    <br><br> - <b>Ordinary Least Squares</b> seeks to minimize the sum of the squared residuals, i.e. the distance 
+    <br><br> - <b>Ordinary Least Squares</b> seek to minimize the sum of the squared residuals, i.e. the distance 
     between the points and the regression line.
     <br><br> - <b>Gradient descendent</b> works by inizializing randomly the coefficients. A learning rate is 
-    used as a scale factor and the coefficients are updated in the direction towards minimizing the error. 
+    used as a scale factor and the coefficients are updated in the direction of minimizing the error. 
     The process is repeated until a minimum sum squared error is achieved or no further improvement is 
     possible.
 
@@ -654,11 +654,11 @@
   answer: >
     <b>Logistic regression</b> is a statistical technique that is used to analyze a dataset and predict the binary outcome. 
     The outcome has to be a binary outcome that is either zero or one or a yes or no. 
-    In other words the output of a logistic regression is always categorical (= discrete)
+    In other words, the output of a logistic regression is always categorical (= discrete)
 
 - question: What do you predict with logistic regression?
   answer: >
-    Logistic regression predicts the probabilty that a variable belongs to one 
+    Logistic regression predicts the probability that a variable belongs to one 
     class or another. 
 
 - question: Can you explain a real use case for logistic regression?
@@ -669,7 +669,7 @@
 - question: How can you turn logistic regression into a classifier?
   answer: >
     To turn logistic regression into a classifier you can use a threshold. If the 
-    output of the logistic regression is above (below) the threshold, then the output
+    the output of the logistic regression is above (below) the threshold, then the output
     can be classified as class zero (class one).
 
 - question: >
@@ -677,7 +677,7 @@
   answer: >
     To evaluate regression models you can use a number of metrics including
     <ul>
-    <li><b>\(R^2\)</b> (also known as coefficient of determination) represents how well the variables
+    <li><b>\(R^2\)</b> (also known as the coefficient of determination) represents how well the variables
     of the regression model describe the variance of the target variable.</li>
     <li><b>Mean absolute error (MAE)</b> is the average of the absolute distances between predictions and actual values.</li>
     <li><b>Mean squared error (MSE)</b> is the mean of the square of the absolute distances between predictions and actual 
@@ -689,8 +689,7 @@
     What is R-squared? How is it computed?
   answer: >
     Given a regression model, the <b>R-squared</b> (\(R^2\)) metric, also known as <b>coefficient
-    of determination</b>, is a measure that represents how well the variables of the regression 
-    model describe the variance of the target variable. 
+    of determination</b>, is a measure that represents how well the variables of the regression model describe the variance of the target variable. 
     <br><br>
     \(R^2\) ranges from negative infinity to 1:
     <ul>
@@ -700,7 +699,7 @@
     variable(s)</li>
     <li>\(R^2\) = 0 indicates that no information variance of the target variable is explained by the independent
     variable(s)</li>
-    <li>\(R^2\) < 0 suggests that the independent variable(s) have no predictive power or may be 
+    <li>\(R^2\) < 0 suggests that the independent variable(s) have no predictive power or maybe 
     negatively correlated with the target variable.</li>
     </ul>
     <br><br>
@@ -716,10 +715,10 @@
   answer: >
     The <b>k-nearest neighbor (KNN)</b> algorithm is a machine learning algorithm that finds the 
     <code>K</code> closest (= most similar) data points of a given data point
-    based on a certain metric, typically the Eucledian distance. 
+    based on a certain metric, typically the Euclidean distance. 
     <br><br>
     The KNN algorithm can be used both for classification and regression. If you want to classify a data point, 
-    you can assign assign it to the most common class among the <code>K</code> neighbors. 
+    you can assign it to the most common class among the <code>K</code> neighbors. 
     If you want to predict a value, you can compute the average value among the <code>K</code> neighbors. 
 
 - question: What are some advantages and disadvantages of the KNN algorithm?
@@ -728,11 +727,11 @@
     <ul>
     <li>simple concept</li>
     <li>builiding a model is cheap</li>
-    <li>no assumption is made about the data distrubution</li>
+    <li>no assumption is made about the data distribution </li>
     </ul>
     <br><br>Some disadvantages of the KNN algorithm are
     <ul>
-    <li>classifying unknown records is expensive, in particular with big data sets, 
+    <li> Classifying unknown records is expensive, in particular with big data sets, 
          since you have to find the K nearest neighbors</li>
     <li>pretty affected by data missing and data scaling</li>
     </ul>
@@ -743,7 +742,7 @@
     <ol>
       <li><b>computational complexity</b>: the computational complexity of the KNN algorithm does increase
       as the dataset size increases because KNN needs to calculate all the distances between datapoints. This process
-      is obviously faster when the dataset is smaller.</li>
+      is faster when the dataset is smaller.</li>
       <li><b>curse of dimensionality</b>: the performance of the KNN algorithm can degrade with high dimensional datasets.
       Indeed, in high-dimensional spaces, the data points become more sparsely distributed and this makes it more challenging
       to find the nearest neighbors. This can affect negatively the model performance. 
@@ -767,7 +766,7 @@
   answer: >
     A <b>decision tree</b> is a supervised machine learning algorithm that generates a flowchart from a dataset. This flowchart
     can be represented as a tree-like structure. You can also think of a decision tree as a sequence of if-else conditions where a
-    a feature is evaluated at each if-else condition.
+    feature is evaluated at each if-else condition.
     <br><br>
     For example, the decision tree in the picture below models the question of going to the beach. 
     According to this decision tree, we go to the beach only when the weather is sunny and the temperature is higher than 25 °C.
@@ -782,7 +781,7 @@
     <br><br>
     The <b>entropy</b> describes the variety in a dataset. An entropy of 0 means that all items are in the same class. The 
     maximum entropy possible is when each item is in a different class.  
-    <br><br>This algorithm is a greedy algorithm since it chooses a local optimal solution at each step.
+    <br><br>This algorithm is greedy since it chooses a local optimal solution at each step.
 - question: What are the main advantages of decision trees?
   answer: >
     The <b>main advantages of decision trees</b> are:
@@ -809,26 +808,26 @@
     To <b>reduce the overfitting of a decision tree</b> you can use <b>pruning</b>, which reduces the size of the tree. 
     There are two approaches to pruning<br>
     <ul>
-    <li><b>Pre-pruning</b>: the tree stop growing when it reaches a certain number of decisions or when 
-    the decision nodes contains too few items. A disadvantage of this approach is that some important 
+    <li><b>Pre-pruning</b>: the tree stops growing when it reaches a certain number of decisions or when 
+    the decision nodes contain too few items. A disadvantage of this approach is that some important 
     data could be pruned.</li>
     <li><b>Post-pruning</b>: the tree can grow as needed and only at the end it is checked if the tree 
     is too big. This approach guarantees that the important data is not pruned.</li>
     </ul>
 - question: >
    What are the main techniques used to combine decision trees to obtain a more accurate model 
-   (so called ensemble techniques)?
+   (so-called ensemble techniques)?
   answer: >
     There are two main ensemble techniques:
     <ul>
     <li><b>Boosting algorithms</b>: this is a sequential process. In boosting algorithms learners 
     are learned sequentially with early learners fitting simple models to the data and then analyzing 
-    data for errors. After each training step the weights are redistributed. 
-    Misclassified data gets an increased weight so that this data will be more on focus in the 
-    next train step.</li>
-    <li><b>Bagging techniques</b>: this is a parallel process. In a bagging technique the dataset is 
-    divided into <code>n</code> samples using randomized sampling. Then a model is build on each sample. 
-    After that the resulting models are combined using voting or averaging.</li>
+    data for errors. After each training step, the weights are redistributed. 
+    Misclassified data gets an increased weight so this data will be more of a focus in the 
+    next training step.</li>
+    <li><b>Bagging techniques</b>: this is a parallel process. In a bagging technique, the dataset is 
+    divided into <code>n</code> samples using randomized sampling. Then a model is built on each sample. 
+    After that, the resulting models are combined using voting or averaging.</li>
     </ul>
     
 - question: What is Random Forest? How does it work?
@@ -841,23 +840,23 @@
       <li>Treat Missing values</li>
     </ul>
     <br>
-    Random forest is a type of ensemble learning method, where a group of weak models combine to form a powerful
+    Random forest is an ensemble learning method, where a group of weak models combine to form a powerful
     model. The random forest starts with a standard machine learning technique called a “decision tree”
     which, in ensemble terms, corresponds to our weak learner. In a decision tree, an input is entered at the
     top and as it traverses down the tree the data gets bucketed into smaller and smaller sets.
     <br><br>
     In Random Forest, we grow multiple trees as opposed to a single tree. To classify a new object based on
     attributes, each tree gives a classification. The forest chooses the classification having the most votes
-    (Over all the trees in the forest) and in case of regression, it takes the average of outputs by different
+    (Overall the trees in the forest) and in the case of regression, it takes the average of outputs by different
     trees.
 
 - h3: Support Vector Machine
-  question: What is Support Vector Machine and what is its main idea?
+  question: What is a Support Vector Machine and what is its main idea?
   answer: >
-    <b>Support Vector Machine</b> (SVM) is a supervised machine learning algorithm that tries to find high dimensional
+    <b>Support Vector Machine</b> (SVM) is a supervised machine learning algorithm that tries to find high-dimensional
     planes that divide a dataset into clusters. The planes are found in such a way that they are as far as possible from any point.
     <br><br>
-    The position of the planes depends on the so called <b>support vectors</b>, that are the points that are closest to the planes.
+    The position of the planes depends on the so-called <b>support vectors</b>, which are the points that are closest to the planes.
     
 - question: What is the technique called <i>kerneling</i> that is used by Support Vector Machine?
   answer:
@@ -865,15 +864,13 @@
     dimensions. More specifically, the dataset is mapped via kernel functions into a higher dimension where the
     data is potentially easier to cluster.
 
-- question: What is Support Vector Machine particulary good at? What are some disadvantages? 
+- question: What is a Support Vector Machine particularly good at? What are some disadvantages? 
   answer: >
       <b>Support Vector Machine (SVM)</b> is particularly good at classifying high-dimensional data, i.e. data with a lot of features.
       <br><br>
-      SVM has some disadvantages like:
+      SVM has some disadvantages:
       <ul>
-        <li>it does not perform well with large datasets because of high computational costs.</li>
-        <li>the kernel must be chosen carefully and this can be tricky.</li>
+        <li> It does not perform well with large datasets because of high computational costs.</li>
+        <li> The kernel must be chosen carefully and this can be tricky.</li>
       </ul>
-
-
-
+      
