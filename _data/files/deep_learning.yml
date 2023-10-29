@@ -89,17 +89,6 @@
     Backpropagation is a fundamental algorithm used to train neural networks. It involves iteratively adjusting the network's 
     weights and biases to minimize the difference between the predicted output and the actual target values.
 
-- h3: Common Challenges and Concepts
-  question: What is Overfitting?
-  answer: >
-    Overfitting occurs when a neural network learns to perform exceptionally well on the training data but doesn't generalize 
-    well to unseen data. It's a common challenge in deep learning, and techniques like regularization are used to mitigate it.
-
-- question: What are Hyperparameters?
-  answer: >
-    Hyperparameters are parameters that are set before training the neural network. They include learning rate, the number of 
-    layers, the number of neurons in each layer, and more. Finding optimal hyperparameters is crucial for model performance.
-
 - h3: Types of Neural Networks
   question: What are some types of deep neural networks? and what are they used for?
   answer: > 
@@ -165,8 +154,42 @@
     is highly advantageous, as it leverages the knowledge from the related task. </li>
     <li><b>Resource Constraints</b>: When computational resources, including time and hardware, are limited, using pre-trained models 
     is efficient compared to training a model from scratch. </li>
-    <li><b>Domain Adaptation: When you need to work in a new domain but have access to data from a related domain, transfer 
+    <li><b>Domain Adaptation</b>: When you need to work in a new domain but have access to data from a related domain, transfer 
     learning can be used to adapt the model from the related domain to the new one. </li>
+    <li>You do not have enough data to train a model from scratch. Starting with a pre-trained can allow you
+    to train the model for your task.</li>
+    <li>You do not have enough time to train a model from scratch. Because training models can take days or even
+    weeks, using a pre-trained model is much more faster.</li>
     </ul>
 
+- question: Explain the concept of transfer learning in deep learning. Provide a real-world example.
+  answer: >
+    Transfer learning in deep learning is a technique where a pre-trained neural network, typically on a large dataset, is 
+    used as a starting point to solve a different but related problem. The idea is to leverage the knowledge gained during 
+    training on the initial task and adapt it to the new task, often with less training data and computation.
+    For example, a pre-trained convolutional neural network (CNN) that has learned to recognize a wide range of 
+    objects in images can be fine-tuned for a specific image classification task, like classifying different species of flowers.
+    The pre-trained model already possesses features that are generally useful for recognizing edges, shapes, and textures, 
+    making it easier to adapt to the new task with a smaller dataset.
+
+- question: What is the vanishing gradient problem in deep learning, and how can it be mitigated?
+  answer: >
+    The vanishing gradient problem is a challenge in training deep neural networks, particularly in recurrent 
+    neural networks (RNNs) and deep feedforward networks. It occurs when gradients become extremely small during 
+    backpropagation, causing the network's weights to update very slowly or not at all. This can lead to slow convergence 
+    and difficulty in training deep models.
+    <br><br>
+    To mitigate the vanishing gradient problem, several techniques can be used:
+    <ul>
+      <li><strong>Activation Functions:</strong> Replace activation functions like sigmoid with alternatives such as 
+                ReLU (Rectified Linear Unit), which are less prone to vanishing gradients.</li>
+      <li><strong>Weight Initialization:</strong> Use appropriate weight initialization techniques like Xavier/Glorot 
+                initialization to ensure that weights have reasonable initial values.</li>
+      <li><strong>Batch Normalization:</strong> Apply batch normalization to normalize the inputs at each layer, helping 
+            gradients to flow more smoothly.</li>
+      <li><strong>Gated Architectures:</strong> Architectures like LSTMs and GRUs use gating mechanisms to control the flow of 
+            information, reducing the vanishing gradient problem in sequential data models.</li>
+      <li><strong>Gradient Clipping:</strong> Clip gradients during training to prevent them from becoming excessively large 
+          or small.</li>
+    </ul>
 
