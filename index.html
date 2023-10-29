@@ -22,36 +22,40 @@ title: Data Science Flashcards
 </head>
 
 <body>
+
+    <!-- Header Area-->
     <div class="header" id="myHeader">
-        <a class="header_link" href="#top"><h1>Data Science Flashcards</h1></a>
+        <a class="header_link" href="#top">
+            <h1>Data Science Flashcards</h1>
+            <p style="font-size: 20px;line-height: 28px;">Expand your knowledge on <b>Data Science</b> and <b>Machine Learning</b> through this comprehensive collection of flashcards. <span><a href="https://github.com/klaus78/Data-Science-Questions-Answers"><u>Contribute</u></a></span></p> 
+        </a>
     </div>
-
-    <div class="content">
-
-        <p style="font-size: 20px;line-height: 28px;">
-        Expand your knowledge on <b>Data Science</b> and <b>Machine Learning</b> 
-        through this comprehensive collection of flashcards. <span><a href="https://github.com/klaus78/Data-Science-Questions-Answers"><u>Contribute</u></a></span>
-        </p>     
-
+    
+    <!-- Left-Menu Area -->
+    <div class="left-menu">
         {% for file in site.data.sort %}
         {% for item in site.data.files.[file.topic] in %}
-
+        
         {% if item.h2 %}
         <button class="collapsible" onclick="showHideMenus()">
             <a href="#" style="pointer-events: none; cursor: default;">{{item.h2}}</a>
         </button>
         {% endif %}
-
+        
         {% if item.h3 %}
         <ul class="hideable_h3">
-            <li><a href="#{{item.h3}}">
-                    <h3>{{item.h3}}</h3>
-                </a></li>
+            <li>
+                <a href="#{{item.h3}}" class="menu-subs">{{item.h3}}</a>
+            </li>
         </ul>
         {% endif %}
-
+        
         {% endfor %}
         {% endfor %}
+    </div>
+    
+    <!-- Content Area -->
+    <div class="content">
 
         <ol>
 
@@ -110,8 +114,7 @@ title: Data Science Flashcards
             {% endfor %}
             {% endfor %}
         </ol>
-
-    </div>
+    </div>   
 
 </body>
 
