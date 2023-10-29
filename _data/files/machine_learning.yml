@@ -873,4 +873,32 @@
         <li> It does not perform well with large datasets because of high computational costs.</li>
         <li> The kernel must be chosen carefully and this can be tricky.</li>
       </ul>
-      
+
+- question: What is the difference between batch gradient descent and stochastic gradient descent?
+  answer: >
+       Batch gradient descent computes the gradient of the cost function with respect to the entire training dataset, <br> 
+       whereas stochastic gradient descent updates the model's parameters based on the gradient of the cost function with <br>
+       respect to only one training example at a time. Mini-batch gradient descent is a compromise between the two, <br>
+       using a subset of the training data.
+
+- question: What is time series data and what are the Characteristics and types of Time Series Data?
+  answer: >
+    Time series data is a series of data points collected or recorded at specific time intervals.
+    These data points are typically ordered chronologically and represent values or observations
+    at successive points in time. Time series data is prevalent in various fields, including finance,
+    economics, engineering, environmental science, and many others.
+ <br>Characteristics:
+     <ul>
+        <li> TimeOrder: Data points are arranged chronologically from past to present or from present to future.</li>
+   <li> SequentialDependence: The value of a data point at a particular time is dependent on values at previous times.</li>
+   </ul>
+  <br>Types:
+    <ul>
+        <li>  Univariate: Single variable measured over time (e.g., daily temperature readings).<li>
+    <li> Multivariate: Multiple variables measured over the same time periods (e.g., stock prices and trading volumes recorded hourly).</li>
+</ul>
+
+   - question: What is the difference between time series data and cross-sectional data?
+  answer: >
+       Time series data is collected over a period of time, with observations recorded sequentially at regular intervals (e.g., stock prices over days). Cross-sectional data is collected at a single point in time or over a very short period, capturing a snapshot of multiple variables at once (e.g., survey data collected from different individuals).
+   
