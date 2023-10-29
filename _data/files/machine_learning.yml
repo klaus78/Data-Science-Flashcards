@@ -40,7 +40,7 @@
     <li><b>Problem definition and domain knowledge</b>: understand what problem you want to solve and gain 
     domain knowledge related to that problem.
     </li>
-    <li><b>Data preparation</b>: gather, and clean the data (es. handling missing values and outliers) and perform feature engineering 
+    <li><b>Data preparation</b>: gather, clean the data (es. handling missing values and outliers) and perform feature engineering 
     (es. select features or create new ones to be used in a machine learning algorithm).</li>
     <li><b>Data splitting</b>: split the dataset into a training dataset and a test dataset. The machine learning model
     will be trained on the training dataset and validated on the test dataset.</li>
@@ -273,16 +273,16 @@
 
 - question: What is K-fold cross-validation?
   answer: >
-    <b>K-fold cross-validation</b> is a specific type of cross-validation where the dataset is split into <i>K</i> equal parts. 
+    <b>K-fold cross-validation</b> is a specific type of cross-validation where the dataset is split into <code>K</code> equal parts. 
     <br>The steps of <b>K-fold cross-validation</b> are:
     <ul> 
-    <li>split a dataset into <i>K</i> equal parts. Each part is called a fold.</li>
-    <li>take one fold <i>i</i> as the test set and take the remaining <i>(K-1)</i> folds as the training set.</li>
-    <li> Train your classification algorithm on the training set and evaluate its performance in the test set.</li> 
-    <li>Repeat the process for each fold. As a result, for each fold, we get an accuracy value and 
-    in total, we get <i>K</i> accuracy values.</li>
-    <li> The final accuracy value for your classification algorithm is given by the average of
-    the <i>K</i> accuracy values.</li>
+    <li>split a dataset into <code>K</code> equal parts. Each part is called a fold.</li>
+    <li>take one fold <code>i</code> as the test set and take the remaining <code>(K-1)</code> folds as the training set.</li>
+    <li>train your classification algorithm on the training set and evaluate its performance on the test set.</li> 
+    <li>repeat the process for each fold. As a result, for each fold, we get an accuracy value and 
+    in total, we get <code>K</code> accuracy values.</li>
+    <li>the final accuracy value for your classification algorithm is given by the average of
+    the <code>K</code> accuracy values.</li>
     </ul>
 
 - question: What matrix can you use to evaluate the performance of a classifier? How does an ideal matrix look like?
@@ -444,7 +444,7 @@
     with high recall captures more true positives but may produce more false positives.
 
 - question: > 
-    What metrics are more meaningful with class-balanced datasets and what works better 
+    What metrics are more meaningful with class-balanced datasets and which ones work better 
     for class-unbalanced datasets? 
   answer: >
     In a class-balanced dataset, the number of items in each class is approximately the same.
@@ -505,7 +505,7 @@
     are typically strongly unbalanced, with few cancer samples and many healthy samples.
     <br><br>
     Because of this, it is evident that accuracy cannot be used since it requires balanced datasets.
-    The typical metrics used for cancer detection are as follows:
+    Instead, the typical metrics used for cancer detection are as follows:
     <ul>
       <li><b>Sensitivity</b>: sensitivity measures the ability of the model to 
       correctly identify patients who have cancer among all the patients who have cancer.
@@ -561,7 +561,7 @@
   image: roc_curve.png
 
 - question: >
-    To evaluate the performance of a machine learning model, you can use metrics like accuracy, precision, recall, and F1-score.
+    To evaluate the performance of a machine learning model, you can use metrics like accuracy, precision, recall and F1-score.
     When to use what?
   answer: >
     The most common metrics that you can use for evaluating the performance of a machine learning model are accuracy, precision,
@@ -574,7 +574,7 @@
     If the false negative predictions are worse than the false positive, aim for higher recall.
     <br><br>
     <b>F1-score</b> is a combination of precision and recall. It is a good choice when you need to consider 
-    both false positives and false negatives. The F1 score is especially useful when you want a single metric 
+    both false positives and false negatives. The F1-score is especially useful when you want a single metric 
     that combines both precision and recall, and you are dealing with imbalanced datasets.
 
 - h3: Naive Bayes
@@ -619,7 +619,7 @@
 - question: How does the Naive Bayes perform with categorical variables?
   answer: > 
     It performs well with categorical variables since no assumption is made on
-    the data distribution. By contrast with numerical variables, a normal distribution
+    the data distribution. By contrast, with numerical variables, a normal distribution
     is assumed.
 
 - h3: Regression
@@ -632,9 +632,9 @@
   answer: >
     Some <b>drawbacks</b>s of a linear model are:
     <ul>
-      <li> The assumption of linearity of the model</li>
-      <li> It can't be used for count outcomes or binary outcomes</li>
-      <li> There are overfitting or underfitting problems that it can't solve</li>
+      <li> The assumption of linearity of the model.</li>
+      <li> It can't be used for count outcomes or binary outcomes.</li>
+      <li> There are overfitting or underfitting problems that it can't solve.</li>
     </ul>
 
 - question: What do you predict with linear regression?
@@ -642,13 +642,15 @@
 
 - question: What are the most common techniques used for computing the coefficients in linear regression?
   answer: >
-    The most common techniques used for computing the coefficients in linear regression are 
-    <br><br> - <b>Ordinary Least Squares</b> seek to minimize the sum of the squared residuals, i.e. the distance 
-    between the points and the regression line.
-    <br><br> - <b>Gradient descendent</b> works by inizializing randomly the coefficients. A learning rate is 
+    The most <b>common techniques</b> used for computing the coefficients in linear regression are
+    <ul> 
+    <li>The <b>Ordinary Least Squares</b> method aims to minimize the sum of the squared residuals, i.e. the distance 
+    between the points and the regression line.</li>
+    <li><b>Gradient descendent</b> works by inizializing randomly the coefficients. A learning rate is 
     used as a scale factor and the coefficients are updated in the direction of minimizing the error. 
     The process is repeated until a minimum sum squared error is achieved or no further improvement is 
-    possible.
+    possible.</li>
+    </ul>
 
 - question: What is logistic regression?
   answer: >
@@ -669,7 +671,7 @@
 - question: How can you turn logistic regression into a classifier?
   answer: >
     To turn logistic regression into a classifier you can use a threshold. If the 
-    the output of the logistic regression is above (below) the threshold, then the output
+    output of the logistic regression is above (below) the threshold, then the output
     can be classified as class zero (class one).
 
 - question: >
@@ -699,7 +701,7 @@
     variable(s)</li>
     <li>\(R^2\) = 0 indicates that no information variance of the target variable is explained by the independent
     variable(s)</li>
-    <li>\(R^2\) < 0 suggests that the independent variable(s) have no predictive power or maybe 
+    <li>\(R^2\) < 0 suggests that the independent variable(s) have no predictive power or could be 
     negatively correlated with the target variable.</li>
     </ul>
     <br><br>
