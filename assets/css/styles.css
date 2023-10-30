@@ -288,7 +288,7 @@ td {
 .content {
       position: absolute;
       height: 83%;
-      top: 17%;   /* same as the height of the header*/
+      top: 17%;   
       width: 82%;
       left: 18%;
       /* overflow-y: auto; */
@@ -321,19 +321,19 @@ td {
       cursor: pointer;
       transition: background-color 0.3s, transform 0.3s, color 0.02s; /* a smooth transition for background color, scale, and text color */
       z-index: 999; /* Set a high z-index value to ensure it's above other elements */
-    }
+}
     
-    /* Style the ion-icon inside the button */
-    #back-to-top ion-icon {
+/* Style the ion-icon inside the button */
+#back-to-top ion-icon {
       font-size: 25px; /* the icon size */
       margin: 0; /* Remove any margin */
-    }
+}
     
-    /* Style the button on hover */
-    #back-to-top:hover {
+/* Style the button on hover */
+#back-to-top:hover {
       background-color: #3f5af1; /* Change the background color to a lighter shade of green on hover */
       color: #fff; /* Change the text color to white on hover */
       transform: scale(1.075); /* a slight scale effect on hover */
-    }
-    
+}
+
 
