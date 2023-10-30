@@ -33,13 +33,13 @@ title: Data Science Flashcards
     <div class="left-menu">
         {% for file in site.data.sort %}
         {% for item in site.data.files.[file.topic] in %}
-
+        
         {% if item.h2 %}
         <button class="collapsible" onclick="showHideMenus()">
             <a href="#" style="pointer-events: none; cursor: default;">{{item.h2}}</a>
         </button>
         {% endif %}
-
+        
         {% if item.h3 %}
         <ul class="hideable_h3">
             <li>
@@ -47,14 +47,14 @@ title: Data Science Flashcards
             </li>
         </ul>
         {% endif %}
-
+        
         {% endfor %}
         {% endfor %}
     </div>
     
     <!-- Content Area -->
     <div class="content">
-
+        
         <ol>
 
             {% for file in site.data.sort %}
@@ -112,13 +112,13 @@ title: Data Science Flashcards
             {% endfor %}
             {% endfor %}
         </ol>
-
-        <button id="back-to-top" class="button" onclick="scrollToTop()">
-            <ion-icon name="arrow-up-outline"></ion-icon>
-        </button>
-
+        
     </div>
-    
+
+    <button id="back-to-top" class="button" onclick="scrollToTop()">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+
 </body>
 
 </html>
