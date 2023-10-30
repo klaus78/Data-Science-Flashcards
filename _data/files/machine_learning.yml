@@ -884,24 +884,32 @@
        respect to only one training example at a time. Mini-batch gradient descent is a compromise between the two, <br>
        using a subset of the training data.
 
-- question: What is time series data and what are the Characteristics and types of Time Series Data?
+- h3: Time Series
+  question: What is time series data and what are the characteristics and types of time series data?
   answer: >
-    Time series data is a series of data points collected or recorded at specific time intervals.
+    <b>Time series data</b> consists of a series of data points collected or recorded at specific time intervals.
     These data points are typically ordered chronologically and represent values or observations
-    at successive points in time. Time series data is prevalent in various fields, including finance,
+    at successive time points. Time series data is prevalent in various fields, including finance,
     economics, engineering, environmental science, and many others.
- <br>Characteristics:
-     <ul>
-        <li> TimeOrder: Data points are arranged chronologically from past to present or from present to future.</li>
-   <li> SequentialDependence: The value of a data point at a particular time is dependent on values at previous times.</li>
-   </ul>
-  <br>Types:
+    <br><br>Time series data exhibits the following characteristics:
     <ul>
-        <li>  Univariate: Single variable measured over time (e.g., daily temperature readings).<li>
-    <li> Multivariate: Multiple variables measured over the same time periods (e.g., stock prices and trading volumes recorded hourly).</li>
-</ul>
+        <li><b>time order</b>: Data points are arranged chronologically from the past to the present or from the present to the future.</li>
+        <li><b>sequential dependence</b>: The value of a data point at a particular time is dependent on values at previous time points.</li>
+    </ul>
+    <br>There are two main types of time series data:
+    <ul>
+        <li><b>univariate</b>: in this type, a single variable is measured over time (e.g., daily temperature readings).</li>
+        <li><b>multivariate</b>: this type involves the measurement of multiple variables measured over the same time periods 
+        (e.g., hourly recordings of stock prices and trading volumes).</li>
+    </ul>
 
-   - question: What is the difference between time series data and cross-sectional data?
+- question: What is the difference between time series data and cross-sectional data?
   answer: >
-       Time series data is collected over a period of time, with observations recorded sequentially at regular intervals (e.g., stock prices over days). Cross-sectional data is collected at a single point in time or over a very short period, capturing a snapshot of multiple variables at once (e.g., survey data collected from different individuals).
-   
+    The primary difference between time series data and cross-sectional data lies in how the data is collected and the 
+    nature of the observations:
+    <ul>
+    <li><b>Time series data</b> is collected over a period of time, with observations recorded sequentially at regular 
+    intervals (e.g., stock prices over days).</li> 
+    <li><b>Cross-sectional data</b> is collected at a single point in time or over a very short period, capturing a 
+    snapshot of multiple variables at once (e.g., survey data collected from different individuals).</li>
+    </ul>
