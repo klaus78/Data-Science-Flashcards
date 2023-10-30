@@ -40,7 +40,7 @@
     <li><b>Problem definition and domain knowledge</b>: understand what problem you want to solve and gain 
     domain knowledge related to that problem.
     </li>
-    <li><b>Data preparation</b>: gather, clean the data (es. handling missing values and outliers) and perform feature engineering 
+    <li><b>Data preparation</b>: gather, and clean the data (es. handling missing values and outliers) and perform feature engineering 
     (es. select features or create new ones to be used in a machine learning algorithm).</li>
     <li><b>Data splitting</b>: split the dataset into a training dataset and a test dataset. The machine learning model
     will be trained on the training dataset and validated on the test dataset.</li>
@@ -505,6 +505,7 @@
     are typically strongly unbalanced, with few cancer samples and many healthy samples.
     <br><br>
     Because of this, it is evident that accuracy cannot be used since it requires balanced datasets.
+
     Instead, the typical metrics used for cancer detection are as follows:
     <ul>
       <li><b>Sensitivity</b>: sensitivity measures the ability of the model to 
@@ -561,7 +562,7 @@
   image: roc_curve.png
 
 - question: >
-    To evaluate the performance of a machine learning model, you can use metrics like accuracy, precision, recall and F1-score.
+    To evaluate the performance of a machine learning model, you can use metrics like accuracy, precision, recall, and F1-score.
     When to use what?
   answer: >
     The most common metrics that you can use for evaluating the performance of a machine learning model are accuracy, precision,
@@ -574,7 +575,7 @@
     If the false negative predictions are worse than the false positive, aim for higher recall.
     <br><br>
     <b>F1-score</b> is a combination of precision and recall. It is a good choice when you need to consider 
-    both false positives and false negatives. The F1-score is especially useful when you want a single metric 
+    both false positives and false negatives. The F1 score is especially useful when you want a single metric 
     that combines both precision and recall, and you are dealing with imbalanced datasets.
 
 - h3: Naive Bayes
@@ -671,7 +672,7 @@
 - question: How can you turn logistic regression into a classifier?
   answer: >
     To turn logistic regression into a classifier you can use a threshold. If the 
-    output of the logistic regression is above (below) the threshold, then the output
+    the output of the logistic regression is above (below) the threshold, then the output
     can be classified as class zero (class one).
 
 - question: >
@@ -875,3 +876,40 @@
         <li> It does not perform well with large datasets because of high computational costs.</li>
         <li> The kernel must be chosen carefully and this can be tricky.</li>
       </ul>
+
+- question: What is the difference between batch gradient descent and stochastic gradient descent?
+  answer: >
+       Batch gradient descent computes the gradient of the cost function with respect to the entire training dataset, <br> 
+       whereas stochastic gradient descent updates the model's parameters based on the gradient of the cost function with <br>
+       respect to only one training example at a time. Mini-batch gradient descent is a compromise between the two, <br>
+       using a subset of the training data.
+
+- h3: Time Series
+  question: What is time series data and what are the characteristics and types of time series data?
+  answer: >
+    <b>Time series data</b> consists of a series of data points collected or recorded at specific time intervals.
+    These data points are typically ordered chronologically and represent values or observations
+    at successive time points. Time series data is prevalent in various fields, including finance,
+    economics, engineering, environmental science, and many others.
+    <br><br>Time series data exhibits the following characteristics:
+    <ul>
+        <li><b>time order</b>: Data points are arranged chronologically from the past to the present or from the present to the future.</li>
+        <li><b>sequential dependence</b>: The value of a data point at a particular time is dependent on values at previous time points.</li>
+    </ul>
+    <br>There are two main types of time series data:
+    <ul>
+        <li><b>univariate</b>: in this type, a single variable is measured over time (e.g., daily temperature readings).</li>
+        <li><b>multivariate</b>: this type involves the measurement of multiple variables measured over the same time periods 
+        (e.g., hourly recordings of stock prices and trading volumes).</li>
+    </ul>
+
+- question: What is the difference between time series data and cross-sectional data?
+  answer: >
+    The primary difference between time series data and cross-sectional data lies in how the data is collected and the 
+    nature of the observations:
+    <ul>
+    <li><b>Time series data</b> is collected over a period of time, with observations recorded sequentially at regular 
+    intervals (e.g., stock prices over days).</li> 
+    <li><b>Cross-sectional data</b> is collected at a single point in time or over a very short period, capturing a 
+    snapshot of multiple variables at once (e.g., survey data collected from different individuals).</li>
+    </ul>
