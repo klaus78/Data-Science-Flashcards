@@ -13,7 +13,8 @@
       border: none;
       text-align: left;
       outline: none;
-      font-size: 26px;
+      font-size: 24px;
+      font-weight: bold;
 }
 
 .active:not(a, .divQuestion),
@@ -36,9 +37,12 @@
 }
 
 .header {
-      padding: 8px;
+      position: fixed;
       text-align: center;
       background: #5b82d7;
+      width: 100%;
+      height: 14%;
+      padding-top: 1%; 
 }
 
 .header_link,
@@ -55,11 +59,6 @@ a:link:not(.header_link) {
 a:visited:not(.header_link) {
       color: #4265b3;
       text-decoration: none;
-}
-
-
-.content {
-      padding: 8px;
 }
 
 .sticky {
@@ -107,7 +106,6 @@ a:visited:not(.header_link) {
       vertical-align: text-top;
 }
 
-
 .divQuestion.active:after {
       content: '\0229D';
       /* arrow up symbol */
@@ -125,7 +123,6 @@ a:visited:not(.header_link) {
       display: none;
       border-left: 8px solid #5b82d7;
 }
-
 
 .divAnswer code {
       font-family: monospace;
@@ -165,19 +162,21 @@ h1 {
       font-size: 30px;
 }
 
-
-
 h2 {
+      padding: 20px 0 20px 20px;
       font-size: 24px;
 }
 
 h3 {
       font-size: 20px;
+      padding: 10px 0 10px 30px;
 }
 
 body {
       font-size: 18px;
       line-height: 26px;
+      margin-top: 0;
+      margin-left: 0;
 }
 
 button {
@@ -274,6 +273,37 @@ td {
 .true-negative {
       background-color: #ffa500;
 }
+
+/* CSS for Left-side Navigation */
+.left-menu { 
+      position: fixed; 
+      width: 16%; 
+      height: 80%; 
+      top: 18%;
+      background-color: #f2f2f2; 
+      overflow-y: auto; 
+  } 
+  
+/* Add this new style to align the content next to the menu */
+.content {
+      position: absolute;
+      height: 83%;
+      top: 17%;   
+      width: 82%;
+      left: 18%;
+      /* overflow-y: auto; */
+}
+
+  html, body {
+      height: 100%;
+      margin: 0;
+      /* padding: 0; */
+}
+
+.menu-subs {
+      font-size: 20px;
+}
+
 /* Additional CSS for the Back to Top button */
 #back-to-top {
       position: fixed;
@@ -291,17 +321,19 @@ td {
       cursor: pointer;
       transition: background-color 0.3s, transform 0.3s, color 0.02s; /* a smooth transition for background color, scale, and text color */
       z-index: 999; /* Set a high z-index value to ensure it's above other elements */
-    }
+}
     
-    /* Style the ion-icon inside the button */
-    #back-to-top ion-icon {
+/* Style the ion-icon inside the button */
+#back-to-top ion-icon {
       font-size: 25px; /* the icon size */
       margin: 0; /* Remove any margin */
-    }
+}
     
-    /* Style the button on hover */
-    #back-to-top:hover {
+/* Style the button on hover */
+#back-to-top:hover {
       background-color: #3f5af1; /* Change the background color to a lighter shade of green on hover */
       color: #fff; /* Change the text color to white on hover */
       transform: scale(1.075); /* a slight scale effect on hover */
-    }
+}
+
+
