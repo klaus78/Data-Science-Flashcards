@@ -37,16 +37,21 @@
 }
 
 .header {
-      position: fixed;
+      padding: 8px;
       text-align: center;
       background: #5b82d7;
+
+      position: fixed;
       width: 100%;
-      height: 14%;
-      padding-top: 1%; 
+      z-index: 10;
+
+      display: flex;
+      align-items: center;
 }
 
 .header_link,
 .header_link:visited {
+      margin: 0 auto;
       color: white;
       text-decoration: none;
 }
@@ -59,17 +64,6 @@ a:link:not(.header_link) {
 a:visited:not(.header_link) {
       color: #4265b3;
       text-decoration: none;
-}
-
-.sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-}
-
-.sticky+.content {
-      padding-top: 102px;
 }
 
 .divQuestion {
@@ -277,24 +271,15 @@ td {
 /* CSS for Left-side Navigation */
 .left-menu { 
       position: fixed; 
-      width: 16%; 
-      height: 80%; 
-      top: 18%;
+      width: 25%; 
+      height: 99%;
       background-color: #f2f2f2; 
       overflow-y: auto; 
-  } 
-  
-/* Add this new style to align the content next to the menu */
-.content {
-      position: absolute;
-      height: 83%;
-      top: 17%;   
-      width: 82%;
-      left: 18%;
-      /* overflow-y: auto; */
+      visibility: visible;
+      display: block;
 }
 
-  html, body {
+html, body {
       height: 100%;
       margin: 0;
       /* padding: 0; */

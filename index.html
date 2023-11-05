@@ -27,20 +27,14 @@ title: Data Science Flashcards
 
     <!-- Header Area-->
     <div class="header" id="myHeader">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="float: left; margin-left: 10px;">
+        <a href="javascript:void(0);" class="icon" onclick="showHideLeftMenu()" style="float: left; margin-left: 10px;">
             <i class="fa fa-bars"></i>
           </a>
-        <a class="header_link"><h1>Data Science Flashcards</h1>
-            <p style="font-size: 20px;line-height: 20px; text-align: center;">
-                Expand your knowledge on <b>Data Science</b> and <b>Machine Learning</b> through 
-                this comprehensive collection of flashcards. 
-                <span><a href="https://github.com/klaus78/Data-Science-Questions-Answers"><u>Contribute</u></a></span>
-            </p>
-        </a>
+        <a class="header_link"><h1>Data Science Flashcards</h1></a>
     </div>
 
     <!-- Left-Menu Area -->
-    <div class="left-menu">
+    <div class="left-menu" id="leftMenu">
         {% for file in site.data.sort %}
         {% for item in site.data.files.[file.topic] in %}
 
@@ -63,7 +57,12 @@ title: Data Science Flashcards
     </div>
     
     <!-- Content Area -->
-    <div class="content">
+    <div id="content" style="position: absolute; height: 99%;" >
+
+        <p style="font-size: 20px;line-height: 28px;">
+            Expand your knowledge on <b>Data Science</b> and <b>Machine Learning</b> 
+            through this comprehensive collection of flashcards. <span><a href="https://github.com/klaus78/Data-Science-Questions-Answers"><u>Contribute</u></a></span>
+        </p>
 
         <ol>
 

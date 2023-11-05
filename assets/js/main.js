@@ -2,19 +2,10 @@ window.onscroll = function () {
       handleWindowScroll();
 };
 
-function handleWindowScroll() {
-      // Get the header
-      var header = document.getElementById("myHeader");
-
-      // Get the offset position of the navbar
-      var sticky = header.offsetTop;
-
-      if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-      } else {
-            header.classList.remove("sticky");
-      }
-}
+window.onload = (event) => {
+      // adjust the vertical position of the left menu
+      positionElements();
+};
 
 function showHideAnswer() {
       var divQuestion = event.target;
@@ -24,7 +15,7 @@ function showHideAnswer() {
       while (divQuestion.className == '')
             divQuestion = divQuestion.parentElement;
 
-      divQuestion.classList.toggle("active")
+      divQuestion.classList.toggle("active");
 
       var divAnswer = divQuestion.parentElement.getElementsByClassName('divAnswer')[0];
 
@@ -69,10 +60,32 @@ function showHideElement(elem) {
       }
 }
 
+function showHideLeftMenu() {
+      var leftMenu = document.getElementById("leftMenu");
+     
+      if (!leftMenu.style.display || leftMenu.style.display === "block") {
+        leftMenu.style.display = "none";
+      } else {
+        leftMenu.style.display = "block";
+      }
+      
+      positionElements();
+}
+
+
 // Back To Top Button
 function scrollToTop() {
       window.scrollTo({
             top: 0,
             behavior: "smooth"
       });
+}
+
+function positionElements() {
+      const header = document.getElementById('myHeader');
+      const leftMenu = document.getElementById('leftMenu');
+      const content = document.getElementById('content');
+      leftMenu.style.marginTop = `${header.offsetHeight + 1}px`;
+      content.style.marginTop = leftMenu.style.marginTop;
+      content.style.marginLeft = `${leftMenu.offsetWidth + 15}px`;
 }
