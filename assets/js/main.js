@@ -87,5 +87,5 @@ function positionElements() {
       const content = document.getElementById('content');
       leftMenu.style.marginTop = `${header.offsetHeight + 1}px`;
       content.style.marginTop = leftMenu.style.marginTop;
-      content.style.marginLeft = `${leftMenu.offsetWidth + 10}px`;
+      //content.style.marginLeft = `${leftMenu.offsetWidth + 10}px`;
 }
