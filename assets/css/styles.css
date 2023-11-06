@@ -158,7 +158,7 @@ h1 {
 
 h2 {
       padding: 20px 0 20px 20px;
-      font-size: 24px;
+      font-size: 20px;
 }
 
 h3 {
@@ -270,7 +270,7 @@ td {
 /* CSS for Left-side Navigation */
 .left-menu { 
       position: fixed; 
-      width: 40%; 
+      width: 60%; 
       height: 99%;
       background-color: #f2f2f2; 
       overflow-y: auto; 
