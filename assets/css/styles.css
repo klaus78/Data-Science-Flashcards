@@ -271,18 +271,17 @@ td {
 /* CSS for Left-side Navigation */
 .left-menu { 
       position: fixed; 
-      width: 25%; 
+      width: 40%; 
       height: 99%;
       background-color: #f2f2f2; 
       overflow-y: auto; 
       visibility: visible;
-      display: block;
+      display: none;
 }
 
 html, body {
       height: 100%;
       margin: 0;
-      /* padding: 0; */
 }
 
 .menu-subs {

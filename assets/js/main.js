@@ -63,7 +63,7 @@ function showHideElement(elem) {
 function showHideLeftMenu() {
       var leftMenu = document.getElementById("leftMenu");
      
-      if (!leftMenu.style.display || leftMenu.style.display === "block") {
+      if (leftMenu.style.display === "block") {
         leftMenu.style.display = "none";
       } else {
         leftMenu.style.display = "block";
@@ -87,5 +87,5 @@ function positionElements() {
       const content = document.getElementById('content');
       leftMenu.style.marginTop = `${header.offsetHeight + 1}px`;
       content.style.marginTop = leftMenu.style.marginTop;
-      content.style.marginLeft = `${leftMenu.offsetWidth + 15}px`;
+      content.style.marginLeft = `${leftMenu.offsetWidth + 10}px`;
 }
