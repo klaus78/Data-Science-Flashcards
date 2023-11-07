@@ -1173,7 +1173,6 @@
 - question: >
     Create a dataframe from <code>{'a':['a','b','c']}</code> and convert the text feature to a
     numerical feature using the <code>OneHotEncoder</code> class of the <code>sklearn</code> library. 
-
   python: |
 
     import pandas as pd
@@ -1190,7 +1189,6 @@
 - question: >
     Create a dataframe from <code>{'a':[6,8,6, np.NaN]}</code> and replace the <code>NaN</code> value
     with the most frequent value using the <code>SimpleImputer</code> class of the <code>sklearn</code> library.
-
   python: |
 
     import pandas as pd
@@ -1206,7 +1204,6 @@
     Load the <code>california housing</code> dataset from sklearn and create a training and a test dataset.
     The test dataset must contains 20% of the total data points. Then train a linear regression with 
     the <code>Ridge</code> algorithm and print the score.
-
   python: |
 
     import numpy as np
@@ -1232,7 +1229,6 @@
     Load the <code>Iris</code> dataset from the <code>sklearn</code> library. 
     Then, train the <code>RandomForestClassifier</code> on it and finally evaluate the result with 
     the <code>cross_val_score</code> metric.
-
   python: |
 
     import numpy as np
@@ -1254,7 +1250,6 @@
 - question: >
     Suppose we have some actual results <code>y_act = [1,0,1,1,0]</code> and let <code>y_pred = [1,1,0,1,0]</code> be the 
     results predicted with a classifier. Evaluate the performance of that classifier using the ROC curve.
-
   python: |
 
     from sklearn.metrics import roc_curve
@@ -1273,7 +1268,6 @@
 - question: >
     Apply the random forest regressor to the california housing dataset. Then evaluate
     the model performance with the R-squared metric.
-
   python: |
 
     import numpy as np
@@ -1304,7 +1298,6 @@
     Write a Python script to perform a web scraping task. Visit a website, such as "https://example.com," and scrape 
     the titles and links of the top articles on the homepage. Use the requests library to fetch the HTML content and
     BeautifulSoup for parsing.
-
   python: |
    
     import requests
@@ -1323,7 +1316,6 @@
 - question: >
     Create a movie recommendation system using user ratings data. The goal is to recommend the top 3 movies for a specific 
     user based on their similarity to other users. For the solution you can use the <code>user_ratings.csv</code> dataset.
-
   python: |
 
     import pandas as pd
@@ -1348,7 +1340,6 @@
     Implement a Python script that simulates a basic multiplayer game. The game should involve multiple players, each with unique 
     attributes, and allow them to interact in a virtual world. Create classes and methods for character creation, movement, and 
     combat.
-
   python: |
     class Player:
     def __init__(self, name, health, attack):
@@ -1413,7 +1404,6 @@
 - question: >
     Apply Principal Component Analysis (PCA) to reduce the dimensionality of a dataset and then train a machine learning model on the reduced data. Compare the model's performance 
     before and after dimensionality reduction.
-    
   python: |
   
       import pandas as pd
@@ -1444,7 +1434,6 @@
 - question: >
     Load a dataset with imbalanced classes and implement strategies to deal with class imbalance, such as oversampling, undersampling, or using different evaluation 
     metrics like F1-score or AUC-ROC.
-
   python: |
   
       import pandas as pd
@@ -1468,7 +1457,6 @@
   question: >
     Implement a simple feedforward neural network using TensorFlow and Keras. Train it on a dataset to perform image 
     classification.
-  
   python: |
 
     # Here's a basic example of a feedforward neural network using TensorFlow and Keras for image classification:
