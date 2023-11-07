@@ -276,6 +276,7 @@ td {
       overflow-y: auto; 
       visibility: visible;
       display: none;
+      padding: 4px;
 }
 
 html, body {
