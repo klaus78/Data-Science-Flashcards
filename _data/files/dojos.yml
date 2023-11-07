@@ -667,7 +667,6 @@
     Generate two random arrays <code>x</code> and <code>y</code> with a normal distribution, each of 100 samples. Then create
     three plots: plot the histogram of <code>x</code>, the histogram of <code>y</code> and the scatter plot of <code>x</code> versus
     <code>y</code>.
-    
   python: |
 
     import matplotlib.pyplot as plt
@@ -681,7 +680,6 @@
 - question: >
     Generate a dataframe with three columns <code>a,b,c</code>, where each column contains 10 values with an uniform distribution. 
     Then plot the three columns in a bar chart.
-  
   python: |
 
     import pandas as pd
@@ -697,7 +695,6 @@
     Create the following dataset <code>
     df = pd.DataFrame({'age':[44, 67, np.nan], 'money':[500,700,550], 'color':['red', 'green','blue']})</code>. Replace the 
     <code>np.nan</code> value with the mean of the other ages. Then display a scatter plot where each point has the given color.
-
   python: |
 
     # create dataframe
@@ -711,7 +708,6 @@
     Create two arrays <code>x</code> and <code>y</code>, each containing 30 values that are normally distributed. Then
     display them in a scatter plot and include a vertical and a horizontal line that divide each axis into two
     equal parts.
-
   python: |
 
     import numpy as np
@@ -733,7 +729,6 @@
     Next, create two plots side by side that share the same y-axis, one for <code>x1</code> and one for <code>x2</code>. 
     Label the title of each plot as <b>x1 plot</b> and <b>x2 plot</b> respectively. 
     Lastly, give the entire figure a common title such as <b>My Plots</b>. 
-
   python: |
 
     fig, (ax1,ax2) = plt.subplots(nrows=1, ncols=2, sharey = True)
@@ -744,12 +739,11 @@
     ax2.plot(x2)
     ax2.set_title("x2 plot")
     # set common title
-    fig.suptitle("My plots")
+    fig.subtitle("My plots")
 
 - question: >
     Generate a random array with 10 rows and 3 columns. Display the values in a bar chart with the 
     <code>dark_background</code> style.
-
   python: |
 
     import matplotlib.pyplot as plt
@@ -766,7 +760,6 @@
 - question: >
     Generate a random dataset with 10 rows and 2 columns. Display the values in a scatter plot and limit the x-axis between
     0.2 and 0.6.
-
   python: |
 
     import matplotlib.pyplot as plt
@@ -782,7 +775,6 @@
     Given the two series <code>s1 = [3,4]</code> and <code>s2 = [5,7]</code>, create a dataframe
     and call the columns <code>c1</code> and <code>c2</code>. Finally display the dataframe in a 
     heatmap with title <code>My heatmap</code>.
-
   python: |
 
     import seaborn as sns
@@ -801,7 +793,6 @@
 - question: >
     Given some salaries of engineers <code>[70,72,76,82,69,75]</code> and workers <code>[50,52,56,32,49,55]</code>,
     create a dataframe with a column for each salary group and display the dataframe in a violin plot.
-
   python: |
 
     import matplotlib.pyplot as plt
@@ -838,7 +829,7 @@
 
 - question: >
    Visualize a horizontal bar chart for the top 10 countries with the highest population. Use sample data or fetch real data from a dataset. Label the countries on the y-axis and their populations on the x-axis.
-  python:  |
+  python: |
   
       import matplotlib.pyplot as plt
       import pandas as pd
@@ -857,7 +848,7 @@
 
 - question: >
    Visualize a 3D surface plot of a mathematical function, such as z = x^2 + y^2. Add labels to the axes and a title to the plot.
-  python:  |
+  python: |
 
       import matplotlib.pyplot as plt
       import numpy as np
