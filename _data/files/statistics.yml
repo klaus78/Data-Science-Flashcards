@@ -19,11 +19,16 @@
     meaning. For example the hotel rating stars from 1 to 5 have a numerical meaning: a five star hotel
     is better than a two star hotel.</li>
 
-- question: What is a random variable?
+- question: What is a random variable? Can you make an example?
   answer: > 
-    A <b>random variable</b> is a variable that assigns a numeric value to each possile outcome of a random phenomenon. 
-    Each numeric value is associated with a specific probability according to a certain density distribution.
-  
+    A <b>random variable</b> is a variable that associates a numerical value with each possible outcome of a random phenomenon. 
+    Each numerical value is linked to a specific probability according to a probability distribution
+    <br><br>
+    A classic <b>example of random variable</b> is the outcome of rolling a six-sided dice. In this case, the random variable
+    represents the possible results that can result from rolling the dice. Let <code>X</code> be the random variable
+    denoting the outcome of the dice. The random variable <code>X</code> can take on the values 1, 2, 3, 4, 5, 6, with each value
+    having an equal probability of 1/6. 
+
 - question: What is the difference between discrete and continuous random variables? Can you make a couple of examples of both?
   answer: >
     <b>Discrete random variables</b> have a finite number of possible 
