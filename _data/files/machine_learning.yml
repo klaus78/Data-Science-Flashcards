@@ -631,7 +631,7 @@
 
 - question: What are the drawbacks of a Linear Model?
   answer: >
-    Some <b>drawbacks</b>s of a linear model are:
+    Some <b>drawbacks</b> of a linear model are:
     <ul>
       <li> The assumption of linearity of the model.</li>
       <li> It can't be used for count outcomes or binary outcomes.</li>
