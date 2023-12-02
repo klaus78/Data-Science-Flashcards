@@ -312,10 +312,10 @@
     PCA is affected by scale. To get the optimal performance out of PCA, 
     which is a crucial first step?
   answer: >
-    <p>For optimal performance in Principal Component Analysis (PCA), a crucial first step is <strong>standardization or scaling of the data</strong>. This is essential because PCA is affected by the scale of the input features.</p>
+    For optimal performance in Principal Component Analysis (PCA), a crucial first step is <strong>standardization or scaling of the data</strong>. 
+    This is essential because PCA is affected by the scale of the input features.
     <p>Standardizing the data involves transforming each feature to have a mean of 0 and a standard deviation of 1. This ensures that all features are on the same scale and prevents features with larger variances from dominating the PCA results. Standardization is typically performed using the following formula for each feature:</p>
     <p><em>Standardized Value = (Original Value - Mean) / Standard Deviation</em></p>
-    
 
 - h3: Text processing
   question: What are some steps involved in the preprocessing of a text?

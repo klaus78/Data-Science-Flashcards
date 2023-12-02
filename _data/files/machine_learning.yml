@@ -189,8 +189,16 @@
 
 - question: What are the two main types of supervised learning algorithms?
   answer: >
-    Supervised machine learning algorithms are mainly classified 
-    into classification and regression.
+    The two main types of supervised learning algorithms are
+    <ul>
+      <li><b>Classification</b>: its goal is to predict the class label of new instances based on past observations. The algorithms
+      learn from a labeled dataset, where each instance has a class label assigned. Some examples of classification problems 
+      are spam detection and image recognition.
+      </li>
+      <li><b>Regression</b>: it deals with predicting a continuous numerical value rather than a categorical label. Some example of regression
+      problems include predicting house prices, stock prices or the temperature.
+      </li>
+    </ul>
 
 - question: Can you mention some supervised machine learning algorithms?
   answer: >
