@@ -18,7 +18,7 @@
     like regression, neural networks, nearest neighbors and decision trees.  By contrast, deep learning is
     based only on neural networks. These neural networks have a large number of hidden layers, which is what the 
     word <i>deep</i> refers to.</li>
-    <li><b>quantity of data</b>: while machine learning algorithms can also work with small datasets, deep learning requires
+    <li><b>Quantity of data</b>: while machine learning algorithms can also work with small datasets, deep learning requires
     very large datasets.</li>
     <li><b>Feature selection</b>: in machine learning, the user selects the most important features or creates new ones 
     for the task at hand. By contrast, in deep learning the feature selection is done automatically by the algorithms during
@@ -33,47 +33,44 @@
 - h3: Neural Networks
   question: What is an Artificial Neural Network (ANN)?
   answer: >
-    An artificial neural network is a computational model inspired by the structure and functioning of the human brain. It 
+    An <b>artificial neural network</b> is a computational model inspired by the structure and functioning of the human brain. It 
     consists of interconnected nodes (neurons) organized in layers, typically an input layer, one or more hidden layers, 
     and an output layer.
 
-- question: What is a Neuron in a Neural Network?
+- question: What are Neurons in a Neural Network?
   answer: >
-    Neurons (also called nodes) in a neural network are basic computational units that receive inputs, perform a weighted sum 
+    <b>Neurons (also called nodes)</b> in a neural network are basic computational units that receive inputs, perform a weighted sum 
     of those inputs, and apply an activation function to produce an output. They are the building blocks of the network.
 
 - question: What is a Shallow Neural Network and Deep Neural Network?
   answer: > 
-    A shallow neural network typically has only one or two hidden layers (layers between the input layer and the output layer), 
-    while a deep neural network has multiple hidden layers.
-    <br>
-    Deep networks are capable of learning complex representations, whereas shallow networks are less capable of capturing 
-    intricate patterns.
+    A <b>shallow neural network</b> is a neural network which typically has only one or two hidden layers 
+    (layers between the input layer and the output layer).
+    <br><br>
+    By contrast, <b>Deep neural networks</b> have multiple hidden layers. They are capable of learning complex representations, 
+    whereas shallow networks are less capable of capturing intricate patterns.
 
 - h3: Training and Optimization
-  question: How Are Weights Initialized in a Network?
+  question: How are weights initialized in a neural network?
   answer: >
-    There are two methods here:
+    There are several ways to initialize weights in a neural network. Here are some of the most common methods:
     <ul>
-      <li>Initialize the weights to zero</li> 
-      <li>Assign them randomly.</li>
-    </ul>
-    <b>Initializing all weights to 0:</b> This makes your model similar to a linear model. All the neurons and every
-    layer perform the same operation, giving the same output and making the deep net useless.
-    <br>
-    <b>Initializing all weights randomly:</b> Here, the weights are assigned randomly by initializing them very close
-    to 0. It gives better accuracy to the model since every neuron performs different computations. This is the
-    most commonly used method.
+      <li><b>Initialize the weights to zero</b>: this makes your model similar to a linear model. All the neurons and every
+    layer perform the same operation, giving the same output and making the deep net useless.</li> 
+      <li><b>Initializing all weights randomly</b>: the weights are assigned randomly by initializing them very close
+        to 0. It gives better accuracy to the model since every neuron performs different computations. This is the
+        most commonly used method</li>
+    </ul> 
 
 - question: What is an Activation Function?
   answer: >
-    An activation function introduces non-linearity into a neural network. It determines whether a neuron should be 
+    An <b>activation function</b> introduces non-linearity into a neural network. It determines whether a neuron should be 
     activated (output a non-zero value) or not. Common activation functions include ReLU (Rectified Linear Unit), 
     Sigmoid, and Tanh.
 
 - question: What is a Cost Function?
   answer: >
-    A cost function (or loss function) is a mathematical measure that quantifies how well a neural network's predictions match 
+    A <b>cost function (or loss function)</b> is a mathematical measure that quantifies how well a neural network's predictions match 
     the actual target values. The goal in training a neural network is to minimize this function.
     <br>
     It is primarily used for two purposes:
@@ -86,37 +83,38 @@
 
 - question: What is Backpropagation?
   answer: >
-    Backpropagation is a fundamental algorithm used to train neural networks. It involves iteratively adjusting the network's 
+    <b>Backpropagation</b> is a fundamental algorithm used to train neural networks. It involves iteratively adjusting the network's 
     weights and biases to minimize the difference between the predicted output and the actual target values.
 
 - h3: Types of Neural Networks
-  question: What are some types of deep neural networks? and what are they used for?
+  question: What are some types of neural networks? What are they used for?
   answer: > 
+    Some types of neural networks are:
     <ul>
-    <li><b>Convolutional Neural Networks (CNNs)</b>: Used for image and video analysis, object recognition, and computer 
-    vision tasks. </li>
-    <li><b>Recurrent Neural Networks (RNNs)</b>: Ideal for sequence data, like natural language processing, time series 
-    analysis, and speech recognition. </li>
-    <li><b>Long Short-Term Memory (LSTM) Networks</b>: A type of RNN that's effective at learning long-term dependencies in 
-    sequences. </li>
-    <li><b>Gated Recurrent Unit (GRU) Networks</b>: Another variant of RNNs, useful for many of the same tasks as LSTMs but 
-    with lower computational complexity. </li>
-    <li><b>Autoencoders</b>: Often employed for dimensionality reduction, feature learning, and data denoising. </li>
-    <li><b>Generative Adversarial Networks (GANs)</b>: Used for generating new data samples, image-to-image translation, and 
-    creating realistic images. </li>
-    <li><b>Transformers</b>: Ideal for natural language processing tasks, like machine translation, language understanding, 
-    and text generation. </li>
+    <li><b>Convolutional Neural Networks (CNNs)</b>: used for image and video analysis, object recognition, and computer 
+    vision tasks.</li>
+    <li><b>Recurrent Neural Networks (RNNs)</b>: ideal for sequence data, like natural language processing, time series 
+    analysis, and speech recognition.</li>
+    <li><b>Long Short-Term Memory (LSTM) Networks</b>: a type of RNN that's effective at learning long-term dependencies in 
+    sequences.</li>
+    <li><b>Gated Recurrent Unit (GRU) Networks</b>: another variant of RNNs, useful for many of the same tasks as LSTMs but 
+    with lower computational complexity.</li>
+    <li><b>Autoencoders</b>: often employed for dimensionality reduction, feature learning, and data denoising. </li>
+    <li><b>Generative Adversarial Networks (GANs)</b>: used for generating new data samples, image-to-image translation, and 
+    creating realistic images.</li>
+    <li><b>Transformers</b>: ideal for natural language processing tasks, like machine translation, language understanding, 
+    and text generation.</li>
     </ul>
     
 - question: What is a Convolutional Neural Network (CNN)?
   answer: >
-    CNNs are a type of neural network designed for processing grid-like data, such as images and video. They use convolutional 
-    layers to automatically learn features from the input data.
+    <b>Convolutional Neural Networks (CNN)</b> are a type of neural network designed for processing grid-like data, such as 
+    images and video. They use convolutional layers to automatically learn features from the input data.
 
 - question: What is a Recurrent Neural Network (RNN)?
   answer: >
-    RNNs are neural networks with loops that allow information to be passed from one step of the network to the next. They 
-    are commonly used for sequential data, like time series and natural language processing.
+    <b>Recurrent Neural Networks (RNN)</b> are neural networks with loops that allow information to be passed from one step 
+    of the network to the next. They are commonly used for sequential data, like time series and natural language processing.
 
 - question: What kind of neural networks works particularly well with image data?
   answer: >
@@ -164,9 +162,10 @@
 
 - question: Explain the concept of transfer learning in deep learning. Provide a real-world example.
   answer: >
-    Transfer learning in deep learning is a technique where a pre-trained neural network, typically on a large dataset, is 
+    <b>Transfer learning in deep learning</b> is a technique where a pre-trained neural network, typically on a large dataset, is 
     used as a starting point to solve a different but related problem. The idea is to leverage the knowledge gained during 
     training on the initial task and adapt it to the new task, often with less training data and computation.
+    <br><br>
     For example, a pre-trained convolutional neural network (CNN) that has learned to recognize a wide range of 
     objects in images can be fine-tuned for a specific image classification task, like classifying different species of flowers.
     The pre-trained model already possesses features that are generally useful for recognizing edges, shapes, and textures, 
@@ -174,22 +173,21 @@
 
 - question: What is the vanishing gradient problem in deep learning, and how can it be mitigated?
   answer: >
-    The vanishing gradient problem is a challenge in training deep neural networks, particularly in recurrent 
+    The <b>vanishing gradient problem</b> is a challenge in training deep neural networks, particularly in recurrent 
     neural networks (RNNs) and deep feedforward networks. It occurs when gradients become extremely small during 
     backpropagation, causing the network's weights to update very slowly or not at all. This can lead to slow convergence 
     and difficulty in training deep models.
     <br><br>
     To mitigate the vanishing gradient problem, several techniques can be used:
     <ul>
-      <li><strong>Activation Functions:</strong> Replace activation functions like sigmoid with alternatives such as 
+      <li><strong>Activation Functions:</strong> replace activation functions like sigmoid with alternatives such as 
                 ReLU (Rectified Linear Unit), which are less prone to vanishing gradients.</li>
-      <li><strong>Weight Initialization:</strong> Use appropriate weight initialization techniques like Xavier/Glorot 
+      <li><strong>Weight Initialization:</strong> use appropriate weight initialization techniques like Xavier/Glorot 
                 initialization to ensure that weights have reasonable initial values.</li>
-      <li><strong>Batch Normalization:</strong> Apply batch normalization to normalize the inputs at each layer, helping 
+      <li><strong>Batch Normalization:</strong> apply batch normalization to normalize the inputs at each layer, helping 
             gradients to flow more smoothly.</li>
-      <li><strong>Gated Architectures:</strong> Architectures like LSTMs and GRUs use gating mechanisms to control the flow of 
+      <li><strong>Gated Architectures:</strong> architectures like LSTMs and GRUs use gating mechanisms to control the flow of 
             information, reducing the vanishing gradient problem in sequential data models.</li>
-      <li><strong>Gradient Clipping:</strong> Clip gradients during training to prevent them from becoming excessively large 
+      <li><strong>Gradient Clipping:</strong> clip gradients during training to prevent them from becoming excessively large 
           or small.</li>
     </ul>
-
