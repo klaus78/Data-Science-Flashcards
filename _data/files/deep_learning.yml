@@ -191,3 +191,26 @@
       <li><strong>Gradient Clipping:</strong> clip gradients during training to prevent them from becoming excessively large 
           or small.</li>
     </ul>
+
+- h3: Large Language Models (LLMs)
+  question: What is a Large Language Model (LLM)?
+  answer: >
+    A <b>Large Language Model (LLM)</b> is a type of language model that can achieve advanced language understanding and generation.
+    LLMs are highly efficient at capturing the complex entity relationships in the text at hand and can generate the text using the 
+    semantic and syntactic of that particular language in which we wish to do so. They can perform tasks like text generation, 
+    machine translation, summary writing, image generation from texts, machine coding, chat-bots, or Conversational AI.
+    <br><br>
+    LLMs are artificial neural networks, mainly transformers, that are trained on massive amount of data and take millions of parameters.
+    As autoregressive language models, they work by taking an input text and repeatedly predicting the next token or word. 
+
+- question: How do Large Language Models (LLMs) work?
+  answer:
+
+- question: What is pre-training and fine-tuning in the context of LLMs?
+  answer:
+
+- question: How are LLMs evaluated?
+  answer:
+
+- question: What is the role of attention mechanisms in LLMs?
+  answer: 
