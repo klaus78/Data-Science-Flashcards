@@ -205,6 +205,19 @@
 
 - question: How do Large Language Models (LLMs) work?
   answer:
+    <b>Large Language Models (LLMs)</b> are a type of artificial intelligence model that are designed to understand and generate human language.
+    LLMs represent words as long lists of numbers, known as <i>word vectors</i>. For example, the word “cat” might be represented as a list of 
+    300 numbers.
+    <br><br>
+    Most LLMs are built on a neural network architecture known as the transformer. This architecture enables the model to identify relationships 
+    between words in a sentence, irrespective of their position in the sequence.
+    <br><br>
+    LLMs are trained using a technique known as <i>transfer learning</i>, where a pre-trained model is adapted to a specific task. 
+    They learn by taking an input text and repeatedly predicting the next word. This requires massive amounts of data and 
+    computational resources.
+    <br><br>
+    Once trained, LLMs can generate text by taking a series of words as input and predicting the most likely next word, over and 
+    over, until they’ve generated a full piece of text.
 
 - question: What is pre-training and fine-tuning in the context of LLMs?
   answer:

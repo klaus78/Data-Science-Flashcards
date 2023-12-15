@@ -878,7 +878,7 @@
   answer: >
     The two main data structures of Pandas are 
     <ul>
-      <li><b>Series</b>: it is given by a one-dimensional arrays and an associated array of labels, called indices. Each element
+      <li><b>Series</b>: it is given by a one-dimensional array and an associated array of labels, called indices. Each element
       in the array has a respective index.</li>  
       <li><b>Dataframe</b>: it is a tabular data structure with rows and columns that behind the scenes 
       is a collection of <i>Series</i>.</li>
@@ -1171,10 +1171,7 @@
     from sklearn.compose import ColumnTransformer
     df = pd.DataFrame({'a':['a','b','c']})
     one_hot = OneHotEncoder()
-    transformer = ColumnTransformer([('one_hot',
-                                      one_hot,
-                                      ['a'] )],
-                                      remainder='passthrough')
+    transformer = ColumnTransformer([('one_hot', one_hot, ['a'] )], remainder='passthrough')
     transformed_df = pd.DataFrame(transformer.fit_transform(df))
 
 - question: >
