@@ -205,7 +205,7 @@
 
 - question: How do Large Language Models (LLMs) work?
   answer:
-    <b>Large Language Models (LLMs)</b> are a type of artificial intelligence model that are designed to understand and generate human language.
+    <b>Large Language Models (LLMs)</b> are a type of artificial intelligence model that is designed to understand and generate human language.
     LLMs represent words as long lists of numbers, known as <i>word vectors</i>. For example, the word “cat” might be represented as a list of 
     300 numbers.
     <br><br>
@@ -219,8 +219,23 @@
     Once trained, LLMs can generate text by taking a series of words as input and predicting the most likely next word, over and 
     over, until they’ve generated a full piece of text.
 
-- question: What is pre-training and fine-tuning in the context of LLMs?
-  answer:
+- question: What is pre-training and fine-tuning in the context of Large Language Models (LLMs)?
+  answer: >
+    <b>Pre-training</b> and <b>fine-tuning</b> are two key stages in the training of Large Language Models (LLMs):
+    <ul>
+      <li><b>Pre-training</b>: this is the initial stage involving the training of the model on a large and diverse 
+      dataset that contains vast amounts of text. The model learns to predict the next
+      word in a given sentence or sequence, developing a profound understanding of grammar, context and semantics.</li>
+      <li><b>Fine-tuning</b>: after the pre-training phase on a general text dataset, the model is fine-tuned, or in
+      simple words, trained to perform a specific task such as sentiment analysis, translation, text summarization and so on.
+      Fine-tuning involves updating the weights of a pre-trained language model on a new task and dataset.
+      </li>
+    </ul>
+    <br>
+    The division of training into pre-training and fine-tuning is a form of transfer learning. The idea is that the model, having
+    learned a broad understanding of language during pre-training, can then be fine-tuned on specific tasks with less computational power.
+    This approach is efficient, especially when dealing with limited task-specific datasets, as the model can transfer its knowledge
+    from the pre-training phase to the task at hand. 
 
 - question: How are LLMs evaluated?
   answer:
