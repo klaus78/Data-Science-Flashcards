@@ -237,8 +237,22 @@
     This approach is efficient, especially when dealing with limited task-specific datasets, as the model can transfer its knowledge
     from the pre-training phase to the task at hand. 
 
-- question: How are LLMs evaluated?
-  answer:
+- question: How are Large Language Models (LLMs) evaluated?
+  answer: >
+    <b>Large Language Models (LLMs)</b> are evaluated based on the ability to generate accurate and relevant responses. 
+    Here are some common methods that are used to measure the performance of LLMs.
+    <ul>
+      <li><b>Controlled Generation Tasks</b>: These tasks assess the model’s ability to generate content under specific constraints. 
+      For example, a study found that LLMs often struggle with meeting fine-grained hard constraints.</li>
+      <li><b>Zero-Shot Classification Tasks</b>: In these tasks, the model is evaluated on its ability to correctly classify inputs 
+      without having seen any labeled examples during training. This method is popular for evaluating LLMs as they have been shown 
+      to learn capabilities during training without explicitly being shown labeled examples.</li>
+      <li><b>Comparative Evaluation</b>: This involves comparing the performance of large models against smaller, fine-tuned models. 
+      The comparison can reveal whether large models fall behind, are comparable, or exceed the ability of smaller models.</li>
+      <li><b>Use of Evaluation Metrics</b>: Certain metrics like Sentence-BERT (SBERT), BS-F1, and Universal Sentence Encoder (USE) can be 
+      used with confidence when evaluating the efficacy of LLMs, particularly in generative tasks like summarization where machine/human 
+      comparisons are appropriate.</li>
+    </ul> 
 
 - question: What is the role of attention mechanisms in LLMs?
-  answer: 
+  
