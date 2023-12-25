@@ -34,7 +34,6 @@ title: Data Science Flashcards
     </div>
 
     
-    
     <!-- Content Area -->
     <div id="content" style="position: absolute; height: 99%; padding: 8px;" >
 
@@ -46,58 +45,58 @@ title: Data Science Flashcards
         <ol>
 
             {% for file in site.data.sort %}
-            {% for item in site.data.files.[file.topic] in %}
+                {% for item in site.data.files.[file.topic] in %}
 
-            {% if item.h2 %}
-            <h2 id="{{item.h2}}" style="margin-top: 8px;margin-bottom: 4px; background-color: aliceblue;">{{item.h2}}
-            </h2>
-            {% unless item.h3 %}
-            {% endunless %}
-            {% endif %}
+                {% if item.h2 %}
+                <h2 id="{{item.h2}}" style="margin-top: 8px;margin-bottom: 4px; background-color: aliceblue;">{{item.h2}}
+                </h2>
+                {% unless item.h3 %}
+                {% endunless %}
+                {% endif %}
 
-            {% if item.h3 %}
-            <h3 id="{{item.h3}}" style="margin-top: 8px;margin-bottom: 4px;">{{item.h3}}</h3>
-            {% endif %}
+                {% if item.h3 %}
+                <h3 id="{{item.h3}}" style="margin-top: 8px;margin-bottom: 4px;">{{item.h3}}</h3>
+                {% endif %}
 
 
-            <li>
+                <li>
 
-                <div class="divQuestion" onclick="showHideAnswer()">
-                    {{item.question}}
-                </div>
+                    <div class="divQuestion" onclick="showHideAnswer()">
+                        {{item.question}}
+                    </div>
 
-                {% if item.answer %}
-                <div class="divAnswer">
-                    {{item.answer}}
+                    {% if item.answer %}
+                    <div class="divAnswer">
+                        {{item.answer}}
 
-                    {% if item.image %}
-                    <br>
-                    <img src="./assets/images/{{item.image}}" alt="not found">
+                        {% if item.image %}
+                        <br>
+                        <img src="./assets/images/{{item.image}}" alt="not found">
+                        {% endif %}
+
+                    </div>
                     {% endif %}
 
-                </div>
-                {% endif %}
+
+                    {% if item.python %}
+                    <div class="divCode">
+                        {% highlight python %}
+                        {{item.python}}
+                        {% endhighlight %}
+                    </div>
+                    {% endif %}
+
+                    {% if item.sql %}
+                    <div class="divCode">
+                        {% highlight sql %}
+                        {{item.sql}}
+                        {% endhighlight %}
+                    </div>
+                    {% endif %}
 
 
-                {% if item.python %}
-                <div class="divCode">
-                    {% highlight python %}
-                    {{item.python}}
-                    {% endhighlight %}
-                </div>
-                {% endif %}
-
-                {% if item.sql %}
-                <div class="divCode">
-                    {% highlight sql %}
-                    {{item.sql}}
-                    {% endhighlight %}
-                </div>
-                {% endif %}
-
-
-            </li>
-            {% endfor %}
+                </li>
+                {% endfor %}
             {% endfor %}
         </ol>
 
@@ -110,23 +109,23 @@ title: Data Science Flashcards
     <!-- Left-Menu Area -->
     <div class="left-menu" id="leftMenu">
         {% for file in site.data.sort %}
-        {% for item in site.data.files.[file.topic] in %}
+            {% for item in site.data.files.[file.topic] in %}
 
-        {% if item.h2 %}
-        <button class="collapsible" onclick="showHideMenus()">
-            <a href="#" style="pointer-events: none; cursor: default;">{{item.h2}}</a>
-        </button>
-        {% endif %}
+            {% if item.h2 %}
+            <button class="collapsible" onclick="showHideMenus()">
+                <a href="#" style="pointer-events: none; cursor: default;">{{item.h2}}</a>
+            </button>
+            {% endif %}
 
-        {% if item.h3 %}
-        <ul class="hideable_h3">
-            <li>
-                <a href="#{{item.h3}}" class="menu-subs">{{item.h3}}</a>
-            </li>
-        </ul>
-        {% endif %}
+            {% if item.h3 %}
+            <ul class="hideable_h3">
+                <li>
+                    <a href="#{{item.h3}}" class="menu-subs">{{item.h3}}</a>
+                </li>
+            </ul>
+            {% endif %}
 
-        {% endfor %}
+            {% endfor %}
         {% endfor %}
     </div>
 </body>

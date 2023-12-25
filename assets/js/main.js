@@ -1,11 +1,12 @@
-window.onscroll = function () {
-      handleWindowScroll();
-};
-
 window.onload = (event) => {
       // adjust the vertical position of the left menu
       positionElements();
 };
+
+window.onresize = function() {
+      positionElements();
+}
+
 
 function showHideAnswer() {
       var divQuestion = event.target;
@@ -68,8 +69,6 @@ function showHideLeftMenu() {
       } else {
         leftMenu.style.display = "block";
       }
-      
-      positionElements();
 }
 
 
@@ -86,6 +85,7 @@ function positionElements() {
       const leftMenu = document.getElementById('leftMenu');
       const content = document.getElementById('content');
       leftMenu.style.marginTop = `${header.offsetHeight + 1}px`;
+      leftMenu.style.height = `${window.innerHeight - header.offsetHeight - 1}px` 
       content.style.marginTop = leftMenu.style.marginTop;
-      //content.style.marginLeft = `${leftMenu.offsetWidth + 10}px`;
+      content.style.height = leftMenu.style.height;
 }
