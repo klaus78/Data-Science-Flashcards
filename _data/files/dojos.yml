@@ -1287,7 +1287,7 @@
     # you should get 0.8049
     
 - question: >
-    Write a Python script to perform a web scraping task. Visit a website, such as "https://example.com," and scrape 
+    Write a Python script to perform a web scraping task. Visit a website, such as "https://example.com" and scrape 
     the titles and links of the top articles on the homepage. Use the requests library to fetch the HTML content and
     BeautifulSoup for parsing.
   python: |
@@ -1335,17 +1335,18 @@
   python: |
     class Player:
     def __init__(self, name, health, attack):
-        self.name = name
-        self.health = health
-        self.attack = attack
+      self.name = name
+      self.health = health
+      self.attack = attack
 
     def move(self, direction):
-        # Implement movement logic
-        pass
+      # Implement movement logic
+      pass
 
     def attack_player(self, target_player):
-        # Implement combat logic
-        pass
+      # Implement combat logic
+      pass
+
     # Create multiple player objects
     player1 = Player("Alice", 100, 20)
     player2 = Player("Bob", 120, 15)
@@ -1355,31 +1356,32 @@
     player2.attack_player(player1)
 
 - question: >
-    Create a DataFrame with sample data where you have features ('X1', 'X2', 'X3') and a target column ('y'). Split the data 
-    into training and test sets using a 70/30 split ratio.
+    Create a DataFrame with sample data where you have features <code>('X1', 'X2', 'X3')</code> and a 
+    target column <code>('y')</code>. Split the data into training and test sets using a 70/30 split ratio.
   python: |
   
       import pandas as pd
       from sklearn.model_selection import train_test_split
       # create a dataframe with sample data
-      data = {'X1':[1,2,3,4,5,6,7,8,9,10], 'X2':[11,12,13,14,15,16,17,18,19,20],
-              'X3':[21,22,23,24,25,26,27,28,29,30], 'y':[31,32,33,34,35,36,37,38,39,40]}
+      data = {'X1':[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'X2':[11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+              'X3':[21, 22, 23, 24, 25, 26, 27, 28, 29, 30], 'y':[31, 32, 33, 34, 35, 36, 37, 38, 39, 40]}
       df = pd.DataFrame(data) 
       # split the data into training and test sets
       X = df.drop('y', axis=1)
       y = df['y']
-      X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+      X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
 - question: >
-    Implement k-fold cross-validation on a dataset and use it to train and evaluate a machine learning model. Print the cross-validation scores and metrics.
+    Implement k-fold cross-validation on a dataset and use it to train and evaluate a machine learning model. 
+    Print the cross-validation scores and metrics.
   python: |
   
       import pandas as pd
       from sklearn.model_selection import cross_val_score
       from sklearn.linear_model import LinearRegression
       # create a dataframe with sample data
-      data = {'X1':[1,2,3,4,5,6,7,8,9,10], 'X2':[11,12,13,14,15,16,17,18,19,20],
-              'X3':[21,22,23,24,25,26,27,28,29,30], 'y':[31,32,33,34,35,36,37,38,39,40]}
+      data = {'X1':[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'X2':[11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+              'X3':[21, 22, 23, 24, 25, 26, 27, 28, 29, 30], 'y':[31, 32, 33, 34, 35, 36, 37, 38, 39, 40]}
       df = pd.DataFrame(data) 
       # split the data into training and test sets
       X = df.drop('y', axis=1)
