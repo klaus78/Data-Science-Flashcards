@@ -977,7 +977,7 @@
 
   python: |
 
-    pd.cut([3,4,13,14,23,24],bins=[0,5,15,25], labels=['Baby','Child','Young'])
+    pd.cut([3, 4, 13, 14, 23, 24], bins=[0, 5, 15, 25], labels=['Baby', 'Child', 'Young'])
 
 - question: >
     Open a csv file, show the first and last two rows, show the number of rows and columns and show the column names.
@@ -1415,7 +1415,7 @@
       # split the data into training and test sets
       X = df.drop('y', axis=1)
       y = df['y']
-      X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+      X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
       # apply PCA
       pca = PCA(n_components=2)
       X_train_pca = pca.fit_transform(X_train)
@@ -1441,7 +1441,7 @@
       # create a dataset with imbalanced classes
       X, y = make_classification(n_samples=1000, n_classes=2, weights=[0.99, 0.01], random_state=1)
       # split the data into training and test sets
-      X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+      X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
       # train a logistic regression model
       model = LogisticRegression()
       model.fit(X_train, y_train)
