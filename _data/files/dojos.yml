@@ -1353,9 +1353,9 @@
     player1 = Player("Alice", 100, 20)
     player2 = Player("Bob", 120, 15)
 
-# Simulate player interactions, movement, and combat
-player1.move("north")
-player2.attack_player(player1)
+    # Simulate player interactions, movement, and combat
+    player1.move("north")
+    player2.attack_player(player1)
 
 
 - question: >
