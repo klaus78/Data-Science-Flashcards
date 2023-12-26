@@ -1174,7 +1174,7 @@
     from sklearn.compose import ColumnTransformer
     df = pd.DataFrame({'a':['a', 'b', 'c']})
     one_hot = OneHotEncoder()
-    transformer = ColumnTransformer([('one_hot', one_hot, ['a'])], remainder='passthrough')
+    transformer = ColumnTransformer( [ ('one_hot', one_hot, ['a']) ], remainder='passthrough')
     fitted = transformer.fit_transform(df)
     transformed_df = pd.DataFrame(fitted)
 
@@ -1187,9 +1187,9 @@
     import numpy as np
     from sklearn.impute import SimpleImputer
     from sklearn.compose import ColumnTransformer
-    my_imputer = SimpleImputer(strategy="most_frequent")
+    my_imputer = SimpleImputer(strategy = "most_frequent")
     df = pd.DataFrame({'a':[6, 8, 6, np.NaN]})
-    imputer = ColumnTransformer([('imp', my_imputer, ['a'])])
+    imputer = ColumnTransformer( [ ('imp', my_imputer, ['a']) ] )
     fitted = imputer.fit_transform(df)
     df_filled = pd.DataFrame(fitted)
 
@@ -1324,7 +1324,7 @@
     # Recommend top 3 movies for a specific user (e.g., user 123)
     user_id = 123
     similar_users = list( enumerate( user_similarity[user_id] ) )
-    similar_users.sort(key=lambda x: x[1], reverse=True)
+    similar_users.sort(key = lambda x: x[1], reverse=True)
 
     # Extract and print the top 3 movie recommendations
     top_movie_ids = [user[0] for user in similar_users[1:4]]
@@ -1353,9 +1353,10 @@
     player1 = Player("Alice", 100, 20)
     player2 = Player("Bob", 120, 15)
 
-    # Simulate player interactions, movement, and combat
-    player1.move("north")
-    player2.attack_player(player1)
+# Simulate player interactions, movement, and combat
+player1.move("north")
+player2.attack_player(player1)
+
 
 - question: >
     Create a DataFrame with sample data where you have features <code>('X1', 'X2', 'X3')</code> and a 
