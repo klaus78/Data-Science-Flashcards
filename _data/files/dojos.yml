@@ -1028,9 +1028,9 @@
   python: |
     
     import pandas as pd
-    data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
-            'Role':['Tecnician', 'Programmer','Student',np.nan],
-            'Salary':[46000,57000,8000,120000]}
+    data = {'Name':['Jeff', 'Paul', 'Roger', 'George'], 'Age':[48, 26, 17, 64],
+            'Role':['Tecnician', 'Programmer', 'Student', np.nan],
+            'Salary':[46000, 57000, 8000, 120000]}
     df = pd.DataFrame(data) 
     # show all columns of row 2
     df.loc[2,:]
