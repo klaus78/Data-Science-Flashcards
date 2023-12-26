@@ -1079,13 +1079,14 @@
     # ['child', 'child', 'child', 'young', 'young', 'adult', 'adult']  
 
 - question: >
-    Given a dataset <code>'age': [35, 40, 45, 56, 22, 19], 'salary': [32, 43, 56, 75, 18, 16]</code>, divide the salary 
+    Given a dataset <code>'age': [35, 40, 45, 56, 22, 19]</code>, <code>'salary': [32, 43, 56, 75, 18, 16]</code>, divide the salary 
     into three bins: poor (0-20), medium (20-45), rich (>45). Then find the average age for the poor, medium and 
     rich bins.
   python: |
 
     # create the dataset
-    df = pd.DataFrame({'age': [35, 40, 45, 56, 22, 19], 'salary': [32, 43, 56, 75, 18, 16]})
+    df = pd.DataFrame({'age': [35, 40, 45, 56, 22, 19], 
+                       'salary': [32, 43, 56, 75, 18, 16]})
     # define salary bins
     mybins = [0, 20, 45, 100]
     # define a label for each bin
