@@ -1085,8 +1085,7 @@
   python: |
 
     # create the dataset
-    df = pd.DataFrame({'age': [35, 40, 45, 56, 22, 19], 
-                       'salary': [32, 43, 56, 75, 18, 16]})
+    df = pd.DataFrame({'age': [35, 40, 45, 56, 22, 19], 'salary': [32, 43, 56, 75, 18, 16]})
     # define salary bins
     mybins = [0, 20, 45, 100]
     # define a label for each bin
@@ -1094,7 +1093,7 @@
     # create a new column 'salary_bin'
     df['salary_bin'] = pd.cut(df.salary, bins = mybins, labels = mylabels)
     # create a pivot table with 
-    df.pivot_table(values='age',index='salary_bin')
+    df.pivot_table(values='age', index='salary_bin')
 
 
 - question: >
