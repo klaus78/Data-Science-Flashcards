@@ -1055,7 +1055,7 @@
 
       # Lets create a dataframe that has a column Age where one value is null
       pd.DataFrame(data)
-      data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[np.nan,26,17,64]}
+      data = {'Name':['Jeff', 'Paul', 'Roger', 'George'], 'Age':[np.nan, 26, 17, 64]}
       df = pd.DataFrame(data)
       # let's find the average age
       mean_age = df.Age.mean()
@@ -1064,14 +1064,14 @@
 
 
 - question: >
-    Given a list of ages <code>[3,7,14,18,20,25,29]</code>, divide the ages into three bins: child (0-14), 
+    Given a list of ages <code>[3, 7, 14, 18, 20, 25, 29]</code>, divide the ages into three bins: child (0-14), 
     young (14-21) and adult (> 21).
   python: |
 
     # define a list of ages
-    ages = [3,7,14,18,20,25,29]
+    ages = [3, 7, 14, 18, 20, 25, 29]
     # define the bins (0-14), (14-21), (21-100)
-    mybins = [0,14,21,100]
+    mybins = [0, 14, 21, 100]
     # each bin is assigned a label
     mylabels = ['child', 'young', 'adult']
     res = pd.cut(ages, bins = mybins, labels = mylabels)
@@ -1079,16 +1079,17 @@
     # ['child', 'child', 'child', 'young', 'young', 'adult', 'adult']  
 
 - question: >
-    Given a dataset <code>'age':[35,40,45,56,22,19], 'salary':[32,43,56,75,18,16]</code>, divide the salary into three bins: 
-    poor (0-20), medium(20-45), rich(>45). Then find the average age for the poor, medium and rich bins.
+    Given a dataset <code>'age':[35, 40, 45, 56, 22, 19], 'salary':[32, 43, 56, 75, 18, 16]</code>, divide the salary 
+    into three bins: poor (0-20), medium(20-45), rich(>45). Then find the average age for the poor, medium and 
+    rich bins.
   python: |
 
     # create the dataset
-    df = pd.DataFrame({'age':[35,40,45,56,22,19], 'salary':[32,43,56,75,18,16]})
+    df = pd.DataFrame({'age':[35, 40, 45, 56, 22, 19], 'salary':[32, 43, 56, 75, 18, 16]})
     # define salary bins
-    mybins = [0,20,45,100]
+    mybins = [0, 20, 45, 100]
     # define a label for each bin
-    mylabels = ['poor','medium','rich']
+    mylabels = ['poor', 'medium', 'rich']
     # create a new column 'salary_bin'
     df['salary_bin'] = pd.cut(df.salary, bins = mybins, labels = mylabels)
     # create a pivot table with 
@@ -1096,24 +1097,26 @@
 
 
 - question: >
-    Create a DataFrame from a dictionary where each key represents a column name and the corresponding value is a list of values for that column. Display the first few rows of the DataFrame.
+    Create a DataFrame from a dictionary where each key represents a column name and the corresponding value 
+    is a list of values for that column. Display the first few rows of the DataFrame.
   python: |
   
       import pandas as pd
-      data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
-              'Role':['Tecnician', 'Programmer','Student','Manager'],
-              'Salary':[46000,57000,8000,120000]}
+      data = {'Name':['Jeff', 'Paul', 'Roger', 'George'], 'Age':[48, 26, 17, 64],
+              'Role':['Tecnician', 'Programmer', 'Student', 'Manager'],
+              'Salary':[46000, 57000, 8000, 120000]}
       df = pd.DataFrame(data) 
       df.head()
 
 - question: >
-    Filter a DataFrame to show only rows that meet specific conditions. For example, display rows where a certain column's value is greater than a particular threshold.
+    Filter a DataFrame to show only rows that meet specific conditions. For example, display rows where a certain column's 
+    value is greater than a particular threshold.
   python: |
   
       import pandas as pd
-      data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
-              'Role':['Tecnician', 'Programmer','Student','Manager'],
-              'Salary':[46000,57000,8000,120000]}
+      data = {'Name':['Jeff', 'Paul', 'Roger', 'George'], 'Age':[48, 26, 17, 64],
+              'Role':['Tecnician', 'Programmer', 'Student', 'Manager'],
+              'Salary':[46000, 57000, 8000, 120000]}
       df = pd.DataFrame(data) 
       # show only rows where salary is greater than 50000
       df[df['Salary'] > 50000]
@@ -1123,9 +1126,9 @@
   python: |
   
       import pandas as pd
-      data = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
-              'Role':['Tecnician', 'Programmer','Student','Manager'],
-              'Salary':[46000,57000,8000,120000]}
+      data = {'Name':['Jeff', 'Paul', 'Roger', 'George'], 'Age':[48, 26, 17, 64],
+              'Role':['Tecnician', 'Programmer', 'Student', 'Manager'],
+              'Salary':[46000, 57000, 8000, 120000]}
       df = pd.DataFrame(data) 
       # reshape the dataframe
       df.pivot_table(values='Age',index='Role')
@@ -1135,12 +1138,12 @@
   python: |
   
       import pandas as pd
-      data1 = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
-              'Role':['Tecnician', 'Programmer','Student','Manager'],
+      data1 = {'Name':['Jeff', 'Paul', 'Roger', 'George'], 'Age':[48, 26, 17, 64],
+              'Role':['Tecnician', 'Programmer', 'Student', 'Manager'],
               'Salary':[46000,57000,8000,120000]}
-      data2 = {'Name':['Jeff','Paul','Roger','George'], 'Age':[48,26,17,64],
-              'Role':['Tecnician', 'Programmer','Student','Manager'],
-              'Salary':[46000,57000,8000,120000]}
+      data2 = {'Name':['Jeff', 'Paul', 'Roger', 'George'], 'Age':[48, 26, 17, 64],
+              'Role':['Tecnician', 'Programmer', 'Student', 'Manager'],
+              'Salary':[46000, 57000, 8000, 120000]}
       df1 = pd.DataFrame(data1) 
       df2 = pd.DataFrame(data2) 
       # merge the two dataframes
@@ -1148,7 +1151,7 @@
   
 - h3: Machine Learning Dojos
   question: >
-    Create a dataframe from <code>{'a': [2,4,6], 'b': [9,5,3], 'y':[1,2,5]}</code>,
+    Create a dataframe from <code>{'a': [2, 4, 6], 'b': [9, 5, 3], 'y':[1, 2, 5]}</code>,
     where <code>y</code> denotes the label column. Create a <code>X</code> dataframe with the feature columns
     and a <code>y</code> dataframe with the label column. Finally split each dataframe into a training and
     a test dataframe, where the test dataframe has 30% of the items.
@@ -1156,26 +1159,26 @@
 
     import pandas as pd
     from sklearn.model_selection import train_test_split
-    df = pd.DataFrame({'a':[2,4,6], 'b':[9,5,3], 'y':[1,2,5]})
+    df = pd.DataFrame({'a':[2, 4, 6], 'b':[9, 5, 3], 'y':[1, 2, 5]})
     X = df.drop(columns='y', axis=1)
     y = df['y']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3) 
 
 - question: >
-    Create a dataframe from <code>{'a':['a','b','c']}</code> and convert the text feature to a
+    Create a dataframe from <code>{'a':['a', 'b', 'c']}</code> and convert the text feature to a
     numerical feature using the <code>OneHotEncoder</code> class of the <code>sklearn</code> library. 
   python: |
 
     import pandas as pd
     from sklearn.preprocessing import OneHotEncoder
     from sklearn.compose import ColumnTransformer
-    df = pd.DataFrame({'a':['a','b','c']})
+    df = pd.DataFrame({'a':['a', 'b', 'c']})
     one_hot = OneHotEncoder()
     transformer = ColumnTransformer([('one_hot', one_hot, ['a'] )], remainder='passthrough')
     transformed_df = pd.DataFrame(transformer.fit_transform(df))
 
 - question: >
-    Create a dataframe from <code>{'a':[6,8,6, np.NaN]}</code> and replace the <code>NaN</code> value
+    Create a dataframe from <code>{'a':[6, 8, 6, np.NaN]}</code> and replace the <code>NaN</code> value
     with the most frequent value using the <code>SimpleImputer</code> class of the <code>sklearn</code> library.
   python: |
 
@@ -1184,8 +1187,8 @@
     from sklearn.impute import SimpleImputer
     from sklearn.compose import ColumnTransformer
     my_imputer = SimpleImputer(strategy="most_frequent")
-    df = pd.DataFrame({'a':[6,8,6, np.NaN]})
-    imputer = ColumnTransformer([('imp',my_imputer, ['a'])])
+    df = pd.DataFrame({'a':[6, 8, 6, np.NaN]})
+    imputer = ColumnTransformer([('imp', my_imputer, ['a'])])
     df_filled = pd.DataFrame(imputer.fit_transform(df))
 
 - question: >
@@ -1206,7 +1209,7 @@
     df['MedHouseVal'] = ds['target']
     X = df.drop('MedHouseVal', axis=1)
     y = df['MedHouseVal']
-    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     model = Ridge()
     model.fit(X_train, y_train)
     score = model.score(X_test, y_test)
@@ -1232,19 +1235,20 @@
     X = df.drop('target', axis=1)
     y = df['target']
     model = RandomForestClassifier()
-    cross_val_score(model, X,y)
+    cross_val_score(model, X, y)
     # As result you should get array([0.96666667, 0.96666667, 0.93333333, 0.96666667, 1.])
 
 - question: >
-    Suppose we have some actual results <code>y_act = [1,0,1,1,0]</code> and let <code>y_pred = [1,1,0,1,0]</code> be the 
-    results predicted with a classifier. Evaluate the performance of that classifier using the ROC curve.
+    Suppose we have some actual results <code>y_act = [1, 0, 1, 1, 0]</code> and let 
+    <code>y_pred = [1, 1, 0, 1, 0]</code> be the results predicted with a classifier. 
+    Evaluate the performance of that classifier using the ROC curve.
   python: |
 
     from sklearn.metrics import roc_curve
     from sklearn.metrics import RocCurveDisplay
     from sklearn.metrics import roc_auc_score
-    y_act = [1,0,1,1,0] 
-    y_pred = [1,1,0,1,0]
+    y_act = [1, 0, 1, 1, 0] 
+    y_pred = [1, 1, 0, 1, 0]
     # compute ROC
     fpr, tpr, threshold = roc_curve(y_act, y_pred)
     # compute the area under curve (auc)
@@ -1274,10 +1278,10 @@
     X = df.drop('target', axis=1)
     # independent variable
     y = df['target']
-    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     model = RandomForestRegressor(n_estimators=100)
     model.fit(X_train, y_train)
-    model.score(X_test,y_test)
+    model.score(X_test, y_test)
     y_pred = model.predict(X_test)
     r2_score(y_test, y_pred)
     # you should get 0.8049
