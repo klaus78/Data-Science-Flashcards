@@ -1131,7 +1131,7 @@
               'Salary':[46000, 57000, 8000, 120000]}
       df = pd.DataFrame(data) 
       # reshape the dataframe
-      df.pivot_table(values='Age',index='Role')
+      df.pivot_table(values='Age', index='Role')
 
 - question: >
     Merge two DataFrames together based on a common column or index and display the resulting merged DataFrame.
@@ -1174,8 +1174,9 @@
     from sklearn.compose import ColumnTransformer
     df = pd.DataFrame({'a':['a', 'b', 'c']})
     one_hot = OneHotEncoder()
-    transformer = ColumnTransformer([('one_hot', one_hot, ['a'] )], remainder='passthrough')
-    transformed_df = pd.DataFrame(transformer.fit_transform(df))
+    transformer = ColumnTransformer([('one_hot', one_hot, ['a'])], remainder='passthrough')
+    fitted = transformer.fit_transform(df)
+    transformed_df = pd.DataFrame(fitted)
 
 - question: >
     Create a dataframe from <code>{'a':[6, 8, 6, np.NaN]}</code> and replace the <code>NaN</code> value
@@ -1189,7 +1190,8 @@
     my_imputer = SimpleImputer(strategy="most_frequent")
     df = pd.DataFrame({'a':[6, 8, 6, np.NaN]})
     imputer = ColumnTransformer([('imp', my_imputer, ['a'])])
-    df_filled = pd.DataFrame(imputer.fit_transform(df))
+    fitted = imputer.fit_transform(df)
+    df_filled = pd.DataFrame(fitted)
 
 - question: >
     Load the <code>california housing</code> dataset from sklearn and create a training and a test dataset.
@@ -1279,7 +1281,7 @@
     # independent variable
     y = df['target']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-    model = RandomForestRegressor(n_estimators=100)
+    model = RandomForestRegressor( n_estimators=100 )
     model.fit(X_train, y_train)
     model.score(X_test, y_test)
     y_pred = model.predict(X_test)
@@ -1317,16 +1319,16 @@
     ratings_data = pd.read_csv("user_ratings.csv")
 
     # Calculate the similarity matrix between users
-    user_similarity = cosine_similarity(ratings_data)
+    user_similarity = cosine_similarity( ratings_data )
 
     # Recommend top 3 movies for a specific user (e.g., user 123)
     user_id = 123
-    similar_users = list(enumerate(user_similarity[user_id]))
+    similar_users = list( enumerate( user_similarity[user_id] ) )
     similar_users.sort(key=lambda x: x[1], reverse=True)
 
     # Extract and print the top 3 movie recommendations
     top_movie_ids = [user[0] for user in similar_users[1:4]]
-    recommended_movies = ratings_data.columns[top_movie_ids]
+    recommended_movies = ratings_data.columns[ top_movie_ids ]
 
 - question: >
     Implement a Python script that simulates a basic multiplayer game. The game should involve multiple players, each with unique 
@@ -1334,18 +1336,18 @@
     combat.
   python: |
     class Player:
-    def __init__(self, name, health, attack):
-      self.name = name
-      self.health = health
-      self.attack = attack
+      def __init__(self, name, health, attack):
+        self.name = name
+        self.health = health
+        self.attack = attack
 
-    def move(self, direction):
-      # Implement movement logic
-      pass
+      def move(self, direction):
+        # Implement movement logic
+        pass
 
-    def attack_player(self, target_player):
-      # Implement combat logic
-      pass
+      def attack_player(self, target_player):
+        # Implement combat logic
+        pass
 
     # Create multiple player objects
     player1 = Player("Alice", 100, 20)
