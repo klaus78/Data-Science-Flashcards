@@ -1174,12 +1174,12 @@
     from sklearn.compose import ColumnTransformer
     df = pd.DataFrame({'a':['a', 'b', 'c']})
     one_hot = OneHotEncoder()
-    transformer = ColumnTransformer( [ ('one_hot', one_hot, ['a']) ], remainder='passthrough')
-    fitted = transformer.fit_transform(df)
-    transformed_df = pd.DataFrame(fitted)
+    transformer = ColumnTransformer( [ ('one_hot', one_hot, ['a']) ], remainder = 'passthrough')
+    fitted = transformer.fit_transform( df )
+    transformed_df = pd.DataFrame( fitted )
 
 - question: >
-    Create a dataframe from <code>{'a':[6, 8, 6, np.NaN]}</code> and replace the <code>NaN</code> value
+    Create a dataframe from <code>{'a' : [6, 8, 6, np.NaN]}</code> and replace the <code>NaN</code> value
     with the most frequent value using the <code>SimpleImputer</code> class of the <code>sklearn</code> library.
   python: |
 
@@ -1188,7 +1188,7 @@
     from sklearn.impute import SimpleImputer
     from sklearn.compose import ColumnTransformer
     my_imputer = SimpleImputer(strategy = "most_frequent")
-    df = pd.DataFrame({'a':[6, 8, 6, np.NaN]})
+    df = pd.DataFrame({'a' : [6, 8, 6, np.NaN]})
     imputer = ColumnTransformer( [ ('imp', my_imputer, ['a']) ] )
     fitted = imputer.fit_transform(df)
     df_filled = pd.DataFrame(fitted)
@@ -1429,8 +1429,8 @@
       # you should get 0.9999
 
 - question: >
-    Load a dataset with imbalanced classes and implement strategies to deal with class imbalance, such as oversampling, undersampling, or using different evaluation 
-    metrics like F1-score or AUC-ROC.
+    Load a dataset with imbalanced classes and implement strategies to deal with class imbalance, such as oversampling, 
+    undersampling, or using different evaluation metrics like F1-score or AUC-ROC.
   python: |
   
       import pandas as pd
@@ -1439,14 +1439,14 @@
       from sklearn.linear_model import LogisticRegression
       from sklearn.metrics import f1_score
       # create a dataset with imbalanced classes
-      X, y = make_classification(n_samples=1000, n_classes=2, weights=[0.99, 0.01], random_state=1)
+      X, y = make_classification(n_samples = 1000, n_classes = 2, weights = [0.99, 0.01], random_state = 1)
       # split the data into training and test sets
       X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
       # train a logistic regression model
       model = LogisticRegression()
       model.fit(X_train, y_train)
       # evaluate the model
-      y_pred = model.predict(X_test)
+      y_pred = model.predict( X_test )
       f1_score(y_test, y_pred)
       # you should get 0.0
 
@@ -1466,18 +1466,18 @@
     x_train, x_test = x_train / 255.0, x_test / 255.0
     # Build the neural network model
     model = keras.Sequential([
-        keras.layers.Flatten(input_shape=(28, 28)),
+        keras.layers.Flatten( input_shape=(28, 28) ),
         keras.layers.Dense(128, activation='relu'),
         keras.layers.Dropout(0.2),
         keras.layers.Dense(10)
     ])
     # Compile the model
     model.compile(optimizer='adam',
-                  loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
-                  metrics=['accuracy'])
+                  loss=tf.keras.losses.SparseCategoricalCrossentropy( from_logits = True ),
+                  metrics = ['accuracy'])
 
     # Train the model
-    model.fit(x_train, y_train, epochs=5)
+    model.fit(x_train, y_train, epochs = 5)
     # Evaluate the model
     test_loss, test_acc = model.evaluate(x_test, y_test)
 
