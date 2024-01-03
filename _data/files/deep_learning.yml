@@ -257,6 +257,24 @@
 - question: What are the applications of Large Language Models (LLMs)?
 
 - question: What are the limitations of Large Language Models (LLMs)?
+  answer: >
+    Large Language Models (LLMs) have several limitations:
+    <ul>
+    <li><b>Data Dependence</b>: LLMs are trained on large amounts of data and their performance heavily depends on the quality and 
+    diversity of this data. If the training data is biased or unrepresentative, the model’s outputs will likely reflect these biases.
+    </li>
+    <li><b>Lack of Understanding</b>: Despite their ability to generate human-like text, LLMs do not truly understand the content they are 
+    generating. They do not have a concept of the world, facts, or truth, and are merely predicting the next word based on patterns 
+    learned during training.</li>
+    <li><b>Inability to Verify Information</b>: LLMs cannot verify the information they generate against real-world facts. 
+    They do not have the ability to access real-time, up-to-date information or databases.</li>
+    <li><b>Ethical Concerns</b>: LLMs can generate harmful or inappropriate content if not properly controlled. This includes 
+    content that is biased, offensive, or misleading.</li>
+    <li><b>Resource Intensive</b>: Training LLMs requires significant computational resources, which can be a barrier to development 
+    and use.</li>
+    <li><b>Lack of Creativity and Innovation</b>: While LLMs can generate text based on patterns they’ve learned, they are not 
+    capable of true creativity or innovation. They cannot come up with new ideas or concepts that were not present in their 
+    training data.</li>
 
 - question: How do Large Language Models (LLMs) handle multilingual tasks?
 
