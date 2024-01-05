@@ -8,7 +8,7 @@
 
 You can try to solve a challenge and then check the solution by clicking on it.
 
-# Take me to the questions
+# Take me to the flashcards
 Here you can check out [the collection of Data Science Flashcards](https://klaus78.github.io/Data-Science-Flashcards). 
 
 # Contributing
