@@ -1,12 +1,12 @@
 # Contributing
 
-At first you have to install the [Jekyll static site generator](https://jekyllrb.com/). The questions are written in the [Markdown markup language](https://en.wikipedia.org/wiki/Markdown).
+At first you have to install the [Jekyll static site generator](https://jekyllrb.com/). The flashcards are written in the [Markdown markup language](https://en.wikipedia.org/wiki/Markdown).
 
 ## Project structure
-The files with the questions-answers are in the **_data\files** folder. There is one file for each major topic. The order of the topics is defined in the **_data\sort.yml** file.
+The files with the flashcards are in the **_data\files** folder. There is one file for each major topic. The order of the topics is defined in the **_data\sort.yml** file.
 
-## Add a question
-Let's say you want to add a new question-answer about Statistics. You can do this by editing the **_data\files\statistics.yml** file. 
+## Add a flashcard
+Let's say you want to add a new flashcard about Statistics. You can do this by editing the **_data\files\statistics.yml** file. 
 
 Each question-answer has the form
 
@@ -17,9 +17,9 @@ Each question-answer has the form
 
 Notice that the **question:** and **answer:** tags are mandatory.
 
-You can use the **h3:** tag when the question is the first question of a subtopic.
+You can use the **h3:** tag when the flashcard is the first flashcard of a subtopic.
 
-Each question can have one image with the **image:** tag. This is the name of the file located in the **assets\images** folder.
+Each flashcard can have one image with the **image:** tag. This is the name of the file located in the **assets\images** folder.
 
 ## Testing 
 Before pushing the code, make sure that the markdown syntax of the files is correct. 
