@@ -139,7 +139,7 @@
     processed once at a time. This process is similar to the way humans read text.
 
 - h3: Transfer Learning
-  question: What is Transfer Learning? and when to use it?
+  question: What is Transfer Learning? When should it be used?
   answer: >
     <b>Transfer learning</b> is a technique where a pre-trained neural network is adapted for a new, related task. This can 
     significantly reduce the amount of data and training time required for the new task.
