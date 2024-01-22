@@ -81,6 +81,13 @@
     generalizes to new data. Lower cost function values indicate better model performance. </li>
     </ul>
 
+- question: What is batch normalization?
+  answer: >
+    <b>Batch normalization</b> is a technique for improving the performance and stability of neural networks. It involves 
+    normalizing the outputs of each layer, i.e., transforming them to have zero mean and unit variance. This helps to 
+    reduce the internal covariate shift problem, which is the change in the distribution of network activations due to 
+    the change in network parameters during training.
+
 - question: What is Backpropagation?
   answer: >
     <b>Backpropagation</b> is a fundamental algorithm used to train neural networks. It involves iteratively adjusting the network's 
