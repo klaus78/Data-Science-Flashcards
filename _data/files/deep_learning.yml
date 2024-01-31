@@ -68,6 +68,12 @@
     activated (output a non-zero value) or not. Common activation functions include ReLU (Rectified Linear Unit), 
     Sigmoid, and Tanh.
 
+- question: What is the purpose of an activation function in a neural network?
+  answer: >
+    An activation function's job is to add non-linearity to the­ network. This lets it figure out and mimic de­tailed patterns
+    and connections in the­ raw data. The function even plays a part in figuring out a ne­uron's output, letting the 
+    network grasp comple­x features.
+
 - question: What is a Cost Function?
   answer: >
     A <b>cost function (or loss function)</b> is a mathematical measure that quantifies how well a neural network's predictions match 
