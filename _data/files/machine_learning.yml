@@ -589,7 +589,7 @@
 - h3: Naive Bayes
   question: What is Naive Bayes?
   answer: >
-    Naive Bayes is a supervised machine learning algorithm based on the Bayes theorem that is used
+    <b>Naive Bayes</b> is a supervised machine learning algorithm based on the Bayes theorem that is used
     to solve classification problems.
 
 - question: Why is Naive Bayes called "naive"?
@@ -610,15 +610,17 @@
 
 - question: What are the main advantages of Naive Bayes?
   answer: >
-    The Naive Bayes is a relatively simple and very quick algorithm since it is a probabilistic 
+    The <b>Naive Bayes</b> is a relatively simple and very quick algorithm since it is a probabilistic 
     model that does not require a training step. This makes it very scalable.
 
 - question: When is the Naive Bayes usually used?
   answer: > 
-    Naive Bayes is often used in <br>
-    - text classification like spam filter<br>
-    - real-time classification since it is fast<br>
-    - multi-class prediction
+    Naive Bayes is often used in
+    <ul>
+      <li>text classification like spam filter</li>
+      <li>real-time classification since it is fast</li>
+      <li>multi-class prediction</li>
+    </ul>
 
 - question: When Naive Bayes is used with numerical variables, what condition is assumed on the data?
   answer: >
