@@ -589,18 +589,19 @@
 - h3: Naive Bayes
   question: What is Naive Bayes?
   answer: >
-    <b>Naive Bayes</b> is a supervised machine learning algorithm based on the Bayes theorem that is used
-    to solve classification problems.
+    <b>Naive Bayes</b> is a family of machine learning algorithms that use Bayes' theorem to perform
+    classification tasks. In particular Bayes' theorem is used to predict the probability of a class label
+    based on some features.
 
-- question: Why is Naive Bayes called "naive"?
+- question: Why is Naive Bayes called 'naive'?
   answer: >
-    Because the Naive Bayes is based on the idea that the predictor variables are independent of 
-    each other while in nature this is often not the case.
+    The Naive Bayes is called <b>naive</b> because it is based on the idea that the predictor variables are 
+    independent of each other while in nature this is often not the case.
     <br><br>
     A Naive Bayes classifier calculates the probability of an item belonging to each possible
     output class. The class with the highest probability is then chosen as output.
 
-- question: What is the Bayes theorem?
+- question: What is Bayes' theorem?
   answer: >
     The Bayes theorem is a mathematical formula for finding P(A|B) from P(B|A).
     The formula is 
