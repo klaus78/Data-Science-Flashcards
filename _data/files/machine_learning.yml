@@ -592,6 +592,10 @@
     <b>Naive Bayes</b> is a family of machine learning algorithms that use Bayes' theorem to perform
     classification tasks. In particular Bayes' theorem is used to predict the probability of a class label
     based on some features.
+    The naive assumption of Bayes' theorem is that the features are conditionally independent of each other, given the class label. 
+    This simplifies the computation and makes the algorithms scalable and efficient. 
+    Naive Bayes classifiers can handle both discrete and continuous features, and can be trained using 
+    maximum likelihood estimation
 
 - question: Why is Naive Bayes called 'naive'?
   answer: >
@@ -603,11 +607,15 @@
 
 - question: What is Bayes' theorem?
   answer: >
-    The Bayes theorem is a mathematical formula for finding P(A|B) from P(B|A).
+    <b>Bayes' theorem</b> is a mathematical formula for finding P(A|B) from P(B|A).
     The formula is 
-    <br><br>
-    P(A|B) = P(B|A) * P(A) / P(B)
-
+    <br>
+    <br> P(A|B) = 
+    <div class="frac">
+      <span>P(B|A) * P(A)</span>
+      <span class="symbol">/</span>
+      <span class="bottom">P(B)</span>
+    </div>
 
 - question: What are the main advantages of Naive Bayes?
   answer: >
