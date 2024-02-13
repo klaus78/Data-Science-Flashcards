@@ -616,6 +616,11 @@
       <span class="symbol">/</span>
       <span class="bottom">P(B)</span>
     </div>
+    <br>where 
+    <p>P(A) = probability that event A happens.</p>
+    <p>P(A|B) = probability that event A happens assuming that event B has already happened.</p> 
+    <p>P(B) = probability that event B happens.</p> 
+    <p>P(B|A) = probability that event B happens assuming that event A has already happened.</p> 
 
 - question: What are the main advantages of Naive Bayes?
   answer: >
