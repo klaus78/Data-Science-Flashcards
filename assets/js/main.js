@@ -1,5 +1,4 @@
-window.onload = (event) => {
-      // adjust the vertical position of the left menu
+window.onload = () => {
       positionElements();
 };
 
@@ -7,6 +6,12 @@ window.onresize = function() {
       positionElements();
 }
 
+
+window.addEventListener('click', function(event) {
+      if(event.target.classList.contains('menu-subs')) {
+            showHideLeftMenu();
+      }
+});
 
 function showHideAnswer() {
       var divQuestion = event.target;

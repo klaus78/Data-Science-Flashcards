@@ -597,7 +597,7 @@
     Naive Bayes classifiers can handle both discrete and continuous features, and can be trained using 
     maximum likelihood estimation
 
-- question: Why is Naive Bayes called 'naive'?
+- question: Why is Naive Bayes called <em>naive</em>?
   answer: >
     The Naive Bayes is called <b>naive</b> because it is based on the idea that the predictor variables are 
     independent of each other while in nature this is often not the case.
