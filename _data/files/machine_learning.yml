@@ -657,13 +657,21 @@
   answer: >
     Some <b>drawbacks</b> of a linear model are:
     <ul>
-      <li> The assumption of linearity of the model.</li>
-      <li> It can't be used for count outcomes or binary outcomes.</li>
-      <li> There are overfitting or underfitting problems that it can't solve.</li>
+      <li>The assumption of linearity of the model.</li>
+      <li>It can't be used for count outcomes or binary outcomes.</li>
+      <li>There are overfitting or underfitting problems that it can't solve.</li>
     </ul>
 
 - question: What do you predict with linear regression?
-  answer: Linear regression predicts a real value
+  answer: >
+    Linear regression is used to predict the value of a dependent variable <code>y</code> based on the values of
+    one or more independent variable.
+    <section>
+    A representation of a linear regression is<br>
+    <code>y = x<sub>0</sub>&middot;k<sub>0</sub> + x<sub>1</sub>&middot;k<sub>1</sub> + ... + x<sub>n</sub>&middot;k<sub>n</sub></code>
+    </section>
+    where <code>y</code> is the dependent variable, <code>x<sub>0</sub>...x<sub>n</sub></code> the independent variables
+    and <code>k<sub>0</sub>...k<sub>n</sub></code> the linear coefficients that represent the weight of each independent variable.
 
 - question: What are the most common techniques used for computing the coefficients in linear regression?
   answer: >
