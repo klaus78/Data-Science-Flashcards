@@ -2,14 +2,19 @@ window.onload = () => {
       positionElements();
 };
 
-window.onresize = function() {
+window.onresize = () => {
       positionElements();
 }
 
-
-window.addEventListener('click', function(event) {
-      if(event.target.classList.contains('menu-subs')) {
+window.addEventListener('click', function (event) {
+      if (event.target.classList.contains('menu-subs')) {
             showHideLeftMenu();
+
+            setTimeout(() => {
+                  // scroll down a bit to show the section header
+                  const header = document.getElementById('myHeader');
+                  window.scrollBy(0, -header.offsetHeight);
+            }, 100);
       }
 });
 
@@ -68,11 +73,11 @@ function showHideElement(elem) {
 
 function showHideLeftMenu() {
       var leftMenu = document.getElementById("leftMenu");
-     
+
       if (leftMenu.style.display === "block") {
-        leftMenu.style.display = "none";
+            leftMenu.style.display = "none";
       } else {
-        leftMenu.style.display = "block";
+            leftMenu.style.display = "block";
       }
 }
 
@@ -90,7 +95,7 @@ function positionElements() {
       const leftMenu = document.getElementById('leftMenu');
       const content = document.getElementById('content');
       leftMenu.style.marginTop = `${header.offsetHeight + 1}px`;
-      leftMenu.style.height = `${window.innerHeight - header.offsetHeight - 1}px` 
+      leftMenu.style.height = `${window.innerHeight - header.offsetHeight - 1}px`
       content.style.marginTop = leftMenu.style.marginTop;
       content.style.height = leftMenu.style.height;
 }
