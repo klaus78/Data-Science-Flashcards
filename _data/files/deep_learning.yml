@@ -99,6 +99,11 @@
     <b>Backpropagation</b> is a fundamental algorithm used to train neural networks. It involves iteratively adjusting the network's 
     weights and biases to minimize the difference between the predicted output and the actual target values.
 
+- question: What is the purpose of dropout regularization in deep learning??
+  answer: >
+    <b>Dropout regularization</b> prevents overfitting by randomly dropping a fraction of neurons during training,
+    forcing the network to learn more robust features and reducing reliance on specific neurons.
+
 - h3: Types of Neural Networks
   question: What are some types of neural networks? What are they used for?
   answer: > 
