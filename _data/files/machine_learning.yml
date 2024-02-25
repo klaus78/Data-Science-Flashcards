@@ -589,24 +589,38 @@
 - h3: Naive Bayes
   question: What is Naive Bayes?
   answer: >
-    <b>Naive Bayes</b> is a supervised machine learning algorithm based on the Bayes theorem that is used
-    to solve classification problems.
+    <b>Naive Bayes</b> is a family of machine learning algorithms that use Bayes' theorem to perform
+    classification tasks. In particular Bayes' theorem is used to predict the probability of a class label
+    based on some features.
+    The naive assumption of Bayes' theorem is that the features are conditionally independent of each other, given the class label. 
+    This simplifies the computation and makes the algorithms scalable and efficient. 
+    Naive Bayes classifiers can handle both discrete and continuous features, and can be trained using 
+    maximum likelihood estimation
 
-- question: Why is Naive Bayes called "naive"?
+- question: Why is Naive Bayes called <em>naive</em>?
   answer: >
-    Because the Naive Bayes is based on the idea that the predictor variables are independent of 
-    each other while in nature this is often not the case.
+    The Naive Bayes is called <b>naive</b> because it is based on the idea that the predictor variables are 
+    independent of each other while in nature this is often not the case.
     <br><br>
     A Naive Bayes classifier calculates the probability of an item belonging to each possible
     output class. The class with the highest probability is then chosen as output.
 
-- question: What is the Bayes theorem?
+- question: What is Bayes' theorem?
   answer: >
-    The Bayes theorem is a mathematical formula for finding P(A|B) from P(B|A).
+    <b>Bayes' theorem</b> is a mathematical formula for finding P(A|B) from P(B|A).
     The formula is 
-    <br><br>
-    P(A|B) = P(B|A) * P(A) / P(B)
-
+    <br>
+    <br> P(A|B) = 
+    <div class="frac">
+      <span>P(B|A) * P(A)</span>
+      <span class="symbol">/</span>
+      <span class="bottom">P(B)</span>
+    </div>
+    <br>where 
+    <p>P(A) = probability that event A happens.</p>
+    <p>P(A|B) = probability that event A happens assuming that event B has already happened.</p> 
+    <p>P(B) = probability that event B happens.</p> 
+    <p>P(B|A) = probability that event B happens assuming that event A has already happened.</p> 
 
 - question: What are the main advantages of Naive Bayes?
   answer: >
@@ -643,13 +657,21 @@
   answer: >
     Some <b>drawbacks</b> of a linear model are:
     <ul>
-      <li> The assumption of linearity of the model.</li>
-      <li> It can't be used for count outcomes or binary outcomes.</li>
-      <li> There are overfitting or underfitting problems that it can't solve.</li>
+      <li>The assumption of linearity of the model.</li>
+      <li>It can't be used for count outcomes or binary outcomes.</li>
+      <li>There are overfitting or underfitting problems that it can't solve.</li>
     </ul>
 
 - question: What do you predict with linear regression?
-  answer: Linear regression predicts a real value
+  answer: >
+    Linear regression is used to predict the value of a dependent variable <code>y</code> based on the values of
+    one or more independent variable.
+    <section>
+    A representation of a linear regression is<br>
+    <code>y = x<sub>0</sub>&middot;k<sub>0</sub> + x<sub>1</sub>&middot;k<sub>1</sub> + ... + x<sub>n</sub>&middot;k<sub>n</sub></code>
+    </section>
+    where <code>y</code> is the dependent variable, <code>x<sub>0</sub>...x<sub>n</sub></code> the independent variables
+    and <code>k<sub>0</sub>...k<sub>n</sub></code> the linear coefficients that represent the weight of each independent variable.
 
 - question: What are the most common techniques used for computing the coefficients in linear regression?
   answer: >
