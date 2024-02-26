@@ -62,7 +62,7 @@
         most commonly used method</li>
     </ul> 
 
-- question: What is an Activation Function?
+- question: What is an activation function?
   answer: >
     An <b>activation function</b> introduces non-linearity into a neural network. It determines whether a neuron should be 
     activated (output a non-zero value) or not. Common activation functions include ReLU (Rectified Linear Unit), 
@@ -70,21 +70,22 @@
 
 - question: What is the purpose of an activation function in a neural network?
   answer: >
-    An activation function's job is to add non-linearity to the­ network. This lets it figure out and mimic de­tailed patterns
-    and connections in the­ raw data. The function even plays a part in figuring out a ne­uron's output, letting the 
-    network grasp comple­x features.
+    The <b>purpose of activation functions</b> is to add non-linearity to a neural network, allowing the network to model complex 
+    relationships within the data. 
+    Activation functions  Activation functions also determine the output of neurons, enabling the network to 
+    make decisions and learn from a vast array of features.
 
-- question: What is a Cost Function?
+- question: What is a cost function?
   answer: >
-    A <b>cost function (or loss function)</b> is a mathematical measure that quantifies how well a neural network's predictions match 
+    A <b>cost function</b> (or also called loss function) is a mathematical measure that quantifies how well a neural network's predictions match 
     the actual target values. The goal in training a neural network is to minimize this function.
     <br>
     It is primarily used for two purposes:
     <ul>
-    <li><b>Model Training</b>: During the training phase, it quantifies the disparity between a machine learning model's 
-    predictions and the true target values, guiding the adjustment of model parameters for better predictions. </li>
+    <li><b>Model Training</b>: During the training phase, it quantifies the disparity between the predictions of a machine learning 
+    model and the true target values, guiding the adjustment of model parameters for better predictions.</li>
     <li><b>Evaluation</b>: After training, the cost function serves as an evaluation metric, measuring how well the model 
-    generalizes to new data. Lower cost function values indicate better model performance. </li>
+    generalizes to new data. Lower cost function values indicate better model performance.</li>
     </ul>
 
 - question: What is batch normalization?
@@ -94,12 +95,12 @@
     reduce the internal covariate shift problem, which is the change in the distribution of network activations due to 
     the change in network parameters during training.
 
-- question: What is Backpropagation?
+- question: What is backpropagation?
   answer: >
     <b>Backpropagation</b> is a fundamental algorithm used to train neural networks. It involves iteratively adjusting the network's 
     weights and biases to minimize the difference between the predicted output and the actual target values.
 
-- question: What is the purpose of dropout regularization in deep learning??
+- question: What is the purpose of dropout regularization in deep learning?
   answer: >
     <b>Dropout regularization</b> prevents overfitting by randomly dropping a fraction of neurons during training,
     forcing the network to learn more robust features and reducing reliance on specific neurons.
