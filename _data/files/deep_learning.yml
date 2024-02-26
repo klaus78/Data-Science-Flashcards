@@ -68,6 +68,12 @@
     activated (output a non-zero value) or not. Common activation functions include ReLU (Rectified Linear Unit), 
     Sigmoid, and Tanh.
 
+- question: What is the purpose of an activation function in a neural network?
+  answer: >
+    An activation function's job is to add non-linearity to the­ network. This lets it figure out and mimic de­tailed patterns
+    and connections in the­ raw data. The function even plays a part in figuring out a ne­uron's output, letting the 
+    network grasp comple­x features.
+
 - question: What is a Cost Function?
   answer: >
     A <b>cost function (or loss function)</b> is a mathematical measure that quantifies how well a neural network's predictions match 
@@ -92,6 +98,11 @@
   answer: >
     <b>Backpropagation</b> is a fundamental algorithm used to train neural networks. It involves iteratively adjusting the network's 
     weights and biases to minimize the difference between the predicted output and the actual target values.
+
+- question: What is the purpose of dropout regularization in deep learning??
+  answer: >
+    <b>Dropout regularization</b> prevents overfitting by randomly dropping a fraction of neurons during training,
+    forcing the network to learn more robust features and reducing reliance on specific neurons.
 
 - h3: Types of Neural Networks
   question: What are some types of neural networks? What are they used for?
