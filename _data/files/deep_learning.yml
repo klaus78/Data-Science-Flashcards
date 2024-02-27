@@ -27,9 +27,17 @@
 
 - question: What is Deep Learning used for?
   answer: >
-    Deep learning is used in a wide range of applications, including image and speech recognition, natural language processing, 
+    <b>Deep learning</b> is used in a wide range of applications, including image and speech recognition, natural language processing, 
     autonomous vehicles, recommendation systems, and more.
 
+- question: To what does the term <i>deep</i> refer in deep learning?
+  answer: >
+    <b>Deep learning</b> is a subset of machine learning methods that relies on artificial neural networks (ANNs) 
+    with representation learning. The term <b>deep</b> specifically refers to the use of multiple hidden layers
+    within the neural network architecture.
+    These layers allow the network to progressively extract higher-level features from raw input data, resulting in more 
+    complex and abstract representations. 
+    
 - h3: Neural Networks
   question: What is an Artificial Neural Network (ANN)?
   answer: >
@@ -49,6 +57,58 @@
     <br><br>
     By contrast, <b>Deep neural networks</b> have multiple hidden layers. They are capable of learning complex representations, 
     whereas shallow networks are less capable of capturing intricate patterns.
+
+- h3: Types of Neural Networks
+  question: What are some types of neural networks? What are they used for?
+  answer: > 
+    Some types of neural networks are:
+    <ul>
+    <li><b>Convolutional Neural Networks (CNNs)</b>: used for image and video analysis, object recognition, and computer 
+    vision tasks.</li>
+    <li><b>Recurrent Neural Networks (RNNs)</b>: ideal for sequence data, like natural language processing, time series 
+    analysis, and speech recognition.</li>
+    <li><b>Long Short-Term Memory (LSTM) Networks</b>: a type of RNN that's effective at learning long-term dependencies in 
+    sequences.</li>
+    <li><b>Gated Recurrent Unit (GRU) Networks</b>: another variant of RNNs, useful for many of the same tasks as LSTMs but 
+    with lower computational complexity.</li>
+    <li><b>Autoencoders</b>: often employed for dimensionality reduction, feature learning, and data denoising. </li>
+    <li><b>Generative Adversarial Networks (GANs)</b>: used for generating new data samples, image-to-image translation, and 
+    creating realistic images.</li>
+    <li><b>Transformers</b>: ideal for natural language processing tasks, like machine translation, language understanding, 
+    and text generation.</li>
+    </ul>
+    
+- question: What is a Convolutional Neural Network (CNN)?
+  answer: >
+    <b>Convolutional Neural Networks (CNN)</b> are a type of neural network designed for processing grid-like data, such as 
+    images and video. They use convolutional layers to automatically learn features from the input data.
+
+- question: What is a Recurrent Neural Network (RNN)?
+  answer: >
+    <b>Recurrent Neural Networks (RNN)</b> are neural networks with loops that allow information to be passed from one step 
+    of the network to the next. They are commonly used for sequential data, like time series and natural language processing.
+
+- question: What kind of neural networks works particularly well with image data?
+  answer: >
+    <b>Convolutional neural networks</b> are a kind of neural network that works
+    particularly well with image data.
+    <br>
+    The basic idea behind convolutional neural networks is to 
+    divide the input image into small fragments and apply a number of filters on 
+    each fragment. Applying a filter is equivalent to searching for a pattern in the fragment.
+    Each filter has a specific task, like searching for edges or for circles.
+    <br>
+    In this way convolutional neural networks can better deal with images that are not very similar,
+    for example because the images are rotated differently.
+
+- question: What kind of neural network is particulary good at processing text data?
+  answer: >
+    A kind neural network that is particulary good at processing text data is 
+    <b>recurrent neural networks</b>.
+    <br>
+    A recurrent neural network has an intern loop, that means the data is not processed all at once 
+    but rather is processed in different steps. In particular in the case of text, each word is 
+    processed once at a time. This process is similar to the way humans read text.
 
 - h3: Training and Optimization
   question: How are weights initialized in a neural network?
@@ -104,58 +164,6 @@
   answer: >
     <b>Dropout regularization</b> prevents overfitting by randomly dropping a fraction of neurons during training,
     forcing the network to learn more robust features and reducing reliance on specific neurons.
-
-- h3: Types of Neural Networks
-  question: What are some types of neural networks? What are they used for?
-  answer: > 
-    Some types of neural networks are:
-    <ul>
-    <li><b>Convolutional Neural Networks (CNNs)</b>: used for image and video analysis, object recognition, and computer 
-    vision tasks.</li>
-    <li><b>Recurrent Neural Networks (RNNs)</b>: ideal for sequence data, like natural language processing, time series 
-    analysis, and speech recognition.</li>
-    <li><b>Long Short-Term Memory (LSTM) Networks</b>: a type of RNN that's effective at learning long-term dependencies in 
-    sequences.</li>
-    <li><b>Gated Recurrent Unit (GRU) Networks</b>: another variant of RNNs, useful for many of the same tasks as LSTMs but 
-    with lower computational complexity.</li>
-    <li><b>Autoencoders</b>: often employed for dimensionality reduction, feature learning, and data denoising. </li>
-    <li><b>Generative Adversarial Networks (GANs)</b>: used for generating new data samples, image-to-image translation, and 
-    creating realistic images.</li>
-    <li><b>Transformers</b>: ideal for natural language processing tasks, like machine translation, language understanding, 
-    and text generation.</li>
-    </ul>
-    
-- question: What is a Convolutional Neural Network (CNN)?
-  answer: >
-    <b>Convolutional Neural Networks (CNN)</b> are a type of neural network designed for processing grid-like data, such as 
-    images and video. They use convolutional layers to automatically learn features from the input data.
-
-- question: What is a Recurrent Neural Network (RNN)?
-  answer: >
-    <b>Recurrent Neural Networks (RNN)</b> are neural networks with loops that allow information to be passed from one step 
-    of the network to the next. They are commonly used for sequential data, like time series and natural language processing.
-
-- question: What kind of neural networks works particularly well with image data?
-  answer: >
-    <b>Convolutional neural networks</b> are a kind of neural network that works
-    particularly well with image data.
-    <br>
-    The basic idea behind convolutional neural networks is to 
-    divide the input image into small fragments and apply a number of filters on 
-    each fragment. Applying a filter is equivalent to searching for a pattern in the fragment.
-    Each filter has a specific task, like searching for edges or for circles.
-    <br>
-    In this way convolutional neural networks can better deal with images that are not very similar,
-    for example because the images are rotated differently.
-
-- question: What kind of neural network is particulary good at processing text data?
-  answer: >
-    A kind neural network that is particulary good at processing text data is 
-    <b>recurrent neural networks</b>.
-    <br>
-    A recurrent neural network has an intern loop, that means the data is not processed all at once 
-    but rather is processed in different steps. In particular in the case of text, each word is 
-    processed once at a time. This process is similar to the way humans read text.
 
 - h3: Transfer Learning
   question: What is Transfer Learning? When should it be used?
