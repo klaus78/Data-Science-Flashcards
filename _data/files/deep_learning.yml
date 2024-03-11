@@ -361,8 +361,23 @@
     These are some of the main methods that LLMs use to handle multilingual tasks, but there are also other aspects to 
     consider, such as data collection, evaluation, interpretability, and responsible AI.
 
-- question: What is the role of data in training Large Language Models (LLMs)?
-
 - question: What ethical considerations are there when using Large Language Models (LLMs)?
+  answer: >
+    The use of Large Language Models (LLMs) raises several ethical considerations. Some of the most relevant ones are:
+    <ul>
+      <li><b>generate harmful content</b>: LLMs have the potential to create harmful content, including hate speech and extremist 
+      propaganda. While they are not inherently harmful, the biases present in their training data can 
+      be reflected in their outputs.</li>
+      <li><b>Disinformation & Influencing Operations</b>: LLMs can inadvertently produce misinformation or be exploited for 
+      disinformation campaigns.</li>
+      <li><b>Weapon Development</b>:  in the wrong hands, LLMs could be used to create malicious content, including cyber 
+      threats or weapons.</li>
+      <li><b>Privacy</b>: LLMs may inadvertently reveal sensitive information or violate privacy rights.</li>
+      <li><b>Environmental Impact</b>: training large models consumes significant computational resources.</li>
+      <li><b>Accountability and Responsibility</b>: clear guidelines on authorship, disclosure, and intellectual property 
+      of the generated content are essential.</li>
+      <li><b>Hallucinations</b>: LLMs sometimes produce text that appears correct but contains incorrect information. 
+      This can lead to misinformation and confusion.</li>
+    </ul>
 
 - question: How can bias in the training data affect the outputs of Large Language Models (LLMs)?
