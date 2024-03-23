@@ -38,6 +38,14 @@
     These layers allow the network to progressively extract higher-level features from raw input data, resulting in more 
     complex and abstract representations. 
     
+- question: What is a deepfake?
+  answer: >
+    A <b>deepfake</b> refers digital content, like videos or pictures, that are created using deep learning
+    algorithms. These creations convey information or events that are either false or have never occured in reality.
+    <b><b>
+    Essentially, deepfakes manipulate media to present a distorted version of the truth.
+
+
 - h3: Neural Networks
   question: What is an Artificial Neural Network (ANN)?
   answer: >
