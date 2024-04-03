@@ -12,7 +12,7 @@
     and deep learning try to create a mathematical model of a dataset. This mathematical
     model can then be used to make predictions on new input data.
     <br>
-    However ML & DL differ in some points:
+    However deep learning and machine learning differ in some points:
     <ul>
     <li><b>Techniques used</b>: machine learning can use several different techniques to create a mathematical model, 
     like regression, neural networks, nearest neighbors and decision trees.  By contrast, deep learning is
@@ -42,9 +42,8 @@
   answer: >
     A <b>deepfake</b> refers digital content, like videos or pictures, that are created using deep learning
     algorithms. These creations convey information or events that are either false or have never occured in reality.
-    <b><b>
+    <br><br>
     Essentially, deepfakes manipulate media to present a distorted version of the truth.
-
 
 - h3: Neural Networks
   question: What is an Artificial Neural Network (ANN)?
@@ -117,6 +116,25 @@
     A recurrent neural network has an intern loop, that means the data is not processed all at once 
     but rather is processed in different steps. In particular in the case of text, each word is 
     processed once at a time. This process is similar to the way humans read text.
+
+- question: What is the transformer architecture?
+  answer: >
+    The <b>transformer architecture</b> is a neural network architecture introduced at Google
+    in 2017. In general, a transformer is something that transforms one sequence into one another, like
+    a translation from one language into another language.
+    <br><br>
+    Transformers consist of two parts: an encoder and a decoder. The encoder takes the input sequence and
+    generates encodings which define what parts of the input sequence are related with each other.
+    The decoder takes the generated encodings to generate the output sequence. Transformers use sequence-to-sequence
+    learning in the sense that they take a sequence of input tokens and try to predict the next token in the output
+    sequence. This is done by iterating through the encoding layers.
+    <br><br>
+    Transformers do not necessarily process data in order, rather run multiple sequences in parallel. 
+    Transformers do use the so-called attention mechanism, that provides context to the tokens of the 
+    input sequence, i.e. context information that gives a meaning to each token.
+
+- question: What is the attention mechanism used by the transformer architecture?
+  answer: 
 
 - h3: Training and Optimization
   question: How are weights initialized in a neural network?
