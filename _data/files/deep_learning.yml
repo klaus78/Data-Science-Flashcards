@@ -117,6 +117,22 @@
     but rather is processed in different steps. In particular in the case of text, each word is 
     processed once at a time. This process is similar to the way humans read text.
 
+- question: What is the self-attention technique that is used in deep learning?
+  answer: >
+    <b>Self-attention</b> is a powerful mechanism used in deep learning, particularly in natural language 
+    processing (NLP) and computer vision tasks. 
+    Self-attention allows neural networks to capture contextual dependencies and relationships 
+    within input sequences.
+    <br><br>
+    For each token, self-attention computes a weighted sum of all other tokens in the sequence, where the weights 
+    reflect the relevance of each token to the current one. The attention mechanism learns to focus on relevant 
+    tokens dynamically, rather than relying on fixed positional embeddings. 
+    <br><br>
+    Self-attention allows a model to consider 
+    all positions in the input sequence when making predictions for a specific position.
+    By constrast, traditional neural network models (like RNNs and CNNs) have fixed receptive fields, limiting their 
+    ability to capture long-range dependencies. Self-attention overcomes this limitation.
+
 - question: What is the transformer architecture?
   answer: >
     The <b>transformer architecture</b> is a neural network architecture introduced at Google
