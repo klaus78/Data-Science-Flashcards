@@ -170,6 +170,21 @@
     activated (output a non-zero value) or not. Common activation functions include ReLU (Rectified Linear Unit), 
     Sigmoid, and Tanh.
 
+- question: Explain different types of activation functions and its uses?
+  answer: >
+    <ul>
+    <li><b>Sigmoid</b>: It converts the input into the value between 0 and 1 using the formula g(z) = 1/(1+e**(-z))
+    <br>It is used in Binary classification and multilabel classification</li>
+    <li><b>ReLU</b>: It converts the negitive input to 0 using the formula g(z) = max(0, z)
+    <br>It is used in Regression when expected output is always positive and mostly used in hidden layers for better gradient flow.</li>
+    <li><b>Linear</b>: It gives the output same as input using formula g(z) = z
+    <br>It is used in output layers for regression models.</li>
+    <li><b>Softmax</b>: It gives vector as output using the formula g(z) = e**zi/sum(e**z) ∀(zi ∈ z) where z = [z1, z2, z3...]
+    <br>It is used in multiclassification</li>
+    <li><b>Tanh</b>: It converts the input into the value between -1 and 1 using the formula g(z) = (e**x-e**-x)/e**x+e**-x)
+    <br>It is used in hidden layers when the input data is centered around 0 to maintain the scale especially in RNN to handle sequential data.</li>
+    </ul>
+
 - question: What is the purpose of an activation function in a neural network?
   answer: >
     The <b>purpose of activation functions</b> is to add non-linearity to a neural network, allowing the network to model complex 
