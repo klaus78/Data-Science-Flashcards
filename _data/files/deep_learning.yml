@@ -170,10 +170,24 @@
     activated (output a non-zero value) or not. Common activation functions include ReLU (Rectified Linear Unit), 
     Sigmoid, and Tanh.
 
-- question: Explain different types of activation functions and its uses?
+- question: What is the purpose of an activation function in a neural network?
   answer: >
+    The <b>purpose of activation functions</b> is to add non-linearity to a neural network, allowing the network to model complex 
+    relationships within the data. 
+    Activation functions  Activation functions also determine the output of neurons, enabling the network to 
+    make decisions and learn from a vast array of features.
+
+- question: Explain different types of activation functions and its uses
+  answer: >
+    These are common examples of activation functions:
     <ul>
-    <li><b>Sigmoid</b>: It converts the input into the value between 0 and 1 using the formula g(z) = 1/(1+e**(-z))
+    <li><b>Sigmoid</b>: It converts the input into the value between 0 and 1 using the formula
+    <br>g(z) =
+    <div class="frac">
+      <span>1</span>
+      <span class="symbol">/</span>
+      <span class="bottom">1+e<sup>(-z)</sup></span>
+    </div>
     <br>It is used in Binary classification and multilabel classification</li>
     <li><b>ReLU</b>: It converts the negitive input to 0 using the formula g(z) = max(0, z)
     <br>It is used in Regression when expected output is always positive and mostly used in hidden layers for better gradient flow.</li>
@@ -184,13 +198,6 @@
     <li><b>Tanh</b>: It converts the input into the value between -1 and 1 using the formula g(z) = (e**x-e**-x)/e**x+e**-x)
     <br>It is used in hidden layers when the input data is centered around 0 to maintain the scale especially in RNN to handle sequential data.</li>
     </ul>
-
-- question: What is the purpose of an activation function in a neural network?
-  answer: >
-    The <b>purpose of activation functions</b> is to add non-linearity to a neural network, allowing the network to model complex 
-    relationships within the data. 
-    Activation functions  Activation functions also determine the output of neurons, enabling the network to 
-    make decisions and learn from a vast array of features.
 
 - question: What is a cost function?
   answer: >
