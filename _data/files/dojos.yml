@@ -1513,3 +1513,162 @@
     test_loss, test_acc = model.evaluate(x_test, y_test)
 
     # This code demonstrates building a simple neural network for image classification on the MNIST dataset.
+
+- question: >
+    Implement a simple, yet slightly more advanced convolutional neural network using PyTorch. 
+    Train it on the MNIST dataset to perform image classification.
+  python: |
+    
+    # Here is a slightly more advanced example of a convolutional neural network using PyTorch for image classification:
+
+    # Import required libraries
+    from torch import device, cuda, utils, no_grad, save, load
+    from torchvision import datasets, transforms
+    from torch.nn.functional import relu
+    from torch.optim import Adam
+    import torch.nn as nn
+
+    # Device configuration: CUDA for more efficient GPU training, otherwise fallback to CPU
+    device = device('cuda' if cuda.is_available() else 'cpu')
+
+    # Preprocessing pipeline: convert to tensor, normalize values, and randomly apply rotation and affine transformations
+    transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.RandomRotation(degrees=10, fill=0),
+        transforms.Normalize(mean=(0.1307,), std=(0.3081,)),  # note: the stats are empirical to the MNIST dataset
+        transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), fill=0)
+    ])
+
+    # Load the MNIST dataset (wikipedia.org/wiki/MNIST_database) from torchvision and apply preprocessing transformations
+    train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
+    eval_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
+    validation_dataset, test_dataset = utils.data.random_split(dataset=eval_dataset, lengths=[5000, 5000])
+
+    # Instantiate iterable train, val and test data loaders for model training and evaluation using batching and shuffling
+    train_loader = utils.data.DataLoader(dataset=train_dataset, batch_size=64, shuffle=True)
+    validation_loader = utils.data.DataLoader(dataset=validation_dataset, batch_size=64, shuffle=True)
+    test_loader = utils.data.DataLoader(dataset=test_dataset, batch_size=500, shuffle=False)
+
+
+    # Define a - basic - convolutional neural network (CNN) model architecture for 28x28 image data with 10 classes/labels
+    class CNN(nn.Module):
+        def __init__(self):
+            super(CNN, self).__init__()
+            # Three convolutional layers (1 -> 16 -> 32 -> 64 channels/features) with batch normalization (BN)
+            self.conv1 = nn.Conv2d(in_channels=1, out_channels=16, kernel_size=3, padding=1)  # First (input) layer
+            self.bn1 = nn.BatchNorm2d(num_features=16)  # Batch normalization for the 16 channels output by the first layer
+            self.conv2 = nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, padding=1)  # Second (hidden) layer
+            self.bn2 = nn.BatchNorm2d(num_features=32)  # Batch normalization for the 32 channels output by the second layer
+            self.conv3 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)  # Third (hidden) layer
+            self.bn3 = nn.BatchNorm2d(num_features=64)  # Batch normalization for the 64 channels output by the third layer
+            # Max pooling layer to reduce the spatial dimensionality (28 x 28 -> 14 x 14, or 64 x 14 x 14) of image data
+            self.pool = nn.MaxPool2d(kernel_size=2, stride=2)  # Max pooling layer using a 2x2 kernel and stride of 2
+            # Two fully-connected layers (64 * 14 * 14 -> 128 -> 10 channels/features) with dropout
+            self.fc1 = nn.Linear(in_features=64 * 14 * 14, out_features=128)  # First (linear) layer, flattens data to 1D
+            self.dropout = nn.Dropout(p=0.2)  # Dropout layer to randomly drop 20% of data to reduce chance of overfitting
+            self.fc2 = nn.Linear(in_features=128, out_features=10)  # Second (output) layer for mapping to label predictions
+
+        def forward(self, x):
+            x = self.bn1(relu(input=self.conv1(x)))  # Apply first convolutional layer with relu activation and then BN
+            x = self.bn2(relu(input=self.conv2(x)))  # Apply second convolutional layer with relu activation and then BN
+            x = self.pool(self.bn3(relu(input=self.conv3(x))))  # Third convolutional layer with relu, BN and max pooling
+            x = x.view(x.size(0), -1)  # Flatten feature map vectors from 3D convolutional to 1D fully-connected layers
+            x = relu(input=self.fc1(x))  # Apply first fully-connected layer and then relu activation
+            x = self.dropout(x)  # Apply dropout layer for data regularization
+            x = self.fc2(x)  # Apply final fully-connected layer to output classification prediction scores
+            return x
+
+    # Instantiate and cast the CNN model to the configured device
+    cnn_model = CNN().to(device)
+
+    # Instantiate the (cross-entropy) loss function and (Adam) optimizer
+    cross_entropy_loss = nn.CrossEntropyLoss()
+    adam_optimizer = Adam(params=cnn_model.parameters(), lr=0.0001)
+
+
+    # Helper function for computing the train, validation and test accuracy scores
+    def compute_accuracy(logits, true_labels):
+        _, predicted_labels = logits.max(1)
+        return (predicted_labels == true_labels).sum().item(), true_labels.size(0)
+
+
+    # Helper function for computing model loss and accuracy scores during training epoch validations and the test evaluation
+    def evaluate_model(data_loader):
+        sum_accurate_predictions, sum_total_predictions, sum_loss = 0, 0, 0
+        cnn_model.eval()
+
+        with no_grad():
+            for eval_data, true_labels in data_loader:
+                eval_data, true_labels = eval_data.to(device), true_labels.to(device)
+                eval_logits = cnn_model(eval_data)
+
+                # Loss
+                eval_loss = cross_entropy_loss(eval_logits, true_labels)
+                sum_loss += eval_loss.item() * eval_data.size(0)
+
+                # Accuracy
+                eval_accurate_predictions, eval_total_predictions = compute_accuracy(eval_logits, true_labels)
+                sum_accurate_predictions += eval_accurate_predictions
+                sum_total_predictions += eval_total_predictions
+
+        return sum_loss / sum_total_predictions, sum_accurate_predictions / sum_total_predictions * 100
+
+    # Iteratively train the model on the input dataset (for 10 epochs)
+    save_validation_accuracy_threshold = 0
+    epochs = 10
+
+    for epoch in range(epochs):
+        epoch_accurate_predictions, epoch_total_predictions = 0, 0
+        cnn_model.train()
+
+        for train_data, labels in train_loader:
+            train_data, labels = train_data.to(device), labels.to(device)
+
+            # Forward pass
+            train_logits = cnn_model(train_data)
+            epoch_loss = cross_entropy_loss(train_logits, labels)
+
+            # Back propagation and update step
+            adam_optimizer.zero_grad()
+            epoch_loss.backward()
+            adam_optimizer.step()
+
+            # Training accuracy update
+            train_batch_accurate_predictions, train_batch_total_predictions = compute_accuracy(train_logits, labels)
+            epoch_accurate_predictions += train_batch_accurate_predictions
+            epoch_total_predictions += train_batch_total_predictions
+
+        # Training epoch validation
+        validation_loss, validation_accuracy = evaluate_model(validation_loader)
+
+        # Checkpoint: save model when the validation accuracy score improves
+        if validation_accuracy > save_validation_accuracy_threshold:
+            save_validation_accuracy_threshold = validation_accuracy
+            save(obj=cnn_model.state_dict(), f='cnn_model.pt')
+
+        epoch_accuracy = epoch_accurate_predictions / epoch_total_predictions * 100.0
+        print(
+            f'Epoch {epoch + 1}, '
+            f'Train Loss: {epoch_loss.item():.4f}, '
+            f'Train Accuracy: {epoch_accuracy:.2f}%, '
+            f'Validation Loss: {validation_loss:.4f}, '
+            f'Validation Accuracy: {validation_accuracy:.2f}%'
+        )
+
+    # Evaluate the saved best model on the test dataset
+    cnn_model.load_state_dict(state_dict=load(f='cnn_model.pt'))
+    test_loss, test_accuracy = evaluate_model(test_loader)
+    print(f'Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%')
+
+    # An example of the output from model training, validation and testing
+    # Epoch 1, Train Loss: 0.0246, Train Accuracy: 90.89%, Validation Loss: 0.0813, Validation Accuracy: 97.36%
+    # Epoch 2, Train Loss: 0.0552, Train Accuracy: 96.73%, Validation Loss: 0.0586, Validation Accuracy: 98.14%
+    # Epoch 3, Train Loss: 0.0458, Train Accuracy: 97.42%, Validation Loss: 0.0567, Validation Accuracy: 98.20%
+    # Epoch 4, Train Loss: 0.0040, Train Accuracy: 97.84%, Validation Loss: 0.0489, Validation Accuracy: 98.36%
+    # Epoch 5, Train Loss: 0.0157, Train Accuracy: 98.06%, Validation Loss: 0.0414, Validation Accuracy: 98.62%
+    # Epoch 6, Train Loss: 0.0193, Train Accuracy: 98.18%, Validation Loss: 0.0443, Validation Accuracy: 98.68%
+    # Epoch 7, Train Loss: 0.0027, Train Accuracy: 98.32%, Validation Loss: 0.0371, Validation Accuracy: 98.98%
+    # Epoch 8, Train Loss: 0.1529, Train Accuracy: 98.46%, Validation Loss: 0.0314, Validation Accuracy: 99.08%
+    # Epoch 9, Train Loss: 0.0062, Train Accuracy: 98.53%, Validation Loss: 0.0385, Validation Accuracy: 98.78%
+    # Epoch 10, Train Loss: 0.0924, Train Accuracy: 98.61%, Validation Loss: 0.0375, Validation Accuracy: 98.82%
+    # Test Loss: 0.0335, Test Accuracy: 99.00% - using the saved model with the best validation accuracy from Epoch 8
