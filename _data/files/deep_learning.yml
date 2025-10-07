@@ -189,10 +189,10 @@
       <span class="bottom">1+e<sup>(-z)</sup></span>
     </div>
     <br>it is used in Binary classification and multilabel classification</li>
-    <li><b>ReLU</b>: it converts the negative input to 0 using the formula <code>g(z) = max(0, z)</code>.
+    <li><b>ReLU</b>: it converts the negative input to 0 using the formula $$g(z) = max(0, z)$$.
     <br>It is used in Regression when the expected output is always positive and mostly used in hidden layers 
     for better gradient flow.</li>
-    <li><b>Linear</b>: it gives the same output as input using the formula <code>g(z) = z</code>
+    <li><b>Linear</b>: it gives the same output as input using the formula $$g(z) = z$$
     <br>It is used in output layers for regression models.</li>
     <li><b>Softmax</b>: It gives vector as output using the formula
     <br>g(z) =
@@ -201,11 +201,7 @@
         <span class="symbol">/</span>
         <span class="bottom">&sum;<sub>j=1</sub><sup>k</sup>e<sup>z<sub>j</sub></sup></span>
       </div>
-      <br>
-      $$R^2 = 1 - \frac{\sum_{i=1}^{n} (yreal_i - ypred_i)^2}
-    {\sum_{i=1}^{n} (yreal_i - \overline{yreal})^2} $$
-      <br>
-     g(z) = e<sup>zi</sup>&sum;(e<sup>z</sup>) ∀(zi ∈ z) where z = [z<sub>1</sub>, z<sub>2</sub>, z<sub>3</sub>...z<sub>k</sub>]
+      ∀(zi ∈ z) where z = [z<sub>1</sub>, z<sub>2</sub>, z<sub>3</sub>...z<sub>k</sub>]
     <br>It is used in multiclassification</li>
     <li><b>Tanh</b>: It converts the input into the value between -1 and 1 using the formula 
     g(z) = 
@@ -214,7 +210,6 @@
         <span class="symbol">/</span>
         <span class="bottom">e<sup>x</sup> + e<sup>-x</sup></span>
       </div>
-
     <br>It is used in hidden layers when the input data is centered around 0 to maintain the scale especially in RNN to handle sequential data.</li>
     </ul>
 
