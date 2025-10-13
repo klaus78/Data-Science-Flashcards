@@ -945,3 +945,95 @@
     <li><b>Cross-sectional data</b> is collected at a single point in time or over a very short period, capturing a 
     snapshot of multiple variables at once (e.g., survey data collected from different individuals).</li>
     </ul>
+
+  h3: Natural Language Processing (NLP)
+- question: What is Natural Language Processing (NLP)?
+  answer: >
+    <b>Natural Language Processing (NLP)</b> is a field of Artificial Intelligence that focuses on enabling machines to understand, interpret, and generate human language.
+    <br><br>
+    It combines <b>linguistics</b>, <b>computer science</b>, and <b>machine learning</b> to process text and speech in a way that computers can understand.
+    <br><br>
+    Common NLP tasks include text classification, sentiment analysis, translation, and speech recognition.
+    <br><br>
+
+- question: What are the main components of NLP?
+  answer: >
+    NLP systems typically consist of two main components:
+    <ul> 
+    <li><b>Natural Language Understanding (NLU)</b>: focuses on interpreting human language, such as identifying intent, meaning, and sentiment.</li> 
+    <li><b>Natural Language Generation (NLG)</b>: focuses on producing human-like text or speech, such as in chatbots or report generation.</li>
+    </ul>
+    <br><br>
+  image: NLP_NLU_NLG.jpg
+
+- question: What are some common applications of NLP?
+  answer: >
+    NLP powers many everyday applications:
+    <ul> 
+    <li><b>Chatbots</b> and virtual assistants (like Siri or Alexa)</li> 
+    <li><b>Machine translation</b> (Google Translate)</li> 
+    <li><b>Sentiment analysis</b> on social media posts</li> 
+    <li><b>Spam detection</b> in emails</li> 
+    <li><b>Speech recognition</b> and transcription services</li> 
+    </ul>
+
+- question: What is tokenization in NLP?
+  answer: >
+    <b>Tokenization</b> is the process of splitting text into smaller units called <b>tokens</b>, such as words or sentences.
+    <br><br>
+    For example, the sentence "I love NLP" becomes ["I", "love", "NLP"].
+    <br><br>
+    Tokenization is the first step in most NLP pipelines.
+    <br>
+  image: Tokenization.png
+
+- question: What is stemming and lemmatization?
+  answer: >
+    Both are text normalization techniques used to reduce words to their base form:
+    <ul>
+    <li><b>Stemming</b>: removes suffixes (e.g., "running" → "run") by simple rule-based trimming.</li> 
+    <li><b>Lemmatization</b>: converts words to their meaningful root form (lemma) using vocabulary and grammar (e.g., "better" → "good").</li> 
+    </ul>
+
+- question: What is stop-word removal in NLP?
+  answer: >
+    <b>Stop words</b> are common words like "the", "is", "at", "on" that don’t add much meaning to text analysis.
+    <br><br>
+    Removing them helps focus on meaningful terms and reduces noise in text processing.
+    <br><br>
+
+- question: What is a Bag-of-Words (BoW) model?
+  answer: > 
+    The <b>Bag-of-Words (BoW)</b> model represents text as a collection of words, ignoring grammar and word order but keeping track of word frequency.
+    <br><br>
+    For example, "NLP is fun" and "fun with NLP" would have similar word counts.
+    <br><br>
+    It’s a simple yet effective representation for many text classification tasks.
+    <br><br>
+
+- question: What is the difference between rule-based NLP and machine learning-based NLP?
+  answer: > 
+    <b>Rule-based NLP</b> systems rely on predefined grammar and keyword rules to process language.
+    <br><br>
+    <b>Machine learning-based NLP</b> uses statistical models and large datasets to learn patterns automatically.
+    <br><br>
+    Modern NLP heavily relies on machine learning and deep learning approaches.
+    <br><br>
+
+- question: What are word embeddings in NLP?
+  answer: >
+    <b>Word embeddings</b> are vector representations of words that capture their meaning and relationships.
+    <br><br>
+    Words with similar meanings (like “king” and “queen”) have similar vector representations.
+   <br><br>
+   Examples include <b>Word2Vec</b>, <b>GloVe</b>, and <b>FastText</b>.
+   <br><br>
+
+- question: What are transformers and why are they important in NLP?
+  answer: >
+    <b>Transformers</b> are deep learning models that use attention mechanisms to process text more effectively.
+    <br><br>
+    They can handle long-range dependencies in language and are the foundation of models like <b>BERT</b> and <b>GPT</b>.
+    <br><br>
+    Transformers revolutionized NLP by achieving state-of-the-art results on translation, summarization, and question answering.
+    <br><br>
