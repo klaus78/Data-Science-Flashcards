@@ -946,8 +946,8 @@
     snapshot of multiple variables at once (e.g., survey data collected from different individuals).</li>
     </ul>
 
-  h3: Natural Language Processing (NLP)
-- question: What is Natural Language Processing (NLP)?
+- h3: Natural Language Processing (NLP)
+  question: What is Natural Language Processing (NLP)?
   answer: >
     <b>Natural Language Processing (NLP)</b> is a field of Artificial Intelligence that focuses on enabling machines to understand, interpret, and generate human language.
     <br><br>
