@@ -38,6 +38,40 @@
     <b>Continuous random variables</b> have a non-finite number of possible outcomes. In other words a continuous random
     variable can assume any value in an interval. An example of continuous random variable
     is the temperature in a room. The temperature can take any value within a range.
+  - question: What is the difference between primary and secondary data?
+    answer: >
+      <b>Primary data</b> is collected first-hand for a specific research purpose (surveys, experiments, interviews).  
+      <b>Secondary data</b> is collected by someone else, often for a different purpose (census reports, research articles, company databases).  
+      Primary data ensures relevance and accuracy but is time-consuming and expensive. Secondary data is cost-effective and faster but may not perfectly fit your needs.
+
+  - question: Explain structured vs unstructured data with examples.
+    answer: >
+      <b>Structured data</b> is highly organized in rows and columns; easy to store and analyze. Examples: SQL databases, Excel spreadsheets with employee data.  
+      <b>Unstructured data</b> has no predefined format; difficult to analyze using traditional tools. Examples: emails, videos, social media posts, images.  
+      Modern analytics often deals with unstructured data, requiring NLP, computer vision, and AI for insights.
+
+  - question: What is multivariate data, and how is it different from univariate data?
+    answer: >
+      <b>Univariate data</b> measures only one variable. Example: height of students. Analysis focuses on mean, median, mode.  
+      <b>Multivariate data</b> measures two or more variables to analyze relationships. Example: height, weight, and age of students.  
+      Multivariate data enables advanced analysis like correlation, regression, and predictive modeling.
+- question: Explain nominal data with an example.
+    answer: >
+      <b>Nominal data</b> is categorical data without any natural order. Examples:
+      <ul>
+      <li>Blood type: A, B, AB, O</li>
+      <li>Hair color: Black, Brown, Blonde</li>
+      </ul>
+      Operations like addition or averaging don’t make sense. It is used for categorization, labeling, or grouping. In statistics, you can count frequencies, modes, or apply chi-square tests.
+
+  - question: Explain ordinal data with an example.
+    answer: >
+      <b>Ordinal data</b> represents categories with a meaningful order, but intervals between categories aren’t uniform. Examples:
+      <ul>
+      <li>Customer satisfaction: Poor, Average, Good, Excellent</li>
+      <li>Education level: High school, Bachelor’s, Master’s, PhD</li>
+      </ul>
+      You can say “Good > Average,” but cannot quantify the difference. Ordinal data is used in surveys, rating systems, and social research to understand ranking preferences.
 
 - h3: Averages
   question: What is the meaning of average of the data?
