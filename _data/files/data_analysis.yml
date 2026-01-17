@@ -15,10 +15,29 @@
 
 
 - h3: Distance metrices
-  question: What is the hamming distance?
+  question: What is the Hamming distance? Can you make an example?
   answer: >
-    The hamming distance is used for categorical features. If all the variables 
-    are categorical then the hamming distance is defined as the number of mismatches.
+    The <b>Hamming distance</b> is a general concept from information theory that is used
+    with any couple of equal-length strings. 
+    <br><br>
+    The <b>Hamming distance</b> counts how many positions differ between two strings of equal length.  
+    <br><br>
+    An as example, compare the two strings
+    <br><code>
+    abc
+    <br>
+    afc
+    </code>
+    <br>
+    Character by character comparison:
+    <ul>
+      <li><code>a</code> is equal to <code>a</code></li>
+      <li><code>b</code> <u>differs</u> from <code>f</code></li>
+      <li><code>c</code> is equal to <code>c</code></li>
+    </ul>
+    There is <u>one</u> position where the characters <u>differ</u>.  
+    <br>
+    Result: <b>Hamming distance = 1</b>
 
 - question: What is the Manhattan (or city block) distance?
   answer: >

@@ -1018,16 +1018,15 @@
     <b>Machine learning-based NLP</b> uses statistical models and large datasets to learn patterns automatically.
     <br><br>
     Modern NLP heavily relies on machine learning and deep learning approaches.
-    <br><br>
 
 - question: What are word embeddings in NLP?
   answer: >
     <b>Word embeddings</b> are vector representations of words that capture their meaning and relationships.
     <br><br>
     Words with similar meanings (like “king” and “queen”) have similar vector representations.
-   <br><br>
-   Examples include <b>Word2Vec</b>, <b>GloVe</b>, and <b>FastText</b>.
-   <br><br>
+    <br><br>
+    Examples include <b>Word2Vec</b>, <b>GloVe</b>, and <b>FastText</b>.
+    <br><br>
 
 - question: What are transformers and why are they important in NLP?
   answer: >
