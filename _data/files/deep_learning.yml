@@ -6,7 +6,7 @@
     These neural networks are composed of multiple layers (hence <b>"deep"</b>), and they are trained on large datasets to make 
     predictions or decisions. These deep NNs can lean from complex and unstructured data like texts, images or even sounds.
 
-  question: What are the differences between machine learning and deep learning?
+- question: What are the differences between machine learning and deep learning?
   answer: >
     <b>Deep learning</b> is a subset of <b>machine learning</b>. Both machine learning
     and deep learning try to create a mathematical model of a dataset. This mathematical
@@ -44,6 +44,27 @@
     algorithms. These creations convey information or events that are either false or have never occured in reality.
     <br><br>
     Essentially, deepfakes manipulate media to present a distorted version of the truth.
+
+- question: What is the difference between supervised, unsupervised, and reinforcement learning in deep learning?
+  answer: >
+    <b>Supervised learning</b> uses labeled data where the model learns to map inputs to correct outputs, 
+    like classification or regression tasks with known target values.
+    <br><br>
+    <b>Unsupervised learning</b> works with unlabeled data to find hidden patterns or structures, such as 
+    clustering, dimensionality reduction, or anomaly detection.
+    <br><br>
+    <b>Reinforcement learning</b> involves an agent learning through trial and error by receiving rewards or 
+    penalties for actions taken in an environment, optimizing for cumulative reward over time.
+
+- question: How does deep learning differ from traditional AI approaches like expert systems?
+  answer: >
+    <b>Expert systems</b> are rule-based AI that rely on human-crafted knowledge encoded as explicit rules 
+    and if-then logic, requiring domain experts to manually program the decision-making process.
+    <br><br>
+    <b>Deep learning</b> automatically learns patterns and features from data without explicit programming, using 
+    neural networks to discover complex relationships. While expert systems are brittle and cannot handle 
+    situations outside their programmed rules, deep learning models can generalize to new, unseen data and 
+    adapt to variations in input patterns.
 
 - h3: Neural Networks
   question: What is an Artificial Neural Network (ANN)?
@@ -116,6 +137,17 @@
     A recurrent neural network has an intern loop, that means the data is not processed all at once 
     but rather is processed in different steps. In particular in the case of text, each word is 
     processed once at a time. This process is similar to the way humans read text.
+
+- question: What are pooling layers in CNNs and what is their purpose?
+  answer: >
+    <b>Pooling layers</b> in Convolutional Neural Networks (CNNs) are layers that progressively reduce the 
+    spatial size (width and height) of the input volume, which helps to reduce computation, control overfitting, 
+    and make feature detection more robust to variations in position and scale.
+    <br><br>
+    The most common type is <b>max pooling</b>, which takes the maximum value from each window of the input. 
+    Other types include <b>average pooling</b> (takes the average) and <b>L2 pooling</b> (takes the L2 norm). Pooling layers 
+    help create translation invariance, allowing the network to recognize features regardless of where they appear 
+    in the input image.
 
 - question: What is the self-attention technique that is used in deep learning?
   answer: >
