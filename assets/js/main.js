@@ -1,5 +1,6 @@
 window.onload = () => {
       positionElements();
+      loadDarkModePreference();
 };
 
 window.onresize = () => {
@@ -88,6 +89,36 @@ function scrollToTop() {
             top: 0,
             behavior: "smooth"
       });
+}
+
+// Dark Mode Toggle
+function toggleDarkMode() {
+      const body = document.body;
+      const toggleBtn = document.getElementById('dark-mode-toggle');
+      
+      body.classList.toggle('dark-mode');
+      
+      // Change button symbol based on mode
+      if (body.classList.contains('dark-mode')) {
+            toggleBtn.textContent = '☀'; // Sun symbol for dark mode (click to go light)
+            localStorage.setItem('darkMode', 'enabled');
+      } else {
+            toggleBtn.textContent = '☾'; // Moon symbol for light mode (click to go dark)
+            localStorage.setItem('darkMode', 'disabled');
+      }
+}
+
+// Load dark mode preference on page load
+function loadDarkModePreference() {
+      const darkMode = localStorage.getItem('darkMode');
+      const toggleBtn = document.getElementById('dark-mode-toggle');
+      
+      if (darkMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggleBtn.textContent = '☀'; // Sun symbol for dark mode
+      } else {
+            toggleBtn.textContent = '☾'; // Moon symbol for light mode
+      }
 }
 
 function positionElements() {

@@ -320,4 +320,119 @@ html, body {
       transform: scale(1.075); /* a slight scale effect on hover */
 }
 
+/* Dark Mode Toggle Button */
+.dark-mode-btn {
+      position: absolute;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 4px;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      padding: 0;
+      margin: 0;
+}
+
+.dark-mode-btn:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+}
+
+.dark-mode-btn:active {
+      transform: scale(0.95);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+}
+
+body.dark-mode .header {
+      background: #2c3e50;
+}
+
+body.dark-mode .collapsible:not(a) {
+      background-color: #2d2d2d;
+      color: #e0e0e0;
+}
+
+body.dark-mode .active:not(a, .divQuestion),
+body.dark-mode .collapsible:not(a):hover {
+      background-color: #3a3a3a;
+}
+
+body.dark-mode .divQuestion {
+      border-bottom: 1px solid #3a3a3a;
+      color: #e0e0e0;
+}
+
+body.dark-mode .divQuestion:hover {
+      background-color: #2c4a4f;
+}
+
+body.dark-mode .divAnswer {
+      background-color: #252525;
+      border: 1px solid #3a3a3a;
+      border-left: 8px solid #4a90e2;
+      color: #e0e0e0;
+}
+
+body.dark-mode .divAnswer code {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+}
+
+body.dark-mode .divCode {
+      background-color: #1e1e1e;
+      border-left: 8px solid #4a90e2;
+}
+
+body.dark-mode h2 {
+      background-color: #2c3e50 !important;
+      color: #e0e0e0;
+}
+
+body.dark-mode h3 {
+      color: #e0e0e0;
+}
+
+body.dark-mode .left-menu {
+      background-color: #1e1e1e;
+}
+
+body.dark-mode a:link:not(.header_link) {
+      color: #6fa8dc;
+}
+
+body.dark-mode a:visited:not(.header_link) {
+      color: #6fa8dc;
+}
+
+body.dark-mode #back-to-top {
+      background-color: #2d2d2d;
+      color: #e0e0e0;
+}
+
+body.dark-mode #back-to-top:hover {
+      background-color: #4a90e2;
+      color: #fff;
+}
+
+body.dark-mode .dark-mode-btn {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .dark-mode-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+}
+
 
