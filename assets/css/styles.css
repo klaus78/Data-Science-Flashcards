@@ -79,7 +79,7 @@ a:visited:not(.header_link) {
 .divQuestion code {
       font-family: monospace;
       font-size: 15px;
-      background-color: #f8f8f8;
+      background-color: #eeeeee;
 }
 
 .divQuestion:hover {
@@ -385,9 +385,12 @@ body.dark-mode .divAnswer {
       color: #e0e0e0;
 }
 
+body.dark-mode .divQuestion code,
 body.dark-mode .divAnswer code {
-      background-color: #1a1a1a;
+      background-color: #3b3b3b;
       color: #e0e0e0;
+      font-family: monospace;
+      font-size: 15px;
 }
 
 body.dark-mode .divCode {
