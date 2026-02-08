@@ -153,7 +153,7 @@ ul {
 h1 {
       margin-top: 0px;
       margin-bottom: 0px;
-      font-size: 26px;
+      font-size: clamp(22px, 5vw, 26px);
 }
 
 h2 {
