@@ -53,7 +53,7 @@
 .header_link:visited {
       margin: 0 auto;
       color: white;
-      text-decoration: none;
+      text-decoration: none;   
 }
 
 a:link:not(.header_link) {
@@ -153,7 +153,7 @@ ul {
 h1 {
       margin-top: 0px;
       margin-bottom: 0px;
-      font-size: clamp(22px, 5vw, 26px);
+      font-size: clamp(26px, 5vw, 32px);
 }
 
 h2 {
@@ -322,8 +322,6 @@ html, body {
 
 /* Dark Mode Toggle Button */
 .dark-mode-btn {
-      position: absolute;
-      right: 20px;
       width: 40px;
       height: 40px;
       background-color: rgba(255, 255, 255, 0.2);
@@ -337,7 +335,7 @@ html, body {
       align-items: center;
       transition: all 0.3s ease;
       padding: 0;
-      margin: 0;
+      margin: 0px 20px 0px 0px;
 }
 
 .dark-mode-btn:hover {
