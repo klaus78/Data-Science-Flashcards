@@ -72,6 +72,36 @@
     situations outside their programmed rules, deep learning models can generalize to new, unseen data and 
     adapt to variations in input patterns.
 
+- question: What is the vanishing gradient problem in deep learning, and how can it be mitigated?
+  answer: >
+    The <b>vanishing gradient problem</b> is a challenge in training deep neural networks, particularly in recurrent 
+    neural networks (RNNs) and deep feedforward networks. It occurs when gradients become extremely small during 
+    backpropagation, causing the network's weights to update very slowly or not at all. This can lead to slow convergence 
+    and difficulty in training deep models.
+    <br><br>
+    To mitigate the vanishing gradient problem, several techniques can be used:
+    <ul>
+      <li><strong>Activation Functions:</strong> replace activation functions like sigmoid with alternatives such as 
+                ReLU (Rectified Linear Unit), which are less prone to vanishing gradients.</li>
+      <li><strong>Weight Initialization:</strong> use appropriate weight initialization techniques like Xavier/Glorot 
+                initialization to ensure that weights have reasonable initial values.</li>
+      <li><strong>Batch Normalization:</strong> apply batch normalization to normalize the inputs at each layer, helping 
+            gradients to flow more smoothly.</li>
+      <li><strong>Gated Architectures:</strong> architectures like LSTMs and GRUs use gating mechanisms to control the flow of 
+            information, reducing the vanishing gradient problem in sequential data models.</li>
+      <li><strong>Gradient Clipping:</strong> clip gradients during training to prevent them from becoming excessively large 
+          or small.</li>
+    </ul>
+  
+- question: What is exploding gradient problem?
+  answer: >
+    <div>The <strong>exploding gradient problem</strong> is a training-time problem in deep neural networks where gradients become extremely large during backpropagation,
+    leading to unstable learning, huge weight updates, and sometimes infinite or NaN loss values.
+    It usually happens in very deep networks or RNNs due to large weights, poor initialization, or repeated multiplication of values greater than one.
+    This issue is classified under Training and Optimization, not transfer learning, and is commonly addressed using techniques 
+    like gradient clipping, smaller learning rates, better weight initialization, normalization methods, or architectures such as LSTMs and ResNets.</div>
+
+
 - h3: Neural Networks
   question: What is an Artificial Neural Network (ANN)?
   answer: >
@@ -313,35 +343,6 @@
     objects in images can be fine-tuned for a specific image classification task, like classifying different species of flowers.
     The pre-trained model already possesses features that are generally useful for recognizing edges, shapes, and textures, 
     making it easier to adapt to the new task with a smaller dataset.
-
-- question: What is the vanishing gradient problem in deep learning, and how can it be mitigated?
-  answer: >
-    The <b>vanishing gradient problem</b> is a challenge in training deep neural networks, particularly in recurrent 
-    neural networks (RNNs) and deep feedforward networks. It occurs when gradients become extremely small during 
-    backpropagation, causing the network's weights to update very slowly or not at all. This can lead to slow convergence 
-    and difficulty in training deep models.
-    <br><br>
-    To mitigate the vanishing gradient problem, several techniques can be used:
-    <ul>
-      <li><strong>Activation Functions:</strong> replace activation functions like sigmoid with alternatives such as 
-                ReLU (Rectified Linear Unit), which are less prone to vanishing gradients.</li>
-      <li><strong>Weight Initialization:</strong> use appropriate weight initialization techniques like Xavier/Glorot 
-                initialization to ensure that weights have reasonable initial values.</li>
-      <li><strong>Batch Normalization:</strong> apply batch normalization to normalize the inputs at each layer, helping 
-            gradients to flow more smoothly.</li>
-      <li><strong>Gated Architectures:</strong> architectures like LSTMs and GRUs use gating mechanisms to control the flow of 
-            information, reducing the vanishing gradient problem in sequential data models.</li>
-      <li><strong>Gradient Clipping:</strong> clip gradients during training to prevent them from becoming excessively large 
-          or small.</li>
-    </ul>
-  
-- question: What is exploding gradient problem?
-  answer: >
-    <div>The <strong>exploding gradient problem</strong> is a training-time problem in deep neural networks where gradients become extremely large during backpropagation,
-    leading to unstable learning, huge weight updates, and sometimes infinite or NaN loss values.
-    It usually happens in very deep networks or RNNs due to large weights, poor initialization, or repeated multiplication of values greater than one.
-    This issue is classified under Training and Optimization, not transfer learning, and is commonly addressed using techniques 
-    like gradient clipping, smaller learning rates, better weight initialization, normalization methods, or architectures such as LSTMs and ResNets.</div>
 
 - h3: Large Language Models (LLMs)
   question: What is a Large Language Model (LLM)?
