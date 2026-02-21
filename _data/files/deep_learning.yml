@@ -212,7 +212,7 @@
   answer: >
     The <b>purpose of activation functions</b> is to add non-linearity to a neural network, allowing the network to model complex 
     relationships within the data. 
-    Activation functions  Activation functions also determine the output of neurons, enabling the network to 
+    Activation functions  also determine the output of neurons, enabling the network to 
     make decisions and learn from a vast array of features.
 
 - question: Explain different types of activation functions and its uses
