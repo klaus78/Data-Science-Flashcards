@@ -44,6 +44,12 @@
     algorithms. These creations convey information or events that are either false or have never occured in reality.
     <br><br>
     Essentially, deepfakes manipulate media to present a distorted version of the truth.
+- question: What is feature learning?
+  answer: >
+    <strong>Feature learning</strong> means that a model automatically learns the important patterns or representations from raw data
+    instead of relying on manually designed features. In deep learning, early layers learn simple features (like edges or colors),
+    and deeper layers combine them into more complex features (like shapes or objects), which is why deep learning reduces the need for
+    human feature engineering
 
 - question: What is the difference between supervised, unsupervised, and reinforcement learning in deep learning?
   answer: >
@@ -328,6 +334,14 @@
       <li><strong>Gradient Clipping:</strong> clip gradients during training to prevent them from becoming excessively large 
           or small.</li>
     </ul>
+  
+- question: What is exploding gradient problem?
+  answer: >
+    <div>The <strong>exploding gradient problem</strong> is a training-time problem in deep neural networks where gradients become extremely large during backpropagation,
+    leading to unstable learning, huge weight updates, and sometimes infinite or NaN loss values.
+    It usually happens in very deep networks or RNNs due to large weights, poor initialization, or repeated multiplication of values greater than one.
+    This issue is classified under Training and Optimization, not transfer learning, and is commonly addressed using techniques 
+    like gradient clipping, smaller learning rates, better weight initialization, normalization methods, or architectures such as LSTMs and ResNets.</div>
 
 - h3: Large Language Models (LLMs)
   question: What is a Large Language Model (LLM)?
