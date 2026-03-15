@@ -55,12 +55,12 @@
   answer: >
     The main techniques of feature engineering are
     <ul>
-    <li><b>feature selection</b>. It selects a subset of features without
+    <li><b>feature selection</b>: it selects a subset of features without
     transforming them</li>
-    <li><b>feaure learning</b>. Use ML learning algorithms to extract the best features</li>
-    <li><b>feature extraction</b>. transform the existing features into new features. This
+    <li><b>feaure learning</b>: use ML learning algorithms to extract the best features</li>
+    <li><b>feature extraction</b>: transform the existing features into new features. This
     is usually done by dim reduction</li>
-    <li><b>feature combination</b>. Combine single features into a more powerful feature</li>
+    <li><b>feature combination</b>: combine single features into a more powerful feature</li>
      </ul>    
 
 - question: What are the main purposes of feature selection?
@@ -75,30 +75,46 @@
 - question: What are the main techniques of feature selection?
   answer: >
     The main techniques of feature selection are
-    <br><br>- filter methods. Statistical techniques are used to evaluate the relationship 
-    between indiviual features and the target features. This technique is completely independent 
-    of the model
-    <br><br>- wrapper method. This consists in training a machine learning model 
-    by adding/removing features so you can evauate their effect on the model based on a 
-    certain scoring
-    <br><br>- embedded methods. The features are selected during the model training
-    and more important features are assigned an higher rank. Examples of such
-    models are decision trees and lasso regression models
-
+    <ul>
+      <li>
+        <b>filter methods</b>: statistical techniques are used to evaluate the relationship 
+        between indiviual features and the target features. This technique is completely independent 
+        of the model
+      </li>
+      <li>
+        <b>wrapper method</b>: this consists in training a machine learning model 
+        by adding/removing features so you can evauate their effect on the model based on a 
+        certain scoring
+      </li>
+      <li>
+        <b>embedded methods</b>: the features are selected during the model training
+        and more important features are assigned an higher rank. Examples of such
+        models are decision trees and lasso regression models
+      </li>
+    </ul>
 
 - question: What are some differences between the main techniques of feature selection?
   answer: >
     Some differences between filter and wrapper methods are
-    <br><br>- wrapper methods rely on machine learning models while filter methods do not. Filter
-    methods rely on statistical values.
-    <br><br>- filter methods can fail when there is not enough data to extract meaningful 
-    statistical values
-    <br><br>- wrapper methods take much more time since they involve training a number of
-    machine learning models.
-    <br><br>- using features extracted with wrapper methods can lead to machine learning models
-    affected by overfitting since those features have been extracted using machine learning
-    models.    
-
+    <ul>
+      <li>
+        wrapper methods rely on machine learning models while filter methods do not. Filter
+        methods rely on statistical values.
+      </li>
+      <li>
+        filter methods can fail when there is not enough data to extract meaningful 
+        statistical values
+      </li>
+      <li>
+        wrapper methods take much more time since they involve training a number of
+        machine learning models.
+      </li>
+      <li>
+        using features extracted with wrapper methods can lead to machine learning models
+        affected by overfitting since those features have been extracted using machine learning
+        models.
+      </li>    
+    </ul>
 
 - question: What is the Z-score normalization (also called standardization)?
   answer: > 
