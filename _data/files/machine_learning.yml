@@ -206,7 +206,7 @@
     <br>K-nearest neighbor, Naive Bayes, Decision Trees, Linear Regression, 
     Support Vector Machines.
 
-- question:
+- question: What is Clustering
   answer: >
     Clustering is an unsupervised machine learning technique that partitions unlabeled data into groups (clusters) 
     where items in the same group are more similar to each other than to those in other groups
