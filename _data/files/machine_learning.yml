@@ -102,7 +102,7 @@
     not perform well on new data that it has not seen before.
 
 - question: What is the difference between bias and variance in machine learning?
-  answer :
+  answer:
     <b>Bias</b> and <b>variance</b> are two important concepts in machine learning. 
     <b>Bias</b> is the error that occurs when the model is not able to learn the true relationship between the input and output variables. 
     <b>Variance</b> is the error that occurs when the model is too sensitive to the training data and does not generalize well to new data.
@@ -206,12 +206,12 @@
     <br>K-nearest neighbor, Naive Bayes, Decision Trees, Linear Regression, 
     Support Vector Machines.
 
-- question: What is Clustering
+- question: What is Clustering?
   answer: >
     Clustering is an unsupervised machine learning technique that partitions unlabeled data into groups (clusters) 
-    where items in the same group are more similar to each other than to those in other groups
+    where items in the same group are more similar to each other than to those in other groups.
 
-- question: What is the difference between Classification and Clustering
+- question: What is the difference between Classification and Clustering?
   answer: >
     <dl>
       <dt><b>Classification</b></dt>
@@ -476,7 +476,7 @@
   answer: >
     In a class-balanced dataset, the number of items in each class is approximately the same.
 
-    <br><br>When the dataset is class-balanced, <b>accuracy</b> is a good metric. Indeed, accuracy assigns
+    <br><br>When the dataset is <i>class-balanced</i>, <b>accuracy</b> is a good metric. Indeed, accuracy assigns
     equal weight to both true positives and true negatives. Accuracy is calculated as the ratio of correctly 
     classified instances (both true positives and true negatives) to the total number of instances, 
     as indicated by the formula
@@ -487,7 +487,7 @@
         <span class="bottom">n</span>
       </div>
 
-    <br><br>When the dataset is class-unbalanced, one class has significantly more items than the
+    <br><br>When the dataset is <i>class-unbalanced</i>, one class has significantly more items than the
     other classes. In that case <b>precision</b> and <b>recall</b>
     are better metrics. In class-imbalanced scenarios, 
     the class with fewer instances is often the class of more significance. 
