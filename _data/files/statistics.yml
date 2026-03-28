@@ -20,7 +20,7 @@
     is better than a two star hotel.</li>
 
 - question: What is a random variable? Can you make an example?
-  answer: > 
+  answer: >
     A <b>random variable</b> is a variable that associates a numerical value with each possible outcome of a random phenomenon. 
     Each numerical value is linked to a specific probability according to a probability distribution
     <br><br>
@@ -103,12 +103,37 @@
     can be applied. Some examples of ratio data are the length and the weight.</li>
     </ul>
 
+- question: What are the two kinds of statistics and how do they differ?
+  answer: >
+    The two main branches of statistics include:
+    <ul>
+      <li>
+        <b>Descriptive Statistics:</b> This focuses on organising and summarising the specific dataset you already have. 
+        The goal is to provide a clear summary of just that dataset and nothing more.
+        It utilizes primary tools like:
+        <ul>
+          <li><b>Measures of Central Tendency:</b> The <b>Mean</b> (Average), <b>Median</b> (middle value), and <b>Mode</b> (most frequent value).</li>
+          <li><b>Measures of Dispersion:</b> <b>Variance</b> and <b>Standard Deviation</b> to show how far aprt data points are.</li>
+        </ul>
+      </li>
+      <li>
+        <b>Inferential Statistics:</b> This kind of statistics takes the information gathered from a sample and use it to make 
+        guesses or "inferences" about a much larger population. It looks for patterns that apply beyond 
+        the immediate data. Common methods include:
+        <ul>
+          <li><b>Hypothesis Testing:</b> Determining if a result is statistically significant. (t-tests, p-values)</li>
+          <li><b>Confidence Intervals:</b> Estimating the range where a population value likely falls.</li>
+          <li><b>Regression Analysis:</b> Examining relationships between different variables.</li>
+        </ul>
+      </li>
+    </ul>
+
 - h3: Averages
   question: What is the meaning of average of the data?
   answer: You can think of the average as the center of the data.
 
   question: There are three different sorts of average&#58; mean, median, mode. How do they differ?
-  answer: >    
+  answer: >
     <b>Mean</b> (&mu;) = <div class="frac">
           <span>sum all items</span>
           <span class="symbol">/</span>
@@ -202,7 +227,7 @@
   answer: The <b>middle quartile</b> is equal to the median.
 
 - question: What is the variance? What is its main disadvantage?
-  answer: > 
+  answer: >
     The <b>variance</b> is a way of measuring how the data is spread. The variance is defined as the average of the 
     squared distance of all points from the mean.
     <br>
@@ -275,7 +300,7 @@
     <br><b>P(A') = 1-P(A)</b>
 
 - question: What does it mean two events are mutually exclusive or disjoint? 
-  answer: > 
+  answer: >
     Two events are <b>mutually exclusive</b> or disjoint when only one of the two events can occur.
 
 - question: What happens when two events intersect?
@@ -291,7 +316,7 @@
     Notice that it is necessary to remove P(A &cap; B) because otherwise some probabilities would be counted twice.
 
 
-- question: > 
+- question: >
     If  events A and B are disjoint, what is the formula for the probability 
     P(A &cup; B)?
   answer: >
@@ -344,7 +369,7 @@
     <span class="bottom">P(B)</span>
     </div></b>
 
-- question: > 
+- question: >
     What diagram is particularly useful for visualizing conditional probabilities? Can you use
     this diagram to visualize the conditional probability P(A|B)?
   answer: >
@@ -397,7 +422,7 @@
     </div>
     </b>
     <br><br>Notice that the denominator is the law of total probability.
-    
+
 - question: if two events are independent, can they be mutually exclusive?
   answer: >
     If two events A and B are independent, both events can happen so they <u>cannot</u> be mutually exclusive. Indeed
@@ -408,7 +433,7 @@
   answer: >
     A <b>probability distribution</b> is a plot that displays the probabilities associated with all possible outcomes 
     of a random variable.
-  
+
 - question: What is the symbol for a random variable and the symbol for the possible values it can take?
   answer: >
     A <b>random variable</b> is represented by a capital letter like X or Y. 
@@ -441,7 +466,7 @@
             &radic;<span style="text-decoration:overline;font-size:17px">Var(X)</span>
             </span>
     </b>
-- question: > 
+- question: >
     Let's suppose you know the expectation and variance of a probability distribution X, write the formulas
     of expectation and variance of the distribution <code>Y = aX + b</code>.
   answer: >
@@ -488,7 +513,7 @@
     Given <code>n</code> objects, you can arrange them 
     <br><br><b>n!</b> times in a line
     <br><br><b>(n-1)!</b> times in a circle
-  
+
 - question: >
     Given <code>n</code> objects where <code>k</code> of them are of a type and <code>j</code> of them of another type, 
     in how many ways can you arrange them by type?
@@ -624,7 +649,7 @@
       </div>
       </b>
       &nbsp;&nbsp; where <b>q = 1 - p</b>.
-    
+
 - question: >
     What are the conditions where we have a binomial distribution? What is the formula of a binomial distribution
     where we have <code>n</code> trials, probabilities of success <code>p</code> and insuccess <code>q</code> of each trial,  

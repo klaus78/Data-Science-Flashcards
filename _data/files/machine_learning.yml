@@ -34,7 +34,7 @@
     </ul>
 
 - question: What are the typical steps of the creation of a machine learning model?
-  answer: > 
+  answer: >
     The typical steps of a machine learning process are:
     <ul>
     <li><b>Problem definition and domain knowledge</b>: understand what problem you want to solve and gain 
@@ -83,7 +83,7 @@
     the complexity of the data, resulting in poor performance.
 
 - question: What is the variance of a machine learning model?
-  answer: > 
+  answer: >
     <b>Variance</b> in machine learning is the amount by which a model's predictions change when it is trained 
     on different subsets of the training data.
     <br><br>
@@ -91,9 +91,9 @@
     will work well with the training data but not generalize well to the test data.
     <br><br>
     A model with low variance will be less sensitive to the training data and will perform well also with the test data. 
-    
+
 - question: What are the implications of high variance in a machine learning model?
-  answer: > 
+  answer: >
     A machine learning with <b>high variance</b> is a model for which small changes in the training data set lead to big changes 
     in the model prediction. This is equivalent to saying that the model overfits the training data, i.e. the model works well 
     on the training data but does not generalize well on the test data.
@@ -102,7 +102,7 @@
     not perform well on new data that it has not seen before.
 
 - question: What is the difference between bias and variance in machine learning?
-  answer : 
+  answer :
     <b>Bias</b> and <b>variance</b> are two important concepts in machine learning. 
     <b>Bias</b> is the error that occurs when the model is not able to learn the true relationship between the input and output variables. 
     <b>Variance</b> is the error that occurs when the model is too sensitive to the training data and does not generalize well to new data.
@@ -169,7 +169,7 @@
     when given new, unseen input data.
 
 - question: What is unsupervised learning? Make also some examples of algorithms
-  answer: > 
+  answer: >
     <b>Unsupervised learning</b> is a machine learning process with unlabeled data.
     <br><br>
     Some examples of unsupervised learning are
@@ -205,7 +205,26 @@
     The most common <b>supervised machine learning algorithms</b> are 
     <br>K-nearest neighbor, Naive Bayes, Decision Trees, Linear Regression, 
     Support Vector Machines.
-  
+
+- question: What is Clustering
+  answer: >
+    Clustering is an unsupervised machine learning technique that partitions unlabeled data into groups (clusters) 
+    where items in the same group are more similar to each other than to those in other groups
+
+- question: What is the difference between Classification and Clustering
+  answer: >
+    <dl>
+      <dt><b>Classification</b></dt>
+        <dd>Classification is a form of supervised learning where the objective is to assign data points into specific, pre-defined categories.<br>
+        It requires a training process using data that is already labeled, allowing the model to learn the boundaries between different groups so it can accurately categorize new information.
+        </dd>
+
+      <dt><b>Clustering</b></dt>
+        <dd>Clustering is a form of unsupervised learning where the objective is to group data points based on their natural similarities.<br>
+        It does not use pre-defined labels or categories; instead, it analyzes the data to discover inherent patterns and structures, creating its own groups based on how closely related the items are to one another.
+        </dd>
+    </dl>
+
 - question: What is reinforcement learning?
   answer: >
     <b>Reinforcement learning</b> is a machine learning algorithm that receives feedback on its output so that the accuracy
@@ -213,7 +232,7 @@
     and error.
 
 - question: How do you handle imbalanced datasets in machine learning?
-  answer: 
+  answer:
     Imbalanced datasets are datasets where the target variable is not evenly distributed. For example, a dataset of fraudulent 
     transactions may be imbalanced, with only a small percentage of transactions being fraudulent.
     There are several ways to handle imbalanced datasets in machine learning. One approach is to oversample the minority class. 
@@ -257,7 +276,7 @@
 
 - h3: Evaluate machine learning methods
   question: To evaluate a generic machine learning model what metrics do you typically use?
-  answer: > 
+  answer: >
     The metrics to use for the evaluation of a machine learning model depend on the type of problem
     we are trying to solve.
 
@@ -266,7 +285,7 @@
     training dataset is balanced.	
 
   question: What is cross-validation in machine learning?
-  answer: > 
+  answer: >
     <b>Cross-validation</b> is a technique used to assess the performance and generalization 
     of a machine learning model. It involves splitting the dataset into multiple subsets, typically a 
     training set and a validation set, multiple times. The model is trained and evaluated on different 
@@ -347,7 +366,7 @@
     classifier has made wrong predictions, which is where the classifier was <b><i>confused</i></b>.
     As a result, you can gain insight about the performance of the classifier and take corrective
     action to minimize the number of wrongly classified items.
-    
+
 
 - question: Can you mention some of the most common metrics used to evaluate binary classifiers?
   answer: >
@@ -451,12 +470,12 @@
     A model with high precision makes fewer false positive errors but may miss some true positives. Conversely, a model 
     with high recall captures more true positives but may produce more false positives.
 
-- question: > 
+- question: >
     What metrics are more meaningful with class-balanced datasets and which ones work better 
     for class-unbalanced datasets? 
   answer: >
     In a class-balanced dataset, the number of items in each class is approximately the same.
-    
+
     <br><br>When the dataset is class-balanced, <b>accuracy</b> is a good metric. Indeed, accuracy assigns
     equal weight to both true positives and true negatives. Accuracy is calculated as the ratio of correctly 
     classified instances (both true positives and true negatives) to the total number of instances, 
@@ -467,7 +486,7 @@
         <span class="symbol">/</span>
         <span class="bottom">n</span>
       </div>
-    
+
     <br><br>When the dataset is class-unbalanced, one class has significantly more items than the
     other classes. In that case <b>precision</b> and <b>recall</b>
     are better metrics. In class-imbalanced scenarios, 
@@ -504,10 +523,10 @@
     lead to a decrease in the other. Therefore, you should choose the metric that aligns with your specific goals 
     and priorities in your application.
 
-- question: > 
+- question: >
     To evaluate machine learning models for cancer detection what metrics do 
     doctors typically use?
-  answer: > 
+  answer: >
     Machine learning models for <b>cancer detection</b> aim to classify patients as having cancer (positive)
     or healthy (negative). In cancer detection, it is important to keep in mind that the datasets
     are typically strongly unbalanced, with few cancer samples and many healthy samples.
@@ -526,7 +545,7 @@
     <br>
     The choice of what metric to use should be tailored to the specific clinical context, as different cancer types and 
     clinical scenarios may have varying requirements.
- 
+
 - question: What is the meaning and use of the F-measure (also called F1-score)?
   answer: >
     The <b>F-measure</b>, also known as the F1-score, is a metric for the evaluation of binary classifiers that combines 
@@ -628,7 +647,7 @@
     model that does not require a training step. This makes it very scalable.
 
 - question: When is the Naive Bayes usually used?
-  answer: > 
+  answer: >
     Naive Bayes is often used in
     <ul>
       <li>text classification like spam filter</li>
@@ -642,7 +661,7 @@
     This is not always the case in practice.
 
 - question: How does the Naive Bayes perform with categorical variables?
-  answer: > 
+  answer: >
     It performs well with categorical variables since no assumption is made on
     the data distribution. By contrast, with numerical variables, a normal distribution
     is assumed.
@@ -740,7 +759,7 @@
     <br><br>
     Given the real values \(yreal_i\) and the predicted values \(ypred_i\), 
     the formula of R-squared \(R^2\) is
-    
+
     $$R^2 = 1 - \frac{\sum_{i=1}^{n} (yreal_i - ypred_i)^2}
     {\sum_{i=1}^{n} (yreal_i - \overline{yreal})^2} $$
 
@@ -795,7 +814,7 @@
       different <code>k</code> values, particularly on smaller datasets.</li>
       </li>
     </ol>
-   
+
 - h3: Decision trees
   question: What is a decision tree?
   answer: >
@@ -864,7 +883,7 @@
     divided into <code>n</code> samples using randomized sampling. Then a model is built on each sample. 
     After that, the resulting models are combined using voting or averaging.</li>
     </ul>
-    
+
 - question: What is Random Forest? How does it work?
   answer: >
     <b>Random forest</b> is a versatile machine learning method capable of performing:
@@ -892,7 +911,7 @@
     planes that divide a dataset into clusters. The planes are found in such a way that they are as far as possible from any point.
     <br><br>
     The position of the planes depends on the so-called <b>support vectors</b>, which are the points that are closest to the planes.
-    
+
 - question: What is the technique called <i>kerneling</i> that is used by Support Vector Machine?
   answer:
     Under the hood, SVM uses a technique called <b>kerneling</b> to find clusters that might not be apparent in lower
@@ -1003,7 +1022,7 @@
     <br><br>
 
 - question: What is a Bag-of-Words (BoW) model?
-  answer: > 
+  answer: >
     The <b>Bag-of-Words (BoW)</b> model represents text as a collection of words, ignoring grammar and word order but keeping track of word frequency.
     <br><br>
     For example, "NLP is fun" and "fun with NLP" would have similar word counts.
@@ -1012,7 +1031,7 @@
     <br><br>
 
 - question: What is the difference between rule-based NLP and machine learning-based NLP?
-  answer: > 
+  answer: >
     <b>Rule-based NLP</b> systems rely on predefined grammar and keyword rules to process language.
     <br><br>
     <b>Machine learning-based NLP</b> uses statistical models and large datasets to learn patterns automatically.
