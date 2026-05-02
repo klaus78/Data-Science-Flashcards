@@ -506,3 +506,31 @@
     </ul>
 
 - question: How can bias in the training data affect the outputs of Large Language Models (LLMs)?
+  answer: >
+    Bias in LLMs originates primarily from the human‑generated text they are trained on. Should this 
+    text reflects historical, cultural, and social inequalities, the model internalizes these patterns 
+    during training. 
+    <br><br>
+    Bias in the training data acts like a distorted mirror: the LLM reflects the world not as it is,
+    but as it was described in the massive, uncurated datasets used to build it. Because these models 
+    are essentially high-level pattern matchers, they could internalize and amplify the prejudices present 
+    in their source material.
+    <br><br>
+    This can leads to several concrete effects:
+    <ul>
+      <li><b>Stereotype reinforcement</b>: If the training corpus overrepresents certain associations—e.g., men as doctors, 
+      women as nurses—the model may generate text that repeats these stereotypes.
+      </li>
+      <li><b>Cultural skew</b>: Models may respond differently depending on perceived race, gender, age, or culture. 
+          For example, identical inputs framed with different demographic cues can yield different sentiment 
+          classifications or recommendations. This is a form of extrinsic bias, visible in real‑world outputs.
+      </li>
+      <li><b>Amplification of harmful or hateful content</b>: Internet‑sourced data often contains unmoderated or toxic language. 
+          Even if filtered, residual patterns can cause models to produce subtly biased or harmful associations. 
+      </li>
+      <li>
+          <b>Algorithmic injustice in applied settings</b>: when LLMs are used in high‑stakes domains—healthcare, hiring, education, or 
+          justice—biased, outputs can lead to discriminatory outcomes. For example, biased summarization or recommendation systems 
+          may systematically disadvantage certain groups.
+      </li>
+    </ul>
