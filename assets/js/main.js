@@ -1,6 +1,7 @@
 window.onload = () => {
-      positionElements();
-      loadDarkModePreference();
+      //positionElements();
+      //loadDarkModePreference();
+      showSplashscreen();
 };
 
 window.onresize = () => {
@@ -24,8 +25,9 @@ function showHideAnswer() {
 
       // in case we clicked on a child element, we move back to the parent element
       // in order to find the proper controls
-      while (divQuestion.className == '')
+      while (divQuestion.className == '') {
             divQuestion = divQuestion.parentElement;
+      }
 
       divQuestion.classList.toggle("active");
 
@@ -129,4 +131,16 @@ function positionElements() {
       leftMenu.style.height = `${window.innerHeight - header.offsetHeight - 1}px`
       content.style.marginTop = leftMenu.style.marginTop;
       content.style.height = leftMenu.style.height;
+}
+
+function showSplashscreen() {
+      const splashScreen = document.getElementById('splashScreen');
+      const mainContent = document.getElementById('mainContent');
+
+      setTimeout(function() {
+            splashScreen.style.display = "none"; 
+            mainContent.style.display = "block";
+            positionElements();
+            loadDarkModePreference();
+      }, 2500); 
 }

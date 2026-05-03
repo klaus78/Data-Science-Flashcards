@@ -24,113 +24,121 @@ title: Data Science Flashcards
 </head>
 
 <body>
-
-    <!-- Header Area-->
-    <div class="header" id="myHeader">
-        <a href="javascript:void(0);" class="icon" onclick="showHideLeftMenu()" style="float: left;">
-            <i class="fa fa-bars"></i>
-          </a>
-        <a class="header_link"><h1>Data Science Flashcards</h1></a>
-        <button id="dark-mode-toggle" class="dark-mode-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">
-            ☾
-        </button>
+    
+    <div id="splashScreen">
+        <img src="./assets/images/logo.png" alt="logo">
     </div>
 
-    
-    <!-- Content Area -->
-    <div id="content" style="position: absolute; height: 99%; padding: 8px;" >
+    <div id="mainContent" style="display: none;">
 
-        <p style="font-size: 20px;line-height: 28px;">
-            Expand your knowledge on <b>Data Science</b> and <b>Machine Learning</b> 
-            with these comprehensive flashcards.
-             <span><a href="https://github.com/klaus78/Data-Science-Questions-Answers"><u>Contribute</u></a></span>
-        </p>
+        <!-- Header Area-->
+        <div class="header" id="myHeader">
+            <a href="javascript:void(0);" class="icon" onclick="showHideLeftMenu()" style="float: left;">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a class="header_link"><h1>Data Science Flashcards</h1></a>
+            <button id="dark-mode-toggle" class="dark-mode-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+                ☾
+            </button>
+        </div>
 
-        <ol>
+        
+        <!-- Content Area -->
+        <div id="content" style="position: absolute; height: 99%; padding: 8px;" >
 
+            <p style="font-size: 20px;line-height: 28px;">
+                Expand your knowledge on <b>Data Science</b> and <b>Machine Learning</b> 
+                with these comprehensive flashcards.
+                <span><a href="https://github.com/klaus78/Data-Science-Questions-Answers"><u>Contribute</u></a></span>
+            </p>
+
+            <ol>
+
+                {% for file in site.data.sort %}
+                    {% for item in site.data.files.[file.topic] in %}
+
+                    {% if item.h2 %}
+                    <h2 id="{{item.h2}}" style="margin-top: 8px;margin-bottom: 4px; background-color: aliceblue;">{{item.h2}}
+                    </h2>
+                    {% unless item.h3 %}
+                    {% endunless %}
+                    {% endif %}
+
+                    {% if item.h3 %}
+                    <h3 id="{{item.h3}}" style="margin-top: 8px;margin-bottom: 4px;">{{item.h3}}</h3>
+                    {% endif %}
+
+
+                    <li>
+
+                        <div class="divQuestion" onclick="showHideAnswer()">
+                            {{item.question}}
+                        </div>
+
+                        {% if item.answer %}
+                        <div class="divAnswer">
+                            {{item.answer}}
+
+                            {% if item.image %}
+                            <br>
+                            <img src="./assets/images/{{item.image}}" alt="not found">
+                            {% endif %}
+
+                        </div>
+                        {% endif %}
+
+
+                        {% if item.python %}
+                        <div class="divCode">
+                            {% highlight python %}
+                            {{item.python}}
+                            {% endhighlight %}
+                        </div>
+                        {% endif %}
+
+                        {% if item.sql %}
+                        <div class="divCode">
+                            {% highlight sql %}
+                            {{item.sql}}
+                            {% endhighlight %}
+                        </div>
+                        {% endif %}
+
+
+                    </li>
+                    {% endfor %}
+                {% endfor %}
+            </ol>
+
+            <button id="back-to-top" class="button" onclick="scrollToTop()">
+                <ion-icon name="arrow-up-outline"></ion-icon>
+            </button>
+
+        </div>
+        
+        <!-- Left-Menu Area -->
+        <div class="left-menu" id="leftMenu">
             {% for file in site.data.sort %}
                 {% for item in site.data.files.[file.topic] in %}
 
                 {% if item.h2 %}
-                <h2 id="{{item.h2}}" style="margin-top: 8px;margin-bottom: 4px; background-color: aliceblue;">{{item.h2}}
-                </h2>
-                {% unless item.h3 %}
-                {% endunless %}
+                <button class="collapsible" onclick="showHideMenus()">
+                    <a href="#" style="pointer-events: none; cursor: default;">{{item.h2}}</a>
+                </button>
                 {% endif %}
 
                 {% if item.h3 %}
-                <h3 id="{{item.h3}}" style="margin-top: 8px;margin-bottom: 4px;">{{item.h3}}</h3>
+                <ul class="hideable_h3">
+                    <li>
+                        <a href="#{{item.h3}}" class="menu-subs">{{item.h3}}</a>
+                    </li>
+                </ul>
                 {% endif %}
 
-
-                <li>
-
-                    <div class="divQuestion" onclick="showHideAnswer()">
-                        {{item.question}}
-                    </div>
-
-                    {% if item.answer %}
-                    <div class="divAnswer">
-                        {{item.answer}}
-
-                        {% if item.image %}
-                        <br>
-                        <img src="./assets/images/{{item.image}}" alt="not found">
-                        {% endif %}
-
-                    </div>
-                    {% endif %}
-
-
-                    {% if item.python %}
-                    <div class="divCode">
-                        {% highlight python %}
-                        {{item.python}}
-                        {% endhighlight %}
-                    </div>
-                    {% endif %}
-
-                    {% if item.sql %}
-                    <div class="divCode">
-                        {% highlight sql %}
-                        {{item.sql}}
-                        {% endhighlight %}
-                    </div>
-                    {% endif %}
-
-
-                </li>
                 {% endfor %}
             {% endfor %}
-        </ol>
+        </div>
 
-        <button id="back-to-top" class="button" onclick="scrollToTop()">
-            <ion-icon name="arrow-up-outline"></ion-icon>
-        </button>
-
-    </div>
-    
-    <!-- Left-Menu Area -->
-    <div class="left-menu" id="leftMenu">
-        {% for file in site.data.sort %}
-            {% for item in site.data.files.[file.topic] in %}
-
-            {% if item.h2 %}
-            <button class="collapsible" onclick="showHideMenus()">
-                <a href="#" style="pointer-events: none; cursor: default;">{{item.h2}}</a>
-            </button>
-            {% endif %}
-
-            {% if item.h3 %}
-            <ul class="hideable_h3">
-                <li>
-                    <a href="#{{item.h3}}" class="menu-subs">{{item.h3}}</a>
-                </li>
-            </ul>
-            {% endif %}
-
-            {% endfor %}
-        {% endfor %}
     </div>
 </body>
 
